@@ -1,10 +1,3 @@
-/* 
- * File:   config_bits.h
- * Author: aaron
- *
- * Created on November 4, 2023, 11:21 AM
- */
-
 #ifndef CONFIG_BITS_H
 #define	CONFIG_BITS_H
 
