@@ -2,7 +2,7 @@
 #define	I2C_REGISTER_BITS_H
 
 //
-// SSPxSTAT - 25.4.4
+// SSPxSTAT - §25.4.4
 //
 
 // bit 7
@@ -48,7 +48,7 @@
 #define SSPxSTAT_TX_BUF_CLR
 
 //
-// SSPxCON1 - 25.4.5
+// SSPxCON1 - §25.4.5
 //
 
 // bit 7
@@ -81,7 +81,7 @@
 #define SSPxCON1_SSMP_CLIENT_7BIT 0x6
 
 //
-// SSPxCON2 - 25.4.6
+// SSPxCON2 - §25.4.6
 //
 
 // bit 7
@@ -125,7 +125,7 @@
 #define SSPxCON2_SEN_DISABLED 0
 
 //
-// SSPxCON3 - 25.4.7
+// SSPxCON3 - §25.4.7
 //
 
 // bit 7
@@ -169,7 +169,7 @@
 #define SSPxCON3_DHEN_DISABLED 0
 
 //
-// SSPxMSK - 25.4.3
+// SSPxMSK - §25.4.3
 //
 
 // bit 7:1
@@ -181,4 +181,3 @@
 #define SSPxMSK_10BIT_DISABLED 0
 
 #endif	/* I2C_REGISTER_BITS_H */
-
