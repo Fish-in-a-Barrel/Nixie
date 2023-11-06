@@ -11,7 +11,7 @@ void I2C_Host_Init()
     SSP1CON1 = SSPxCON1_SSPEN_ENABLED | SSPxCON1_SSMP_HOST;
     SSP1CON2 = 0x00;
     
-    // slew rate settings for high speed control
+    // disable slew rate control for standard speed
     SSP1STAT |= 
               SSPxSTAT_SLEW_RATE_CTL_ENABLED // 100 kHz
             | SSPxSTAT_CKE_SMBUS_DISABLED;
@@ -19,7 +19,7 @@ void I2C_Host_Init()
     // set the baud rate (§25.3)
     SSP1ADD = _XTAL_FREQ / (4 * I2C_BAUD + 1);
     
-    // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1)
+    // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1 / §18.8.2)
     SSP1DATPPS = 4;
     SSP1CLKPPS = 5;
     RA4PPS = PPS_OUT_SDA1;
