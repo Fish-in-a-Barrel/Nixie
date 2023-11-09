@@ -19,6 +19,26 @@
 #define CATHODE_8_PIN RC4
 #define CATHODE_9_PIN RC5
 
+#define TOPPS_(RA) RA ## PPS
+#define TOPPS(RA) TOPPS_(RA)
+
+#define CATHODE_0_PPS TOPPS(CATHODE_0_PIN)
+#define CATHODE_1_PPS TOPPS(CATHODE_1_PIN)
+#define CATHODE_2_PPS TOPPS(CATHODE_2_PIN)
+#define CATHODE_3_PPS TOPPS(CATHODE_3_PIN)
+#define CATHODE_4_PPS TOPPS(CATHODE_4_PIN)
+#define CATHODE_5_PPS TOPPS(CATHODE_5_PIN)
+#define CATHODE_6_PPS TOPPS(CATHODE_6_PIN)
+#define CATHODE_7_PPS TOPPS(CATHODE_7_PIN)
+#define CATHODE_8_PPS TOPPS(CATHODE_8_PIN)
+#define CATHODE_9_PPS TOPPS(CATHODE_9_PIN)
+
+const uint8_t PWM_MAX = 255;
+const uint8_t PWM_RAMP_STEPS = 5;
+const uint8_t PWM_RAMP_TIME = 150;
+const uint8_t PWM_RAMP_STEP_SIZE = PWM_MAX / PWM_RAMP_STEPS;
+const uint8_t PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
+
 uint8_t gAddressI2c = 0x10;
 
 void InitPins()
@@ -69,7 +89,7 @@ void InitI2C()
     SSP1CON3 = 0x00;
     
     // Set the client address and enable the full address mask (§25.4.2, §25.4.3)
-    SSP1ADD = gAddressI2c << 1;
+    SSP1ADD = (uint8_t)(gAddressI2c << 1);
     SSP1MSK = 0xFE;
 
     // Enable Interrupts
@@ -77,6 +97,29 @@ void InitI2C()
 
     // Enable the port (§25.4.5)
     SSP1CON1bits.SSPEN = 1;
+}
+
+void InitPWM()
+{
+    //
+    // 1 Hz cycle time
+    //
+    
+    // Use the F_osc/4 source, as required for PWM (§21.10.5, §23.9)
+    T2CLKCON = 0x1;
+    
+    // 250 tick counter reset results (§21.10.2)
+    T2PR = 250;
+    
+    // Mode is free-running, period-pulse, software-gated (§21.10.4)
+    T2HLT = 0x00;    
+    
+    // Enable the timer with a 1:1 pre-scaler (§21.10.3)
+    T2CON = 0x80 | 0x00 | 0x00;
+
+    // Enable the PWMs (PWM4 inverted §23.11.1)
+    PWM3CON = 0x80;
+    PWM4CON = 0x90;
 }
 
 volatile uint8_t gDataI2C = 0;
@@ -125,27 +168,53 @@ void __interrupt() ISR()
     if (PIR1bits.SSP1IF == 1) HandleI2C();
 }
 
-void UpdateCathodePins(uint8_t bcd)
+void SetPwmDutyCycle(int dc)
 {
-    CATHODE_0_PIN = 0 == bcd;
-    CATHODE_1_PIN = 1 == bcd;
-    CATHODE_2_PIN = 2 == bcd;
-    CATHODE_3_PIN = 3 == bcd;
-    CATHODE_4_PIN = 4 == bcd;
-    CATHODE_5_PIN = 5 == bcd;
-    CATHODE_6_PIN = 6 == bcd;
-    CATHODE_7_PIN = 7 == bcd;
-    CATHODE_8_PIN = 8 == bcd;
-    CATHODE_9_PIN = 9 == bcd;
+    // §23.11.2
+    PWM3DCH = PWM4DCH = (uint8_t)((dc >> 2) & 0xFF);
+    PWM3DCL = PWM4DCL = (uint8_t)((dc & 0x3) << 6);
+
+    // Restart the PWM timer
+    T2TMR = 0;
+}
+
+#define ASSIGN_PPS(PPS, X) PPS = (X == bcd) ? 3 : (X == lastBcd) ? 4 : 0;
+
+void RampCathodePins(const uint8_t bcd)
+{
+    static uint8_t lastBcd = 0xFF;
     
-    // TODO: Smooth fading between digits.
+    if (bcd == lastBcd) return;
+
+    SetPwmDutyCycle(0);
+
+    ASSIGN_PPS(CATHODE_0_PPS, 0);
+    ASSIGN_PPS(CATHODE_1_PPS, 1);
+    ASSIGN_PPS(CATHODE_2_PPS, 2);
+    ASSIGN_PPS(CATHODE_3_PPS, 3);
+    ASSIGN_PPS(CATHODE_4_PPS, 4);
+    ASSIGN_PPS(CATHODE_5_PPS, 5);
+    ASSIGN_PPS(CATHODE_6_PPS, 6);
+    ASSIGN_PPS(CATHODE_7_PPS, 7);
+    ASSIGN_PPS(CATHODE_8_PPS, 8);
+    ASSIGN_PPS(CATHODE_9_PPS, 9);
+    
+    // Ramp the duty cycle over time
+    for (int pwm = 0; pwm <= PWM_MAX; pwm += PWM_RAMP_STEP_SIZE)
+    {
+        SetPwmDutyCycle(4 * pwm);
+        __delay_ms(PWM_RAMP_STEP_INTERVAL);
+    }
+    
+    lastBcd = bcd;
 }
 
 void main(void)
 {
     InitInterrupts();
     InitPins();
-    
+    InitPWM();
+
     // TODO: Read I2C address wired to pins.
     
     InitI2C();
@@ -157,7 +226,7 @@ void main(void)
             uint8_t data = gDataI2C;
             gNewDataI2C = 0;
             
-            UpdateCathodePins(data);
+            RampCathodePins(data);
         }
         
         __delay_ms(10);
