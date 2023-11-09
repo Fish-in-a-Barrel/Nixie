@@ -12,6 +12,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>config_bits.c</itemPath>
+      <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -27,7 +29,7 @@
         <targetDevice>PIC16F15243</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>PK5Tool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.45</languageToolchainVersion>
         <platform>3</platform>
