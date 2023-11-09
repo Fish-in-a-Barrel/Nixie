@@ -1,42 +1,41 @@
+//
+// Section references are to the "PIC16F15213/14/23/24/43/44 Low Pin Count Microcontrollers" datasheet.
+// Document DS40002195D
+// https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F15213-14-23-24-43-44-Microcontroller-Data-Sheet-40002195.pdf
+//
+
 #include <xc.h>
 
 #define _XTAL_FREQ (1000 * 1000ul) // 1 MHz
 
 void InitPins()
 {
-    /**
-    TRISx registers
-    */
-    TRISA = 0x3F;
-    TRISB = 0x30;
-    TRISC = 0xFF;
+    // I2C pins must be configured as inputs (§25.2.2.3)
+    TRISA = 0x30;
+    TRISB = 0x00;
+    TRISC = 0x00;
 
-    /**
-    ANSELx registers
-    */
-    ANSELA = 0x7;
-    ANSELB = 0x30;
-    ANSELC = 0xFF;
+    // Clear the analog registers (§16.5)
+    ANSELA = 0x00;
+    ANSELB = 0x00;
+    ANSELC = 0x00;
     
     // Clear the GPIO pins
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
     
-    // Set PPS input pins
+    // Set PPS input pins (§18.2, Table 18-1)
     SSP1CLKPPS = 0x5;
     SSP1DATPPS = 0x4;
 
-    // Set PPS output pins
+    // Set PPS output pins (§18.8.2)
     RA5PPS = 0x07;
     RA4PPS = 0x08;
 }
 
 void InitInterrupts()
 {
-    PIR0bits.INTF = 0;
-    INTCONbits.INTEDG = 1;
-
     // Enable global and peripheral interrupts
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1; 
@@ -68,7 +67,6 @@ volatile uint8_t gNewDataI2C = 0;
 
 void SendAckI2C()
 {
-    /* Send ACK */
     SSP1CON2bits.ACKDT = 0;
     SSP1CON2bits.ACKEN = 1;
 }
@@ -80,14 +78,19 @@ void HandleI2C()
     
     if (!SSP1STATbits.D_nA)
     {
+        //
         // Handle address message
+        //
         
+        // The buffer MUST be read.
         uint8_t devNull = SSP1BUF;
         SendAckI2C();
     }
     else if ((!SSP1STATbits.R_nW) && (SSP1STATbits.BF))
     {
+        //
         // Handle data writes
+        //
 
         gDataI2C = SSP1BUF;
         gNewDataI2C = 1;
@@ -95,6 +98,7 @@ void HandleI2C()
         SendAckI2C();
     }
     
+    // Release the clock stretch
     SSP1CON1bits.CKP = 1;
 }
 
