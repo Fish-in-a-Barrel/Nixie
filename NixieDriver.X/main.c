@@ -8,6 +8,19 @@
 
 #define _XTAL_FREQ (1000 * 1000ul) // 1 MHz
 
+#define CATHODE_0_PIN RB4
+#define CATHODE_1_PIN RB5
+#define CATHODE_2_PIN RB6
+#define CATHODE_3_PIN RB7
+#define CATHODE_4_PIN RC0
+#define CATHODE_5_PIN RC1
+#define CATHODE_6_PIN RC2
+#define CATHODE_7_PIN RC3
+#define CATHODE_8_PIN RC4
+#define CATHODE_9_PIN RC5
+
+uint8_t gAddressI2c = 0x10;
+
 void InitPins()
 {
     // I2C pins must be configured as inputs (§25.2.2.3)
@@ -36,29 +49,33 @@ void InitPins()
 
 void InitInterrupts()
 {
-    // Enable global and peripheral interrupts
+    // Enable global and peripheral interrupts (§12.4)
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1; 
 }
 
 void InitI2C()
 {
-    /* CKE disabled; SMP Standard Speed;  */
-    SSP1STAT = 0xA4;
-    /* SSPM 7 Bit Polling; CKP disabled; SSPEN disabled; SSPOV no_overflow; WCOL no_collision;  */
-    SSP1CON1 |= 0x6;
-    /* SEN enabled; RSEN disabled; PEN disabled; RCEN disabled; ACKEN disabled; ACKDT acknowledge; GCEN disabled;  */
-    SSP1CON2 = 0x1;
-    /* DHEN disabled; AHEN disabled; SBCDE disabled; SDAHT 100ns; BOEN disabled; SCIE disabled; PCIE disabled;  */
-    SSP1CON3 = 0x0;
-    /* SSPADD 32;  */
-    SSP1ADD = 0x20;
-    /* SSPMSK 254;  */
+    // Not relevant to clients (§25.4.4)
+    SSP1STAT = 0x00;
+    
+    // 7-bit addressing client (§25.4.5)
+    SSP1CON1 = 0x06;
+    
+    // Enable clock stretching (§25.4.6)
+    SSP1CON2 = 0x01;
+    
+    // No start/stop interrupts (§25.4.7)
+    SSP1CON3 = 0x00;
+    
+    // Set the client address and enable the full address mask (§25.4.2, §25.4.3)
+    SSP1ADD = gAddressI2c << 1;
     SSP1MSK = 0xFE;
 
-    /* Enable Interrupts */
+    // Enable Interrupts
     PIE1bits.SSP1IE = 1;
 
+    // Enable the port (§25.4.5)
     SSP1CON1bits.SSPEN = 1;
 }
 
@@ -71,6 +88,7 @@ void SendAckI2C()
     SSP1CON2bits.ACKEN = 1;
 }
 
+// §25.2.3
 void HandleI2C()
 {
     // Clear the interrupt flag
@@ -82,7 +100,7 @@ void HandleI2C()
         // Handle address message
         //
         
-        // The buffer MUST be read.
+        // The buffer MUST be read to clear SSPxSTAT.BF (§25.2.3.6.1).
         uint8_t devNull = SSP1BUF;
         SendAckI2C();
     }
@@ -98,7 +116,7 @@ void HandleI2C()
         SendAckI2C();
     }
     
-    // Release the clock stretch
+    // Release the clock stretch (§25.2.3.6.1)
     SSP1CON1bits.CKP = 1;
 }
 
@@ -107,10 +125,29 @@ void __interrupt() ISR()
     if (PIR1bits.SSP1IF == 1) HandleI2C();
 }
 
+void UpdateCathodePins(uint8_t bcd)
+{
+    CATHODE_0_PIN = 0 == bcd;
+    CATHODE_1_PIN = 1 == bcd;
+    CATHODE_2_PIN = 2 == bcd;
+    CATHODE_3_PIN = 3 == bcd;
+    CATHODE_4_PIN = 4 == bcd;
+    CATHODE_5_PIN = 5 == bcd;
+    CATHODE_6_PIN = 6 == bcd;
+    CATHODE_7_PIN = 7 == bcd;
+    CATHODE_8_PIN = 8 == bcd;
+    CATHODE_9_PIN = 9 == bcd;
+    
+    // TODO: Smooth fading between digits.
+}
+
 void main(void)
 {
     InitInterrupts();
     InitPins();
+    
+    // TODO: Read I2C address wired to pins.
+    
     InitI2C();
     
     while(1)
@@ -120,8 +157,7 @@ void main(void)
             uint8_t data = gDataI2C;
             gNewDataI2C = 0;
             
-            RB6 = (data & 0x1) ? 1 : 0;
-            RB7 = (data & 0x2) ? 1 : 0;
+            UpdateCathodePins(data);
         }
         
         __delay_ms(10);
