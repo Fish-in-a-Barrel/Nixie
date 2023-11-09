@@ -33,11 +33,11 @@
 #define CATHODE_8_PPS TOPPS(CATHODE_8_PIN)
 #define CATHODE_9_PPS TOPPS(CATHODE_9_PIN)
 
-const uint8_t PWM_MAX = 255;
-const uint8_t PWM_RAMP_STEPS = 5;
-const uint8_t PWM_RAMP_TIME = 150;
-const uint8_t PWM_RAMP_STEP_SIZE = PWM_MAX / PWM_RAMP_STEPS;
-const uint8_t PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
+const int PWM_MAX = 250; 
+const int PWM_RAMP_STEPS = 5;
+const int PWM_RAMP_TIME = 150;
+const int PWM_RAMP_STEP_SIZE = PWM_MAX / PWM_RAMP_STEPS;
+const int PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
 
 uint8_t gAddressI2c = 0x10;
 
@@ -109,7 +109,7 @@ void InitPWM()
     T2CLKCON = 0x1;
     
     // 250 tick counter reset results (§21.10.2)
-    T2PR = 250;
+    T2PR = (uint8_t)PWM_MAX;
     
     // Mode is free-running, period-pulse, software-gated (§21.10.4)
     T2HLT = 0x00;    
@@ -171,8 +171,8 @@ void __interrupt() ISR()
 void SetPwmDutyCycle(int dc)
 {
     // §23.11.2
-    PWM3DCH = PWM4DCH = (uint8_t)((dc >> 2) & 0xFF);
-    PWM3DCL = PWM4DCL = (uint8_t)((dc & 0x3) << 6);
+    PWM3DCH = PWM4DCH = dc;
+    PWM3DCL = PWM4DCL = 0;
 
     // Restart the PWM timer
     T2TMR = 0;
@@ -202,9 +202,12 @@ void RampCathodePins(const uint8_t bcd)
     // Ramp the duty cycle over time
     for (int pwm = 0; pwm <= PWM_MAX; pwm += PWM_RAMP_STEP_SIZE)
     {
-        SetPwmDutyCycle(4 * pwm);
+        SetPwmDutyCycle(pwm);
         __delay_ms(PWM_RAMP_STEP_INTERVAL);
     }
+    
+    // Set the duty cycle > max for 100% duty cycle
+    SetPwmDutyCycle(PWM_MAX + 1);
     
     lastBcd = bcd;
 }
