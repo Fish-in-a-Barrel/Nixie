@@ -93,11 +93,12 @@ void InitI2C()
     SSP1CON3 = 0x00;
     
     // Set the client address and enable the full address mask (§25.4.2, §25.4.3)
-    SSP1ADD = (uint8_t)(
-            (ADDRESS_PIN_0 << 1) | 
-            (ADDRESS_PIN_1 << 2) | 
-            (ADDRESS_PIN_2 << 3) | 
-            (ADDRESS_PIN_3 << 4));
+    // (lots of explicit casts to avoid warnings about implicit casts by the | operator)
+    SSP1ADD =
+            (uint8_t)((uint8_t)ADDRESS_PIN_0 << 1) | 
+            (uint8_t)((uint8_t)ADDRESS_PIN_2 << 3) | 
+            (uint8_t)((uint8_t)ADDRESS_PIN_1 << 2) | 
+            (uint8_t)((uint8_t)ADDRESS_PIN_3 << 4);
     SSP1MSK = 0xFE;
 
     // Enable Interrupts
@@ -179,7 +180,7 @@ void __interrupt() ISR()
 void SetPwmDutyCycle(int dc)
 {
     // §23.11.2
-    PWM3DCH = PWM4DCH = (int8_t)dc;
+    PWM3DCH = PWM4DCH = (uint8_t)dc;
     PWM3DCL = PWM4DCL = 0;
 
     // Restart the PWM timer
@@ -220,6 +221,65 @@ void RampCathodePins(const uint8_t bcd)
     lastBcd = bcd;
 }
 
+// Scroll through all the cathodes for a minute. Apparently cathodes that aren't used can fail.
+void RefreshCathodes()
+{
+    CATHODE_0_PIN = 0;
+    CATHODE_1_PIN = 0;
+    CATHODE_2_PIN = 0;
+    CATHODE_3_PIN = 0;
+    CATHODE_4_PIN = 0;
+    CATHODE_5_PIN = 0;
+    CATHODE_6_PIN = 0;
+    CATHODE_7_PIN = 0;
+    CATHODE_8_PIN = 0;
+    
+    for (uint8_t i = 0; i < 6; ++i)
+    {
+        CATHODE_9_PIN = 0;
+        CATHODE_0_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_0_PIN = 0;
+        CATHODE_1_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_1_PIN = 0;
+        CATHODE_2_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_2_PIN = 0;
+        CATHODE_3_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_3_PIN = 0;
+        CATHODE_4_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_4_PIN = 0;
+        CATHODE_5_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_5_PIN = 0;
+        CATHODE_6_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_6_PIN = 0;
+        CATHODE_7_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_7_PIN = 0;
+        CATHODE_8_PIN = 1;
+        __delay_ms(1000);
+        
+        CATHODE_8_PIN = 0;
+        CATHODE_9_PIN = 1;
+        __delay_ms(1000);
+    }
+
+    CATHODE_9_PIN = 0;
+}
+
 void main(void)
 {
     InitInterrupts();
@@ -234,7 +294,8 @@ void main(void)
             uint8_t data = gDataI2C;
             gNewDataI2C = 0;
             
-            RampCathodePins(data);
+            if (0xFF != data) RampCathodePins(data);
+            else RefreshCathodes();
         }
         
         __delay_ms(10);
