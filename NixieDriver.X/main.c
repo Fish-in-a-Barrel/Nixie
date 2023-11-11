@@ -8,16 +8,21 @@
 
 #define _XTAL_FREQ (1000 * 1000ul) // 1 MHz
 
-#define CATHODE_1_PIN RC4 // v Left pins v
-#define CATHODE_2_PIN RC3
+#define CATHODE_5_PIN RC4 // v Left pins v
+#define CATHODE_4_PIN RC3
 #define CATHODE_3_PIN RC6
-#define CATHODE_4_PIN RC7
-#define CATHODE_5_PIN RB7
-#define CATHODE_6_PIN RB6 // v Right pins v
-#define CATHODE_7_PIN RB5
+#define CATHODE_2_PIN RC7
+#define CATHODE_1_PIN RB7
+#define CATHODE_0_PIN RB6 // v Right pins v
+#define CATHODE_9_PIN RB5
 #define CATHODE_8_PIN RB4
-#define CATHODE_9_PIN RC2
-#define CATHODE_0_PIN RC1
+#define CATHODE_7_PIN RC2
+#define CATHODE_6_PIN RC1
+
+#define ADDRESS_PIN_0 RC0 // LSB
+#define ADDRESS_PIN_1 RA2
+#define ADDRESS_PIN_2 RA1
+#define ADDRESS_PIN_3 RA0
 
 #define TOPPS_(RA) RA ## PPS
 #define TOPPS(RA) TOPPS_(RA)
@@ -39,14 +44,13 @@ const int PWM_RAMP_TIME = 150;
 const int PWM_RAMP_STEP_SIZE = PWM_MAX / PWM_RAMP_STEPS;
 const int PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
 
-uint8_t gAddressI2c = 0x10;
-
 void InitPins()
 {
-    // I2C pins must be configured as inputs (§25.2.2.3)
-    TRISA = 0x30;
+    // I2C pins (RA4 and RA5) must be configured as inputs (§25.2.2.3)
+    // Address pins RA0-3 and RC0 are inputs
+    TRISA = 0x37;
     TRISB = 0x00;
-    TRISC = 0x00;
+    TRISC = 0x01;
 
     // Clear the analog registers (§16.5)
     ANSELA = 0x00;
@@ -89,7 +93,11 @@ void InitI2C()
     SSP1CON3 = 0x00;
     
     // Set the client address and enable the full address mask (§25.4.2, §25.4.3)
-    SSP1ADD = (uint8_t)(gAddressI2c << 1);
+    SSP1ADD = (uint8_t)(
+            (ADDRESS_PIN_0 << 1) | 
+            (ADDRESS_PIN_1 << 2) | 
+            (ADDRESS_PIN_2 << 3) | 
+            (ADDRESS_PIN_3 << 4));
     SSP1MSK = 0xFE;
 
     // Enable Interrupts
@@ -171,7 +179,7 @@ void __interrupt() ISR()
 void SetPwmDutyCycle(int dc)
 {
     // §23.11.2
-    PWM3DCH = PWM4DCH = dc;
+    PWM3DCH = PWM4DCH = (int8_t)dc;
     PWM3DCL = PWM4DCL = 0;
 
     // Restart the PWM timer
@@ -217,9 +225,6 @@ void main(void)
     InitInterrupts();
     InitPins();
     InitPWM();
-
-    // TODO: Read I2C address wired to pins.
-    
     InitI2C();
     
     while(1)
