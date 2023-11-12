@@ -19,7 +19,7 @@
 #define STATE_WRITE_ADDRESS 2
 #define STATE_WRITE_DATA 3
 
-typedef void (*StateHandler)(void);
+typedef uint8_t (*StateHandler)(void);
 
 static struct
 {
@@ -119,13 +119,13 @@ void I2C_SendNACK(void)
     SSP1CON2bits.ACKEN = 1;
 }
 
-void WriteAddress()
+uint8_t WriteAddress()
 {
     SSP1BUF = operation.address;
-    operation.state = STATE_WRITE_ADDRESS;
+    return STATE_WRITE_ADDRESS;
 }
 
-void WriteData()
+uint8_t WriteData()
 {
     if ((NULL == operation.buffer) || (0 == operation.bufferLen))
     {
@@ -136,20 +136,21 @@ void WriteData()
     {
         --operation.bufferLen;
         SSP1BUF = *(operation.buffer++);
-        operation.state = STATE_WRITE_DATA;
     }
+
+    return STATE_WRITE_DATA;
 }
 
-void WriteHandler()
+uint8_t WriteHandler()
 {
     switch (operation.state)
     {
         case STATE_WRITE_START:
-            WriteAddress();
+            operation.state = WriteAddress();
             break;
         case STATE_WRITE_ADDRESS:
         case STATE_WRITE_DATA:
-            WriteData();
+            operation.state = WriteData();
             break;
         default:
             ClearOp();
