@@ -27,12 +27,11 @@ void main(void)
     EnableInterrupts();
     
     uint8_t counter = 0;
-    
+    uint8_t buffer = 0;
     while (1)
     {
-        I2C_Write(0x01, I2C_WRITE, &counter, sizeof(counter));
-        
-        counter = (++counter) % 4;
+        buffer = (++counter) % 4;
+        I2C_Write(0x01, I2C_WRITE, &buffer, sizeof(buffer));
 
         __delay_ms(1000);
     }
