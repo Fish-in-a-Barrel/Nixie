@@ -7,7 +7,6 @@
 void __interrupt() ISR()
 {
     if (PIR1bits.SSP1IF) I2C_HandleInterrupt();
-    if (PIR1bits.BCL1IF) I2C_HandleCollisionInterrupt();
 }
 
 void EnableInterrupts()
@@ -18,7 +17,6 @@ void EnableInterrupts()
 
     // Enable Interrupts
     PIE1bits.SSP1IE = 1;
-    PIE1bits.BCL1IE = 1;
 }
 
 void main(void)

@@ -12,7 +12,6 @@
 //
 
 #define OP_IDLE 0
-#define STATE_DEFAULT 0
 
 // OP_WRITE
 #define OP_WRITE 1
@@ -20,7 +19,7 @@
 #define STATE_WRITE_ADDRESS 2
 #define STATE_WRITE_DATA 3
 
-typedef void (*StateHandler)(uint8_t nextState);
+typedef void (*StateHandler)(void);
 
 static struct
 {
@@ -31,11 +30,6 @@ static struct
     uint8_t bufferLen;
     
     StateHandler stateHandler;
-    StateHandler startHandler;
-    StateHandler stopHandler;
-    StateHandler addressHandler;
-    StateHandler dataAckHandler;
-    StateHandler dataNackHandler;
 } operation;
 
 void ClearOp()
@@ -46,7 +40,6 @@ void ClearOp()
     operation.bufferLen = 0;
     
     operation.stateHandler = NULL;
-    operation.startHandler = operation.stopHandler = operation.addressHandler = operation.dataAckHandler = operation.dataNackHandler = NULL;
 }
 
 uint8_t IsBusy()
@@ -93,37 +86,10 @@ void I2C_Host_Init(void)
 
 void I2C_HandleInterrupt(void)
 {
-//    if (SSP1STATbits.S) // Start
-//    {
-//        if (operation.startHandler) operation.startHandler(STATE_DEFAULT);
-//    }
-//    else if (SSP1STATbits.P) // Stop
-//    {
-//        if (operation.stopHandler) operation.stopHandler(STATE_DEFAULT);
-//    }
-//    else if (!SSP1STATbits.D_nA) // Address
-//    {
-//        if (operation.addressHandler) operation.addressHandler(STATE_DEFAULT);
-//    }
-//    else if (SSP1CON2bits.ACKSTAT) // Data + ACK
-//    {
-//        if (operation.dataAckHandler) operation.dataAckHandler(STATE_DEFAULT);
-//    }
-//    else // Data + NACK
-//    {
-//        if (operation.dataNackHandler) operation.dataNackHandler(STATE_DEFAULT);
-//    }
-    
-    operation.stateHandler(STATE_DEFAULT);
+    operation.stateHandler();
     
     // Clear the interrupt flag
     PIR1bits.SSP1IF = 0;
-}
-
-void I2C_HandleCollisionInterrupt(void)
-{
-    // Clear the interrupt flag
-    PIR1bits.BCL1IF = 0;
 }
 
 void I2C_Start()
@@ -153,13 +119,13 @@ void I2C_SendNACK(void)
     SSP1CON2bits.ACKEN = 1;
 }
 
-void WriteAddress(uint8_t nextState)
+void WriteAddress()
 {
     SSP1BUF = operation.address;
     operation.state = STATE_WRITE_ADDRESS;
 }
 
-void WriteData(uint8_t nextState)
+void WriteData()
 {
     if ((NULL == operation.buffer) || (0 == operation.bufferLen))
     {
@@ -174,16 +140,16 @@ void WriteData(uint8_t nextState)
     }
 }
 
-void WriteHandler(uint8_t nextState)
+void WriteHandler()
 {
     switch (operation.state)
     {
         case STATE_WRITE_START:
-            WriteAddress(STATE_DEFAULT);
+            WriteAddress();
             break;
         case STATE_WRITE_ADDRESS:
         case STATE_WRITE_DATA:
-            WriteData(STATE_DEFAULT);
+            WriteData();
             break;
         default:
             ClearOp();
@@ -202,10 +168,6 @@ uint8_t I2C_Write(uint8_t address, uint8_t direction, uint8_t* data, uint8_t len
     operation.bufferLen = len;
     
     operation.stateHandler = WriteHandler;
-    operation.startHandler = WriteAddress;
-    operation.addressHandler = NULL;
-    operation.dataAckHandler = WriteData;
-    operation.dataNackHandler = NULL;
     
     I2C_Start();
     

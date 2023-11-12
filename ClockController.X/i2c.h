@@ -24,7 +24,5 @@ uint8_t I2C_Write(uint8_t address, uint8_t direction, uint8_t* data, uint8_t len
 
 void I2C_HandleInterrupt(void);
 
-void I2C_HandleCollisionInterrupt(void);
-
 #endif	/* I2C_H */
 
