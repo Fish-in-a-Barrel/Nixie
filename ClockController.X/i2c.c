@@ -7,64 +7,85 @@
 
 #define I2C_ADDRESS(address, rw) (uint8_t)((address << 1) | rw)
 
+#define I2C_READ 1
+#define I2C_WRITE 0
+
 //
 // Operation states
 //
 
 #define OP_IDLE 0
 
-// OP_WRITE
+// Operations
 #define OP_WRITE 1
-#define STATE_WRITE_START 1
+#define OP_WRITE_READ 2
+
+// States
+#define STATE_ERROR 0xFF
+#define STATE_IDLE 0
 #define STATE_WRITE_ADDRESS 2
 #define STATE_WRITE_DATA 3
-
-typedef uint8_t (*StateHandler)(void);
+#define STATE_READ_START 4
+#define STATE_READ_DATA 5
+#define STATE_READ_COMPLETE 6
 
 static struct
 {
     uint8_t type;
     uint8_t state;
     uint8_t address;
-    uint8_t* buffer;
-    uint8_t bufferLen;
-    
-    StateHandler stateHandler;
+    const uint8_t* writeBuffer;
+    uint8_t writeBufferLen;
+    uint8_t* readBuffer;
+    uint8_t readBufferLen;
 } operation;
 
 void ClearOp()
 {
     operation.type = OP_IDLE;
-    operation.state = 0;
-    operation.buffer = NULL;
-    operation.bufferLen = 0;
-    
-    operation.stateHandler = NULL;
+    if (operation.state != STATE_ERROR) operation.state = STATE_IDLE;
+    operation.writeBuffer = NULL;
+    operation.writeBufferLen = 0;
+    operation.readBuffer = NULL;
+    operation.readBufferLen = 0;
 }
 
 uint8_t IsBusy()
 {
-    return operation.type != OP_IDLE || SSP1STATbits.S;
+    return operation.type != OP_IDLE || SSP1STATbits.S || SSP1STATbits.BF;
+}
+
+void ResetBus()
+{
+    // Clear the analog registers (§16.5)
+    ANSELA = 0x00;
+
+    TRISA = 0x10;
+    RA5 = 1;
+    
+    while (!RA4)
+    {
+        RA5 = !RA5;
+        //__delay_ms(10);
+    }
+    
+    PORTA = 0;
 }
 
 void I2C_Host_Init(void)
 {
+    ResetBus();
+    
+    // set RA4 & RA5 as digital inputs (§25.2.2.3)
+    TRISA = 0x30;
+    
+    // disable slew rate control for standard speed
     // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1 / §18.8.2)
     SSP1DATPPS = 4;
     SSP1CLKPPS = 5;
     RA4PPS = PPS_OUT_SDA1;
     RA5PPS = PPS_OUT_SCL1;
     
-    // set RA4 & RA5 as digital inputs (§25.2.2.3)
-    TRISA |= 0x30;
-    
-    // Clear the analog registers (§16.5)
-    ANSELA = 0x00;
-
-    // Clear the GPIO pins
-    PORTA = 0;
-    
-    // disable slew rate control for standard speed
     SSP1STAT |= 
               SSPxSTAT_SLEW_RATE_CTL_ENABLED // 100 kHz
             | SSPxSTAT_CKE_SMBUS_DISABLED;
@@ -72,7 +93,7 @@ void I2C_Host_Init(void)
     // enable I2C pins SCL and SDA for serial communication (§25.2.4)
     SSP1CON1 = SSPxCON1_SSMP_HOST;
     SSP1CON2 = 0;
-    SSP1CON3 = 0;
+    SSP1CON3 = SSPxCON3_PCIE_ENABLED | SSPxCON3_SCIE_ENABLED;
     
     // set the baud rate (§25.3)
     SSP1ADD = _XTAL_FREQ / (4 * I2C_BAUD + 1);
@@ -84,93 +105,172 @@ void I2C_Host_Init(void)
     operation.type = OP_IDLE;
 }
 
-void I2C_HandleInterrupt(void)
-{
-    operation.stateHandler();
-    
-    // Clear the interrupt flag
-    PIR1bits.SSP1IF = 0;
-}
-
-void I2C_Start()
+uint8_t Start()
 {
     SSP1CON2bits.SEN = 1;
+    return STATE_WRITE_ADDRESS;
 }
 
-void I2C_Stop()
+uint8_t Stop()
 {
     SSP1CON2bits.PEN = 1;
+    ClearOp();
+    
+    return STATE_IDLE;
 }
 
-void I2C_Restart()
+uint8_t Restart()
 {
-    SSP1CON2bits.SEN = 1;
+    SSP1CON2bits.RSEN = 1;
+    
+    return STATE_WRITE_ADDRESS;
 }
 
-void I2C_SendACK(void)
+void SendACK(void)
 {
     SSP1CON2bits.ACKDT = 0;
     SSP1CON2bits.ACKEN = 1;
 }
 
-void I2C_SendNACK(void)
+void SendNACK(void)
 {
     SSP1CON2bits.ACKDT = 1;
     SSP1CON2bits.ACKEN = 1;
 }
 
-uint8_t WriteAddress()
+uint8_t WriteAddress(uint8_t direction)
 {
-    SSP1BUF = operation.address;
-    return STATE_WRITE_ADDRESS;
+    SSP1BUF = I2C_ADDRESS(operation.address, direction);
+    return (I2C_WRITE == direction) ? STATE_WRITE_DATA : STATE_READ_DATA;
 }
 
 uint8_t WriteData()
 {
-    if ((NULL == operation.buffer) || (0 == operation.bufferLen))
+    if (operation.writeBuffer && operation.writeBufferLen)
     {
-        I2C_Stop();
-        ClearOp();
+        SSP1BUF = *(operation.writeBuffer++);
+        --operation.writeBufferLen;
+
+        return STATE_WRITE_DATA;
     }
     else
     {
-        --operation.bufferLen;
-        SSP1BUF = *(operation.buffer++);
+        if (OP_WRITE_READ == operation.type)
+        {
+            Restart();
+            return WriteAddress(I2C_READ);
+        }
+        else
+        {
+            return Stop();
+        }
     }
-
-    return STATE_WRITE_DATA;
 }
 
-uint8_t WriteHandler()
+uint8_t ReadData()
 {
+    if (!SSP1STATbits.BF)
+    {
+        SSP1CON2bits.RCEN = 1;
+        return STATE_READ_DATA;
+    }
+    else if (operation.readBuffer && operation.readBufferLen)
+    {
+        *(operation.readBuffer++) = SSP1BUF;
+        --operation.readBufferLen;
+        
+        if (operation.readBufferLen > 0)
+        {
+            SendACK();
+            return STATE_READ_DATA;
+        }
+        else
+        {
+            SendNACK();
+            return STATE_READ_COMPLETE;            
+        }
+    }
+    else
+    {
+        // We shouldn't actually reach this point.
+        
+        SendNACK();
+        return STATE_READ_COMPLETE;            
+    }
+}
+
+void ExecuteStateMachine()
+{   
+    if (SSP1CON2bits.ACKSTAT) operation.state = STATE_ERROR;
+    
     switch (operation.state)
     {
-        case STATE_WRITE_START:
-            operation.state = WriteAddress();
-            break;
         case STATE_WRITE_ADDRESS:
+            operation.state = WriteAddress(operation.writeBufferLen ? I2C_WRITE : I2C_READ);
+            break;
         case STATE_WRITE_DATA:
             operation.state = WriteData();
             break;
+        case STATE_READ_DATA:
+            operation.state = ReadData();
+            break;
+        case STATE_READ_COMPLETE:
+            Stop();
+            break;
+            
+        case STATE_IDLE:
+        case STATE_ERROR:
+            break;
+
         default:
             ClearOp();
             break;
     }
 }
 
-uint8_t I2C_Write(uint8_t address, uint8_t direction, uint8_t* data, uint8_t len)
+void I2C_Write(uint8_t address, const void* data, uint8_t len)
 {
-    if (IsBusy()) return 0;
+    if (IsBusy()) return;
     
     operation.type = OP_WRITE;
-    operation.state = STATE_WRITE_START;
-    operation.address = I2C_ADDRESS(address, direction);
-    operation.buffer = data;
-    operation.bufferLen = len;
+    operation.address = address;
+    operation.writeBuffer = data;
+    operation.writeBufferLen = len;
+    operation.readBuffer = 0;
+    operation.readBufferLen = 0;
     
-    operation.stateHandler = WriteHandler;
+    operation.state = Start();
     
-    I2C_Start();
+    while (IsBusy());
+}
+
+void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, void* readData, uint8_t readLen)
+{
+    if (IsBusy()) return;
     
-    return ACKSTAT;
+    operation.type = OP_WRITE_READ;
+    operation.address = address;
+    operation.writeBuffer = writeData;
+    operation.writeBufferLen = writeLen;
+    operation.readBuffer = readData;
+    operation.readBufferLen = readLen;
+    
+    operation.state = Start();
+    
+    while (IsBusy());
+}
+
+void I2C_HandleInterrupt(void)
+{
+    if (PIR1bits.SSP1IF)
+    {
+        PIR1bits.SSP1IF = 0;
+        ExecuteStateMachine();
+    }
+    else if (PIR1bits.BCL1IF)
+    {
+        PIR1bits.BCL1IF = 0;
+        operation.state = STATE_ERROR;
+        ClearOp();
+    }
 }
