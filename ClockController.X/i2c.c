@@ -55,37 +55,9 @@ uint8_t IsBusy()
     return operation.type != OP_IDLE || SSP1STATbits.S || SSP1STATbits.BF;
 }
 
-void ResetBus()
-{
-    // Clear the analog registers (§16.5)
-    ANSELA = 0x00;
-
-    TRISA = 0x10;
-    RA5 = 1;
-    
-    while (!RA4)
-    {
-        RA5 = !RA5;
-        //__delay_ms(10);
-    }
-    
-    PORTA = 0;
-}
-
 void I2C_Host_Init(void)
 {
-    ResetBus();
-    
-    // set RA4 & RA5 as digital inputs (§25.2.2.3)
-    TRISA = 0x30;
-    
     // disable slew rate control for standard speed
-    // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1 / §18.8.2)
-    SSP1DATPPS = 4;
-    SSP1CLKPPS = 5;
-    RA4PPS = PPS_OUT_SDA1;
-    RA5PPS = PPS_OUT_SCL1;
-    
     SSP1STAT |= 
               SSPxSTAT_SLEW_RATE_CTL_ENABLED // 100 kHz
             | SSPxSTAT_CKE_SMBUS_DISABLED;

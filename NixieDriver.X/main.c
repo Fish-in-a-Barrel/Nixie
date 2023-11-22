@@ -44,6 +44,7 @@ const int PWM_RAMP_TIME = 150;
 const int PWM_RAMP_STEP_SIZE = PWM_MAX / PWM_RAMP_STEPS;
 const int PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
 
+
 void InitPins()
 {
     // I2C pins (RA4 and RA5) must be configured as inputs (§25.2.2.3)

@@ -1,4 +1,5 @@
 build
+buildLog
 dist
 *.log
 *.log.inx
