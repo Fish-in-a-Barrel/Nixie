@@ -26,7 +26,7 @@ void EnableInterrupts()
     PIE1bits.BCL1IE = 1;
     
     // Enable EUSART interrupts (§12.9.3)
-    //PIE1bits.RC1IE = 1;
+    PIE1bits.RC1IE = 1;
 }
 
 uint8_t rtcBuffer[6] = { 0, 0, 0, 0, 0, 0 };
@@ -76,9 +76,12 @@ void CheckGPS()
 {
     if (gpsData.updated)
     {
-        GPS_ConvertToLocalTime();
-        
-        // TODO: Compare to RTC and update RTC as needed
+        if ('A' == gpsData.status)
+        {
+            GPS_ConvertToLocalTime();
+
+            // TODO: Compare to RTC and update RTC as needed
+        }
         
         gpsData.updated = 0;
     }

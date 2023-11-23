@@ -1,5 +1,4 @@
-#include <pic16f15213.h>
-
+#include <xc.h>
 #include "clock.h"
 
 void InitClock(void)

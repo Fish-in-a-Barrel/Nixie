@@ -15,6 +15,7 @@
       <itemPath>gps.h</itemPath>
       <itemPath>bcd_utils.h</itemPath>
       <itemPath>time_utils.h</itemPath>
+      <itemPath>gps_utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -31,6 +32,7 @@
       <itemPath>bcd_utils.c</itemPath>
       <itemPath>time_utils.c</itemPath>
       <itemPath>clock.c</itemPath>
+      <itemPath>gps_utils.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

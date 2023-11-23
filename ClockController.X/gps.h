@@ -5,11 +5,11 @@
 
 struct GpsData
 {
-    char time[6];
-    char date[6];
-    char status;
-    char lat[9];
-    char lon[9];
+    uint8_t time[6];
+    uint8_t date[6];
+    uint8_t status;
+    uint8_t lat[2];
+    uint8_t lon[3];
     uint8_t dst;
     
     uint8_t updated;
