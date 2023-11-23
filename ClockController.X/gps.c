@@ -46,6 +46,9 @@ const uint8_t FIELD_OFFSET[5] =
     4  // (9) date
 };
 
+char buffer[64];
+uint16_t bi = 0;
+
 uint8_t gState = STATE_AWAIT_START;
 uint8_t gField = FIELD_TIME;
 uint8_t gCharCounter = 0;
@@ -294,6 +297,12 @@ void GPS_HandleInterrupt(void)
     // Clear the interrupt
     PIR1bits.RC1IF = 0;
     
+    if (RC1STAbits.OERR)
+    {
+        RC1STAbits.CREN = 0;
+        RC1STAbits.CREN = 1;
+    }
+    
     uint8_t error = RC1STAbits.FERR;
     char data = RC1REG;
     
@@ -302,6 +311,12 @@ void GPS_HandleInterrupt(void)
     {
         gState = STATE_AWAIT_START;
         return;
+    }
+    
+    buffer[bi++] = data;
+    if (bi > 64)
+    {
+        bi = 0;
     }
     
     // Run the state machine.

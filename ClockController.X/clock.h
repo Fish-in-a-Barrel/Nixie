@@ -8,7 +8,11 @@
 #ifndef CLOCK_H
 #define	CLOCK_H
 
-#define _XTAL_FREQ (1000 * 1000ul) // 1 MHz
+#define SPEED 4
+
+#define _XTAL_FREQ (SPEED * 1000 * 1000ul)
+
+void InitClock(void);
 
 #endif	/* CLOCK_H */
 

@@ -3,7 +3,7 @@
 #include "clock.h"
 #include "pps_outputs.h"
 
-#define I2C_BAUD (100 * 1000ul) // 100 kHz
+#define I2C_BAUD (400 * 1000ul) // 100 kHz
 
 #define I2C_ADDRESS(address, rw) (uint8_t)((address << 1) | rw)
 

@@ -26,7 +26,7 @@ void EnableInterrupts()
     PIE1bits.BCL1IE = 1;
     
     // Enable EUSART interrupts (§12.9.3)
-    PIE1bits.RC1IE = 1;
+    //PIE1bits.RC1IE = 1;
 }
 
 uint8_t rtcBuffer[6] = { 0, 0, 0, 0, 0, 0 };
@@ -35,6 +35,8 @@ struct RtcData rtc;
 void UpdateNixieDrivers()
 {
     uint8_t digit = rtc.seconds01;
+//    static uint8_t count = 0;
+//    count = (count + 1) % 2;
     
     I2C_Write(0x01, &digit, sizeof(digit));
 }
@@ -48,15 +50,15 @@ void ReadRTC()
 
 void SetClock()
 {
-    rtc.minutes01 = 5;
-    rtc.minutes10 = 4;
+    rtc.minutes01 = 0;
+    rtc.minutes10 = 1;
     
-    rtc.hour01 = 2;
-    rtc.hours10 = 1;
+    rtc.hour01 = 0;
+    rtc.hours10 = 2;
     rtc.hoursType = 1;
     
     rtc.date01 = 2;
-    rtc.date10 = 1;
+    rtc.date10 = 2;
     
     rtc.month01 = 1;
     rtc.month10 = 1;
@@ -88,6 +90,7 @@ void main(void)
     I2C_Host_Init();
     SerialInit();
     EnableInterrupts();
+    InitClock();
     
     //SetClock();
     
