@@ -36,8 +36,6 @@ void main(void)
     
     InitDisplay();
     
-    __delay_ms(500);
-    
     while (1)
     {
         GetButtonState();
