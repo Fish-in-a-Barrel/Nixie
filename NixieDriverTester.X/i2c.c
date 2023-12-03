@@ -33,7 +33,12 @@ static struct
 {
     uint8_t type;
     uint8_t state;
+    
     uint8_t address;
+    
+    WriteCallback* callback;
+    struct WriteCallbackContext* callbackContext;
+    
     const uint8_t* writeBuffer;
     uint8_t writeBufferLen;
     uint8_t* readBuffer;
@@ -118,7 +123,14 @@ uint8_t WriteAddress(uint8_t direction)
 
 uint8_t WriteData()
 {
-    if (operation.writeBuffer && operation.writeBufferLen)
+    if (operation.callback && operation.callback(operation.callbackContext))
+    {
+        SSP1BUF = operation.callbackContext->data;
+        ++operation.callbackContext->count;
+        
+        return STATE_WRITE_DATA;
+    }
+    else if (operation.writeBuffer && operation.writeBufferLen)
     {
         SSP1BUF = *(operation.writeBuffer++);
         --operation.writeBufferLen;
@@ -178,7 +190,8 @@ void ExecuteStateMachine()
     switch (operation.state)
     {
         case STATE_WRITE_ADDRESS:
-            operation.state = WriteAddress(operation.writeBufferLen ? I2C_WRITE : I2C_READ);
+            operation.state = WriteAddress(
+                    (operation.writeBufferLen || operation.callback) ? I2C_WRITE : I2C_READ);
             break;
         case STATE_WRITE_DATA:
             operation.state = WriteData();
@@ -214,6 +227,24 @@ void I2C_Write(uint8_t address, const void* data, uint8_t len)
     operation.state = Start();
     
     while (IsBusy());
+}
+
+void I2C_WriteWithCallback(uint8_t address, WriteCallback* callback, struct WriteCallbackContext* context)
+{
+    if (IsBusy()) return;
+    
+    operation.type = OP_WRITE;
+    operation.address = address;
+    operation.callback = callback;
+    operation.callbackContext = context;
+    operation.callbackContext->count = 0;    
+    
+    operation.writeBuffer = 0;
+    operation.writeBufferLen = 0;
+    operation.readBuffer = 0;
+    operation.readBufferLen = 0;
+    
+    operation.state = Start();
 }
 
 void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, void* readData, uint8_t readLen)

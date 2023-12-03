@@ -12,6 +12,7 @@
       <itemPath>pwm.h</itemPath>
       <itemPath>i2c.h</itemPath>
       <itemPath>i2c_register_bits.h</itemPath>
+      <itemPath>oled.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -26,6 +27,7 @@
       <itemPath>button.c</itemPath>
       <itemPath>pwm.c</itemPath>
       <itemPath>i2c.c</itemPath>
+      <itemPath>oled.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
