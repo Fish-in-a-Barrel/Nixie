@@ -1,0 +1,48 @@
+#include <xc.h>
+
+#include "pwm.h"
+#include "clock.h"
+
+#define PWM_FREQ (32 * 1000)
+#define TMR2_RESET ((_XTAL_FREQ / 4) / PWM_FREQ)
+
+#if TMR2_RESET > 0xFF
+/*
+    The timer reset value is too large (greater than 255). To fix:
+    - pre-scale the clock (§21.10.3)
+    - lower the system oscillator frequency
+    - decrease the PWM frequency
+ */
+#endif
+
+void InitPWM(uint8_t dutyCycle)
+{
+    // Use the F_osc/4 source, as required for PWM (§21.10.5, §23.9)
+    T2CLKCON = 0x1;
+    
+    uint16_t reset = TMR2_RESET;
+    uint8_t shift = 0;
+    
+    // 250 tick counter reset results (§21.10.2)
+    T2PR = TMR2_RESET;
+    SetPwmDutyCycle(dutyCycle);
+    
+    // Mode is free-running, period-pulse, software-gated (§21.10.4)
+    T2HLT = 0x00;    
+    
+    // Enable the timer with a 1:1 pre-scaler (§21.10.3)
+    T2CON = 0x80 | 0x00 | 0x00;
+
+    // Enable PWM3
+    PWM3CON = 0x80;
+}
+
+void SetPwmDutyCycle(uint16_t dutyCycle)
+{
+    // Convert to fixed precision with 2 "decimal" places
+    uint16_t pwm = (dutyCycle << 2) * TMR2_RESET / 100;
+    
+    // §23.11.2
+    PWM3DCH = (uint8_t)(pwm >> 2);
+    PWM3DCL = (uint8_t)((pwm & 0x3) << 6);
+}

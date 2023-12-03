@@ -9,6 +9,7 @@
       <itemPath>pins.h</itemPath>
       <itemPath>pps_outputs.h</itemPath>
       <itemPath>button.h</itemPath>
+      <itemPath>pwm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -21,6 +22,7 @@
       <itemPath>clock.c</itemPath>
       <itemPath>pins.c</itemPath>
       <itemPath>button.c</itemPath>
+      <itemPath>pwm.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
