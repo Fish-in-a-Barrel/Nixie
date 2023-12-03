@@ -29,7 +29,7 @@ void InitI2CPins(void)
     // Set RA4 & RA5 as digital inputs (§25.2.2.3)
     TRISA = 0x38;
     
-    // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1;  §18.8.2)
+    // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1; §18.3; §18.8.2)
     SSP1DATPPS = 4;
     SSP1CLKPPS = 5;
     RA4PPS = PPS_OUT_SDA1;
@@ -38,12 +38,13 @@ void InitI2CPins(void)
 
 void InitButtonPins(void)
 {
-    // Set RA2 as input for button
-    TRISA |= 0x04;
+    // Set RA1 as input for button
+    TRISA |= 0x02;
 }
 
 void InitPwmPins(void)
 {
+    // Remap the PWM output to pin 2 (§18.3)
     RA2PPS = PPS_OUT_PWM3;
 }
 
@@ -55,5 +56,5 @@ void InitPins(void)
     
     InitI2CPins();
     //InitButtonPins();
-    InitPwmPins();
+    //InitPwmPins();
 }
