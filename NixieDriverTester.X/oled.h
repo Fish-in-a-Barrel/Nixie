@@ -3,7 +3,7 @@
 
 #include <xc.h>
 
-void InitDisplay(void);
+void SetupDisplay(void);
 
 void DrawCharacter(uint8_t row, uint8_t col, uint8_t code);
 

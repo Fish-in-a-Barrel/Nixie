@@ -34,18 +34,33 @@ void main(void)
     
     EnableInterrupts();
     
-    InitDisplay();
-
-    for (int i = 0; i < 14; ++i)
-    {
-        __delay_ms(25);
-        DrawCharacter(i / 10, i % 10, i);
-    }
+    SetupDisplay();
+    
+    // Voltage: --- V
+    DrawCharacter(3, 0, 1);
+    DrawCharacter(3, 1, 8);
+    DrawCharacter(3, 2, 0);
+    DrawCharacter(3, 4, 10);
+    
+    // Duty Cycle: -- %
+    DrawCharacter(3, 10, 5);
+    DrawCharacter(3, 11, 0);
+    DrawCharacter(3, 13, 11);
+    
+    // Current driven tube: *
+    DrawCharacter(0, 0, 12);
+    
+    // Button indicator: *
+    DrawCharacter(0, 19, 12);
+    
+    uint8_t counter = 0;
     
     while (1)
     {
         GetButtonState();
         
-        __delay_ms(10);
+        DrawCharacter(0, 0, counter++ % 10);
+        
+        __delay_ms(500);
     }
 }

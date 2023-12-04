@@ -5,7 +5,6 @@
 
 struct WriteCallbackContext
 {
-    uint8_t operation;
     uint8_t id;
     uint16_t count;
     

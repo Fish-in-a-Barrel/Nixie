@@ -49,6 +49,8 @@ void ClearOp()
 {
     operation.type = OP_IDLE;
     if (operation.state != STATE_ERROR) operation.state = STATE_IDLE;
+    operation.callback = NULL;
+    operation.callbackContext = NULL;
     operation.writeBuffer = NULL;
     operation.writeBufferLen = 0;
     operation.readBuffer = NULL;

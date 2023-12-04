@@ -9,8 +9,7 @@
 #define WIDTH 128
 #define HEIGHT 32
 
-#define OP_CLEAR 0
-#define OP_CHARACTER 1
+static struct WriteCallbackContext gContext;
 
 void SendAddressBounds(uint8_t rowStart, uint8_t rowEnd, uint8_t colStart, uint8_t colEnd)
 {
@@ -31,24 +30,32 @@ void SendAddressBounds(uint8_t rowStart, uint8_t rowEnd, uint8_t colStart, uint8
 
 uint8_t ClearCallback(struct WriteCallbackContext* context)
 {
-    uint8_t x = ((context->count - 1) % 128) / 10;
-    uint8_t y = (context->count - 1) / 256;
+    if (0 == context->count)
+    {
+        context->data = 0x40;
+        return 1;
+    }
+    else if (context->count <= (HEIGHT * WIDTH) / 8)
+    {
+        context->data = 0;
+        return 1;
+    }
     
-    context->data = (0 == context->count) ? 0x40 : (x + y == 0 ? 0xFF : 0x00);
-    return context->count <= (HEIGHT * WIDTH) / 8;
+    gContext.id = 0xFF;
+    return 0;
 }
 
 void Clear(void)
 {
-    static struct WriteCallbackContext context;
-    
     SendAddressBounds(0, 0xFF, 0, WIDTH - 1);
     
-    I2C_WriteWithCallback(I2C_ADDRESS, &ClearCallback, &context);
+    gContext.id = 0;
+    
+    I2C_WriteWithCallback(I2C_ADDRESS, &ClearCallback, &gContext);
 }
 
  
-void InitDisplay(void)
+void SetupDisplay(void)
 {
     const uint8_t init1[] =
     {
@@ -121,15 +128,17 @@ uint8_t DrawCharacterCallback(struct WriteCallbackContext* context)
         return 1;
     }
     
+    context->id = 0xFF;
     return 0;
 }
 
 void DrawCharacter(uint8_t row, uint8_t col, uint8_t code)
 {
-    static struct WriteCallbackContext context;
-    context.id = code;
+    while (gContext.id != 0xFF);
+    
+    gContext.id = code;
     
     SendAddressBounds(row, row + 1, col * 6, (col + 1) * 6);
 
-    I2C_WriteWithCallback(I2C_ADDRESS, &DrawCharacterCallback, &context);
+    I2C_WriteWithCallback(I2C_ADDRESS, &DrawCharacterCallback, &gContext);
 }
