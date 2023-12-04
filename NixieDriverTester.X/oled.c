@@ -2,6 +2,7 @@
 
 #include "oled.h"
 #include "i2c.h"
+#include "font8x5.h"
 
 #define I2C_ADDRESS 0x3C
 
@@ -9,6 +10,7 @@
 #define HEIGHT 32
 
 #define OP_CLEAR 0
+#define OP_CHARACTER 1
 
 void SendAddressBounds(uint8_t rowStart, uint8_t rowEnd, uint8_t colStart, uint8_t colEnd)
 {
@@ -99,4 +101,35 @@ void InitDisplay(void)
     I2C_Write(I2C_ADDRESS, init5, sizeof(init5));
     
     Clear();
+}
+
+uint8_t DrawCharacterCallback(struct WriteCallbackContext* context)
+{
+    if (0 == context->count)
+    {
+        context->data = 0x40;
+        return 1;
+    }
+    else if (context->count <= FONT_WIDTH)
+    {
+        context->data = font8x5[context->id][context->count - 1];
+        return 1;
+    }
+    else if (context->count == FONT_WIDTH + 1)
+    {
+        context->data = 0;
+        return 1;
+    }
+    
+    return 0;
+}
+
+void DrawCharacter(uint8_t row, uint8_t col, uint8_t code)
+{
+    static struct WriteCallbackContext context;
+    context.id = code;
+    
+    SendAddressBounds(row, row + 1, col * 6, (col + 1) * 6);
+
+    I2C_WriteWithCallback(I2C_ADDRESS, &DrawCharacterCallback, &context);
 }

@@ -35,6 +35,12 @@ void main(void)
     EnableInterrupts();
     
     InitDisplay();
+
+    for (int i = 0; i < 14; ++i)
+    {
+        __delay_ms(25);
+        DrawCharacter(i / 10, i % 10, i);
+    }
     
     while (1)
     {

@@ -13,6 +13,7 @@
       <itemPath>i2c.h</itemPath>
       <itemPath>i2c_register_bits.h</itemPath>
       <itemPath>oled.h</itemPath>
+      <itemPath>font8x5.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -28,6 +29,7 @@
       <itemPath>pwm.c</itemPath>
       <itemPath>i2c.c</itemPath>
       <itemPath>oled.c</itemPath>
+      <itemPath>font8x5.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
