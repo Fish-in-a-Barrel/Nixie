@@ -48,6 +48,12 @@ void InitPwmPins(void)
     RA2PPS = PPS_OUT_PWM3;
 }
 
+void InitAdcPins(void)
+{
+    TRISA |= 0x04; // TODO: set to 0x01
+    ANSELA = 0x04; // TODO: set to 0x01
+}
+
 void InitPins(void)
 {
     // Clear the analog registers (§16.5; §24.1.2.1)
@@ -55,6 +61,7 @@ void InitPins(void)
     TRISA = 0x00;
     
     InitI2CPins();
+    InitAdcPins();
     //InitButtonPins();
     //InitPwmPins();
 }

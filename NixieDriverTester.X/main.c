@@ -7,6 +7,7 @@
 #include "pwm.h"
 #include "i2c.h"
 #include "oled.h"
+#include "adc.h"
 
 void __interrupt() ISR()
 {
@@ -25,11 +26,42 @@ void EnableInterrupts()
     PIE1bits.BCL1IE = 1;
 }
 
+void CheckAdc(void)
+{
+    //if (!PIR1bits.ADIF) return;    
+    
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO);
+    
+    // Pause global interrupts while reading the ADC value because this is not atomic.
+    INTCONbits.GIE = 0;
+    PIR1bits.ADIF = 0;
+    uint16_t adc = ADRES;
+    INTCONbits.GIE = 1;
+    
+    // Raw value in mV
+    adc *= 4;
+    
+    uint8_t digits[] = { 0, 0, 0 };
+    uint8_t i = 2;
+    while (adc > 0)
+    {
+        digits[i--] = adc % 10;
+        adc /= 10;
+    }
+
+    // Voltage: --- V
+    DrawCharacter(3, 0, digits[0]);
+    DrawCharacter(3, 1, digits[1]);
+    DrawCharacter(3, 2, digits[2]);
+}
+
 void main(void)
 {
     InitClock();
     InitPins();
     InitPWM(50);
+    InitAdc();
     I2C_Host_Init();
     
     EnableInterrupts();
@@ -58,9 +90,10 @@ void main(void)
     while (1)
     {
         GetButtonState();
+        CheckAdc();
         
         DrawCharacter(0, 0, counter++ % 10);
         
-        __delay_ms(500);
+        __delay_ms(50);
     }
 }
