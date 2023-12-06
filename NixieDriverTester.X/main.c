@@ -52,7 +52,7 @@ void EnableInterrupts()
     PIE1bits.BCL1IE = 1;
     
     // Enable the TMR2 interrupt for tick counting
-    PIE1bits.TMR2IE = 1;
+    //PIE1bits.TMR2IE = 1;
 }
 
 void GetCurrentVoltage(void)
