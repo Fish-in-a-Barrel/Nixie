@@ -144,17 +144,11 @@ void DrawStaticDisplaySymbols(void)
 
 void DisplayNumber(uint8_t number, int8_t digitCount, uint8_t x, uint8_t row)
 {
-    uint8_t digits[] = { 0, 0, 0 };
-    
-    int8_t i = digitCount - 1;
     while (number > 0)
     {
-        digits[i--] = number % 10;
+        DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
         number /= 10;
     }
-    
-    for (i = 0; i < digitCount; ++i)
-        DrawCharacter(row, (uint8_t)(x + i), digits[i]);
 }
 
 void RefreshDisplay()
