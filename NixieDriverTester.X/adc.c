@@ -21,7 +21,7 @@ void InitAdc(void)
     ADCON0bits.CHS = 2; // TODO change to 0
     
     // Trigger acquisition with PWM3 (§27.4.3)
-    ADACTbits.ACT = 0x10;
+    ADACTbits.ACT = 0x7;
     
     // Enable the ADC (§27.4.1)
     ADCON0bits.ON = 1;

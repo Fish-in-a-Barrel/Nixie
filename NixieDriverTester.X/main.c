@@ -7,7 +7,10 @@
 #include "pwm.h"
 #include "i2c.h"
 #include "oled.h"
+#include "font8x5.h"
 #include "adc.h"
+
+#define CATHODE_NONE 10
 
 #define HV_TARGET 180
 #define HV_DEADBAND 5
@@ -21,7 +24,7 @@ uint32_t gTickCount_32kHz = 0;
 uint8_t gVoltage = 0;
 
 uint8_t gNixieAutoIncrement = 1;
-uint8_t gCurrentCathode = 11;
+uint8_t gCurrentCathode = CATHODE_NONE;
 
 // This is a 10-bit fixed-precision int with 2 mantissa bits
 uint16_t gPwmDutyCycle = PWM_MIN << 2;
@@ -52,7 +55,7 @@ void EnableInterrupts()
     PIE1bits.TMR2IE = 1;
 }
 
-void GetCurrentNixieVoltage(void)
+void GetCurrentVoltage(void)
 {
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO);
@@ -84,7 +87,7 @@ void AdjustVoltagePwm(void)
 
 void UpdateNixieState(void)
 {
-    uint8_t targetCathode = 11;
+    uint8_t targetCathode = CATHODE_NONE;
     static uint32_t nixieStartTickCount = 0;
     static uint32_t buttonStartTickCount = 0;
     
@@ -133,61 +136,37 @@ void UpdateNixieState(void)
 void DrawStaticDisplaySymbols(void)
 {
         // Voltage: --- V
-    DrawCharacter(3, 0, 1);
-    DrawCharacter(3, 1, 8);
-    DrawCharacter(3, 2, 0);
-    DrawCharacter(3, 4, 10);
+    DrawCharacter(3, 4, CHAR_V);
     
     // Duty Cycle: -- %
-    DrawCharacter(3, 10, 5);
-    DrawCharacter(3, 11, 0);
-    DrawCharacter(3, 13, 11);
+    DrawCharacter(3, 13, CHAR_PCT);
+}
+
+void DisplayNumber(uint8_t number, int8_t digitCount, uint8_t x, uint8_t row)
+{
+    uint8_t digits[] = { 0, 0, 0 };
     
-    // Current driven tube: *
-    DrawCharacter(0, 0, 12);
+    int8_t i = digitCount - 1;
+    while (number > 0)
+    {
+        digits[i--] = number % 10;
+        number /= 10;
+    }
     
-    // Button indicator: *
-    DrawCharacter(0, 19, 12);
+    for (i = 0; i < digitCount; ++i)
+        DrawCharacter(row, (uint8_t)(x + i), digits[i]);
 }
 
 void RefreshDisplay()
 {
-    uint8_t counter = 0;
-        
-    DrawCharacter(0, 0, counter++ % 10);
+    uint8_t nixieState = (gCurrentCathode > CATHODE_NONE) ? gCurrentCathode : CHAR_DSH;
+    uint8_t autoState = gNixieAutoIncrement ? CHAR_AST : CHAR_SPC;
+    
+    DrawCharacter(0, 0, nixieState);
+    DrawCharacter(0, 1, autoState);
 
-    
-    //
-    // Voltage
-    //
-    
-    uint8_t number = gVoltage;
-    uint8_t digits[] = { 0, 0, 0 };
-    int8_t i = 2;
-    while (i >= 0)
-    {
-        digits[i--] = number % 10;
-        number /= 10;
-    }
-
-    DrawCharacter(3, 0, digits[0]);
-    DrawCharacter(3, 1, digits[1]);
-    DrawCharacter(3, 2, digits[2]);
-    
-    //
-    // Duty Cycle
-    //
-    
-    number = gPwmDutyCycle >> 2;
-    i = 1;
-    while (i >= 0)
-    {
-        digits[i--] = number % 10;
-        number /= 10;
-    }
-
-    DrawCharacter(3, 10, digits[0]);
-    DrawCharacter(3, 11, digits[1]);
+    DisplayNumber(gVoltage, 3, 0, 3);
+    DisplayNumber((uint8_t)(gPwmDutyCycle >> 2), 2, 10, 3);
 }
 
 void main(void)
@@ -205,7 +184,7 @@ void main(void)
     
     while (1)
     {
-        GetCurrentNixieVoltage();
+        GetCurrentVoltage();
         AdjustVoltagePwm();
         UpdateNixieState();
         RefreshDisplay();
