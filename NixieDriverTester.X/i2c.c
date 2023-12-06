@@ -249,6 +249,8 @@ void I2C_WriteWithCallback(uint8_t address, WriteCallback* callback, struct Writ
     operation.state = Start();
 }
 
+/*
+ * not needed for this application
 void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, void* readData, uint8_t readLen)
 {
     if (IsBusy()) return;
@@ -264,6 +266,7 @@ void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, voi
     
     while (IsBusy());
 }
+*/
 
 void I2C_HandleInterrupt(void)
 {

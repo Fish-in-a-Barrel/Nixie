@@ -60,8 +60,8 @@ void InitPins(void)
     PORTA = 0;
     TRISA = 0x00;
     
-    InitAdcPins();
+    //InitAdcPins();
     InitI2CPins();
-    InitButtonPins();
+    //InitButtonPins();
     InitPwmPins();
 }
