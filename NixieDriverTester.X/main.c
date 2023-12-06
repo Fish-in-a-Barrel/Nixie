@@ -13,8 +13,8 @@
 #define CATHODE_NONE 10
 
 #ifdef BREADBOARD
-#define HV_TARGET 12
-#define HV_DEADBAND 2
+#define HV_TARGET 120
+#define HV_DEADBAND 5
 #define HV_MIN (HV_TARGET - HV_DEADBAND)
 #define HV_MAX (HV_TARGET + HV_DEADBAND)
 
@@ -82,10 +82,8 @@ void GetCurrentVoltage(void)
     // This works out to 50 * 4.096 / 1024 = 0.2, or 1/5.
     gVoltage = (uint8_t)(adc / 5);
 #else
-    // (ADC_raw / 1024) * 4.096 = V on pin.
-    // multiply by 4 to compensate for the voltage divider supplying the pin.
-    // This works out to 4 * 4.096 / 1024 =~ 1/64.
-     gVoltage = (uint8_t)(adc / 55);
+    // this will be roughly 1/10s of volts
+    gVoltage = (uint8_t)((adc / 5) - (adc / 65.2));
 #endif
 }
 
@@ -206,6 +204,6 @@ void main(void)
         UpdateNixieState();
         RefreshDisplay();
         
-        __delay_ms(10);
+        __delay_ms(100);
     }
 }
