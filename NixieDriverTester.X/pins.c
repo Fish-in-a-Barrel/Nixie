@@ -33,21 +33,37 @@ void InitI2CPins(void)
 
 void InitButtonPins(void)
 {
+#ifndef BREADBOARD
     // Set RA1 as a discrete input for the button
     TRISA |= 0x02;
+#else
+    // Set RB6 as a discrete input for the button
+    TRISB |= 0x02;
+#endif
 }
 
 void InitPwmPins(void)
 {
+#ifndef BREADBOARD
     // Remap the PWM output to RA2 (§18.3)
     RA2PPS = PPS_OUT_PWM3;
+#else
+    // Remap the PWM output to RB7 (§18.3)
+    RB7PPS = PPS_OUT_PWM3;
+#endif
 }
 
 void InitAdcPins(void)
 {
+#ifndef BREADBOARD
     // Set RA0 as an analog input for voltage monitoring
     TRISA |= 0x01;
     ANSELA |= 0x01;
+#else
+    // Set RC5 as an analog input for voltage monitoring
+    TRISC |= 0x20;
+    ANSELC |= 0x20;
+#endif
 }
 
 void InitPins(void)
@@ -55,13 +71,23 @@ void InitPins(void)
     // Clear the analog registers (§16.5; §24.1.2.1)
     ANSELA = 0x00;
 
+#ifdef BREADBOARD
+    TRISB = 0x00;
+    ANSELB = 0x00;
+    PORTB = 0x00;
+
+    TRISC = 0x00;
+    ANSELC = 0x00;
+    PORTC = 0x00;
+#endif
+
     ResetI2C();
     
-    PORTA = 0;
+    PORTA = 0x00;
     TRISA = 0x00;
-    
-    //InitAdcPins();
+        
+    InitAdcPins();
     InitI2CPins();
-    //InitButtonPins();
+    InitButtonPins();
     InitPwmPins();
 }

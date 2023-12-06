@@ -12,6 +12,15 @@
 
 #define CATHODE_NONE 10
 
+#ifdef BREADBOARD
+#define HV_TARGET 12
+#define HV_DEADBAND 2
+#define HV_MIN (HV_TARGET - HV_DEADBAND)
+#define HV_MAX (HV_TARGET + HV_DEADBAND)
+
+#define PWM_MIN 65
+#define PWM_MAX 90
+#else
 #define HV_TARGET 180
 #define HV_DEADBAND 5
 #define HV_MIN (HV_TARGET - HV_DEADBAND)
@@ -19,8 +28,9 @@
 
 #define PWM_MIN 80
 #define PWM_MAX 95
+#endif
 
-uint32_t gTickCount_32kHz = 0;
+uint32_t gTickCount = 0;
 uint8_t gVoltage = 0;
 
 uint8_t gNixieAutoIncrement = 1;
@@ -36,7 +46,7 @@ void __interrupt() ISR()
     
     if (PIR1bits.TMR2IF)
     {
-        ++gTickCount_32kHz;
+        ++gTickCount;
         PIR1bits.TMR2IF = 0;
     }
 }
@@ -66,10 +76,17 @@ void GetCurrentVoltage(void)
     uint16_t adc = ADRES;
     INTCONbits.GIE = 1;
     
-    // (ADC_raw / 1024) * 4.096 = mV on pin.
+#ifndef BREADBOARD
+    // (ADC_raw / 1024) * 4.096 = V on pin.
     // multiply by 50 to compensate for the voltage divider supplying the pin.
     // This works out to 50 * 4.096 / 1024 = 0.2, or 1/5.
     gVoltage = (uint8_t)(adc / 5);
+#else
+    // (ADC_raw / 1024) * 4.096 = V on pin.
+    // multiply by 4 to compensate for the voltage divider supplying the pin.
+    // This works out to 4 * 4.096 / 1024 =~ 1/64.
+     gVoltage = (uint8_t)(adc / 55);
+#endif
 }
 
 void AdjustVoltagePwm(void)
@@ -97,9 +114,9 @@ void UpdateNixieState(void)
         if (gNixieAutoIncrement)
         {
             // This doesn't handle roll-over of the tick counter, but that's not important for this application.
-            if (gTickCount_32kHz - nixieStartTickCount > 32000)
+            if (gTickCount - nixieStartTickCount < _PWM_FREQ)
             {
-                nixieStartTickCount = gTickCount_32kHz;
+                nixieStartTickCount = gTickCount;
 
                 targetCathode = (11 == gCurrentCathode) ? 0 : (gCurrentCathode + 1) % 10;
             }
@@ -112,14 +129,14 @@ void UpdateNixieState(void)
         switch (GetButtonState())
         {
             case 0b10: // Transition to "pressed" state
-                buttonStartTickCount = gTickCount_32kHz;
+                buttonStartTickCount = gTickCount;
                 break;
             case 0b11: // Transition to "released" state
                 gCurrentCathode = (gCurrentCathode + 1) % 10;
                 I2C_Write(0x0F, &gCurrentCathode, sizeof(gCurrentCathode));
                 
                 // If held for more than 2 seconds, toggle auto-increment
-                if ((gTickCount_32kHz - buttonStartTickCount) > 64000)
+                if ((gTickCount - buttonStartTickCount) < 2 * _PWM_FREQ)
                 {
                     gNixieAutoIncrement = !gNixieAutoIncrement;
                 }
@@ -153,6 +170,12 @@ void DisplayNumber(uint8_t number, int8_t digitCount, uint8_t x, uint8_t row)
 
 void RefreshDisplay()
 {
+    static uint8_t ticker = 0;
+    for (uint8_t i = 0; i < 4; ++i)
+        DrawCharacter(i, 20, i == ticker % 4 ? CHAR_AST : CHAR_SPC);
+
+    ++ticker;
+    
     uint8_t nixieState = (gCurrentCathode > CATHODE_NONE) ? gCurrentCathode : CHAR_DSH;
     uint8_t autoState = gNixieAutoIncrement ? CHAR_AST : CHAR_SPC;
     

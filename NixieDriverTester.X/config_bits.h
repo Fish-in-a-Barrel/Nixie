@@ -34,7 +34,11 @@ extern "C" {
 #pragma config WRTB = OFF       // Boot Block Write Protection bit (Boot Block is not write-protected)
 #pragma config WRTC = OFF       // Configuration Registers Write Protection bit (Configuration Registers are not write-protected)
 #pragma config WRTSAF = OFF     // Storage Area Flash (SAF) Write Protection bit (SAF is not write-protected)
+#if BREADBOARD
+#pragma config LVP = OFF
+#else
 #pragma config LVP = ON         // Low Voltage Programming Enable bit (Low Voltage programming enabled. MCLR/Vpp pin function is MCLR. MCLRE Configuration bit is ignored.)
+#endif
 
 // CONFIG5
 #pragma config CP = OFF         // User Program Flash Memory Code Protection bit (User Program Flash Memory code protection is disabled)

@@ -3,8 +3,7 @@
 #include "pwm.h"
 #include "clock.h"
 
-#define PWM_FREQ (32 * 1000)
-#define TMR2_RESET ((_XTAL_FREQ / 4) / PWM_FREQ)
+#define TMR2_RESET ((_XTAL_FREQ / 4) / _PWM_FREQ)
 
 #if TMR2_RESET > 0xFF
 /*
@@ -36,10 +35,8 @@ void InitPWM(uint16_t dutyCycle)
 
 void SetPwmDutyCycle(uint16_t dutyCycle)
 {
-    // Convert to fixed precision with 2 "decimal" places
     uint16_t pwm = dutyCycle * TMR2_RESET / 100;
     
     // §23.11.2
-    PWM3DCH = (uint8_t)(pwm >> 2);
-    PWM3DCL = (uint8_t)((pwm & 0x3) << 6);
+    PWM3DC = pwm << 6;
 }

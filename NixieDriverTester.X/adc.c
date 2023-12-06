@@ -18,7 +18,13 @@ void InitAdc(void)
     ADCON1bits.ADPREF = 0x3;
     
     // Select RA0 as the ADC channel (§27.4.1)
-    ADCON0bits.CHS = 2; // TODO change to 0
+#ifndef BREADBOARD
+    // Select RA0 as the ADC channel (§27.4.1)
+    ADCON0bits.CHS = 0;
+#else
+    // Select RC5 as the ADC channel (§27.4.1)
+    ADCON0bits.CHS = 0x15;
+#endif
     
     // Trigger acquisition with PWM3 (§27.4.3)
     ADACTbits.ACT = 0x7;
