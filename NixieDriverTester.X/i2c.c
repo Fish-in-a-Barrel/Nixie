@@ -47,8 +47,14 @@ static struct
 
 void ClearOp()
 {
+    if (operation.state == STATE_ERROR) 
+    {
+            SSP1CON1bits.SSPEN = 0;
+            SSP1CON1bits.SSPEN = 1;        
+    }
+
     operation.type = OP_IDLE;
-    if (operation.state != STATE_ERROR) operation.state = STATE_IDLE;
+    operation.state = STATE_IDLE;
     operation.callback = NULL;
     operation.callbackContext = NULL;
     operation.writeBuffer = NULL;
@@ -206,7 +212,6 @@ void ExecuteStateMachine()
             break;
             
         case STATE_IDLE:
-        case STATE_ERROR:
             break;
 
         default:
