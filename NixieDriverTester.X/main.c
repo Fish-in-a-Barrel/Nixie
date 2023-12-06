@@ -9,6 +9,16 @@
 #include "oled.h"
 #include "adc.h"
 
+#define HV_TARGET 180
+#define HV_DEADBAND 5
+#define PWM_MIN 80
+#define PWM_MAX 95
+
+uint8_t gVoltage = 0;
+
+// This is a 10-bit fixed-precision int with 2 mantissa bits
+uint16_t gPwm = PWM_MIN << 2;
+
 void __interrupt() ISR()
 {
     // Dispatch interrupts to handlers (§12.9.6)
@@ -26,10 +36,8 @@ void EnableInterrupts()
     PIE1bits.BCL1IE = 1;
 }
 
-void CheckAdc(void)
+void GetCurrentNixieVoltage(void)
 {
-    //if (!PIR1bits.ADIF) return;    
-    
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO);
     
@@ -39,36 +47,28 @@ void CheckAdc(void)
     uint16_t adc = ADRES;
     INTCONbits.GIE = 1;
     
-    // Raw value in mV
-    adc *= 4;
-    
-    uint8_t digits[] = { 0, 0, 0 };
-    uint8_t i = 2;
-    while (adc > 0)
-    {
-        digits[i--] = adc % 10;
-        adc /= 10;
-    }
-
-    // Voltage: --- V
-    DrawCharacter(3, 0, digits[0]);
-    DrawCharacter(3, 1, digits[1]);
-    DrawCharacter(3, 2, digits[2]);
+    // (ADC_raw / 1024) * 4.096 = mV on pin.
+    // multiply by 50 to compensate for the voltage divider supplying the pin.
+    // This works out to 50 * 4.096 / 1024 = 0.2, or 1/5.
+    gVoltage = (uint8_t)(adc / 5);
 }
 
-void main(void)
+void AdjustVoltagePwm(void)
 {
-    InitClock();
-    InitPins();
-    InitPWM(50);
-    InitAdc();
-    I2C_Host_Init();
-    
-    EnableInterrupts();
-    
-    SetupDisplay();
-    
-    // Voltage: --- V
+    // No real control strategy here. Just push the voltage towards the SP by adjusting the PWM slowly.
+    if (HV_TARGET - HV_DEADBAND > gVoltage)
+    {
+        if (PWM_MAX < gPwm >> 2) SetPwmDutyCycle(++gPwm);
+    }
+    else if (HV_TARGET + HV_DEADBAND < gVoltage)
+    {
+        if (PWM_MIN > gPwm >> 2) SetPwmDutyCycle(--gPwm);
+    }
+}
+
+void DrawStaticDisplaySymbols(void)
+{
+        // Voltage: --- V
     DrawCharacter(3, 0, 1);
     DrawCharacter(3, 1, 8);
     DrawCharacter(3, 2, 0);
@@ -84,15 +84,56 @@ void main(void)
     
     // Button indicator: *
     DrawCharacter(0, 19, 12);
-    
+}
+
+void RefreshDisplay()
+{
     uint8_t counter = 0;
+        
+    DrawCharacter(0, 0, counter++ % 10);
+
+    uint8_t number = gVoltage;
+    uint8_t digits[] = { 0, 0, 0 };
+    uint8_t i = 2;
+    while (number > 0)
+    {
+        digits[i--] = number % 10;
+        number /= 10;
+    }
+
+    // Voltage: --- V
+    DrawCharacter(3, 0, digits[0]);
+    DrawCharacter(3, 1, digits[1]);
+    DrawCharacter(3, 2, digits[2]);
+}
+
+void main(void)
+{
+    InitClock();
+    InitPins();
+    InitPWM(gPwm);
+    InitAdc();
+    I2C_Host_Init();
+    
+    EnableInterrupts();
+    
+    SetupDisplay();
+    DrawStaticDisplaySymbols();
     
     while (1)
     {
         GetButtonState();
-        CheckAdc();
         
-        DrawCharacter(0, 0, counter++ % 10);
+        // TODO: react to button presses
+        
+        GetCurrentNixieVoltage();
+        AdjustVoltagePwm();
+        
+        // TODO: disable nixie tubes if the voltage is out of band.
+        
+        // TODO: auto-increment nixie cathode
+        
+        RefreshDisplay();
         
         __delay_ms(50);
     }

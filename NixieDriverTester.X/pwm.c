@@ -15,13 +15,10 @@
  */
 #endif
 
-void InitPWM(uint8_t dutyCycle)
+void InitPWM(uint16_t dutyCycle)
 {
     // Use the F_osc/4 source, as required for PWM (§21.10.5, §23.9)
     T2CLKCON = 0x1;
-    
-    uint16_t reset = TMR2_RESET;
-    uint8_t shift = 0;
     
     // 250 tick counter reset results (§21.10.2)
     T2PR = TMR2_RESET;
@@ -40,7 +37,7 @@ void InitPWM(uint8_t dutyCycle)
 void SetPwmDutyCycle(uint16_t dutyCycle)
 {
     // Convert to fixed precision with 2 "decimal" places
-    uint16_t pwm = (dutyCycle << 2) * TMR2_RESET / 100;
+    uint16_t pwm = dutyCycle * TMR2_RESET / 100;
     
     // §23.11.2
     PWM3DCH = (uint8_t)(pwm >> 2);

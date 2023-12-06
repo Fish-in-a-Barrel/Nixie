@@ -7,7 +7,7 @@
 // This usually happens as a result of a controller reset (e.g. during debugging).
 void ResetI2C(void)
 {
-    // Setup RA4 as input and RA5 as output
+    // Setup RA4 (SDA) as input and RA5 (SCL) as output
     TRISA = 0x10;
     RA5 = 1;
     
@@ -17,15 +17,10 @@ void ResetI2C(void)
         RA5 = !RA5;
         __delay_ms(10);
     }
-    
-    // Clear the outputs
-    PORTA = 0;
 }
 
 void InitI2CPins(void)
 {
-    ResetI2C();
-    
     // Set RA4 & RA5 as digital inputs (§25.2.2.3)
     TRISA = 0x38;
     
@@ -38,30 +33,35 @@ void InitI2CPins(void)
 
 void InitButtonPins(void)
 {
-    // Set RA1 as input for button
+    // Set RA1 as a discrete input for the button
     TRISA |= 0x02;
 }
 
 void InitPwmPins(void)
 {
-    // Remap the PWM output to pin 2 (§18.3)
+    // Remap the PWM output to RA2 (§18.3)
     RA2PPS = PPS_OUT_PWM3;
 }
 
 void InitAdcPins(void)
 {
-    TRISA |= 0x04; // TODO: set to 0x01
-    ANSELA = 0x04; // TODO: set to 0x01
+    // Set RA0 as an analog input for voltage monitoring
+    TRISA |= 0x01;
+    ANSELA |= 0x01;
 }
 
 void InitPins(void)
 {
     // Clear the analog registers (§16.5; §24.1.2.1)
     ANSELA = 0x00;
+
+    ResetI2C();
+    
+    PORTA = 0;
     TRISA = 0x00;
     
-    InitI2CPins();
     InitAdcPins();
-    //InitButtonPins();
-    //InitPwmPins();
+    InitI2CPins();
+    InitButtonPins();
+    InitPwmPins();
 }
