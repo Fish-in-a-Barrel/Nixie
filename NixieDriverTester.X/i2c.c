@@ -223,7 +223,10 @@ void I2C_Write(uint8_t address, const void* data, uint8_t len)
     operation.address = address;
     operation.writeBuffer = data;
     operation.writeBufferLen = len;
-    operation.readBuffer = 0;
+    
+    operation.callback = NULL;
+    operation.callbackContext = NULL;    
+    operation.readBuffer = NULL;
     operation.readBufferLen = 0;
     
     operation.state = Start();

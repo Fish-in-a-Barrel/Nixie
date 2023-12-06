@@ -82,35 +82,11 @@ void SetupDisplay(void)
     Clear();
 }
 
-uint8_t DrawCharacterCallback(struct WriteCallbackContext* context)
-{
-    if (0 == context->count)
-    {
-        context->data = 0x40;
-        return 1;
-    }
-    else if (context->count <= FONT_WIDTH)
-    {
-        context->data = font8x5[context->id][context->count - 1];
-        return 1;
-    }
-    else if (context->count == FONT_WIDTH + 1)
-    {
-        context->data = 0;
-        return 1;
-    }
-    
-    context->id = 0xFF;
-    return 0;
-}
-
 void DrawCharacter(uint8_t row, uint8_t col, uint8_t code)
 {
-    while (gContext.id != 0xFF);
-    
-    gContext.id = code;
+    uint8_t buffer[] = { 0x40, 0, 0, 0, 0, 0, 0 };
+    for (uint8_t i = 0; i < FONT_WIDTH; ++i) buffer[i + 1] = font8x5[code][i];
     
     SendAddressBounds(row, row + 1, col * 6, (col + 1) * 6);
-
-    I2C_WriteWithCallback(I2C_ADDRESS, &DrawCharacterCallback, &gContext);
+    I2C_Write(I2C_ADDRESS, buffer, sizeof(buffer));
 }
