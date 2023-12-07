@@ -83,7 +83,7 @@ void GetCurrentVoltage(void)
     gVoltage = (uint8_t)(adc / 5);
 #else
     // this will be roughly 1/10s of volts
-    gVoltage = (uint8_t)((adc / 5) - (adc / 65.2));
+    gVoltage = (uint8_t)((adc / 5) - (adc / 65));
 #endif
 }
 
