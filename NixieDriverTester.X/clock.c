@@ -4,6 +4,8 @@
 void InitClock(void)
 {
 #if SPEED == 2
+    OSCFRQbits.FRQ = 0x0;
+#elif SPEED == 2
     OSCFRQbits.FRQ = 0x1;
 #elif SPEED == 4
     OSCFRQbits.FRQ = 0x2;
@@ -14,6 +16,6 @@ void InitClock(void)
 #elif SPEED == 32
     OSCFRQbits.FRQ = 0x5;
 #else
-    OSCFRQbits.FRQ = 0x0;
+#error Invalid SPEED setting
 #endif
 }

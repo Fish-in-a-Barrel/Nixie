@@ -12,6 +12,7 @@
     - lower the system oscillator frequency
     - decrease the PWM frequency
  */
+#error Timer reset value to large for T2PR
 #endif
 
 void InitPWM(uint16_t dutyCycle)
