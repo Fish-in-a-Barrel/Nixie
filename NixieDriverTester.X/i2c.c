@@ -257,6 +257,8 @@ void I2C_WriteWithCallback(uint8_t address, WriteCallback* callback, struct Writ
     
     operation.state = STATE_WRITE_ADDRESS;
     Start();
+    
+    while (IsBusy());
 }
 
 /*

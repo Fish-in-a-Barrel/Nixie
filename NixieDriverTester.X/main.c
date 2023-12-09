@@ -200,7 +200,7 @@ void RefreshDisplay()
     uint8_t autoState = gNixieAutoIncrement ? CHAR_AST : CHAR_SPC;
     
     DrawCharacter(0, 0, nixieState);
-    DrawCharacter(0, 1, autoState);
+    DrawCharacter(0, 2, autoState);
 
     //
     // Voltage and duty cycle
