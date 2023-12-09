@@ -18,16 +18,12 @@
 
 // Operations
 #define OP_WRITE 1
-#define OP_WRITE_READ 2
 
 // States
 #define STATE_ERROR 0xFF
 #define STATE_IDLE 0
 #define STATE_WRITE_ADDRESS 2
 #define STATE_WRITE_DATA 3
-#define STATE_READ_START 4
-#define STATE_READ_DATA 5
-#define STATE_READ_COMPLETE 6
 
 static struct
 {
@@ -41,8 +37,6 @@ static struct
     
     const uint8_t* writeBuffer;
     uint8_t writeBufferLen;
-    uint8_t* readBuffer;
-    uint8_t readBufferLen;
 } operation;
 
 void ClearOp()
@@ -59,8 +53,6 @@ void ClearOp()
     operation.callbackContext = NULL;
     operation.writeBuffer = NULL;
     operation.writeBufferLen = 0;
-    operation.readBuffer = NULL;
-    operation.readBufferLen = 0;
 }
 
 uint8_t IsBusy()
@@ -104,29 +96,10 @@ uint8_t Stop()
     return STATE_IDLE;
 }
 
-uint8_t Restart()
+uint8_t WriteAddress()
 {
-    SSP1CON2bits.RSEN = 1;
-    
-    return STATE_WRITE_ADDRESS;
-}
-
-void SendACK(void)
-{
-    SSP1CON2bits.ACKDT = 0;
-    SSP1CON2bits.ACKEN = 1;
-}
-
-void SendNACK(void)
-{
-    SSP1CON2bits.ACKDT = 1;
-    SSP1CON2bits.ACKEN = 1;
-}
-
-uint8_t WriteAddress(uint8_t direction)
-{
-    SSP1BUF = I2C_ADDRESS(operation.address, direction);
-    return (I2C_WRITE == direction) ? STATE_WRITE_DATA : STATE_READ_DATA;
+    SSP1BUF = I2C_ADDRESS(operation.address, I2C_WRITE);
+    return STATE_WRITE_DATA;
 }
 
 uint8_t WriteData()
@@ -145,50 +118,8 @@ uint8_t WriteData()
 
         return STATE_WRITE_DATA;
     }
-    else
-    {
-        if (OP_WRITE_READ == operation.type)
-        {
-            Restart();
-            return WriteAddress(I2C_READ);
-        }
-        else
-        {
-            return Stop();
-        }
-    }
-}
-
-uint8_t ReadData()
-{
-    if (!SSP1STATbits.BF)
-    {
-        SSP1CON2bits.RCEN = 1;
-        return STATE_READ_DATA;
-    }
-    else if (operation.readBuffer && operation.readBufferLen)
-    {
-        *(operation.readBuffer++) = SSP1BUF;
-        --operation.readBufferLen;
-        
-        if (operation.readBufferLen > 0)
-        {
-            SendACK();
-            return STATE_READ_DATA;
-        }
-        else
-        {
-            SendNACK();
-            return STATE_READ_COMPLETE;            
-        }
-    }
-    else
-    {
-        // We shouldn't actually reach this point.
-        
-        SendNACK();
-        return STATE_READ_COMPLETE;            
-    }
+    
+    return Stop();
 }
 
 void ExecuteStateMachine()
@@ -198,20 +129,10 @@ void ExecuteStateMachine()
     switch (operation.state)
     {
         case STATE_WRITE_ADDRESS:
-            operation.state = WriteAddress(
-                    (operation.writeBufferLen || operation.callback) ? I2C_WRITE : I2C_READ);
+            operation.state = WriteAddress();
             break;
         case STATE_WRITE_DATA:
             operation.state = WriteData();
-            break;
-        case STATE_READ_DATA:
-            operation.state = ReadData();
-            break;
-        case STATE_READ_COMPLETE:
-            Stop();
-            break;
-            
-        case STATE_IDLE:
             break;
 
         default:
@@ -231,8 +152,6 @@ void I2C_Write(uint8_t address, const void* data, uint8_t len)
     
     operation.callback = NULL;
     operation.callbackContext = NULL;    
-    operation.readBuffer = NULL;
-    operation.readBufferLen = 0;
     
     operation.state = STATE_WRITE_ADDRESS;
     Start();
@@ -252,33 +171,12 @@ void I2C_WriteWithCallback(uint8_t address, WriteCallback* callback, struct Writ
     
     operation.writeBuffer = 0;
     operation.writeBufferLen = 0;
-    operation.readBuffer = 0;
-    operation.readBufferLen = 0;
     
     operation.state = STATE_WRITE_ADDRESS;
     Start();
     
     while (IsBusy());
 }
-
-/*
- * not needed for this application
-void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, void* readData, uint8_t readLen)
-{
-    if (IsBusy()) return;
-    
-    operation.type = OP_WRITE_READ;
-    operation.address = address;
-    operation.writeBuffer = writeData;
-    operation.writeBufferLen = writeLen;
-    operation.readBuffer = readData;
-    operation.readBufferLen = readLen;
-    
-    operation.state = Start();
-    
-    while (IsBusy());
-}
-*/
 
 void I2C_HandleInterrupt(void)
 {
