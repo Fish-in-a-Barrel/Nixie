@@ -42,6 +42,8 @@ uint16_t gPwmDutyCycle = PWM_MIN << 2;
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
 
+uint8_t gLastButtonState = BUTTON_STATE_RELEASED;
+
 void __interrupt() ISR()
 {
     // Dispatch interrupts to handlers (§12.9.6)
@@ -149,16 +151,10 @@ void UpdateNixieState(void)
             }
         }
         
-        switch (GetButtonState())
+        if ((gLastButtonState != gButtonState) && (BUTTON_STATE_RELEASED == gButtonState))
         {
-            case 0b10: // Transition to "pressed" state
-                buttonStartTickCount = gTickCount;
-                break;
-            case 0b11: // Transition to "released" state
-                // If held for more than 1 second, toggle auto-increment
-                if ((gTickCount - buttonStartTickCount) > TICK_FREQ) gNixieAutoIncrement = !gNixieAutoIncrement;
-
-                if (!gNixieAutoIncrement) targetCathode = (gCurrentCathode + 1) % 10;
+            if (gLongPress) gNixieAutoIncrement = !gNixieAutoIncrement;
+            if (!gNixieAutoIncrement) targetCathode = (gCurrentCathode + 1) % 10;
         }
     }
     
@@ -217,15 +213,8 @@ void RefreshDisplay()
     //
     // Button pressed indicator
     //
-    
-    static uint8_t lastButtonState = 2;
-    uint8_t buttonState = GetButtonState() & 0x01;
-    
-    if (lastButtonState != buttonState)
-    {
-        InvertDisplay(!buttonState);
-        lastButtonState = buttonState;
-    }
+
+    if (gLastButtonState != gButtonState) InvertDisplay(!gButtonState);
 }
 
 void main(void)
@@ -246,8 +235,12 @@ void main(void)
     {
         GetCurrentVoltage();
         AdjustVoltagePwm();
+        
+        UpdateButtonState();
         UpdateNixieState();
         RefreshDisplay();
+        
+        gLastButtonState = gButtonState;
         
         __delay_ms(10);
     }

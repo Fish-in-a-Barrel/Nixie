@@ -1,9 +1,12 @@
 #ifndef BUTTON_H
 #define	BUTTON_H
 
-#define BUTTON_STATE_HI 1
-#define BUTTON_STATE_CHANGED 2
+#define BUTTON_STATE_HELD 0
+#define BUTTON_STATE_RELEASED 1
 
-uint8_t GetButtonState(void);
+extern uint8_t gButtonState;
+extern uint8_t gLongPress;
+
+void UpdateButtonState(void);
 
 #endif	/* BUTTON_H */
