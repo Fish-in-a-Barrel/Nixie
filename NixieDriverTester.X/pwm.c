@@ -28,7 +28,7 @@ void InitPWM(uint16_t dutyCycle)
     T2HLT = 0x00;    
     
     // Enable the timer with a 1:1 pre-scaler (§21.10.3)
-    T2CON = 0x80 | 0x00 | 0x00;
+    T2CON = 0x80 | 0x00 | 0x09;
 
     // Enable PWM3
     PWM3CON = 0x80;
