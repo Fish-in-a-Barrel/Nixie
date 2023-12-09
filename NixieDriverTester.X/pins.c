@@ -34,12 +34,13 @@ void InitI2CPins(void)
 void InitButtonPins(void)
 {
 #ifndef BREADBOARD
-    // Set RA1 as a discrete input for the button
+    // Set RA1 as a discrete input for the button, use the internal weak pull-up
     TRISA |= 0x02;
+    WPUA |= 0x02;
 #else
     // Set RB6 as a discrete input for the button
     TRISB |= 0x40;
-    //WPUB |= 0x40;
+    WPUB |= 0x40;
 #endif
 }
 
