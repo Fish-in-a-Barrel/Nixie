@@ -90,3 +90,11 @@ void DrawCharacter(uint8_t row, uint8_t col, uint8_t code)
     SendAddressBounds(row, row + 1, col * 6, (col + 1) * 6);
     I2C_Write(I2C_ADDRESS, buffer, sizeof(buffer));
 }
+
+void InvertDisplay(uint8_t invert)
+{
+    uint8_t command[] = { 0x00, 0xA6 };
+    if (invert) command[1] = 0xA7;
+    
+    I2C_Write(I2C_ADDRESS, command, sizeof(command));
+}

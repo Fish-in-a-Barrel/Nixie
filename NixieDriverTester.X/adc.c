@@ -9,7 +9,7 @@ void InitAdc(void)
     FVRCON = 0x83;
     
     // Select the ADCRC clock (§27.4.2)
-    ADCON1bits.CS = 0xF;
+    ADCON1bits.CS = 0x7;
     
     // Right-justify the result registers  (§27.4.2)
     ADCON1bits.FM = 0x1;

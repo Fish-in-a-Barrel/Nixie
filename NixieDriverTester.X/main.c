@@ -9,6 +9,7 @@
 #include "oled.h"
 #include "font8x5.h"
 #include "adc.h"
+#include "timer.h"
 
 #define CATHODE_NONE 10
 
@@ -30,8 +31,6 @@
 #define PWM_MAX 95
 #endif
 
-#define TICK_FREQ (_PWM_FREQ / 10)
-uint32_t gTickCount = 0;
 uint8_t gVoltage = 0;
 
 uint8_t gNixieAutoIncrement = 1;
@@ -48,11 +47,7 @@ void __interrupt() ISR()
     // Dispatch interrupts to handlers (§12.9.6)
     if (PIR1bits.SSP1IF || PIR1bits.BCL1IF) I2C_HandleInterrupt();
     
-    if (PIR1bits.TMR2IF)
-    {
-        ++gTickCount;
-        PIR1bits.TMR2IF = 0;
-    }
+    if (PIR1bits.TMR2IF) TimerInterruptHandler();
     
     if (PIR1bits.ADIF)
     {
@@ -194,11 +189,16 @@ void DisplayNumber(uint8_t number, int8_t digitCount, uint8_t x, uint8_t row)
 
 void RefreshDisplay()
 {
+    // Scroll * vertically for proof of life
     static uint8_t ticker = 0;
     for (uint8_t i = 0; i < 4; ++i)
         DrawCharacter(i, 20, i == ticker % 4 ? CHAR_AST : CHAR_SPC);
 
     ++ticker;
+    
+    //
+    // Nixie state
+    //
     
     uint8_t nixieState = (gCurrentCathode != CATHODE_NONE) ? gCurrentCathode : CHAR_DSH;
     uint8_t autoState = gNixieAutoIncrement ? CHAR_AST : CHAR_SPC;
@@ -206,14 +206,33 @@ void RefreshDisplay()
     DrawCharacter(0, 0, nixieState);
     DrawCharacter(0, 1, autoState);
 
+    //
+    // Voltage and duty cycle
+    //
+    
+    
     DisplayNumber(gVoltage, 3, 0, 3);
     DisplayNumber((uint8_t)(gPwmDutyCycle >> 2), 2, 10, 3);
+
+    //
+    // Button pressed indicator
+    //
+    
+    static uint8_t lastButtonState = 2;
+    uint8_t buttonState = GetButtonState() & 0x01;
+    
+    if (lastButtonState != buttonState)
+    {
+        InvertDisplay(!buttonState);
+        lastButtonState = buttonState;
+    }
 }
 
 void main(void)
 {
     InitClock();
     InitPins();
+    InitTimer();
     InitPWM(gPwmDutyCycle);
     InitAdc();
     I2C_Host_Init();
