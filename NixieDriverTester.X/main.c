@@ -14,6 +14,7 @@
 #define CATHODE_NONE 10
 
 #ifdef BREADBOARD
+#define ADC_SP 650
 #define HV_TARGET 120
 #define HV_DEADBAND 2
 #define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
@@ -41,6 +42,7 @@ uint16_t gPwmDutyCycle = PWM_MIN << 2;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
+uint16_t gAdcCv = 0;
 
 uint8_t gLastButtonState = BUTTON_STATE_RELEASED;
 
@@ -77,7 +79,7 @@ void EnableInterrupts()
     PIE1bits.ADIE = 1;
 }
 
-void GetCurrentVoltage(void)
+void CaptureAdc(void)
 {
     if (0 == gAdcAccumulatorCount)
     {
@@ -85,41 +87,54 @@ void GetCurrentVoltage(void)
         return;
     }
     
-    uint32_t v_bar;
+    uint32_t accum;
     uint32_t count;
     
     // Pause global interrupts while reading the ADC value because this is not atomic.
     INTCONbits.GIE = 0;
-    v_bar = gAdcAccumulator;
+    accum = gAdcAccumulator;
     count = gAdcAccumulatorCount;
     gAdcAccumulator = 0;
     gAdcAccumulatorCount = 0;
     INTCONbits.GIE = 1;
     
-    v_bar /= count;
+    gAdcCv =(uint16_t)(accum / count);
     
 #ifndef BREADBOARD
     // (ADC_raw / 1024) * 4.096 = V on pin.
     // multiply by 50 to compensate for the voltage divider supplying the pin.
     // This works out to 50 * 4.096 / 1024 = 0.2, or 1/5.
-    gVoltage = (uint8_t)(v_bar / 5);
+    gVoltage = (uint8_t)(adc_bar / 5);
 #else
     // this will be roughly 1/10s of volts
-    gVoltage = (uint8_t)((v_bar / 5) - (v_bar / 52));
+    gVoltage = (uint8_t)((gAdcCv / 5) - (gAdcCv / 52));
 #endif
 }
 
 void AdjustVoltagePwm(void)
 {
-    // No real control strategy here. Just push the voltage towards the SP by adjusting the PWM slowly.
-    if (gVoltage < HV_TARGET - HV_DEADBAND)
-    {
-        if (PWM_MAX > gPwmDutyCycle >> 2) SetPwmDutyCycle(++gPwmDutyCycle);
-    }
-    else if (gVoltage > HV_TARGET + HV_DEADBAND)
-    {
-        if (PWM_MIN < gPwmDutyCycle >> 2) SetPwmDutyCycle(--gPwmDutyCycle);
-    }
+    const uint8_t dPwmMax = 10;
+    const uint8_t Kp = 75;
+    const uint16_t Ki = 1000;
+    
+    static int16_t i = 0;
+    
+    int8_t p = (int8_t)((ADC_SP - (int16_t)gAdcCv) / Kp);
+    int8_t i_n = (int8_t)(ADC_SP - (int16_t)gAdcCv);
+
+    if ((i_n < -1) || (i_n > 1)) i += i_n;
+    
+    int8_t dPwm = p + (int8_t)(i / Ki);
+    
+    if (dPwm > dPwmMax) dPwm = dPwmMax;
+    if (dPwm < -dPwmMax) dPwm = -dPwmMax;
+    
+    gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + dPwm);
+    
+    if ((gPwmDutyCycle >> 2) > PWM_MAX) gPwmDutyCycle = PWM_MAX << 2;
+    else if ((gPwmDutyCycle >> 2) < PWM_MIN) gPwmDutyCycle = PWM_MIN << 2;
+    
+    SetPwmDutyCycle(gPwmDutyCycle);
 }
 
 void UpdateNixieState(void)
@@ -233,7 +248,7 @@ void main(void)
     
     while (1)
     {
-        GetCurrentVoltage();
+        CaptureAdc();
         AdjustVoltagePwm();
         
         UpdateButtonState();
