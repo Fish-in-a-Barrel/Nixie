@@ -49,8 +49,8 @@ void ClearOp()
 {
     if (operation.state == STATE_ERROR) 
     {
-            SSP1CON1bits.SSPEN = 0;
-            SSP1CON1bits.SSPEN = 1;        
+        SSP1CON1bits.SSPEN = 0;
+        SSP1CON1bits.SSPEN = 1;        
     }
 
     operation.type = OP_IDLE;
@@ -234,7 +234,8 @@ void I2C_Write(uint8_t address, const void* data, uint8_t len)
     operation.readBuffer = NULL;
     operation.readBufferLen = 0;
     
-    operation.state = Start();
+    operation.state = STATE_WRITE_ADDRESS;
+    Start();
     
     while (IsBusy());
 }
@@ -254,7 +255,8 @@ void I2C_WriteWithCallback(uint8_t address, WriteCallback* callback, struct Writ
     operation.readBuffer = 0;
     operation.readBufferLen = 0;
     
-    operation.state = Start();
+    operation.state = STATE_WRITE_ADDRESS;
+    Start();
 }
 
 /*
