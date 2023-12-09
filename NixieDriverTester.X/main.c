@@ -160,13 +160,10 @@ void UpdateNixieState(void)
                 buttonStartTickCount = gTickCount;
                 break;
             case 0b11: // Transition to "released" state
-                targetCathode = (gCurrentCathode + 1) % 10;
-                
-                // If held for more than 2 seconds, toggle auto-increment
-                if ((gTickCount - buttonStartTickCount) > 2 * TICK_FREQ)
-                {
-                    gNixieAutoIncrement = !gNixieAutoIncrement;
-                }
+                // If held for more than 1 second, toggle auto-increment
+                if ((gTickCount - buttonStartTickCount) > TICK_FREQ) gNixieAutoIncrement = !gNixieAutoIncrement;
+
+                if (!gNixieAutoIncrement) targetCathode = (gCurrentCathode + 1) % 10;
         }
     }
     

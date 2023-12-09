@@ -38,7 +38,8 @@ void InitButtonPins(void)
     TRISA |= 0x02;
 #else
     // Set RB6 as a discrete input for the button
-    TRISB |= 0x02;
+    TRISB |= 0x40;
+    //WPUB |= 0x40;
 #endif
 }
 
