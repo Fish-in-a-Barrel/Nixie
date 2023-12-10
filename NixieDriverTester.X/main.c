@@ -14,14 +14,14 @@
 #define CATHODE_NONE 10
 
 #ifdef BREADBOARD
-#define ADC_SP 650
 #define HV_TARGET 120
 #define HV_DEADBAND 2
 #define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
 #define HV_MAX (HV_TARGET + 2 * HV_DEADBAND)
 
-#define PWM_MIN 65
-#define PWM_MAX 90
+#define ADC_SP 650
+#define PWM_MIN 105
+#define PWM_MAX 145
 #else
 #define HV_TARGET 180
 #define HV_DEADBAND 5
@@ -38,7 +38,7 @@ uint8_t gNixieAutoIncrement = 1;
 uint8_t gCurrentCathode = CATHODE_NONE;
 
 // This is a 10-bit fixed-precision int with 2 mantissa bits
-uint16_t gPwmDutyCycle = PWM_MIN << 2;
+uint16_t gPwmDutyCycle = PWM_MIN;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
@@ -114,25 +114,30 @@ void CaptureAdc(void)
 void AdjustVoltagePwm(void)
 {
     const uint8_t dPwmMax = 10;
-    const uint8_t Kp = 75;
-    const uint16_t Ki = 1000;
+    const int8_t Kp = 5;
+    const int16_t Ki = 10;
     
     static int16_t i = 0;
     
     int8_t p = (int8_t)((ADC_SP - (int16_t)gAdcCv) / Kp);
     int8_t i_n = (int8_t)(ADC_SP - (int16_t)gAdcCv);
 
-    if ((i_n < -1) || (i_n > 1)) i += i_n;
+    // prevent integral wind-up
+    //i = (9 * i) / 10;
+    if (i > dPwmMax) i = dPwmMax;
+    if (i < -dPwmMax) i = -dPwmMax;
     
-    int8_t dPwm = p + (int8_t)(i / Ki);
+    i += i_n;
+    
+    int8_t dPwm = (p + (int8_t)(i / Ki)) / 10;
     
     if (dPwm > dPwmMax) dPwm = dPwmMax;
     if (dPwm < -dPwmMax) dPwm = -dPwmMax;
     
     gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + dPwm);
     
-    if ((gPwmDutyCycle >> 2) > PWM_MAX) gPwmDutyCycle = PWM_MAX << 2;
-    else if ((gPwmDutyCycle >> 2) < PWM_MIN) gPwmDutyCycle = PWM_MIN << 2;
+    if (gPwmDutyCycle > PWM_MAX) gPwmDutyCycle = PWM_MAX;
+    else if (gPwmDutyCycle < PWM_MIN) gPwmDutyCycle = PWM_MIN;
     
     SetPwmDutyCycle(gPwmDutyCycle);
 }
@@ -180,6 +185,15 @@ void UpdateNixieState(void)
     }
 }
 
+void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
+{
+    while (digitCount > 0)
+    {
+        DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
+        number /= 10;
+    }
+}
+
 void DrawStaticDisplaySymbols(void)
 {
         // Voltage: --- V
@@ -187,15 +201,7 @@ void DrawStaticDisplaySymbols(void)
     
     // Duty Cycle: -- %
     DrawCharacter(3, 13, CHAR_PCT);
-}
-
-void DisplayNumber(uint8_t number, int8_t digitCount, uint8_t x, uint8_t row)
-{
-    while (digitCount > 0)
-    {
-        DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
-        number /= 10;
-    }
+    DisplayNumber(TMR2_RESET << 2, 4, 3, 15);
 }
 
 void RefreshDisplay()
@@ -222,8 +228,8 @@ void RefreshDisplay()
     //
     
     
-    DisplayNumber(gVoltage, 3, 0, 3);
-    DisplayNumber((uint8_t)(gPwmDutyCycle >> 2), 2, 10, 3);
+    DisplayNumber(gVoltage, 3, 3, 0);
+    DisplayNumber(gPwmDutyCycle, 4, 3, 8);
 
     //
     // Button pressed indicator
