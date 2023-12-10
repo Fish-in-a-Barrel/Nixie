@@ -19,9 +19,10 @@
 #define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
 #define HV_MAX (HV_TARGET + 2 * HV_DEADBAND)
 
-#define ADC_SP 650
-#define PWM_MIN 105
-#define PWM_MAX 145
+#define ADC_SP 660L
+#define PWM_SCALAR 64
+#define PWM_MIN 105 * PWM_SCALAR
+#define PWM_MAX 145 * PWM_SCALAR
 #else
 #define HV_TARGET 180
 #define HV_DEADBAND 5
@@ -32,17 +33,16 @@
 #define PWM_MAX 95
 #endif
 
-uint8_t gVoltage = 0;
-
 uint8_t gNixieAutoIncrement = 1;
 uint8_t gCurrentCathode = CATHODE_NONE;
 
-// This is a 10-bit fixed-precision int with 2 mantissa bits
 uint16_t gPwmDutyCycle = PWM_MIN;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
 uint16_t gAdcCv = 0;
+
+uint8_t gVoltage = 0;
 
 uint8_t gLastButtonState = BUTTON_STATE_RELEASED;
 
@@ -111,35 +111,57 @@ void CaptureAdc(void)
 #endif
 }
 
+uint32_t stableAtTick = 0;
+uint8_t stableCounter = 0;
+
+void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
+{
+    while (digitCount > 0)
+    {
+        DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
+        number /= 10;
+    }
+}
+
 void AdjustVoltagePwm(void)
 {
-    const uint8_t dPwmMax = 10;
-    const int8_t Kp = 5;
-    const int16_t Ki = 10;
+    const int16_t DELTA_PWM_MAX = PWM_SCALAR * 500;
+    const int16_t I_MAX = PWM_SCALAR;
+    const int16_t Kp = 2;
+    const int16_t Ki = PWM_SCALAR;
     
     static int16_t i = 0;
     
-    int8_t p = (int8_t)((ADC_SP - (int16_t)gAdcCv) / Kp);
-    int8_t i_n = (int8_t)(ADC_SP - (int16_t)gAdcCv);
+    if (!stableAtTick)
+    {
+        if ((ADC_SP - gAdcCv) < 2) ++stableCounter;
+        if (stableCounter > 100)
+        {
+            stableAtTick = gTickCount;
+            DisplayNumber(stableAtTick, 6, 0, 6);
+        }
+    }
 
+    int16_t error = PWM_SCALAR * (int16_t)(ADC_SP - gAdcCv);
+    int16_t p = (error * Kp) / 3;
+    i += error;
+    
     // prevent integral wind-up
     //i = (9 * i) / 10;
-    if (i > dPwmMax) i = dPwmMax;
-    if (i < -dPwmMax) i = -dPwmMax;
+    if (i > I_MAX) i = I_MAX;
+    if (i < -I_MAX) i = -I_MAX;    
     
-    i += i_n;
+    int16_t delta = p + (i / Ki);
     
-    int8_t dPwm = (p + (int8_t)(i / Ki)) / 10;
+//    if (delta > DELTA_PWM_MAX) delta = DELTA_PWM_MAX;
+//    if (delta < -DELTA_PWM_MAX) delta = -DELTA_PWM_MAX;
     
-    if (dPwm > dPwmMax) dPwm = dPwmMax;
-    if (dPwm < -dPwmMax) dPwm = -dPwmMax;
-    
-    gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + dPwm);
+    gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + delta);
     
     if (gPwmDutyCycle > PWM_MAX) gPwmDutyCycle = PWM_MAX;
     else if (gPwmDutyCycle < PWM_MIN) gPwmDutyCycle = PWM_MIN;
     
-    SetPwmDutyCycle(gPwmDutyCycle);
+    SetPwmDutyCycle(gPwmDutyCycle / PWM_SCALAR);
 }
 
 void UpdateNixieState(void)
@@ -185,15 +207,6 @@ void UpdateNixieState(void)
     }
 }
 
-void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
-{
-    while (digitCount > 0)
-    {
-        DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
-        number /= 10;
-    }
-}
-
 void DrawStaticDisplaySymbols(void)
 {
         // Voltage: --- V
@@ -206,12 +219,13 @@ void DrawStaticDisplaySymbols(void)
 
 void RefreshDisplay()
 {
+    uint32_t lastUpdateTick = 0;
+    if (gTickCount - lastUpdateTick < TMR2_FREQ / 10) return;
+    lastUpdateTick = gTickCount;
+    
     // Scroll * vertically for proof of life
-    static uint8_t ticker = 0;
     for (uint8_t i = 0; i < 4; ++i)
-        DrawCharacter(i, 20, i == ticker % 4 ? CHAR_AST : CHAR_SPC);
-
-    ++ticker;
+        DrawCharacter(i, 20, i == (gTickCount / (TMR2_FREQ / 40)) % 4 ? CHAR_AST : CHAR_SPC);
     
     //
     // Nixie state
@@ -229,7 +243,7 @@ void RefreshDisplay()
     
     
     DisplayNumber(gVoltage, 3, 3, 0);
-    DisplayNumber(gPwmDutyCycle, 4, 3, 8);
+    DisplayNumber(gPwmDutyCycle / PWM_SCALAR, 4, 3, 8);
 
     //
     // Button pressed indicator
@@ -263,6 +277,6 @@ void main(void)
         
         gLastButtonState = gButtonState;
         
-        __delay_ms(10);
+        __delay_ms(5);
     }
 }
