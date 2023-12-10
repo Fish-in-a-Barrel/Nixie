@@ -36,7 +36,7 @@
 uint8_t gNixieAutoIncrement = 1;
 uint8_t gCurrentCathode = CATHODE_NONE;
 
-uint16_t gPwmDutyCycle = PWM_MIN;
+uint16_t gPwmDutyCycle = 115 * PWM_SCALAR;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
@@ -111,8 +111,38 @@ void CaptureAdc(void)
 #endif
 }
 
-uint32_t stableAtTick = 0;
-uint8_t stableCounter = 0;
+void AdjustVoltagePwm(void)
+{
+    const int16_t DELTA_PWM_MAX = PWM_SCALAR * 500;
+    const int16_t I_MAX = 5 * PWM_SCALAR / 2;
+    const int16_t Kp_N = 4;
+    const int16_t Kp_D = 5;
+    const int16_t Ki_N = 5;
+    const int16_t Ki_D = PWM_SCALAR * 4;
+    
+    static int16_t i = 0;
+
+    int16_t error = PWM_SCALAR * (int16_t)(ADC_SP - gAdcCv);
+    int16_t p = (error * Kp_N) / Kp_D;
+    i += error;
+    
+    // prevent integral wind-up
+    //i = (9 * i) / 10;
+    if (i > I_MAX) i = I_MAX;
+    if (i < -I_MAX) i = -I_MAX;    
+    
+    int16_t delta = p + ((Ki_N * i) / Ki_D);
+    
+    if (delta > DELTA_PWM_MAX) delta = DELTA_PWM_MAX;
+    if (delta < -DELTA_PWM_MAX) delta = -DELTA_PWM_MAX;
+    
+    gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + delta);
+    
+    if (gPwmDutyCycle > PWM_MAX) gPwmDutyCycle = PWM_MAX;
+    else if (gPwmDutyCycle < PWM_MIN) gPwmDutyCycle = PWM_MIN;
+    
+    SetPwmDutyCycle(gPwmDutyCycle / PWM_SCALAR);
+}
 
 void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
 {
@@ -121,47 +151,6 @@ void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
         DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
         number /= 10;
     }
-}
-
-void AdjustVoltagePwm(void)
-{
-    const int16_t DELTA_PWM_MAX = PWM_SCALAR * 500;
-    const int16_t I_MAX = PWM_SCALAR;
-    const int16_t Kp = 2;
-    const int16_t Ki = PWM_SCALAR;
-    
-    static int16_t i = 0;
-    
-    if (!stableAtTick)
-    {
-        if ((ADC_SP - gAdcCv) < 2) ++stableCounter;
-        if (stableCounter > 100)
-        {
-            stableAtTick = gTickCount;
-            DisplayNumber(stableAtTick, 6, 0, 6);
-        }
-    }
-
-    int16_t error = PWM_SCALAR * (int16_t)(ADC_SP - gAdcCv);
-    int16_t p = (error * Kp) / 3;
-    i += error;
-    
-    // prevent integral wind-up
-    //i = (9 * i) / 10;
-    if (i > I_MAX) i = I_MAX;
-    if (i < -I_MAX) i = -I_MAX;    
-    
-    int16_t delta = p + (i / Ki);
-    
-//    if (delta > DELTA_PWM_MAX) delta = DELTA_PWM_MAX;
-//    if (delta < -DELTA_PWM_MAX) delta = -DELTA_PWM_MAX;
-    
-    gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + delta);
-    
-    if (gPwmDutyCycle > PWM_MAX) gPwmDutyCycle = PWM_MAX;
-    else if (gPwmDutyCycle < PWM_MIN) gPwmDutyCycle = PWM_MIN;
-    
-    SetPwmDutyCycle(gPwmDutyCycle / PWM_SCALAR);
 }
 
 void UpdateNixieState(void)
@@ -257,7 +246,7 @@ void main(void)
     InitClock();
     InitPins();
     InitTimer();
-    InitPWM(gPwmDutyCycle);
+    InitPWM(gPwmDutyCycle / PWM_SCALAR);
     InitAdc();
     I2C_Host_Init();
     
