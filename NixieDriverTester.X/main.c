@@ -19,8 +19,10 @@
 #define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
 #define HV_MAX (HV_TARGET + 2 * HV_DEADBAND)
 
-#define PWM_MIN 65
-#define PWM_MAX 90
+#define ADC_SP 660L
+#define PWM_SCALAR 64
+#define PWM_MIN 105 * PWM_SCALAR
+#define PWM_MAX 145 * PWM_SCALAR
 #else
 #define HV_TARGET 180
 #define HV_DEADBAND 5
@@ -31,16 +33,16 @@
 #define PWM_MAX 95
 #endif
 
-uint8_t gVoltage = 0;
-
 uint8_t gNixieAutoIncrement = 1;
 uint8_t gCurrentCathode = CATHODE_NONE;
 
-// This is a 10-bit fixed-precision int with 2 mantissa bits
-uint16_t gPwmDutyCycle = PWM_MIN << 2;
+uint16_t gPwmDutyCycle = 115 * PWM_SCALAR;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
+uint16_t gAdcCv = 0;
+
+uint8_t gVoltage = 0;
 
 uint8_t gLastButtonState = BUTTON_STATE_RELEASED;
 
@@ -77,7 +79,7 @@ void EnableInterrupts()
     PIE1bits.ADIE = 1;
 }
 
-void GetCurrentVoltage(void)
+void CaptureAdc(void)
 {
     if (0 == gAdcAccumulatorCount)
     {
@@ -85,40 +87,69 @@ void GetCurrentVoltage(void)
         return;
     }
     
-    uint32_t v_bar;
+    uint32_t accum;
     uint32_t count;
     
     // Pause global interrupts while reading the ADC value because this is not atomic.
     INTCONbits.GIE = 0;
-    v_bar = gAdcAccumulator;
+    accum = gAdcAccumulator;
     count = gAdcAccumulatorCount;
     gAdcAccumulator = 0;
     gAdcAccumulatorCount = 0;
     INTCONbits.GIE = 1;
     
-    v_bar /= count;
+    gAdcCv =(uint16_t)(accum / count);
     
 #ifndef BREADBOARD
     // (ADC_raw / 1024) * 4.096 = V on pin.
     // multiply by 50 to compensate for the voltage divider supplying the pin.
     // This works out to 50 * 4.096 / 1024 = 0.2, or 1/5.
-    gVoltage = (uint8_t)(v_bar / 5);
+    gVoltage = (uint8_t)(adc_bar / 5);
 #else
     // this will be roughly 1/10s of volts
-    gVoltage = (uint8_t)((v_bar / 5) - (v_bar / 52));
+    gVoltage = (uint8_t)((gAdcCv / 5) - (gAdcCv / 52));
 #endif
 }
 
 void AdjustVoltagePwm(void)
 {
-    // No real control strategy here. Just push the voltage towards the SP by adjusting the PWM slowly.
-    if (gVoltage < HV_TARGET - HV_DEADBAND)
+    const int16_t DELTA_PWM_MAX = PWM_SCALAR * 500;
+    const int16_t I_MAX = 5 * PWM_SCALAR / 2;
+    const int16_t Kp_N = 4;
+    const int16_t Kp_D = 5;
+    const int16_t Ki_N = 5;
+    const int16_t Ki_D = PWM_SCALAR * 4;
+    
+    static int16_t i = 0;
+
+    int16_t error = PWM_SCALAR * (int16_t)(ADC_SP - gAdcCv);
+    int16_t p = (error * Kp_N) / Kp_D;
+    i += error;
+    
+    // prevent integral wind-up
+    //i = (9 * i) / 10;
+    if (i > I_MAX) i = I_MAX;
+    if (i < -I_MAX) i = -I_MAX;    
+    
+    int16_t delta = p + ((Ki_N * i) / Ki_D);
+    
+    if (delta > DELTA_PWM_MAX) delta = DELTA_PWM_MAX;
+    if (delta < -DELTA_PWM_MAX) delta = -DELTA_PWM_MAX;
+    
+    gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + delta);
+    
+    if (gPwmDutyCycle > PWM_MAX) gPwmDutyCycle = PWM_MAX;
+    else if (gPwmDutyCycle < PWM_MIN) gPwmDutyCycle = PWM_MIN;
+    
+    SetPwmDutyCycle(gPwmDutyCycle / PWM_SCALAR);
+}
+
+void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
+{
+    while (digitCount > 0)
     {
-        if (PWM_MAX > gPwmDutyCycle >> 2) SetPwmDutyCycle(++gPwmDutyCycle);
-    }
-    else if (gVoltage > HV_TARGET + HV_DEADBAND)
-    {
-        if (PWM_MIN < gPwmDutyCycle >> 2) SetPwmDutyCycle(--gPwmDutyCycle);
+        DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
+        number /= 10;
     }
 }
 
@@ -172,25 +203,18 @@ void DrawStaticDisplaySymbols(void)
     
     // Duty Cycle: -- %
     DrawCharacter(3, 13, CHAR_PCT);
-}
-
-void DisplayNumber(uint8_t number, int8_t digitCount, uint8_t x, uint8_t row)
-{
-    while (digitCount > 0)
-    {
-        DrawCharacter(row, (uint8_t)(x + --digitCount), number % 10);
-        number /= 10;
-    }
+    DisplayNumber(TMR2_RESET << 2, 4, 3, 15);
 }
 
 void RefreshDisplay()
 {
+    uint32_t lastUpdateTick = 0;
+    if (gTickCount - lastUpdateTick < TMR2_FREQ / 10) return;
+    lastUpdateTick = gTickCount;
+    
     // Scroll * vertically for proof of life
-    static uint8_t ticker = 0;
     for (uint8_t i = 0; i < 4; ++i)
-        DrawCharacter(i, 20, i == ticker % 4 ? CHAR_AST : CHAR_SPC);
-
-    ++ticker;
+        DrawCharacter(i, 20, i == (gTickCount / (TMR2_FREQ / 40)) % 4 ? CHAR_AST : CHAR_SPC);
     
     //
     // Nixie state
@@ -207,8 +231,8 @@ void RefreshDisplay()
     //
     
     
-    DisplayNumber(gVoltage, 3, 0, 3);
-    DisplayNumber((uint8_t)(gPwmDutyCycle >> 2), 2, 10, 3);
+    DisplayNumber(gVoltage, 3, 3, 0);
+    DisplayNumber(gPwmDutyCycle / PWM_SCALAR, 4, 3, 8);
 
     //
     // Button pressed indicator
@@ -222,7 +246,7 @@ void main(void)
     InitClock();
     InitPins();
     InitTimer();
-    InitPWM(gPwmDutyCycle);
+    InitPWM(gPwmDutyCycle / PWM_SCALAR);
     InitAdc();
     I2C_Host_Init();
     
@@ -233,7 +257,7 @@ void main(void)
     
     while (1)
     {
-        GetCurrentVoltage();
+        CaptureAdc();
         AdjustVoltagePwm();
         
         UpdateButtonState();
@@ -242,6 +266,6 @@ void main(void)
         
         gLastButtonState = gButtonState;
         
-        __delay_ms(10);
+        __delay_ms(5);
     }
 }
