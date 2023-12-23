@@ -26,11 +26,13 @@
 #else
 #define HV_TARGET 180
 #define HV_DEADBAND 5
-#define HV_MIN (HV_TARGET - HV_DEADBAND)
-#define HV_MAX (HV_TARGET + HV_DEADBAND)
+#define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
+#define HV_MAX (HV_TARGET + 2 * HV_DEADBAND)
 
-#define PWM_MIN 80
-#define PWM_MAX 95
+#define ADC_SP 660L
+#define PWM_SCALAR 32
+#define PWM_MIN 38 * PWM_SCALAR
+#define PWM_MAX 40 * PWM_SCALAR
 #endif
 
 uint8_t gNixieAutoIncrement = 1;
@@ -104,7 +106,7 @@ void CaptureAdc(void)
     // (ADC_raw / 1024) * 4.096 = V on pin.
     // multiply by 50 to compensate for the voltage divider supplying the pin.
     // This works out to 50 * 4.096 / 1024 = 0.2, or 1/5.
-    gVoltage = (uint8_t)(adc_bar / 5);
+    gVoltage = (uint8_t)(gAdcCv / 5);
 #else
     // this will be roughly 1/10s of volts
     gVoltage = (uint8_t)((gAdcCv / 5) - (gAdcCv / 52));
@@ -202,7 +204,7 @@ void DrawStaticDisplaySymbols(void)
     DrawCharacter(3, 4, CHAR_V);
     
     // Duty Cycle: -- %
-    DrawCharacter(3, 13, CHAR_PCT);
+    DrawCharacter(3, 13, CHAR_SLH);
     DisplayNumber(TMR2_RESET << 2, 4, 3, 15);
 }
 
