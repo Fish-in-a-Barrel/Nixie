@@ -4,7 +4,7 @@
 #include "timer.h"
 
 #ifndef BREADBOARD
-    #define BUTTON_PIN RA2;
+    #define BUTTON_PIN RA1;
 #else
     #define BUTTON_PIN RB6;
 #endif
