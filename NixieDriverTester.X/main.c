@@ -31,8 +31,8 @@
 
 #define ADC_SP 660L
 #define PWM_SCALAR 32
-#define PWM_MIN 38 * PWM_SCALAR
-#define PWM_MAX 40 * PWM_SCALAR
+#define PWM_MIN 40 * PWM_SCALAR
+#define PWM_MAX 45 * PWM_SCALAR
 #endif
 
 uint8_t gNixieAutoIncrement = 1;
@@ -251,6 +251,8 @@ void main(void)
     InitPWM(gPwmDutyCycle / PWM_SCALAR);
     InitAdc();
     I2C_Host_Init();
+    
+    __delay_ms(50);
     
     EnableInterrupts();
     
