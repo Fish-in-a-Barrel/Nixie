@@ -29,16 +29,19 @@
 #define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
 #define HV_MAX (HV_TARGET + 2 * HV_DEADBAND)
 
-#define ADC_SP 660L
+// This should be 1/4 the expected voltage from the voltage divider mV.
+// Theoretically this should be 2,800mV, but it will vary with the exact resistance of the resistors in the voltage divider.
+#define ADC_SP 711L
+
 #define PWM_SCALAR 32
-#define PWM_MIN 40 * PWM_SCALAR
-#define PWM_MAX 60 * PWM_SCALAR
+#define PWM_MIN 70 * PWM_SCALAR
+#define PWM_MAX 81 * PWM_SCALAR
 #endif
 
 uint8_t gNixieAutoIncrement = 1;
 uint8_t gCurrentCathode = CATHODE_NONE;
 
-uint16_t gPwmDutyCycle = 115 * PWM_SCALAR;
+uint16_t gPwmDutyCycle = PWM_MIN * PWM_SCALAR;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
@@ -103,10 +106,11 @@ void CaptureAdc(void)
     gAdcCv =(uint16_t)(accum / count);
     
 #ifndef BREADBOARD
-    // (ADC_raw / 1024) * 4.096 = V on pin.
-    // multiply by 50 to compensate for the voltage divider supplying the pin.
-    // This works out to 50 * 4.096 / 1024 = 0.2, or 1/5.
-    gVoltage = (uint8_t)(gAdcCv / 5);
+    // (4096 * ADC_raw) / 1024 = mV on pin.
+    // multiply by 63.5 to compensate for the voltage divider supplying the pin.
+    // divide by 1000 to convert from mV to volts
+    // This works out to (63.5 * (4096 / 1024)) / 1000 = 0.254, or ~(1/4 + 1/250).
+    gVoltage = (uint8_t)(gAdcCv / 4) + (uint8_t)(gAdcCv / 210);
 #else
     // this will be roughly 1/10s of volts
     gVoltage = (uint8_t)((gAdcCv / 5) - (gAdcCv / 52));
@@ -201,7 +205,7 @@ void UpdateNixieState(void)
 void DrawStaticDisplaySymbols(void)
 {
         // Voltage: --- V
-    DrawCharacter(3, 4, CHAR_V);
+    DrawCharacter(0, 14, CHAR_V);
     
     // Duty Cycle: -- %
     DrawCharacter(3, 13, CHAR_SLH);
@@ -233,7 +237,8 @@ void RefreshDisplay()
     //
     
     
-    DisplayNumber(gVoltage, 3, 3, 0);
+    DisplayNumber(gAdcCv, 4, 3, 0);
+    DisplayNumber(gVoltage, 3, 0, 10);
     DisplayNumber(gPwmDutyCycle / PWM_SCALAR, 4, 3, 8);
 
     //
