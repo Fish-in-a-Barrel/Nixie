@@ -22,7 +22,7 @@ void ResetI2C(void)
 void InitI2CPins(void)
 {
     // Set RA4 & RA5 as digital inputs (§25.2.2.3)
-    TRISA = 0x38;
+    TRISA |= 0x38;
     
     // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1; §18.3; §18.8.2)
     SSP1DATPPS = 4;
