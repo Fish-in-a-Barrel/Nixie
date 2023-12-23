@@ -32,7 +32,7 @@
 #define ADC_SP 660L
 #define PWM_SCALAR 32
 #define PWM_MIN 40 * PWM_SCALAR
-#define PWM_MAX 45 * PWM_SCALAR
+#define PWM_MAX 60 * PWM_SCALAR
 #endif
 
 uint8_t gNixieAutoIncrement = 1;
