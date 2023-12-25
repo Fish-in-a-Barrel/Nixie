@@ -16,7 +16,7 @@ extern "C" {
 #pragma config VDDAR = HI       // VDD Range Analog Calibration Selection bit (Internal analog systems are calibrated for operation between VDD = 2.3V - 5.5V)
 
 // CONFIG2
-#pragma config MCLRE = EXTMCLR  // Master Clear Enable bit (If LVP = 0, MCLR pin is MCLR; If LVP = 1, RA3 pin function is MCLR)
+#pragma config MCLRE = INTMCLR  // Master Clear Enable bit (If LVP = 0, MCLR pin is MCLR; If LVP = 1, RA3 pin function is MCLR)
 #pragma config PWRTS = PWRT_OFF // Power-up Timer Selection bits (PWRT is disabled)
 #pragma config WDTE = OFF       // WDT Operating Mode bits (WDT disabled; SEN is ignored)
 #pragma config BOREN = ON       // Brown-out Reset Enable bits (Brown-out Reset Enabled, SBOREN bit is ignored)
@@ -34,11 +34,7 @@ extern "C" {
 #pragma config WRTB = OFF       // Boot Block Write Protection bit (Boot Block is not write-protected)
 #pragma config WRTC = OFF       // Configuration Registers Write Protection bit (Configuration Registers are not write-protected)
 #pragma config WRTSAF = OFF     // Storage Area Flash (SAF) Write Protection bit (SAF is not write-protected)
-#if BREADBOARD
 #pragma config LVP = OFF
-#else
-#pragma config LVP = ON         // Low Voltage Programming Enable bit (Low Voltage programming enabled. MCLR/Vpp pin function is MCLR. MCLRE Configuration bit is ignored.)
-#endif
 
 // CONFIG5
 #pragma config CP = OFF         // User Program Flash Memory Code Protection bit (User Program Flash Memory code protection is disabled)
