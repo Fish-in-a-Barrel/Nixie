@@ -3,7 +3,7 @@
 #include "clock.h"
 #include "pps_outputs.h"
 
-#define I2C_BAUD (400 * 1000ul) // 100 kHz
+#define I2C_BAUD (400 * 1000ul) // 400 kHz
 
 #define I2C_ADDRESS(address, rw) (uint8_t)((address << 1) | rw)
 
@@ -60,8 +60,22 @@ uint8_t IsBusy()
     return operation.type != OP_IDLE || SSP1STATbits.S || SSP1STATbits.BF;
 }
 
+void InitI2CPins(void)
+{
+    // Set RA4 & RA5 as digital inputs (§25.2.2.3)
+    TRISA |= 0x30;
+    
+    // Remap the SDA/SLC pins to 4/5 (§18.2, Table 18-1; §18.3; §18.8.2)
+    SSP1DATPPS = 4;
+    SSP1CLKPPS = 5;
+    RA4PPS = PPS_OUT_SDA1;
+    RA5PPS = PPS_OUT_SCL1;    
+}
+
 void I2C_Host_Init(void)
 {
+    InitI2CPins();
+    
     // disable slew rate control for standard speed
     SSP1STAT |= 
               SSPxSTAT_SLEW_RATE_CTL_ENABLED // 100 kHz

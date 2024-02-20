@@ -3,8 +3,17 @@
 volatile uint8_t gAdcResultIndex = 0;
 volatile uint16_t gAdcResult[2] = { 0, 0 };
 
+void InitAdcPins(void)
+{
+    // Set RA0 as an analog input for voltage monitoring
+    TRISA |= 0x01;
+    ANSELA |= 0x01;
+}
+
 void InitAdc(void)
 {
+    InitAdcPins();
+    
     // Enable up the fixed voltage reference at 4.096V (§26.3.1)
     FVRCON = 0x83;
     

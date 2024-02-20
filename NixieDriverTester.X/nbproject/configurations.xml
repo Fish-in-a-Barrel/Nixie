@@ -49,13 +49,13 @@
         <targetDevice>PIC16F15213</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PK5Tool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.22.376"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.23.382"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -199,8 +199,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/aaron/MPLABXProjects/NixieClock/NixieDriverTester.X/debug/default/NixieDriverTester_ptg"/>
         <property key="programmerToGoImageName" value="NixieDriverTester_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -327,7 +325,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.22.376"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.23.382"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -589,13 +587,13 @@
         <targetDevice>PIC16F15243</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PK5Tool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.22.376"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.23.382"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -739,8 +737,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/aaron/MPLABXProjects/NixieClock/NixieDriverTester.X/debug/Breadboard/NixieDriverTester_ptg"/>
         <property key="programmerToGoImageName" value="NixieDriverTester_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

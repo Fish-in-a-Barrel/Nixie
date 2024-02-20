@@ -14,6 +14,18 @@
 uint8_t gButtonState = BUTTON_STATE_RELEASED;
 uint8_t gLongPress = 0;
 
+void InitButtonPins(void)
+{
+    // Set RA1 as a discrete input for the button, use the internal weak pull-up
+    TRISA |= 0x02;
+    WPUA |= 0x02;
+}
+
+void InitButton(void)
+{
+    InitButtonPins();
+}
+
 void UpdateButtonState(void)
 {
     static uint8_t gTransitionCounter = 0;

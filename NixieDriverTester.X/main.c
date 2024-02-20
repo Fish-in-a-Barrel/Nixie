@@ -13,17 +13,6 @@
 
 #define CATHODE_NONE 10
 
-#ifdef BREADBOARD
-#define HV_TARGET 120
-#define HV_DEADBAND 2
-#define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
-#define HV_MAX (HV_TARGET + 2 * HV_DEADBAND)
-
-#define ADC_SP 660L
-#define PWM_SCALAR 64
-#define PWM_MIN 105 * PWM_SCALAR
-#define PWM_MAX 145 * PWM_SCALAR
-#else
 #define HV_TARGET 180
 #define HV_DEADBAND 5
 #define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
@@ -31,17 +20,17 @@
 
 // This should be 1/4 the expected voltage from the voltage divider mV.
 // Theoretically this should be 2,800mV, but it will vary with the exact resistance of the resistors in the voltage divider.
-#define ADC_SP 711L
+#define ADC_SP 715L
+#define ADC_DEADBAND 5
 
 #define PWM_SCALAR 32
-#define PWM_MIN 70 * PWM_SCALAR
-#define PWM_MAX 81 * PWM_SCALAR
-#endif
+#define PWM_MIN (uint16_t)(0.85 * (TMR2_RESET << 2) * PWM_SCALAR)
+#define PWM_MAX (uint16_t)(0.95 * (TMR2_RESET << 2) * PWM_SCALAR)
 
 uint8_t gNixieAutoIncrement = 1;
 uint8_t gCurrentCathode = CATHODE_NONE;
 
-uint16_t gPwmDutyCycle = PWM_MIN * PWM_SCALAR;
+uint16_t gPwmDutyCycle = PWM_MIN;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
@@ -105,20 +94,16 @@ void CaptureAdc(void)
     
     gAdcCv =(uint16_t)(accum / count);
     
-#ifndef BREADBOARD
     // (4096 * ADC_raw) / 1024 = mV on pin.
     // multiply by 63.5 to compensate for the voltage divider supplying the pin.
     // divide by 1000 to convert from mV to volts
     // This works out to (63.5 * (4096 / 1024)) / 1000 = 0.254, or ~(1/4 + 1/250).
     gVoltage = (uint8_t)(gAdcCv / 4) + (uint8_t)(gAdcCv / 210);
-#else
-    // this will be roughly 1/10s of volts
-    gVoltage = (uint8_t)((gAdcCv / 5) - (gAdcCv / 52));
-#endif
 }
 
 void AdjustVoltagePwm(void)
 {
+    /*
     const int16_t DELTA_PWM_MAX = PWM_SCALAR * 500;
     const int16_t I_MAX = 5 * PWM_SCALAR / 2;
     const int16_t Kp_N = 4;
@@ -138,11 +123,15 @@ void AdjustVoltagePwm(void)
     if (i < -I_MAX) i = -I_MAX;    
     
     int16_t delta = p + ((Ki_N * i) / Ki_D);
-    
+     
     if (delta > DELTA_PWM_MAX) delta = DELTA_PWM_MAX;
     if (delta < -DELTA_PWM_MAX) delta = -DELTA_PWM_MAX;
     
     gPwmDutyCycle = (uint16_t)((int16_t)gPwmDutyCycle + delta);
+    */
+    
+    if (gAdcCv + ADC_DEADBAND < ADC_SP) ++gPwmDutyCycle;
+    else if (gAdcCv- ADC_DEADBAND > ADC_SP) --gPwmDutyCycle;
     
     if (gPwmDutyCycle > PWM_MAX) gPwmDutyCycle = PWM_MAX;
     else if (gPwmDutyCycle < PWM_MIN) gPwmDutyCycle = PWM_MIN;
@@ -252,17 +241,20 @@ void main(void)
 {
     InitClock();
     InitPins();
-    InitTimer();
-    InitPWM(gPwmDutyCycle / PWM_SCALAR);
-    InitAdc();
-    I2C_Host_Init();
     
+    // Give other devices time to finish power-up.
     __delay_ms(50);
     
+    I2C_Host_Init();
     EnableInterrupts();
     
     SetupDisplay();
     DrawStaticDisplaySymbols();
+    
+    InitButton();
+    InitTimer();
+    InitPWM(gPwmDutyCycle / PWM_SCALAR);
+    InitAdc();
     
     while (1)
     {

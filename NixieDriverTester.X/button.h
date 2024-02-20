@@ -7,6 +7,8 @@
 extern uint8_t gButtonState;
 extern uint8_t gLongPress;
 
+void InitButton(void);
+
 void UpdateButtonState(void);
 
 #endif	/* BUTTON_H */
