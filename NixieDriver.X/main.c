@@ -8,21 +8,22 @@
 
 #define _XTAL_FREQ (1000 * 1000ul) // 1 MHz
 
-#define CATHODE_5_PIN RC4 // v Left pins v
-#define CATHODE_4_PIN RC3
-#define CATHODE_3_PIN RC6
-#define CATHODE_2_PIN RC7
-#define CATHODE_1_PIN RB7
-#define CATHODE_0_PIN RB6 // v Right pins v
-#define CATHODE_9_PIN RB5
-#define CATHODE_8_PIN RB4
-#define CATHODE_7_PIN RC2
-#define CATHODE_6_PIN RC1
+#define CATHODE_0_PIN RC3
+#define CATHODE_9_PIN RC6
+#define CATHODE_8_PIN RC7
+#define CATHODE_7_PIN RB7
+#define CATHODE_6_PIN RC4
+#define CATHODE_5_PIN RC5
+#define CATHODE_4_PIN RA4
+#define CATHODE_3_PIN RA5
+#define CATHODE_2_PIN RA2
+#define CATHODE_1_PIN RC2
+#define CATHODE_DOR_PIN RB5
 
-#define ADDRESS_PIN_0 RC0 // LSB
-#define ADDRESS_PIN_1 RA2
-#define ADDRESS_PIN_2 RA1
-#define ADDRESS_PIN_3 RA0
+#define ADDRESS_PIN_0 RA0 // LSB
+#define ADDRESS_PIN_1 RA1
+#define ADDRESS_PIN_2 RC0
+#define ADDRESS_PIN_3 RC1
 
 #define TOPPS_(RA) RA ## PPS
 #define TOPPS(RA) TOPPS_(RA)
@@ -37,6 +38,7 @@
 #define CATHODE_8_PPS TOPPS(CATHODE_8_PIN)
 #define CATHODE_9_PPS TOPPS(CATHODE_9_PIN)
 #define CATHODE_0_PPS TOPPS(CATHODE_0_PIN)
+#define CATHODE_DOT_PPS TOPPS(CATHODE_DOT_PIN)
 
 const int PWM_MAX = 250; 
 const int PWM_RAMP_STEPS = 5;
@@ -47,11 +49,17 @@ const int PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
 
 void InitPins()
 {
-    // I2C pins (RA4 and RA5) must be configured as inputs (§25.2.2.3)
-    // Address pins RA0-3 and RC0 are inputs
-    TRISA = 0x37;
-    TRISB = 0x00;
-    TRISC = 0x01;
+    /*
+     * I2C:
+     * SCL = RB4
+     * SDA = RB6
+     */
+    
+    // I2C pins must be configured as inputs (§25.2.2.3)
+    // Address pins are inputs
+    TRISA = 0x03;
+    TRISB = 0x50;
+    TRISC = 0x03;
 
     // Clear the analog registers (§16.5)
     ANSELA = 0x00;
@@ -63,13 +71,13 @@ void InitPins()
     PORTB = 0;
     PORTC = 0;
     
-    // Set PPS input pins (§18.2, Table 18-1)
-    SSP1CLKPPS = 0x5;
-    SSP1DATPPS = 0x4;
+    // Set PPS input pins (§18.2, Table 18-1; §18.8.1)
+    SSP1CLKPPS = (0b001 << 3) | 4;
+    SSP1DATPPS = (0b001 << 3) | 6;
 
     // Set PPS output pins (§18.8.2)
-    RA5PPS = 0x07;
-    RA4PPS = 0x08;
+    RB4PPS = 0x07; // SCL
+    RB6PPS = 0x08; // SDA
 }
 
 void InitInterrupts()
