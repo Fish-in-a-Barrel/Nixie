@@ -8,6 +8,7 @@
 
 #define _XTAL_FREQ (1000 * 1000ul) // 1 MHz
 
+// The pin GPIO register for each cathode driver.
 #define CATHODE_0_PIN RC3
 #define CATHODE_9_PIN RC6
 #define CATHODE_8_PIN RC7
@@ -18,16 +19,19 @@
 #define CATHODE_3_PIN RA5
 #define CATHODE_2_PIN RA2
 #define CATHODE_1_PIN RC2
-#define CATHODE_DOR_PIN RB5
+#define CATHODE_COMMA_PIN RB5
 
+// The pin GPIO register for each address bit.
 #define ADDRESS_PIN_0 RA0 // LSB
 #define ADDRESS_PIN_1 RA1
-#define ADDRESS_PIN_2 RC0
-#define ADDRESS_PIN_3 RC1
+#define ADDRESS_PIN_2 RC1
+#define ADDRESS_PIN_3 RC0
 
+// TOPPS(X) composites the pin register with the suffix "PPS" to form the PPS register associated with that pin.
 #define TOPPS_(RA) RA ## PPS
 #define TOPPS(RA) TOPPS_(RA)
 
+// The PPS register for each driver pin.
 #define CATHODE_1_PPS TOPPS(CATHODE_1_PIN)
 #define CATHODE_2_PPS TOPPS(CATHODE_2_PIN)
 #define CATHODE_3_PPS TOPPS(CATHODE_3_PIN)
@@ -38,14 +42,13 @@
 #define CATHODE_8_PPS TOPPS(CATHODE_8_PIN)
 #define CATHODE_9_PPS TOPPS(CATHODE_9_PIN)
 #define CATHODE_0_PPS TOPPS(CATHODE_0_PIN)
-#define CATHODE_DOT_PPS TOPPS(CATHODE_DOT_PIN)
+#define CATHODE_COMMA_PPS TOPPS(CATHODE_COMMA_PIN)
 
 const int PWM_MAX = 250; 
 const int PWM_RAMP_STEPS = 5;
 const int PWM_RAMP_TIME = 150;
 const int PWM_RAMP_STEP_SIZE = PWM_MAX / PWM_RAMP_STEPS;
 const int PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
-
 
 void InitPins()
 {
@@ -168,11 +171,15 @@ void HandleI2C()
     else if ((!SSP1STATbits.R_nW) && (SSP1STATbits.BF))
     {
         //
-        // Handle data writes
+        // Handle data
         //
 
-        gDataI2C = SSP1BUF;
-        gNewDataI2C = 1;
+        uint8_t buf = SSP1BUF;
+        if (buf != gDataI2C)
+        {
+            gDataI2C = buf;
+            gNewDataI2C = 1;
+        }
         
         SendAckI2C();
     }
@@ -196,16 +203,25 @@ void SetPwmDutyCycle(int dc)
     T2TMR = 0;
 }
 
+// Expands to an assignment that sets the PPS output for a given pin to one of three values:
+//   If the pin # matches the selected digit, assign PWM 3 (increasing duty cycle, fade in)
+//   Otherwise, if the pin # matches the previously selected digit, assign PWM 4 (edcreasing duty cycle, fade out)
+//   Otherwise, assign GPIO (off)
 #define ASSIGN_PPS(PPS, X) PPS = (X == bcd) ? 3 : (X == lastBcd) ? 4 : 0;
 
 void RampCathodePins(const uint8_t bcd)
 {
     static uint8_t lastBcd = 0xFF;
     
+    // Set the comma driver
+    CATHODE_COMMA_PIN = bcd >> 7;
+    bcd &= 0x7F;
+    
     if (bcd == lastBcd) return;
 
     SetPwmDutyCycle(0);
 
+    // Set the digit drivers.
     ASSIGN_PPS(CATHODE_0_PPS, 0);
     ASSIGN_PPS(CATHODE_1_PPS, 1);
     ASSIGN_PPS(CATHODE_2_PPS, 2);
