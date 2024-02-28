@@ -1,3 +1,9 @@
+//
+// Section references are to the "PIC16F15213/14/23/24/43/44 Low Pin Count Microcontrollers" datasheet.
+// Document DS40002195D
+// https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F15213-14-23-24-43-44-Microcontroller-Data-Sheet-40002195.pdf
+//
+
 #include <xc.h>
 
 #include "config_bits.h"
@@ -29,6 +35,7 @@
 
 uint8_t gNixieAutoIncrement = 1;
 uint8_t gCurrentCathode = CATHODE_NONE;
+uint8_t gCurrentCommaState = 0;
 
 uint16_t gPwmDutyCycle = PWM_MIN;
 
@@ -150,9 +157,12 @@ void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
 
 void UpdateNixieState(void)
 {
-    uint8_t targetCathode = gCurrentCathode;
     static uint32_t nixieStartTickCount = 0;
+    static uint32_t commaToggleTickCount = (uint32_t)(~0);
     static uint32_t buttonStartTickCount = 0;
+
+    uint8_t targetCathode = gCurrentCathode;
+    uint8_t targetCommaState = gCurrentCommaState;
     
     // Shut off the nixie tube if the voltage is out of range.
     if ((gVoltage < HV_MIN) || (gVoltage > HV_MAX))
@@ -173,7 +183,15 @@ void UpdateNixieState(void)
             if (gTickCount - nixieStartTickCount > TICK_FREQ)
             {
                 nixieStartTickCount = gTickCount;
+                commaToggleTickCount = nixieStartTickCount + TICK_FREQ / 2;
                 targetCathode = (gCurrentCathode + 1) % 10;
+            }
+            
+            // Flip the comma state when the toggle tick count is reached.
+            if (gTickCount >= commaToggleTickCount)
+            {
+                targetCommaState = gCurrentCommaState ? 0 : 1;
+                commaToggleTickCount = (uint32_t)(~0);
             }
         }
         
@@ -184,10 +202,13 @@ void UpdateNixieState(void)
         }
     }
     
-    if (targetCathode != gCurrentCathode)
+    if ((targetCathode != gCurrentCathode) || (targetCommaState != gCurrentCommaState))
     {
+        uint8_t command = (targetCommaState ? 0x80 : 0) | targetCathode;
+        I2C_Write(0x0F, &command, sizeof(command));        
+
         gCurrentCathode = targetCathode;
-        I2C_Write(0x0F, &gCurrentCathode, sizeof(gCurrentCathode));        
+        gCurrentCommaState = targetCommaState;
     }
 }
 
