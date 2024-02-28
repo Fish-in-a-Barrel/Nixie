@@ -17,33 +17,44 @@
 #include "adc.h"
 #include "timer.h"
 
-#define CATHODE_NONE 10
-
-#define HV_TARGET 180
-#define HV_DEADBAND 5
-#define HV_MIN (HV_TARGET - 2 * HV_DEADBAND)
-#define HV_MAX (HV_TARGET + 2 * HV_DEADBAND)
-
-// This should be 1/4 the expected voltage from the voltage divider mV.
-// Theoretically this should be 2,800mV, but it will vary with the exact resistance of the resistors in the voltage divider.
+// The ADC returns a 10-bit value dividing the range 0mv to 4096mV evenly so V/4 = ADC.
+// The expected voltage from the voltage divider is 2,800mV, which means the expected ADC value is 700. This will vary with the exact resistance of
+// the resistors in the voltage divider.
 #define ADC_SP 715L
 #define ADC_DEADBAND 5
-
-#define PWM_SCALAR 32
-#define PWM_MIN (uint16_t)(0.85 * (TMR2_RESET << 2) * PWM_SCALAR)
-#define PWM_MAX (uint16_t)(0.95 * (TMR2_RESET << 2) * PWM_SCALAR)
-
-uint8_t gNixieAutoIncrement = 1;
-uint8_t gCurrentCathode = CATHODE_NONE;
-uint8_t gCurrentCommaState = 0;
-
-uint16_t gPwmDutyCycle = PWM_MIN;
 
 uint32_t gAdcAccumulator = 0;
 uint16_t gAdcAccumulatorCount = 0;
 uint16_t gAdcCv = 0;
 
+// The Nixie tube will be blanked if the high-voltage supply is outside the target range.
+#define HV_TARGET 180
+#define HV_DEADBAND 10
+#define HV_MIN (HV_TARGET - HV_DEADBAND)
+#define HV_MAX (HV_TARGET + HV_DEADBAND)
+
 uint8_t gVoltage = 0;
+
+// The voltage booster is controlled by changing the duty-cycle of the PWM signal driving it.
+// By scaling the working DC value, we can have a working value with more granularity than the actual PWM allows. This can allow for some smoother
+// control, depending on the algorithm.
+#define PWM_DC_SCALAR 32
+#define PWM_DC_MIN (uint16_t)(0.85 * (TMR2_RESET << 2) * PWM_DC_SCALAR)
+#define PWM_DC_MAX (uint16_t)(0.95 * (TMR2_RESET << 2) * PWM_DC_SCALAR)
+
+uint16_t gPwmDutyCycle = PWM_DC_MIN;
+
+typedef struct
+{
+    uint8_t digit:4; // LSB. The digit to display. Blanks the nixie for values > 9.
+    uint8_t _pad:3;  // unused
+    uint8_t comma:1; // 1 = comma lit (for IN-12B)
+} NixieState;
+
+#define NIXIE_DIGIT_BLANK 0xF
+
+uint8_t gNixieAutoIncrement = 1;
+NixieState gCurrentNixieState = { NIXIE_DIGIT_BLANK, 0, 0 };
 
 uint8_t gLastButtonState = BUTTON_STATE_RELEASED;
 
@@ -105,6 +116,7 @@ void CaptureAdc(void)
     // multiply by 63.5 to compensate for the voltage divider supplying the pin.
     // divide by 1000 to convert from mV to volts
     // This works out to (63.5 * (4096 / 1024)) / 1000 = 0.254, or ~(1/4 + 1/250).
+    // The exact values used will depend on the precise value of the resistors.
     gVoltage = (uint8_t)(gAdcCv / 4) + (uint8_t)(gAdcCv / 210);
 }
 
@@ -140,10 +152,10 @@ void AdjustVoltagePwm(void)
     if (gAdcCv + ADC_DEADBAND < ADC_SP) ++gPwmDutyCycle;
     else if (gAdcCv- ADC_DEADBAND > ADC_SP) --gPwmDutyCycle;
     
-    if (gPwmDutyCycle > PWM_MAX) gPwmDutyCycle = PWM_MAX;
-    else if (gPwmDutyCycle < PWM_MIN) gPwmDutyCycle = PWM_MIN;
+    if (gPwmDutyCycle > PWM_DC_MAX) gPwmDutyCycle = PWM_DC_MAX;
+    else if (gPwmDutyCycle < PWM_DC_MIN) gPwmDutyCycle = PWM_DC_MIN;
     
-    SetPwmDutyCycle(gPwmDutyCycle / PWM_SCALAR);
+    SetPwmDutyCycle(gPwmDutyCycle / PWM_DC_SCALAR);
 }
 
 void DisplayNumber(uint16_t number, int8_t digitCount, uint8_t row, uint8_t x)
@@ -161,20 +173,19 @@ void UpdateNixieState(void)
     static uint32_t commaToggleTickCount = (uint32_t)(~0);
     static uint32_t buttonStartTickCount = 0;
 
-    uint8_t targetCathode = gCurrentCathode;
-    uint8_t targetCommaState = gCurrentCommaState;
+    NixieState targetState = gCurrentNixieState;
     
     // Shut off the nixie tube if the voltage is out of range.
     if ((gVoltage < HV_MIN) || (gVoltage > HV_MAX))
     {
-        targetCathode = CATHODE_NONE;
+        targetState.digit = NIXIE_DIGIT_BLANK;
     }
     else
     {
-        if (CATHODE_NONE == gCurrentCathode)
+        if (NIXIE_DIGIT_BLANK == gCurrentNixieState.digit)
         {
             nixieStartTickCount = gTickCount;
-            targetCathode = 0;
+            targetState.digit = 0;
         }
         
         if (gNixieAutoIncrement)
@@ -184,13 +195,13 @@ void UpdateNixieState(void)
             {
                 nixieStartTickCount = gTickCount;
                 commaToggleTickCount = nixieStartTickCount + TICK_FREQ / 2;
-                targetCathode = (gCurrentCathode + 1) % 10;
+                targetState.digit = (gCurrentNixieState.digit + 1) % 10;
             }
             
             // Flip the comma state when the toggle tick count is reached.
             if (gTickCount >= commaToggleTickCount)
             {
-                targetCommaState = gCurrentCommaState ? 0 : 1;
+                targetState.comma = gCurrentNixieState.comma ? 0 : 1;
                 commaToggleTickCount = (uint32_t)(~0);
             }
         }
@@ -198,17 +209,15 @@ void UpdateNixieState(void)
         if ((gLastButtonState != gButtonState) && (BUTTON_STATE_RELEASED == gButtonState))
         {
             if (gLongPress) gNixieAutoIncrement = !gNixieAutoIncrement;
-            if (!gNixieAutoIncrement) targetCathode = (gCurrentCathode + 1) % 10;
+            if (!gNixieAutoIncrement) targetState.digit = (gCurrentNixieState.digit + 1) % 10;
         }
     }
     
-    if ((targetCathode != gCurrentCathode) || (targetCommaState != gCurrentCommaState))
+    if ((gCurrentNixieState.digit != gCurrentNixieState.digit) || (targetState.comma != gCurrentNixieState.comma))
     {
-        uint8_t command = (targetCommaState ? 0x80 : 0) | targetCathode;
-        I2C_Write(0x0F, &command, sizeof(command));        
+        I2C_Write(0x0F, &targetState, sizeof(targetState));        
 
-        gCurrentCathode = targetCathode;
-        gCurrentCommaState = targetCommaState;
+        gCurrentNixieState = targetState;
     }
 }
 
@@ -236,7 +245,7 @@ void RefreshDisplay()
     // Nixie state
     //
     
-    uint8_t nixieState = (gCurrentCathode != CATHODE_NONE) ? gCurrentCathode : CHAR_DSH;
+    uint8_t nixieState = (gCurrentNixieState.digit != NIXIE_DIGIT_BLANK) ? gCurrentNixieState.digit : CHAR_DSH;
     uint8_t autoState = gNixieAutoIncrement ? CHAR_AST : CHAR_SPC;
     
     DrawCharacter(0, 0, nixieState);
@@ -249,7 +258,7 @@ void RefreshDisplay()
     
     DisplayNumber(gAdcCv, 4, 3, 0);
     DisplayNumber(gVoltage, 3, 0, 10);
-    DisplayNumber(gPwmDutyCycle / PWM_SCALAR, 4, 3, 8);
+    DisplayNumber(gPwmDutyCycle / PWM_DC_SCALAR, 4, 3, 8);
 
     //
     // Button pressed indicator
@@ -274,7 +283,7 @@ void main(void)
     
     InitButton();
     InitTimer();
-    InitPWM(gPwmDutyCycle / PWM_SCALAR);
+    InitPWM(gPwmDutyCycle / PWM_DC_SCALAR);
     InitAdc();
     
     while (1)
