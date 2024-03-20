@@ -205,11 +205,11 @@ void SetPwmDutyCycle(int dc)
 
 // Expands to an assignment that sets the PPS output for a given pin to one of three values:
 //   If the pin # matches the selected digit, assign PWM 3 (increasing duty cycle, fade in)
-//   Otherwise, if the pin # matches the previously selected digit, assign PWM 4 (edcreasing duty cycle, fade out)
+//   Otherwise, if the pin # matches the previously selected digit, assign PWM 4 (decreasing duty cycle, fade out)
 //   Otherwise, assign GPIO (off)
 #define ASSIGN_PPS(PPS, X) PPS = (X == bcd) ? 3 : (X == lastBcd) ? 4 : 0;
 
-void RampCathodePins(const uint8_t bcd)
+void RampCathodePins(uint8_t bcd)
 {
     static uint8_t lastBcd = 0xFF;
     
