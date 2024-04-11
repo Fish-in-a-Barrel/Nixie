@@ -30,11 +30,24 @@ void EnableInterrupts()
     PIE1bits.RC1IE = 1;
 }
 
-uint8_t rtcBuffer[6] = { 0, 0, 0, 0, 0, 0 };
 struct RtcData rtc;
+
+uint8_t CRC(void* data, uint8_t size)
+{
+    uint8_t crc = 0;
+    for (uint8_t i = 0; i < size; ++i) crc ^= ((uint8_t*)data)[i];
+    
+    return crc;
+}
 
 void UpdateNixieDrivers()
 {
+    static uint8_t lastCRC = 0;
+    uint8_t crc = CRC(&rtc, sizeof(rtc));
+    
+    if (lastCRC == crc) return;
+    lastCRC = crc;    
+    
     uint8_t digit;
     
     digit = rtc.hour10;   I2C_Write(0x01, &digit, sizeof(digit));
