@@ -8,7 +8,7 @@
 #ifndef CLOCK_H
 #define	CLOCK_H
 
-#define SPEED 4
+#define SPEED 32
 
 #define _XTAL_FREQ (SPEED * 1000 * 1000ul)
 

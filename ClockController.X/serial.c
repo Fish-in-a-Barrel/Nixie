@@ -13,6 +13,5 @@ void SerialInit(void)
     //ADDEN disabled; CREN enabled; SREN disabled; RX9 8-bit; SPEN enabled; (§24.6.2)
     RC1STA = 0x90;
     //SPBRGL 103; SPBRGH 0; (§24.6.6)
-    SP1BRGL = _XTAL_FREQ / (4 * SER_BAUD) - 1; 
-    SP1BRGH = 0x0; 
+    SP1BRG = _XTAL_FREQ / (4 * SER_BAUD) - 1; 
 }
