@@ -62,11 +62,11 @@ uint8_t DateTimeBefore(volatile const char* ad, volatile const char* at, volatil
 uint8_t GetDayOfWeek(volatile const char* date)
 {
     // This set of month keys is only valid in years [2000, 2099].
-    const int8_t MONTH_KEY[12] = { 2, 5, 5, 1, 3, 6, 1, 4, 7, 2, 5, 7 };
+    const uint8_t MONTH_KEY[12] = { 2, 5, 5, 1, 3, 6, 1, 4, 7, 2, 5, 7 };
     
-    int8_t day = BcdToBinary(date, 2);
-    int8_t month = BcdToBinary(date + 2, 2);
-    int8_t year = BcdToBinary(date + 4, 2);
+    uint8_t day = BcdToBinary(date, 2);
+    uint8_t month = BcdToBinary(date + 2, 2);
+    uint8_t year = BcdToBinary(date + 4, 2);
     
     // Convert the raw month to it's equivalent "key" value
     if ((year % 4) || (month > 2))

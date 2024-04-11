@@ -13,22 +13,15 @@ void FindSunday(char* date, uint8_t whichSunday)
     BinaryToBcd(sunday, date, 2);
 }
 
-int8_t GetTimeZoneOffset()
-{
-    int8_t lon = BcdToBinary(gpsData.lon, sizeof(gpsData.lon));
-    
-    return lon / 15;
-}
-
 void RollYearBack()
 {
-    int8_t year = BcdToBinary(gpsData.date + 4, 2) - 1;
+    uint8_t year = BcdToBinary(gpsData.date + 4, 2) - 1;
     BinaryToBcd(year, gpsData.date + 4, 2);
 }
 
-int8_t RollMonthBack()
+uint8_t RollMonthBack()
 {
-    int8_t month = BcdToBinary(gpsData.date + 2, 2);
+    uint8_t month = BcdToBinary(gpsData.date + 2, 2);
     
     if (--month == 0)
     {
@@ -42,11 +35,11 @@ int8_t RollMonthBack()
 
 void RollDayBack()
 {
-    int8_t day = BcdToBinary(gpsData.date, 2);
+    uint8_t day = BcdToBinary(gpsData.date, 2);
     
     if (--day == 0)
     {
-        int8_t month = RollMonthBack();
+        uint8_t month = RollMonthBack();
         
         switch (month)
         {
@@ -72,7 +65,7 @@ void RollDayBack()
             // February - I'm not bothering with anything more than standard leap days
             case 2:
             {
-                int8_t year = BcdToBinary(gpsData.date + 4, 2);
+                uint8_t year = BcdToBinary(gpsData.date + 4, 2);
                 day = (year % 4) ? 29 : 28;
                 break;
             }
@@ -88,7 +81,7 @@ void RollDayBack()
 
 void RollTimeBack(int8_t tzOffset)
 {
-    int8_t hour = BcdToBinary(gpsData.time, 2);
+    int8_t hour = (int8_t)BcdToBinary(gpsData.time, 2);
     hour -= tzOffset;
     
     // If hour < 0, then UTC is already at tomorrow and we need to roll the date back one day.
@@ -98,12 +91,12 @@ void RollTimeBack(int8_t tzOffset)
         RollDayBack();
     }
     
-    BinaryToBcd(hour, gpsData.time, 2);
+    BinaryToBcd((uint8_t)hour, gpsData.time, 2);
 }
 
 void RollMonthForward()
 {
-    int8_t month = BcdToBinary(gpsData.date + 2, 2);
+    uint8_t month = BcdToBinary(gpsData.date + 2, 2);
 
     // This code is only triggered by DST=true, which means we don't have to worry about rolling over the year.
     BinaryToBcd(++month, gpsData.date + 2, 2);
@@ -111,11 +104,11 @@ void RollMonthForward()
 
 void RollDayForward()
 {
-    int8_t day = BcdToBinary(gpsData.date, 2);
-    int8_t month = BcdToBinary(gpsData.date + 2, 2);
+    uint8_t day = BcdToBinary(gpsData.date, 2);
+    uint8_t month = BcdToBinary(gpsData.date + 2, 2);
     
     // This code is only triggered by DST=true, which means we only need to consider March->November
-    int8_t dayMax = 31;
+    uint8_t dayMax = 31;
     switch (month)
     {
         // 30 day months
@@ -164,10 +157,8 @@ void UpdateDST()
 }
 
 // This is a very crude UTC to local time conversion
-void GPS_ConvertToLocalTime()
+void GPS_ConvertToLocalTime(int8_t tzOffset)
 {
-    int8_t tzOffset = GetTimeZoneOffset();
-    
     RollTimeBack(tzOffset);
     UpdateDST();
 }

@@ -6,18 +6,18 @@
 struct RtcData
 {
     // 0x00 - seconds
-    uint8_t seconds01:4;
-    uint8_t seconds10:3;
+    uint8_t second01:4;
+    uint8_t second10:3;
     uint8_t zero0:1;
     
     // 0x01 - minutes
-    uint8_t minutes01:4;
-    uint8_t minutes10:3;
+    uint8_t minute01:4;
+    uint8_t minute10:3;
     uint8_t zero1:1;
     
     // 0x02 - hours
     uint8_t hour01:4;
-    uint8_t hours10:2;
+    uint8_t hour10:2;
     uint8_t hoursType:1; // 0 = 12, 1 = 24
     uint8_t zero2:1;
     

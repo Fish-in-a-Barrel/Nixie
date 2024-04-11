@@ -19,13 +19,13 @@ volatile struct GpsData gpsData;
 #define FIELD_DATE 4
 #define LAST_FIELD FIELD_DATE
 
-volatile uint8_t* FIELD[] =
+volatile char* FIELD[] =
 {
-    &(gpsData.time),
+    gpsData.time,
     &(gpsData.status),
-    &(gpsData.lat),
-    &(gpsData.lon),
-    &(gpsData.date)
+    gpsData.lat,
+    gpsData.lon,
+    gpsData.date
 };
 
 const uint8_t FIELD_SIZE[5] =

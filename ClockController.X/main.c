@@ -7,6 +7,7 @@
 #include "serial.h"
 #include "rtc.h"
 #include "gps.h"
+#include "bcd_utils.h"
 
 void __interrupt() ISR()
 {
@@ -34,11 +35,21 @@ struct RtcData rtc;
 
 void UpdateNixieDrivers()
 {
-    uint8_t digit = rtc.seconds01;
-//    static uint8_t count = 0;
-//    count = (count + 1) % 2;
+    uint8_t digit;
     
-    I2C_Write(0x01, &digit, sizeof(digit));
+    digit = rtc.hour10;   I2C_Write(0x01, &digit, sizeof(digit));
+    digit = rtc.hour01;   I2C_Write(0x02, &digit, sizeof(digit));
+    digit = rtc.minute10; I2C_Write(0x03, &digit, sizeof(digit));
+    digit = rtc.minute01; I2C_Write(0x04, &digit, sizeof(digit));
+    digit = rtc.second10; I2C_Write(0x05, &digit, sizeof(digit));
+    digit = rtc.second01; I2C_Write(0x06, &digit, sizeof(digit));
+
+    digit = rtc.date10;  I2C_Write(0x09, &digit, sizeof(digit));
+    digit = rtc.date01;  I2C_Write(0x0A, &digit, sizeof(digit));
+    digit = rtc.month10; I2C_Write(0x0B, &digit, sizeof(digit));
+    digit = rtc.month01; I2C_Write(0x0C, &digit, sizeof(digit));
+    digit = rtc.year10;  I2C_Write(0x0D, &digit, sizeof(digit));
+    digit = rtc.year01;  I2C_Write(0x0E, &digit, sizeof(digit));
 }
 
 void ReadRTC()
@@ -48,23 +59,26 @@ void ReadRTC()
     I2C_WriteRead(I2C_RTC_ADDRESS, &READ_START_ADDRESS, sizeof(READ_START_ADDRESS), &rtc, sizeof(rtc));
 }
 
-void SetClock()
+void SetRTC()
 {
-    rtc.minutes01 = 0;
-    rtc.minutes10 = 1;
-    
-    rtc.hour01 = 0;
-    rtc.hours10 = 2;
+    rtc.hour10 = BcdToBinary(gpsData.time + 0, 1);
+    rtc.hour01 = BcdToBinary(gpsData.time + 1, 1);
     rtc.hoursType = 1;
     
-    rtc.date01 = 2;
-    rtc.date10 = 2;
+    rtc.minute10 = BcdToBinary(gpsData.time + 2, 1);
+    rtc.minute01 = BcdToBinary(gpsData.time + 3, 1);
     
-    rtc.month01 = 1;
-    rtc.month10 = 1;
+    rtc.second10 = BcdToBinary(gpsData.time + 4, 1);
+    rtc.second01 = BcdToBinary(gpsData.time + 5, 1);
     
-    rtc.year01 = 3;
-    rtc.year10 = 2;
+    rtc.date10 = BcdToBinary(gpsData.date + 0, 1);
+    rtc.date01 = BcdToBinary(gpsData.date + 1, 1);
+    
+    rtc.month10 = BcdToBinary(gpsData.date + 2, 1);
+    rtc.month01 = BcdToBinary(gpsData.date + 3, 1);
+    
+    rtc.year10 = BcdToBinary(gpsData.date + 4, 1);
+    rtc.year01 = BcdToBinary(gpsData.date + 5, 1);
     
     uint8_t buffer[sizeof(rtc) + 1];
     for (int i = 0; i < sizeof(rtc); ++i) buffer[i + 1] = ((uint8_t*)&rtc)[i];
@@ -78,7 +92,7 @@ void CheckGPS()
     {
         if ('A' == gpsData.status)
         {
-            GPS_ConvertToLocalTime();
+            GPS_ConvertToLocalTime(-6);
 
             // TODO: Compare to RTC and update RTC as needed
         }
@@ -95,7 +109,13 @@ void main(void)
     EnableInterrupts();
     InitClock();
     
-    //SetClock();
+    // TODO: Initialize USB PD
+    
+    // TODO: Initialize display
+    
+    // TODO: Initialize ADC
+    // TODO: Initialize PWM
+    // TODO: Setup power control interrupt
     
     gpsData.updated = 0;
     
@@ -105,7 +125,9 @@ void main(void)
         ReadRTC();
         
         UpdateNixieDrivers();
+        
+        // TODO: handle button changes
 
-        __delay_ms(1000);
+        __delay_ms(100);
     }
 }
