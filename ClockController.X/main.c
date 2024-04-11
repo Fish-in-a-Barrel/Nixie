@@ -90,8 +90,8 @@ void SetRTC()
     rtc.month10 = gpsData.datetime.month / 10;
     rtc.month01 = gpsData.datetime.month % 10;
     
-    rtc.date10 = gpsData.datetime.date / 10;
-    rtc.date01 = gpsData.datetime.date % 10;
+    rtc.date10 = gpsData.datetime.day / 10;
+    rtc.date01 = gpsData.datetime.day % 10;
     
     uint8_t buffer[sizeof(rtc) + 1];
     for (int i = 0; i < sizeof(rtc); ++i) buffer[i + 1] = ((uint8_t*)&rtc)[i];

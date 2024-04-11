@@ -6,7 +6,7 @@
 
 struct GpsData
 {
-    struct Datetime datetime;
+    struct DateTime datetime;
 
     char status;
     

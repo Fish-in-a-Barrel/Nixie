@@ -6,12 +6,12 @@
 
 // Updates the passed date with the date of the requested Sunday in the month and year passed
 // whichSunday: the 1-based count of the Sunday requested
-void FindSunday(struct Datetime* date, uint8_t whichSunday)
+void FindSunday(struct DateTime* date, uint8_t whichSunday)
 {
     uint8_t sunday = (whichSunday - 1) * 7 + 1;
     sunday += ((7 - GetDayOfWeek(date) + DOW_SUNDAY) % 7);
     
-    date->date = sunday;
+    date->day = sunday;
 }
 
 void RollYearBack()
@@ -30,7 +30,7 @@ void RollMonthBack()
 
 void RollDayBack()
 {
-    if (--gpsData.datetime.date == 0)
+    if (--gpsData.datetime.day == 0)
     {
         RollMonthBack();
         
@@ -44,7 +44,7 @@ void RollDayBack()
             case 8: // August
             case 10: // October
             case 12: // December
-                gpsData.datetime.date = 31;
+                gpsData.datetime.day = 31;
                 break;
                 
             // 30 day months
@@ -52,13 +52,13 @@ void RollDayBack()
             case 6: // June
             case 9: // September
             case 11: // November
-                gpsData.datetime.date = 30;
+                gpsData.datetime.day = 30;
                 break;
                 
             // February - I'm not bothering with anything more than standard leap days
             case 2:
             {
-                gpsData.datetime.date = (gpsData.datetime.year % 4) ? 29 : 28;
+                gpsData.datetime.day = (gpsData.datetime.year % 4) ? 29 : 28;
                 break;
             }
 
@@ -106,9 +106,9 @@ void RollDayForward()
             break;
     }
     
-    if (++gpsData.datetime.date > dayMax)
+    if (++gpsData.datetime.day > dayMax)
     {
-        gpsData.datetime.date = 1;
+        gpsData.datetime.day = 1;
         RollMonthForward();        
     }
 }
@@ -116,14 +116,14 @@ void RollDayForward()
 void UpdateDST()
 {
     // DST starts on the second Sunday in March
-    struct Datetime dstStart = { gpsData.datetime.year, 3, 1, 2, 0, 0};
+    struct DateTime dstStart = { gpsData.datetime.year, 3, 1, 2, 0, 0};
     FindSunday(&dstStart, 2);
     
     if (DateBefore(&gpsData.datetime, &dstStart)) return;
 
     // DST ends on the first Sunday in November
     // Times are in standard time, so the end time is 1AM instead of 2AM.
-    struct Datetime dstEnd = { gpsData.datetime.year, 11, 1, 1, 0, 0};
+    struct DateTime dstEnd = { gpsData.datetime.year, 11, 1, 1, 0, 0};
     FindSunday(&dstEnd, 1);
 
     if (DateAfter(&gpsData.datetime, &dstEnd)) return;

@@ -169,7 +169,7 @@ void GPS_HandleInterrupt(void)
     // Handle the state machine reaching the end state.
     if (STATE_END == gState)
     {
-        gpsData.datetime.date  = BcdToBinary(rawGpsData.date + 0, 2);
+        gpsData.datetime.day  = BcdToBinary(rawGpsData.date + 0, 2);
         gpsData.datetime.month = BcdToBinary(rawGpsData.date + 2, 2);
         gpsData.datetime.year  = BcdToBinary(rawGpsData.date + 4, 2);
 
