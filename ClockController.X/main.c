@@ -8,6 +8,7 @@
 #include "rtc.h"
 #include "gps.h"
 #include "bcd_utils.h"
+#include "ap33772.h"
 
 void __interrupt() ISR()
 {
@@ -110,8 +111,8 @@ void main(void)
     SerialInit();
     EnableInterrupts();
     InitClock();
-    
-    // TODO: Initialize USB PD
+
+    AP33772Init();
     
     // TODO: Initialize display
     
