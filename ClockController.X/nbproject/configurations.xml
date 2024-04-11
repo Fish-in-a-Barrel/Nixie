@@ -83,40 +83,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <HI-TECH-COMP>
-        <property key="additional-warnings" value="true"/>
-        <property key="asmlist" value="true"/>
-        <property key="call-prologues" value="false"/>
-        <property key="default-bitfield-type" value="true"/>
-        <property key="default-char-type" value="true"/>
-        <property key="define-macros" value=""/>
-        <property key="disable-optimizations" value="true"/>
-        <property key="extra-include-directories" value=""/>
-        <property key="favor-optimization-for" value="-speed,+space"/>
-        <property key="garbage-collect-data" value="true"/>
-        <property key="garbage-collect-functions" value="true"/>
-        <property key="identifier-length" value="255"/>
-        <property key="local-generation" value="false"/>
-        <property key="operation-mode" value="free"/>
-        <property key="opt-xc8-compiler-strict_ansi" value="false"/>
-        <property key="optimization-assembler" value="true"/>
-        <property key="optimization-assembler-files" value="true"/>
-        <property key="optimization-debug" value="false"/>
-        <property key="optimization-invariant-enable" value="false"/>
-        <property key="optimization-invariant-value" value="16"/>
-        <property key="optimization-level" value="-O0"/>
-        <property key="optimization-speed" value="false"/>
-        <property key="optimization-stable-enable" value="false"/>
-        <property key="preprocess-assembler" value="true"/>
-        <property key="short-enums" value="true"/>
-        <property key="tentative-definitions" value="-fno-common"/>
-        <property key="undefine-macros" value=""/>
-        <property key="use-cci" value="false"/>
-        <property key="use-iar" value="false"/>
-        <property key="verbose" value="false"/>
-        <property key="warning-level" value="-3"/>
-        <property key="what-to-do" value="ignore"/>
-      </HI-TECH-COMP>
       <HI-TECH-LINK>
         <property key="additional-options-checksum" value=""/>
         <property key="additional-options-code-offset" value=""/>
@@ -198,8 +164,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/aaron/MPLABXProjects/NixieClock/ClockController.X/debug/default/ClockController_ptg"/>
         <property key="programmerToGoImageName" value="ClockController_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -317,16 +281,16 @@
     <conf name="Level_2_Opt" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC16F15213</targetDevice>
+        <targetDevice>PIC16F15224</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PK5Tool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.45</languageToolchainVersion>
+        <languageToolchainVersion>2.46</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.22.376"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.24.387"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -355,40 +319,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <HI-TECH-COMP>
-        <property key="additional-warnings" value="true"/>
-        <property key="asmlist" value="true"/>
-        <property key="call-prologues" value="false"/>
-        <property key="default-bitfield-type" value="true"/>
-        <property key="default-char-type" value="true"/>
-        <property key="define-macros" value=""/>
-        <property key="disable-optimizations" value="true"/>
-        <property key="extra-include-directories" value=""/>
-        <property key="favor-optimization-for" value="-speed,+space"/>
-        <property key="garbage-collect-data" value="true"/>
-        <property key="garbage-collect-functions" value="true"/>
-        <property key="identifier-length" value="255"/>
-        <property key="local-generation" value="false"/>
-        <property key="operation-mode" value="free"/>
-        <property key="opt-xc8-compiler-strict_ansi" value="false"/>
-        <property key="optimization-assembler" value="true"/>
-        <property key="optimization-assembler-files" value="true"/>
-        <property key="optimization-debug" value="false"/>
-        <property key="optimization-invariant-enable" value="false"/>
-        <property key="optimization-invariant-value" value="16"/>
-        <property key="optimization-level" value="-O2"/>
-        <property key="optimization-speed" value="false"/>
-        <property key="optimization-stable-enable" value="false"/>
-        <property key="preprocess-assembler" value="true"/>
-        <property key="short-enums" value="true"/>
-        <property key="tentative-definitions" value="-fno-common"/>
-        <property key="undefine-macros" value=""/>
-        <property key="use-cci" value="false"/>
-        <property key="use-iar" value="false"/>
-        <property key="verbose" value="false"/>
-        <property key="warning-level" value="-3"/>
-        <property key="what-to-do" value="ignore"/>
-      </HI-TECH-COMP>
       <HI-TECH-LINK>
         <property key="additional-options-checksum" value=""/>
         <property key="additional-options-code-offset" value=""/>
@@ -451,7 +381,7 @@
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="hwtoolclock.frcindebug" value="false"/>
@@ -470,8 +400,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/aaron/MPLABXProjects/NixieClock/ClockController.X/debug/default/ClockController_ptg"/>
         <property key="programmerToGoImageName" value="ClockController_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
