@@ -69,10 +69,13 @@ void RollDayBack()
     }
 }
 
+// tzOffset must be negative
 void RollTimeBack(int8_t tzOffset)
 {
+    if (tzOffset >= 0) return;
+    
     int8_t hour = (int8_t)gpsData.datetime.hour;
-    hour -= tzOffset;
+    hour += tzOffset;
     
     // If hour < 0, then UTC is already at tomorrow and we need to roll the date back one day.
     if (hour < 0)
@@ -84,58 +87,28 @@ void RollTimeBack(int8_t tzOffset)
     gpsData.datetime.hour = (uint8_t)hour;
 }
 
-void RollMonthForward()
-{
-    // This code is only triggered by DST=true, which means we don't have to worry about rolling over the year because that only happens in
-    // November.
-    ++gpsData.datetime.month;
-}
-
-void RollDayForward()
-{
-    // This code is only triggered by DST=true, which means we only need to consider March->November
-    uint8_t dayMax = 31;
-    switch (gpsData.datetime.month)
-    {
-        // 30 day months
-        case 4: // April
-        case 6: // June
-        case 9: // September
-        case 11: // November
-            dayMax = 30;
-            break;
-    }
-    
-    if (++gpsData.datetime.day > dayMax)
-    {
-        gpsData.datetime.day = 1;
-        RollMonthForward();        
-    }
-}
-
-void UpdateDST()
+uint8_t GetDstOffset()
 {
     // DST starts on the second Sunday in March
     struct DateTime dstStart = { gpsData.datetime.year, 3, 1, 2, 0, 0};
     FindSunday(&dstStart, 2);
     
-    if (DateTimeBefore(&gpsData.datetime, &dstStart)) return;
+    if (DateTimeBefore(&gpsData.datetime, &dstStart)) return 0;
 
     // DST ends on the first Sunday in November
     // Times are in standard time, so the end time is 1AM instead of 2AM.
     struct DateTime dstEnd = { gpsData.datetime.year, 11, 1, 1, 0, 0};
     FindSunday(&dstEnd, 1);
 
-    if (DateTimeBefore(&gpsData.datetime, &dstEnd)) return;
+    if (DateTimeBefore(&gpsData.datetime, &dstEnd)) return 0;
 
-    // If we've made it this far, then we're in DST
-    if (++gpsData.datetime.hour >= 24) RollDayForward();
+    return 1;
 }
 
-// This is a very crude UTC to local time conversion
+// UTC to local time conversion
 void GPS_ConvertToLocalTime(int8_t tzOffset)
 {
+    tzOffset += GetDstOffset();
     RollTimeBack(tzOffset);
-    UpdateDST();
 }
 
