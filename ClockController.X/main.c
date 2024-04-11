@@ -74,24 +74,24 @@ void ReadRTC()
 
 void SetRTC()
 {
-    rtc.hour10 = BcdToBinary(gpsData.time + 0, 1);
-    rtc.hour01 = BcdToBinary(gpsData.time + 1, 1);
+    rtc.hour10 = gpsData.datetime.hour / 10;
+    rtc.hour01 = gpsData.datetime.hour % 10;
     rtc.hoursType = 1;
     
-    rtc.minute10 = BcdToBinary(gpsData.time + 2, 1);
-    rtc.minute01 = BcdToBinary(gpsData.time + 3, 1);
+    rtc.minute10 = gpsData.datetime.minute / 10;
+    rtc.minute01 = gpsData.datetime.minute % 10;
     
-    rtc.second10 = BcdToBinary(gpsData.time + 4, 1);
-    rtc.second01 = BcdToBinary(gpsData.time + 5, 1);
+    rtc.second10 = gpsData.datetime.second / 10;
+    rtc.second01 = gpsData.datetime.second % 10;
     
-    rtc.date10 = BcdToBinary(gpsData.date + 0, 1);
-    rtc.date01 = BcdToBinary(gpsData.date + 1, 1);
+    rtc.year10 = gpsData.datetime.year / 10;
+    rtc.year01 = gpsData.datetime.year % 10;
     
-    rtc.month10 = BcdToBinary(gpsData.date + 2, 1);
-    rtc.month01 = BcdToBinary(gpsData.date + 3, 1);
+    rtc.month10 = gpsData.datetime.month / 10;
+    rtc.month01 = gpsData.datetime.month % 10;
     
-    rtc.year10 = BcdToBinary(gpsData.date + 4, 1);
-    rtc.year01 = BcdToBinary(gpsData.date + 5, 1);
+    rtc.date10 = gpsData.datetime.date / 10;
+    rtc.date01 = gpsData.datetime.date % 10;
     
     uint8_t buffer[sizeof(rtc) + 1];
     for (int i = 0; i < sizeof(rtc); ++i) buffer[i + 1] = ((uint8_t*)&rtc)[i];

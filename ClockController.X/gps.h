@@ -2,15 +2,13 @@
 #define	GPS_H
 
 #include <xc.h>
+#include "time_utils.h"
 
 struct GpsData
 {
-    char time[6];
-    char date[6];
+    struct Datetime datetime;
+
     char status;
-    char lat[2];
-    char lon[3];
-    uint8_t dst;
     
     uint8_t updated;
 };

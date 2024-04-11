@@ -6,42 +6,35 @@
 
 // Updates the passed date with the date of the requested Sunday in the month and year passed
 // whichSunday: the 1-based count of the Sunday requested
-void FindSunday(char* date, uint8_t whichSunday)
+void FindSunday(struct Datetime* date, uint8_t whichSunday)
 {
     uint8_t sunday = (whichSunday - 1) * 7 + 1;
     sunday += ((7 - GetDayOfWeek(date) + DOW_SUNDAY) % 7);
-    BinaryToBcd(sunday, date, 2);
+    
+    date->date = sunday;
 }
 
 void RollYearBack()
 {
-    uint8_t year = BcdToBinary(gpsData.date + 4, 2) - 1;
-    BinaryToBcd(year, gpsData.date + 4, 2);
+    --gpsData.datetime.year;
 }
 
-uint8_t RollMonthBack()
+void RollMonthBack()
 {
-    uint8_t month = BcdToBinary(gpsData.date + 2, 2);
-    
-    if (--month == 0)
+    if (--gpsData.datetime.month == 0)
     {
-        month = 12;
+        gpsData.datetime.month = 12;
         RollYearBack();
     }
-    
-    BinaryToBcd(month, gpsData.date + 2, 2);
-    return month;
 }
 
 void RollDayBack()
 {
-    uint8_t day = BcdToBinary(gpsData.date, 2);
-    
-    if (--day == 0)
+    if (--gpsData.datetime.date == 0)
     {
-        uint8_t month = RollMonthBack();
+        RollMonthBack();
         
-        switch (month)
+        switch (gpsData.datetime.month)
         {
             // 31 day months
             case 1: // January
@@ -51,7 +44,7 @@ void RollDayBack()
             case 8: // August
             case 10: // October
             case 12: // December
-                day = 31;
+                gpsData.datetime.date = 31;
                 break;
                 
             // 30 day months
@@ -59,14 +52,13 @@ void RollDayBack()
             case 6: // June
             case 9: // September
             case 11: // November
-                day = 30;
+                gpsData.datetime.date = 30;
                 break;
                 
             // February - I'm not bothering with anything more than standard leap days
             case 2:
             {
-                uint8_t year = BcdToBinary(gpsData.date + 4, 2);
-                day = (year % 4) ? 29 : 28;
+                gpsData.datetime.date = (gpsData.datetime.year % 4) ? 29 : 28;
                 break;
             }
 
@@ -75,13 +67,11 @@ void RollDayBack()
                 break;
         }
     }
-    
-    BinaryToBcd(day, gpsData.date, 2);
 }
 
 void RollTimeBack(int8_t tzOffset)
 {
-    int8_t hour = (int8_t)BcdToBinary(gpsData.time, 2);
+    int8_t hour = (int8_t)gpsData.datetime.hour;
     hour -= tzOffset;
     
     // If hour < 0, then UTC is already at tomorrow and we need to roll the date back one day.
@@ -91,69 +81,55 @@ void RollTimeBack(int8_t tzOffset)
         RollDayBack();
     }
     
-    BinaryToBcd((uint8_t)hour, gpsData.time, 2);
+    gpsData.datetime.hour = (uint8_t)hour;
 }
 
 void RollMonthForward()
 {
-    uint8_t month = BcdToBinary(gpsData.date + 2, 2);
-
-    // This code is only triggered by DST=true, which means we don't have to worry about rolling over the year.
-    BinaryToBcd(++month, gpsData.date + 2, 2);
+    // This code is only triggered by DST=true, which means we don't have to worry about rolling over the year because that only happens in
+    // November.
+    ++gpsData.datetime.month;
 }
 
 void RollDayForward()
 {
-    uint8_t day = BcdToBinary(gpsData.date, 2);
-    uint8_t month = BcdToBinary(gpsData.date + 2, 2);
-    
     // This code is only triggered by DST=true, which means we only need to consider March->November
     uint8_t dayMax = 31;
-    switch (month)
+    switch (gpsData.datetime.month)
     {
         // 30 day months
         case 4: // April
         case 6: // June
         case 9: // September
         case 11: // November
-            day = 30;
+            dayMax = 30;
             break;
     }
     
-    if (++day > dayMax)
+    if (++gpsData.datetime.date > dayMax)
     {
-        day = 1;
+        gpsData.datetime.date = 1;
         RollMonthForward();        
     }
-    
-    BinaryToBcd(day, gpsData.date, 2);
 }
 
 void UpdateDST()
 {
     // DST starts on the second Sunday in March
-    char dstStart[6] = "dd03yy";
-    dstStart[4] = gpsData.date[4];
-    dstStart[5] = gpsData.date[5];
-    FindSunday(dstStart, 2);
+    struct Datetime dstStart = { gpsData.datetime.year, 3, 1, 2, 0, 0};
+    FindSunday(&dstStart, 2);
+    
+    if (DateBefore(&gpsData.datetime, &dstStart)) return;
 
     // DST ends on the first Sunday in November
-    char dstEnd[6] = "dd11yy";
-    dstEnd[4] = gpsData.date[4];
-    dstEnd[5] = gpsData.date[5];
-    FindSunday(dstEnd, 1);
-    
     // Times are in standard time, so the end time is 1AM instead of 2AM.
-    gpsData.dst = 
-        DateTimeAfter(gpsData.date, gpsData.time, dstStart, "020000") &&
-        DateTimeBefore(gpsData.date, gpsData.time, dstEnd, "010000");
+    struct Datetime dstEnd = { gpsData.datetime.year, 11, 1, 1, 0, 0};
+    FindSunday(&dstEnd, 1);
 
-    if (gpsData.dst && (BcdToBinary(gpsData.time, 2) + 1 >= 24))
-    {
-        RollDayForward();
-    
-        BinaryToBcd(0, gpsData.time, 2);
-    }
+    if (DateAfter(&gpsData.datetime, &dstEnd)) return;
+
+    // If we've made it this far, then we're in DST
+    if (++gpsData.datetime.hour >= 24) RollDayForward();
 }
 
 // This is a very crude UTC to local time conversion

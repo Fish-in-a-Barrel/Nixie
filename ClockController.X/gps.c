@@ -6,6 +6,13 @@
 
 volatile struct GpsData gpsData;
 
+volatile static struct
+{
+    char time[6];
+    char date[6];
+    char status;
+} rawGpsData;
+
 #define STATE_AWAIT_START 0
 #define STATE_CONSUME_HEADER 1
 #define STATE_AWAIT_FIELD 2
@@ -14,36 +21,28 @@ volatile struct GpsData gpsData;
 
 #define FIELD_TIME 0
 #define FIELD_STATUS 1
-#define FIELD_LAT 2
-#define FIELD_LON 3
 #define FIELD_DATE 4
 #define LAST_FIELD FIELD_DATE
 
 volatile char* FIELD[] =
 {
-    gpsData.time,
-    &(gpsData.status),
-    gpsData.lat,
-    gpsData.lon,
-    gpsData.date
+    rawGpsData.time,
+    &(rawGpsData.status),
+    rawGpsData.date
 };
 
 const uint8_t FIELD_SIZE[5] =
 {
-    sizeof(gpsData.time),
-    sizeof(gpsData.status),
-    sizeof(gpsData.lat),
-    sizeof(gpsData.lon),
-    sizeof(gpsData.date)
+    sizeof(rawGpsData.time),
+    sizeof(rawGpsData.status),
+    sizeof(rawGpsData.date)
 };
 
 const uint8_t FIELD_OFFSET[5] =
 {
     1, // (1) time
     1, // (2) status
-    1, // (3) lat
-    2, // (5) lon
-    4  // (9) date
+    7  // (9) date
 };
 
 uint8_t gState = STATE_AWAIT_START;
@@ -170,7 +169,18 @@ void GPS_HandleInterrupt(void)
     // Handle the state machine reaching the end state.
     if (STATE_END == gState)
     {
+        gpsData.datetime.date  = BcdToBinary(rawGpsData.date + 0, 2);
+        gpsData.datetime.month = BcdToBinary(rawGpsData.date + 2, 2);
+        gpsData.datetime.year  = BcdToBinary(rawGpsData.date + 4, 2);
+
+        gpsData.datetime.hour   = BcdToBinary(rawGpsData.time + 0, 2);
+        gpsData.datetime.minute = BcdToBinary(rawGpsData.time + 2, 2);
+        gpsData.datetime.second = BcdToBinary(rawGpsData.time + 4, 2);
+
+        gpsData.status = rawGpsData.status;
+        
         gpsData.updated = 1;
+        
         gState = STATE_AWAIT_START;
     }
 }
