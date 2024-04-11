@@ -42,5 +42,8 @@ uint8_t DateTimeAfter(volatile const struct DateTime* a, volatile const struct D
 // True if a < b
 uint8_t DateTimeBefore(volatile const struct DateTime* a, volatile const struct DateTime* b);
 
+// True if a and b are within a second of each other
+uint8_t TimesAreClose(volatile const struct DateTime* a, volatile const struct DateTime* b);
+
 #endif	/* TIME_UTILS_H */
 

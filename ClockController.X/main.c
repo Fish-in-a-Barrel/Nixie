@@ -74,29 +74,19 @@ void ReadRTC()
 
 void SetRTC()
 {
-    rtc.hour10 = gpsData.datetime.hour / 10;
-    rtc.hour01 = gpsData.datetime.hour % 10;
-    rtc.hoursType = 1;
-    
-    rtc.minute10 = gpsData.datetime.minute / 10;
-    rtc.minute01 = gpsData.datetime.minute % 10;
-    
-    rtc.second10 = gpsData.datetime.second / 10;
-    rtc.second01 = gpsData.datetime.second % 10;
-    
-    rtc.year10 = gpsData.datetime.year / 10;
-    rtc.year01 = gpsData.datetime.year % 10;
-    
-    rtc.month10 = gpsData.datetime.month / 10;
-    rtc.month01 = gpsData.datetime.month % 10;
-    
-    rtc.date10 = gpsData.datetime.day / 10;
-    rtc.date01 = gpsData.datetime.day % 10;
-    
+    // TODO: Figure out why I have a 1-byte offset here and add a comment.
     uint8_t buffer[sizeof(rtc) + 1];
-    for (int i = 0; i < sizeof(rtc); ++i) buffer[i + 1] = ((uint8_t*)&rtc)[i];
+    ConvertDateTimeToRtc((struct RtcData*)(buffer + 1), &gpsData.datetime, HOUR_TYPE_24);
     
     I2C_Write(I2C_RTC_ADDRESS, buffer, sizeof(buffer));
+}
+
+void SynchronizeTime()
+{
+    struct DateTime rtcTime;
+    ConvertRtcToDateTime(&rtc, &rtcTime);
+
+    if (!TimesAreClose(&gpsData.datetime, &rtcTime)) SetRTC();
 }
 
 void CheckGPS()
@@ -106,8 +96,7 @@ void CheckGPS()
         if ('A' == gpsData.status)
         {
             GPS_ConvertToLocalTime(-6);
-
-            // TODO: Compare to RTC and update RTC as needed
+            SynchronizeTime();
         }
         
         gpsData.updated = 0;

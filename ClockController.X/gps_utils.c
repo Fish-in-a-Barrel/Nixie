@@ -119,14 +119,14 @@ void UpdateDST()
     struct DateTime dstStart = { gpsData.datetime.year, 3, 1, 2, 0, 0};
     FindSunday(&dstStart, 2);
     
-    if (DateBefore(&gpsData.datetime, &dstStart)) return;
+    if (DateTimeBefore(&gpsData.datetime, &dstStart)) return;
 
     // DST ends on the first Sunday in November
     // Times are in standard time, so the end time is 1AM instead of 2AM.
     struct DateTime dstEnd = { gpsData.datetime.year, 11, 1, 1, 0, 0};
     FindSunday(&dstEnd, 1);
 
-    if (DateAfter(&gpsData.datetime, &dstEnd)) return;
+    if (DateTimeBefore(&gpsData.datetime, &dstEnd)) return;
 
     // If we've made it this far, then we're in DST
     if (++gpsData.datetime.hour >= 24) RollDayForward();

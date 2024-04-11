@@ -1,7 +1,14 @@
 #ifndef RTC_H
 #define	RTC_H
 
+#include <xc.h>
+
+#include "time_utils.h"
+
 #define I2C_RTC_ADDRESS 0x68
+
+#define HOUR_TYPE_12 0
+#define HOUR_TYPE_24 1
 
 struct RtcData
 {
@@ -40,6 +47,10 @@ struct RtcData
     uint8_t year01:4;
     uint8_t year10:4;
 };
+
+void ConvertRtcToDateTime(const volatile struct RtcData* rtc, volatile struct DateTime* datetime);
+
+void ConvertDateTimeToRtc(volatile struct RtcData* rtc, const volatile struct DateTime* datetime, uint8_t hourType);
 
 #endif	/* RTC_H */
 

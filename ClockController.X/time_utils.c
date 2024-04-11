@@ -90,3 +90,39 @@ uint8_t GetDayOfWeek(volatile const struct DateTime* date)
     
     return (uint8_t)dayOfWeek;
 }
+
+// Computes the absolute difference between to values, accounting for "closer" distances due to round over/under.
+// e.g. AbsModDiff(0, 59, 60) has a distance of 1, not 59
+uint8_t AbsModDiff(uint8_t a, uint8_t b, uint8_t modulus)
+{
+    uint8_t diff = 0;
+    
+    if (a < b) diff = b - a;
+    else if (b < a) diff = a - b;
+    
+    if (diff * 2 > modulus) diff = modulus - diff;
+    
+    return diff;
+}
+
+uint8_t TimesAreClose(volatile const struct DateTime* a, volatile const struct DateTime* b)
+{
+    if (a->hour != b->hour)
+    {
+        if (AbsModDiff(a->hour, b->hour, 24) >= 1) return 0;
+
+        if (a->hour < b->hour) return (a->minute == 59) && (a->second == 59) && (b->minute == 0) && (b->second == 0);
+        else return (a->minute == 0) && (a->second == 0) && (b->minute == 59) && (b->second == 59);
+    }
+    else if (a->minute != b->minute)
+    {
+        if (AbsModDiff(a->minute, b->minute, 60) >= 1) return 0;
+        
+        if (a->minute < b->minute) return (a->second == 59) && (b->second == 0);
+        else return (a->second == 0) && (b->second == 59);
+    }
+    else
+    {
+        return AbsModDiff(a->second, b->second, 60) <= 1;
+    }
+}
