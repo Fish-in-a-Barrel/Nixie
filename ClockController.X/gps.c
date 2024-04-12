@@ -4,6 +4,10 @@
 #include "bcd_utils.h"
 #include "time_utils.h"
 
+/*
+ * This receives and decodes the NMEA protocol RMC message sent by the GPS receiver. (§20.10)
+ */
+
 volatile struct GpsData gpsData;
 
 volatile static struct
@@ -123,14 +127,6 @@ void ConsumeField(char data)
     }
 }
 
-static char buffer[64];
-static uint8_t index = 0;
-void ClearBuffer()
-{
-    for (uint8_t i = 0; i < sizeof(buffer); ++i) buffer[i] = 0;
-    index = 0;
-}
-
 void GPS_HandleInterrupt(void)
 {
     // Clear the interrupt
@@ -153,9 +149,6 @@ void GPS_HandleInterrupt(void)
         gState = STATE_AWAIT_START;
         return;
     }
-
-    if (gState == STATE_AWAIT_START) ClearBuffer();
-    buffer[index++] = data;
 
     // Run the state machine.
     switch (gState)

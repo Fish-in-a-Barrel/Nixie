@@ -1,8 +1,16 @@
 #ifndef GPS_H
 #define	GPS_H
 
+/*
+ * Code is base on the document "u-blox 6 Receiver Description". Section notes in this file referece that document.
+ */
+
 #include <xc.h>
 #include "time_utils.h"
+
+// Why is 'V' invalid and 'A' valid? IDK. (UBLOX §18)
+#define GPS_STATUS_VALID 'A'
+#define GPS_STATUS_INVALID 'V'
 
 struct GpsData
 {
