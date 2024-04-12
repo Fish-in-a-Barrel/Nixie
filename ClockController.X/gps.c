@@ -21,7 +21,7 @@ volatile static struct
 
 #define FIELD_TIME 0
 #define FIELD_STATUS 1
-#define FIELD_DATE 4
+#define FIELD_DATE 2
 #define LAST_FIELD FIELD_DATE
 
 volatile char* FIELD[] =
@@ -31,14 +31,14 @@ volatile char* FIELD[] =
     rawGpsData.date
 };
 
-const uint8_t FIELD_SIZE[5] =
+const uint8_t FIELD_SIZE[LAST_FIELD + 1] =
 {
     sizeof(rawGpsData.time),
     sizeof(rawGpsData.status),
     sizeof(rawGpsData.date)
 };
 
-const uint8_t FIELD_OFFSET[5] =
+const uint8_t FIELD_OFFSET[LAST_FIELD + 1] =
 {
     1, // (1) time
     1, // (2) status
@@ -62,13 +62,13 @@ void AwaitStart(char data)
 void ConsumeHeader(char data)
 {
     const char HEADER[] = "GPRMC";
-    
+
     if (HEADER[gCharCounter++] != data)
     {
         // The header does not match the message we want.
         gState = STATE_AWAIT_START;
     }
-    
+
     if (gCharCounter >= sizeof(HEADER) - 1)
     {
         // The header matches the message we want: start consuming fields;
@@ -102,6 +102,8 @@ void AwaitNextField()
     {
         gState = STATE_AWAIT_FIELD;
         ++gField;
+        
+        // The counter is now used to count down commas until the desired field is reached.
         gCharCounter = FIELD_OFFSET[gField];
     }
 }
@@ -134,26 +136,27 @@ void GPS_HandleInterrupt(void)
     // Clear the interrupt
     PIR1bits.RC1IF = 0;
     
+    // Always shift out the contents of the receive buffer.
+    char data = RC1REG;
+
     if (RC1STAbits.OERR)
     {
         RC1STAbits.CREN = 0;
         RC1STAbits.CREN = 1;
     }
-    
+
     uint8_t error = RC1STAbits.FERR;
-    char data = RC1REG;
-    
-    if (error || (gState == STATE_AWAIT_START)) ClearBuffer();
-    
-    buffer[index++] = data;
-    
+
     // Reset the state machine if there is a framing error.
     if (error)
     {
         gState = STATE_AWAIT_START;
         return;
     }
-    
+
+    if (gState == STATE_AWAIT_START) ClearBuffer();
+    buffer[index++] = data;
+
     // Run the state machine.
     switch (gState)
     {
@@ -161,11 +164,11 @@ void GPS_HandleInterrupt(void)
         case STATE_CONSUME_HEADER: ConsumeHeader(data); break;
         case STATE_AWAIT_FIELD: AwaitField(data); break;
         case STATE_CONSUME_FIELD: ConsumeField(data); break;
-        
+
         // We should never get here.
         default: AwaitStart(data);
     }
-    
+
     // Handle the state machine reaching the end state.
     if (STATE_END == gState)
     {
@@ -178,9 +181,9 @@ void GPS_HandleInterrupt(void)
         gpsData.datetime.second = BcdToBinary(rawGpsData.time + 4, 2);
 
         gpsData.status = rawGpsData.status;
-        
+
         gpsData.updated = 1;
-        
+
         gState = STATE_AWAIT_START;
     }
 }
