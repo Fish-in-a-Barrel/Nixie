@@ -106,13 +106,14 @@ void CheckGPS()
 
 void main(void)
 {
+    InitClock();
     InitPins();
+    
     I2C_Host_Init();
     SerialInit();
     EnableInterrupts();
-    InitClock();
 
-    //AP33772Init();
+    AP33772Init();
     
     // TODO: Initialize display
     

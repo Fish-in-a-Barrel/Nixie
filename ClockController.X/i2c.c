@@ -19,6 +19,7 @@
 // Operations
 #define OP_WRITE 1
 #define OP_WRITE_READ 2
+#define OP_READ 3
 
 // States
 #define STATE_ERROR 0xFF
@@ -211,6 +212,23 @@ void I2C_Write(uint8_t address, const void* data, uint8_t len)
     operation.address = address;
     operation.writeBuffer = data;
     operation.writeBufferLen = len;
+    
+    operation.state = STATE_WRITE_ADDRESS;
+    Start();
+    
+    while (IsBusy());
+}
+
+void I2C_Read(uint8_t address, void* data, uint8_t len)
+{
+    if (IsBusy()) return;
+    
+    operation.type = OP_READ;
+    operation.address = address;
+    operation.writeBuffer = NULL;
+    operation.writeBufferLen = 0;
+    operation.readBuffer = data;
+    operation.readBufferLen = len;
     
     operation.state = STATE_WRITE_ADDRESS;
     Start();
