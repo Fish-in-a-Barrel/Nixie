@@ -75,8 +75,8 @@ void ReadRTC()
 
 void SetRTC()
 {
-    // TODO: Figure out why I have a 1-byte offset here and add a comment.
-    uint8_t buffer[sizeof(rtc) + 1];
+    // Byte 0 is the starting register address for the write.
+    uint8_t buffer[sizeof(rtc) + 1] = { 0 };
     ConvertDateTimeToRtc((struct RtcData*)(buffer + 1), &gpsData.datetime, HOUR_TYPE_24);
     
     I2C_Write(I2C_RTC_ADDRESS, buffer, sizeof(buffer));
@@ -87,7 +87,7 @@ void SynchronizeTime()
     struct DateTime rtcTime;
     ConvertRtcToDateTime(&rtc, &rtcTime);
 
-    if (!TimesAreClose(&gpsData.datetime, &rtcTime)) SetRTC();
+    //if (!TimesAreClose(&gpsData.datetime, &rtcTime)) SetRTC();
 }
 
 void CheckGPS()
@@ -112,7 +112,7 @@ void main(void)
     EnableInterrupts();
     InitClock();
 
-    AP33772Init();
+    //AP33772Init();
     
     // TODO: Initialize display
     
@@ -124,13 +124,13 @@ void main(void)
     
     while (1)
     {
-        CheckGPS();
         ReadRTC();
+        CheckGPS();
         
-        UpdateNixieDrivers();
+        //UpdateNixieDrivers();
         
         // TODO: handle button changes
 
-        __delay_ms(100);
+        __delay_ms(1000);
     }
 }

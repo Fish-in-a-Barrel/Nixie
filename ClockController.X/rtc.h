@@ -43,7 +43,7 @@ struct RtcData
     uint8_t zero5:2;
     uint8_t century:1;
     
-    // 0x5 - year
+    // 0x6 - year
     uint8_t year01:4;
     uint8_t year10:4;
 };

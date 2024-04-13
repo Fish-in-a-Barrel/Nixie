@@ -164,8 +164,8 @@
 #define SSPxCON3_AHEN_DISABLED 0
 
 // bit 0
-#define SSPxCON3_DHEN_MASK (1 << 5)
-#define SSPxCON3_DHEN_ENABLED (1 << 5)
+#define SSPxCON3_DHEN_MASK 1
+#define SSPxCON3_DHEN_ENABLED 1
 #define SSPxCON3_DHEN_DISABLED 0
 
 //
@@ -179,5 +179,24 @@
 #define SSPxMSK_10BIT_MASK 0x01
 #define SSPxMSK_10BIT_ENABLED 1
 #define SSPxMSK_10BIT_DISABLED 0
+
+//
+// RxxI2C - §16.14.9
+//
+
+// bit 7:6
+#define SLEW_FAST_PLUS (3 << 6)
+#define SLEW_FAST (2 << 6)
+#define SLEW_STANDARD 0
+
+// bit 5:4
+#define PU_10X (2 << 4)
+#define PU_2X (1 << 4)
+#define PU_STANDARD 0
+
+// 2:1
+#define TH_SMBUS 2
+#define TH_I2C 1
+#define TH_STANDARD 0
 
 #endif	/* I2C_REGISTER_BITS_H */

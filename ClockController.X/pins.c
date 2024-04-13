@@ -8,8 +8,9 @@
 // This usually happens as a result of a controller reset (e.g. during debugging).
 void ResetI2C(void)
 {
-    // Setup RC1 (SDA) as input and RC0 (SCL) as output
-    TRISC = 0x02;
+    TRISC |= 0x02;  // Setup RC1 (SDA) to input
+    TRISC &= ~0x01; // Setup RC0 (SCL) to output
+    
     RC0 = 1;
     
     // If SDA is being held low, toggle SCL
@@ -19,8 +20,10 @@ void ResetI2C(void)
         __delay_ms(10);
     }
     
-    // Clear the outputs
-    PORTC = 0;
+    RC0 = 0;
+    
+    // Reset RC0 & RC1 to digital inputs (§25.2.2.3)
+    TRISC |= 0x03;
 }
 
 void InitI2CPins(void)

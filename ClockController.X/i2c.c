@@ -3,7 +3,7 @@
 #include "clock.h"
 #include "pps_outputs.h"
 
-#define I2C_BAUD (400 * 1000ul) // 100 kHz
+#define I2C_BAUD (400 * 1000ul) // 400 kHz
 
 #define I2C_ADDRESS(address, rw) (uint8_t)((address << 1) | rw)
 
@@ -70,6 +70,10 @@ void I2C_Host_Init(void)
     // set the baud rate (§25.3)
     SSP1ADD = _XTAL_FREQ / (4 * I2C_BAUD + 1);
     
+//    // Set the pad I2C controls (§16.11, §16.14.9)
+//    RC0I2C = PU_10X | SLEW_FAST | TH_I2C;
+//    RC1I2C = PU_10X | SLEW_FAST | TH_I2C;
+    
     // Enable the port (§25.4.5)
     SSP1CON1bits.SSPEN = 1;
     
@@ -129,8 +133,7 @@ uint8_t WriteData()
     {
         if (OP_WRITE_READ == operation.type)
         {
-            Restart();
-            return WriteAddress(I2C_READ);
+            return Restart();
         }
         else
         {
@@ -208,10 +211,9 @@ void I2C_Write(uint8_t address, const void* data, uint8_t len)
     operation.address = address;
     operation.writeBuffer = data;
     operation.writeBufferLen = len;
-    operation.readBuffer = 0;
-    operation.readBufferLen = 0;
     
-    operation.state = Start();
+    operation.state = STATE_WRITE_ADDRESS;
+    Start();
     
     while (IsBusy());
 }
@@ -227,6 +229,7 @@ void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, voi
     operation.readBuffer = readData;
     operation.readBufferLen = readLen;
     
+    operation.state = STATE_WRITE_ADDRESS;
     operation.state = Start();
     
     while (IsBusy());
