@@ -92,17 +92,15 @@ uint8_t GetDayOfWeek(volatile const struct DateTime* date)
     return (uint8_t)dayOfWeek;
 }
 
-// Updates the passed date with the date of the requested Sunday in the month and year passed
-// whichSunday: the 1-based count of the Sunday requested
-void FindSunday(struct DateTime* date, uint8_t whichSunday)
+void FindDayOfWeekN(struct DateTime* date, uint8_t requestedDow, uint8_t n)
 {
     // Start with the earliest possible day that could be the requested Sunday.
-    date->day = (whichSunday - 1) * 7 + 1;
+    date->day = (n - 1) * 7 + 1;
     
-    // Move forward based on the actual day of the week.
-    int8_t dow = (int8_t)GetDayOfWeek(date) - DOW_SUNDAY;
-    if (dow < DOW_SUNDAY) date->day += DOW_SUNDAY - dow;
-    else if (dow > DOW_SUNDAY) date->day += 7 - (dow + DOW_SUNDAY);
+    // Move forward the actual day of the week to the requested day.
+    int8_t actualDow = (int8_t)GetDayOfWeek(date) - requestedDow;
+    if (actualDow < requestedDow) date->day += requestedDow - actualDow;
+    else if (actualDow > requestedDow) date->day += 7 - (actualDow + requestedDow);
 }
 
 // Computes the absolute difference between to values, accounting for "closer" distances due to round over/under.

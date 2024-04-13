@@ -24,7 +24,11 @@ struct DateTime
 
 uint8_t GetDayOfWeek(volatile const struct DateTime* date);
 
-void FindSunday(struct DateTime* date, uint8_t whichSunday);
+// Updates the passed date with the date of the requested Sunday in the month and year passed.
+// date: The structure to update. Year and month should be initialized before calling.
+// dow: The day-of-week to find, 0 = Saturday.
+// n: Which occurrence to find, 1-based. 
+void FindDayOfWeekN(struct DateTime* date, uint8_t dow, uint8_t n);
 
 // True if a > b
 uint8_t DateAfter(volatile const struct DateTime* a, volatile const struct DateTime* b);
