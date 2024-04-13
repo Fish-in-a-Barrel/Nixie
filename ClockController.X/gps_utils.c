@@ -4,16 +4,6 @@
 
 #include "gps.h"
 
-// Updates the passed date with the date of the requested Sunday in the month and year passed
-// whichSunday: the 1-based count of the Sunday requested
-void FindSunday(struct DateTime* date, uint8_t whichSunday)
-{
-    uint8_t sunday = (whichSunday - 1) * 7 + 1;
-    sunday += ((7 - GetDayOfWeek(date) + DOW_SUNDAY) % 7);
-    
-    date->day = sunday;
-}
-
 void RollYearBack()
 {
     --gpsData.datetime.year;
@@ -100,7 +90,7 @@ uint8_t GetDstOffset()
     struct DateTime dstEnd = { gpsData.datetime.year, 11, 1, 1, 0, 0};
     FindSunday(&dstEnd, 1);
 
-    if (DateTimeBefore(&gpsData.datetime, &dstEnd)) return 0;
+    if (DateTimeAfter(&gpsData.datetime, &dstEnd)) return 0;
 
     return 1;
 }

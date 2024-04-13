@@ -87,7 +87,7 @@ void SynchronizeTime()
     struct DateTime rtcTime;
     ConvertRtcToDateTime(&rtc, &rtcTime);
 
-    //if (!TimesAreClose(&gpsData.datetime, &rtcTime)) SetRTC();
+    if (!TimesAreClose(&gpsData.datetime, &rtcTime)) SetRTC();
 }
 
 void CheckGPS()

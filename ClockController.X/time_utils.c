@@ -63,9 +63,10 @@ uint8_t DateTimeBefore(volatile const struct DateTime* a, volatile const struct 
     return 0;
 }
 
+// https://www.almanac.com/how-find-day-week
 uint8_t GetDayOfWeek(volatile const struct DateTime* date)
 {
-    // This set of month keys is only valid in years [2000, 2099].
+    // This set of month keys is only valid in years [2000..2099].
     const uint8_t MONTH_KEY[12] = { 2, 5, 5, 1, 3, 6, 1, 4, 7, 2, 5, 7 };
     
     uint8_t monthKey = 0;
@@ -84,11 +85,24 @@ uint8_t GetDayOfWeek(volatile const struct DateTime* date)
     
     int dayOfWeek = date->year / 10 + date->year % 10;  // Add the last two digits of the year
     dayOfWeek /= 4;                                     // Divide the sum by 4
-    dayOfWeek += date->day;                            // Add the day of the month
+    dayOfWeek += date->day;                             // Add the day of the month
     dayOfWeek += monthKey;                              // Add the month key
     dayOfWeek %= 7;                                     // Modulo 7 for the day of the week. 0 = Saturday.
     
     return (uint8_t)dayOfWeek;
+}
+
+// Updates the passed date with the date of the requested Sunday in the month and year passed
+// whichSunday: the 1-based count of the Sunday requested
+void FindSunday(struct DateTime* date, uint8_t whichSunday)
+{
+    // Start with the earliest possible day that could be the requested Sunday.
+    date->day = (whichSunday - 1) * 7 + 1;
+    
+    // Move forward based on the actual day of the week.
+    int8_t dow = (int8_t)GetDayOfWeek(date) - DOW_SUNDAY;
+    if (dow < DOW_SUNDAY) date->day += DOW_SUNDAY - dow;
+    else if (dow > DOW_SUNDAY) date->day += 7 - (dow + DOW_SUNDAY);
 }
 
 // Computes the absolute difference between to values, accounting for "closer" distances due to round over/under.

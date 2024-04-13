@@ -24,6 +24,8 @@ struct DateTime
 
 uint8_t GetDayOfWeek(volatile const struct DateTime* date);
 
+void FindSunday(struct DateTime* date, uint8_t whichSunday);
+
 // True if a > b
 uint8_t DateAfter(volatile const struct DateTime* a, volatile const struct DateTime* b);
 
