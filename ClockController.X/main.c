@@ -9,12 +9,22 @@
 #include "gps.h"
 #include "bcd_utils.h"
 #include "ap33772.h"
+#include "timer.h"
+#include "adc.h"
+#include "pwm.h"
 
 void __interrupt() ISR()
 {
     // Dispatch interrupts to handlers (§12.9.6)
     if (PIR1bits.SSP1IF || PIR1bits.BCL1IF) I2C_HandleInterrupt();
     if (PIR1bits.RC1IF) GPS_HandleInterrupt();
+    if (PIR1bits.TMR2IF) TimerInterruptHandler();
+    if (PIR1bits.ADIF)
+    {
+        PIR1bits.ADIF = 0;
+        gAdcAccumulator += ADRES;
+        ++gAdcAccumulatorCount;
+    }
 }
 
 void EnableInterrupts()
@@ -29,6 +39,13 @@ void EnableInterrupts()
     
     // Enable EUSART interrupts (§12.9.3)
     PIE1bits.RC1IE = 1;
+    
+    // Enable the TMR2 interrupt for tick counting
+    PIE1bits.TMR2IE = 1;
+
+    // Enable ACD interrupt
+    PIR1bits.ADIF = 0;
+    PIE1bits.ADIE = 1;
 }
 
 struct RtcData rtc;
@@ -117,21 +134,27 @@ void main(void)
     
     // TODO: Initialize display
     
-    // TODO: Initialize ADC
-    // TODO: Initialize PWM
-    // TODO: Setup power control interrupt
+    InitTimer();
+    InitAdc();
+    InitPWM(0);
     
     gpsData.updated = 0;
     
+    uint8_t frameCounter = 0;
     while (1)
     {
-        ReadRTC();
-        CheckGPS();
+        // TODO: Maintain power circuit
         
-        //UpdateNixieDrivers();
-        
-        // TODO: handle button changes
+        if (frameCounter % 16 == 0)
+        {
+            ReadRTC();
+            CheckGPS();
 
-        __delay_ms(1000);
+            //UpdateNixieDrivers();
+
+            // TODO: handle button changes
+        }
+
+        __delay_ms(5);
     }
 }
