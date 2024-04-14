@@ -12,6 +12,7 @@
 #include "timer.h"
 #include "adc.h"
 #include "pwm.h"
+#include "boost_control.h"
 
 void __interrupt() ISR()
 {
@@ -19,12 +20,7 @@ void __interrupt() ISR()
     if (PIR1bits.SSP1IF || PIR1bits.BCL1IF) I2C_HandleInterrupt();
     if (PIR1bits.RC1IF) GPS_HandleInterrupt();
     if (PIR1bits.TMR2IF) TimerInterruptHandler();
-    if (PIR1bits.ADIF)
-    {
-        PIR1bits.ADIF = 0;
-        gAdcAccumulator += ADRES;
-        ++gAdcAccumulatorCount;
-    }
+    if (PIR1bits.ADIF) AdcInterruptHandler();
 }
 
 void EnableInterrupts()
@@ -136,14 +132,15 @@ void main(void)
     
     InitTimer();
     InitAdc();
-    InitPWM(0);
+    InitPWM();
+    InitBoostConverter();
     
     gpsData.updated = 0;
     
     uint8_t frameCounter = 0;
     while (1)
     {
-        // TODO: Maintain power circuit
+        UpdateBoostConverter();
         
         if (frameCounter % 16 == 0)
         {

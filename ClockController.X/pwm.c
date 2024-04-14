@@ -10,13 +10,11 @@ void InitPwmPins(void)
     RA2PPS = PPS_OUT_PWM3;
 }
 
-void InitPWM(uint16_t dutyCycle)
+void InitPWM()
 {
     InitPwmPins();
-    
-    SetPwmDutyCycle(dutyCycle);
 
-    // Inverted do to level-shifting, enable
+    // Inverted due to level-shifting
     PWM3CONbits.PWM3POL = 1;
     
     // Enable PWM3

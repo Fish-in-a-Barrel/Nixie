@@ -21,6 +21,7 @@
       <itemPath>pwm.h</itemPath>
       <itemPath>adc.h</itemPath>
       <itemPath>timer.h</itemPath>
+      <itemPath>boost_control.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -43,6 +44,7 @@
       <itemPath>pwm.c</itemPath>
       <itemPath>adc.c</itemPath>
       <itemPath>timer.c</itemPath>
+      <itemPath>boost_control.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

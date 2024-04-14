@@ -3,11 +3,14 @@
 
 #include <xc.h>
 
+extern uint16_t gAdcCv;
+extern uint8_t gVoltage;
+
 void InitAdc(void);
 
-extern uint32_t gAdcAccumulator;
-extern uint16_t gAdcAccumulatorCount;
-extern uint16_t gAdcCv;
+void AdcInterruptHandler(void);
+
+void CaptureAdc(void);
 
 #endif	/* ADC_H */
 
