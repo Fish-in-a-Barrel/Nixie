@@ -71,9 +71,9 @@ void I2C_Host_Init(void)
     // set the baud rate (§25.3)
     SSP1ADD = _XTAL_FREQ / (4 * I2C_BAUD + 1);
     
-//    // Set the pad I2C controls (§16.11, §16.14.9)
-//    RC0I2C = PU_10X | SLEW_FAST | TH_I2C;
-//    RC1I2C = PU_10X | SLEW_FAST | TH_I2C;
+    // Set the pad I2C controls (§16.11, §16.14.9)
+    RC0I2C = PU_2X | SLEW_FAST | TH_I2C;
+    RC1I2C = PU_2X | SLEW_FAST | TH_I2C;
     
     // Enable the port (§25.4.5)
     SSP1CON1bits.SSPEN = 1;
