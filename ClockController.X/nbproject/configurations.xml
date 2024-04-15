@@ -325,16 +325,16 @@
     <conf name="Level_2_Opt" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC16F15224</targetDevice>
+        <targetDevice>PIC16F15225</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.45</languageToolchainVersion>
+        <languageToolchainVersion>2.46</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.24.387"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
