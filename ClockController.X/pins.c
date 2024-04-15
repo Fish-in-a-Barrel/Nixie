@@ -4,32 +4,8 @@
 #include "clock.h"
 #include <xc.h>
 
-// This function is used to convince client devices to let go of the bus if they have desynced from the host.
-// This usually happens as a result of a controller reset (e.g. during debugging).
-void ResetI2C(void)
-{
-    TRISC |= 0x02;  // Setup RC1 (SDA) to input
-    TRISC &= ~0x01; // Setup RC0 (SCL) to output
-    
-    RC0 = 1;
-    
-    // If SDA is being held low, toggle SCL
-    while (!RC1)
-    {
-        RC0 = !RC0;
-        __delay_ms(10);
-    }
-    
-    RC0 = 0;
-    
-    // Reset RC0 & RC1 to digital inputs (§25.2.2.3)
-    TRISC |= 0x03;
-}
-
 void InitI2CPins(void)
 {
-    ResetI2C();
-    
     // Set RC0 & RC1 as digital inputs (§25.2.2.3)
     TRISC |= 0x03;
     

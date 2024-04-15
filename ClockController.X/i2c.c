@@ -51,9 +51,47 @@ void ClearOp()
     operation.readBufferLen = 0;
 }
 
-uint8_t IsBusy()
+// This function is used to convince client devices to let go of the bus if they have desynced from the host.
+// This usually happens as a result of a controller reset (e.g. during debugging).
+void SynchronizeClients(void)
 {
-    return operation.type != OP_IDLE || SSP1STATbits.S || SSP1STATbits.BF;
+    TRISC |= 0x02;  // Set RC1 (SDA) to input
+    TRISC &= ~0x01; // Set RC0 (SCL) to output
+    
+    RC0 = 1;
+    uint8_t count = 8 + 1;
+    
+    // If SDA is being held low, toggle SCL
+    while (!RC1 && (--count != 0))
+    {
+        RC0 = 0;
+        __delay_ms(1);
+        RC0 = 1;
+        __delay_ms(1);
+    }
+    
+    RC0 = 0;
+    
+    // Reset RC0 & RC1 to digital inputs (§25.2.2.3)
+    TRISC |= 0x03;
+}
+
+void SynchronizeBus()
+{
+    if (SSP1STATbits.S || SSP1STATbits.BF)
+    {
+        // Reset the port
+        SSP1CON1bits.SSPEN = 0;
+        
+        SynchronizeClients();
+        
+        SSP1CON1bits.SSPEN = 1;
+    }
+}
+
+uint8_t IsDone()
+{
+    return OP_IDLE == operation.type;
 }
 
 void I2C_Host_Init(void)
@@ -82,13 +120,14 @@ void I2C_Host_Init(void)
     operation.type = OP_IDLE;
 }
 
-uint8_t Start()
+void Start(void)
 {
+    // Set the state first, otherwise it's possible for an interrupt to occur while the state is still "IDLE" because this is non-interrupt code.
+    operation.state = STATE_WRITE_ADDRESS;
     SSP1CON2bits.SEN = 1;
-    return STATE_WRITE_ADDRESS;
 }
 
-uint8_t Stop()
+uint8_t Stop(void)
 {
     SSP1CON2bits.PEN = 1;
     ClearOp();
@@ -96,7 +135,7 @@ uint8_t Stop()
     return STATE_IDLE;
 }
 
-uint8_t Restart()
+uint8_t Restart(void)
 {
     SSP1CON2bits.RSEN = 1;
     
@@ -206,22 +245,21 @@ void ExecuteStateMachine()
 
 void I2C_Write(uint8_t address, const void* data, uint8_t len)
 {
-    if (IsBusy()) return;
+    SynchronizeBus();
     
     operation.type = OP_WRITE;
     operation.address = address;
     operation.writeBuffer = data;
     operation.writeBufferLen = len;
-    
-    operation.state = STATE_WRITE_ADDRESS;
+
     Start();
     
-    while (IsBusy());
+    while (!IsDone());
 }
 
 void I2C_Read(uint8_t address, void* data, uint8_t len)
 {
-    if (IsBusy()) return;
+    SynchronizeBus();
     
     operation.type = OP_READ;
     operation.address = address;
@@ -229,16 +267,15 @@ void I2C_Read(uint8_t address, void* data, uint8_t len)
     operation.writeBufferLen = 0;
     operation.readBuffer = data;
     operation.readBufferLen = len;
-    
-    operation.state = STATE_WRITE_ADDRESS;
+
     Start();
     
-    while (IsBusy());
+    while (!IsDone());
 }
 
 void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, void* readData, uint8_t readLen)
 {
-    if (IsBusy()) return;
+    SynchronizeBus();
     
     operation.type = OP_WRITE_READ;
     operation.address = address;
@@ -246,11 +283,10 @@ void I2C_WriteRead(uint8_t address, const void* writeData, uint8_t writeLen, voi
     operation.writeBufferLen = writeLen;
     operation.readBuffer = readData;
     operation.readBufferLen = readLen;
+
+    Start();
     
-    operation.state = STATE_WRITE_ADDRESS;
-    operation.state = Start();
-    
-    while (IsBusy());
+    while (!IsDone());
 }
 
 void I2C_HandleInterrupt(void)
