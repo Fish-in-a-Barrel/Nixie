@@ -110,18 +110,7 @@ union Status GetStatus(void)
     uint8_t command = AP33772_CMD_STATUS;
     union Status status;
     
-    //I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &status, sizeof(status));
-
-    I2C_Write(AP33772_ADDR, &command, sizeof(command));
-    I2C_Read(AP33772_ADDR, &status, sizeof(status));
-
-    command = AP33772_CMD_CURRENT;
-    I2C_Write(AP33772_ADDR, &command, sizeof(command));
-    I2C_Read(AP33772_ADDR, &current24mA, sizeof(current24mA));
-
-    command = AP33772_CMD_VOLTAGE;
-    I2C_Write(AP33772_ADDR, &command, sizeof(command));
-    I2C_Read(AP33772_ADDR, &voltage80mV, sizeof(voltage80mV));
+    I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &status, sizeof(status));
     
     return status;
 }
@@ -135,10 +124,7 @@ uint8_t IsReady(void)
 uint8_t UpdatePDOs(void)
 {
     uint8_t command = AP33772_CMD_PDONUM;
-    //I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &pdoCount, sizeof(pdoCount));
-    
-    I2C_Write(AP33772_ADDR, &command, sizeof(command));
-    I2C_Read(AP33772_ADDR, &pdoCount, sizeof(pdoCount));
+    I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &pdoCount, sizeof(pdoCount));
     
     if (pdoCount > AP33772_MaxPdoCount)
     {
@@ -147,9 +133,7 @@ uint8_t UpdatePDOs(void)
     else
     {
         command = AP33772_CMD_SRCPDO;
-        I2C_Write(AP33772_ADDR, &command, sizeof(command));
-        I2C_Read(AP33772_ADDR, &pdos, sizeof(struct AP33772_PowerDataObject) * pdoCount);
-        //I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &pdos, sizeof(struct AP33772_PowerDataObject) * pdoCount);
+        I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &pdos, sizeof(struct AP33772_PowerDataObject) * pdoCount);
     }
     
     return pdoCount;
