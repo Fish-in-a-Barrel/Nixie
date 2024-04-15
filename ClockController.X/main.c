@@ -147,7 +147,7 @@ void main(void)
             ReadRTC();
             CheckGPS();
 
-            //UpdateNixieDrivers();
+            UpdateNixieDrivers();
 
             // TODO: handle button changes
         }
