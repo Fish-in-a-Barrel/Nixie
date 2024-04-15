@@ -15,6 +15,8 @@
 #include "boost_control.h"
 #include "button.h"
 
+int8_t gTimeZoneOffset = -6;
+
 void __interrupt() ISR()
 {
     // Dispatch interrupts to handlers (§12.9.6)
@@ -118,6 +120,14 @@ void CheckGPS()
     }
 }
 
+void UpdateTimeZoneOffset()
+{
+    UpdateButtons();
+    
+    if (ROTATION_CW == gButtonState.rotation) ++gTimeZoneOffset;
+    if (ROTATION_CCW == gButtonState.rotation) --gTimeZoneOffset;
+}
+
 void main(void)
 {
     InitClock();
@@ -146,12 +156,11 @@ void main(void)
         
         if (frameCounter % 16 == 0)
         {
+            UpdateTimeZoneOffset();
             ReadRTC();
             CheckGPS();
 
             UpdateNixieDrivers();
-
-            UpdateButtons();
         }
 
         __delay_ms(5);
