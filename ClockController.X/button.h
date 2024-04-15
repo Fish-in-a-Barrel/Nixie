@@ -16,9 +16,9 @@ union ButtonState
     uint8_t _raw;
 };
 
-#define ROTATION_NONE 0;
-#define ROTATION_CW 1;
-#define ROTATION_CCW 2;
+#define ROTATION_NONE 0
+#define ROTATION_CW 1
+#define ROTATION_CCW 2
 
 struct
 {
