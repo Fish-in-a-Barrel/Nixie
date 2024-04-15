@@ -13,6 +13,7 @@
 #include "adc.h"
 #include "pwm.h"
 #include "boost_control.h"
+#include "button.h"
 
 void __interrupt() ISR()
 {
@@ -129,6 +130,7 @@ void main(void)
     AP33772Init();
     
     // TODO: Initialize display
+    InitButtons();
     
     InitTimer();
     InitAdc();
@@ -149,7 +151,7 @@ void main(void)
 
             UpdateNixieDrivers();
 
-            // TODO: handle button changes
+            UpdateButtons();
         }
 
         __delay_ms(5);
