@@ -287,7 +287,7 @@ void ExecuteStateMachine()
     switch (operation.state)
     {
         case STATE_WRITE_ADDRESS:
-            operation.state = WriteAddress(operation.writeBufferLen ? I2C_WRITE : I2C_READ);
+            operation.state = WriteAddress(operation.writeBufferLen || operation.callback ? I2C_WRITE : I2C_READ);
             break;
         case STATE_WRITE_DATA:
             operation.state = WriteData();
