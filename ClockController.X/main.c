@@ -14,6 +14,7 @@
 #include "pwm.h"
 #include "boost_control.h"
 #include "button.h"
+#include "oled.h"
 
 int8_t gTimeZoneOffset = -6;
 
@@ -112,7 +113,7 @@ void CheckGPS()
     {
         if ('A' == gpsData.status)
         {
-            GPS_ConvertToLocalTime(-6);
+            GPS_ConvertToLocalTime(gTimeZoneOffset);
             SynchronizeTime();
         }
         
@@ -136,16 +137,15 @@ void main(void)
     I2C_Host_Init();
     SerialInit();
     EnableInterrupts();
-
-    // Temporarily set the PWM pin high. This will be inverted by the level-shift circuit, disabling the boost
-    // converter until we are ready to control that.
-    //
-    // DO THIS BEFORE THE AP33772 IS INITIALIZED AND ENERGIZES THE +20V SOURCE.
-    RA2 = 1;
+    
+    // Give other devices (*cough*OLED*cough*) time to finish power-up.
+    __delay_ms(50);
+    
+    SetupDisplay();
+    DrawString(0,0,"Hello World!");
 
     AP33772Init();
 
-    // TODO: Initialize display
     InitButtons();
     
     InitTimer();

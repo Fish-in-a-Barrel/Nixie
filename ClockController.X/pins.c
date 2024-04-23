@@ -40,4 +40,11 @@ void InitPins(void)
     
     InitI2CPins();
     InitSerialPins();
+
+
+    // Temporarily set the PWM pin high. This will be inverted by the level-shift circuit, disabling the boost
+    // converter until we are ready to control that.
+    //
+    // DO THIS BEFORE THE AP33772 IS INITIALIZED AND ENERGIZES THE +20V SOURCE.
+    RA2 = 1;
 }
