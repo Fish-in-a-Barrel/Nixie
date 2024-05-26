@@ -45,7 +45,7 @@ uint8_t ClearCallback(struct WriteCallbackContext* context)
     return 0;
 }
 
-void Clear(void)
+void OLED_Clear(void)
 {
     SendAddressBounds(0, 0xFF, 0, WIDTH - 1);
     
@@ -79,7 +79,7 @@ void SetupDisplay(void)
     
     I2C_Write(I2C_ADDRESS, initCmds, sizeof(initCmds));
     
-    Clear();
+    OLED_Clear();
 }
 
 void DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii)
@@ -95,6 +95,24 @@ void DrawString(uint8_t row, uint8_t col, const char* str)
 {
     char* c = (char*)str;
     while (*c != 0) DrawCharacter(row, col++, *(c++));
+}
+
+void OLED_DrawNumber8(uint8_t row, uint8_t col, uint8_t number, int8_t digitCount)
+{
+    while (digitCount > 0)
+    {
+        DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
+        number /= 10;
+    }
+}
+
+void OLED_DrawNumber16(uint8_t row, uint8_t col, uint16_t number, int8_t digitCount)
+{
+    while (digitCount > 0)
+    {
+        DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
+        number /= 10;
+    }
 }
 
 void InvertDisplay(uint8_t invert)

@@ -129,6 +129,60 @@ void UpdateTimeZoneOffset()
     if (ROTATION_CCW == gButtonState.rotation) --gTimeZoneOffset;
 }
 
+void UpdateDisplay()
+{
+    struct AP33772_Status status;
+    
+    AP33772_GetStatus(&status);
+
+    DrawString(1, 0, "0000 mA, 00000 mV");
+    OLED_DrawNumber16(1, 0, status.current, 4);
+    OLED_DrawNumber16(1, 9, status.voltage, 5);
+    
+    uint8_t x = 0;
+    if (status.status.ready)
+    {
+        DrawString(2, x, "RDY");
+        x += 4;
+    }
+    
+    if (status.status.success)
+    {
+        DrawString(2, x, "SUC");
+        x += 4;
+    }
+    
+    if (status.status.newPDO)
+    {
+        DrawString(2, x, "NEW");
+        x += 4;
+    }
+    
+    if (status.status.overVoltageProtection)
+    {
+        DrawString(2, x, "OVP");
+        x += 4;
+    }
+    
+    if (status.status.overCurrentProtection)
+    {
+        DrawString(2, x, "OCP");
+        x += 4;
+    }
+    
+    if (status.status.overTemperaturProtection)
+    {
+        DrawString(2, x, "OTP");
+        x += 4;
+    }
+    
+    if (status.status.derating)
+    {
+        DrawString(2, x, "OTP");
+        x += 3;
+    }
+}
+
 void main(void)
 {
     InitClock();
@@ -142,9 +196,8 @@ void main(void)
     __delay_ms(50);
     
     SetupDisplay();
-    DrawString(0,0,"Hello World!");
 
-    AP33772Init();
+    if (!AP33772Init()) while (1);
 
     InitButtons();
     
@@ -167,8 +220,16 @@ void main(void)
             CheckGPS();
 
             UpdateNixieDrivers();
+            
+            UpdateDisplay();
         }
 
+        if (frameCounter == 0)
+        {
+            UpdateDisplay();
+        }
+        
+        ++frameCounter;
         __delay_ms(5);
     }
 }

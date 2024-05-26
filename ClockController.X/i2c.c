@@ -4,11 +4,11 @@
 #include "pps_outputs.h"
 
 #if _I2C_TRACE
-    char gEventTrace[32] = {0};
+    char gEventTrace[128] = {0};
     uint8_t gEventIndex = 0;
 
     #define RESET_TRACE() gEventTrace[gEventIndex] = '.'; gEventIndex = 0;
-    #define ADD_EVENT(C) gEventTrace[gEventIndex++ % 32] = C;
+    #define ADD_EVENT(C) gEventTrace[gEventIndex++ % 128] = C;
 
     char* I2C_GetEventTrace(void) { return gEventTrace; }
 #else
@@ -117,8 +117,6 @@ void ResetBus()
 {
     if (SSP1STATbits.S || SSP1STATbits.BF)
     {
-        ADD_EVENT('*');
-        
         // Reset the port
         SSP1CON1bits.SSPEN = 0;
         
@@ -250,6 +248,7 @@ uint8_t ReadData()
     {
         ADD_EVENT('~');
         
+        // ACK received, enable receive mode.
         SSP1CON2bits.RCEN = 1;
         return STATE_READ_DATA;
     }

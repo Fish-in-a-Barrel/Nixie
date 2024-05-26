@@ -1,8 +1,7 @@
 #include "ap33772.h"
 #include "i2c.h"
 #include "clock.h"
-
-#include <xc.h>
+#include "oled.h"
 
 static const uint8_t AP33772_ADDR = 0x51;
 
@@ -42,6 +41,8 @@ struct AP33772_PowerDataObject
         // These structures don't pack correctly because some of the fields span byte boundaries.
         // XC8 will not span a field across a byte, and instead leaves empty space, which breaks the field
         // alignment and causes the union to be oversized.
+        //
+        // The structures are left for reference.
         
         /*
         struct // any.type = PowerDataObjectType::FIXED
@@ -82,26 +83,10 @@ struct AP33772_RequestDataObject {
 };
 */
 
-union Status
-{
-    uint8_t raw;
-    
-    struct
-    {
-        uint8_t ready:1;
-        uint8_t success:1;
-        uint8_t newPDO:1;
-        uint8_t _:1;
-        uint8_t overVoltageProtection:1;
-        uint8_t overCurrentProtection:1;
-        uint8_t overTemperaturProtection:1;
-        uint8_t derating:1;
-    };
-};
-
 #define AP33772_MaxPdoCount 7
 struct AP33772_PowerDataObject pdos[AP33772_MaxPdoCount];
 uint8_t pdoCount = 0;
+uint8_t selectedPdo = 0;
 uint8_t current24mA = 0;
 uint8_t voltage80mV = 0;
 
@@ -118,10 +103,12 @@ union Status GetStatus(void)
 uint8_t IsReady(void)
 {
     union Status status = GetStatus();
-    return status.raw != 0xFF;
+    OLED_DrawNumber8(2, 18, status.raw, 3);
+    
+    return (status.raw != 0xFF) && status.ready && status.newPDO && status.success;
 }
 
-uint8_t UpdatePDOs(void)
+void UpdatePDOs(void)
 {
     uint8_t command = AP33772_CMD_PDONUM;
     I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &pdoCount, sizeof(pdoCount));
@@ -135,8 +122,6 @@ uint8_t UpdatePDOs(void)
         command = AP33772_CMD_SRCPDO;
         I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &pdos, sizeof(struct AP33772_PowerDataObject) * pdoCount);
     }
-    
-    return pdoCount;
 }
 
 #define GetVoltage(pdo) ((pdo.raw[1] >> 2) | (((uint16_t)pdo.raw[2] & 0xF) << 6))
@@ -150,23 +135,31 @@ uint8_t UpdatePDOs(void)
 
 uint8_t SelectPDO(void)
 {
-    uint8_t pos = 0;
-    while (pos < AP33772_MaxPdoCount)
+    while (selectedPdo < pdoCount)
     {        
-        if ((AP33772_PDO_TYPE_FIXED == pdos[pos].any.type) && (GetVoltage(pdos[pos]) == VOLTAGE_OP)) break;
-        ++pos;
+        if ((AP33772_PDO_TYPE_FIXED == pdos[selectedPdo].any.type) && 
+                (GetVoltage(pdos[selectedPdo]) == VOLTAGE_OP)) break;
+        ++selectedPdo;
     }
     
-    if (pos >= AP33772_MaxPdoCount) return 0;
+    if (selectedPdo >= pdoCount)
+    {
+        DrawString(0, 0, "No suitable PDO found ");
+        return 0;
+    }
     
     uint8_t buffer[5] = { AP33772_CMD_RDO, 0, 0, 0, 0 };
     
     buffer[1] = CURRENT_MAX & 0xFF;
     buffer[2] = ((CURRENT_MAX >> 8) & 0x3) | (CURRENT_OP << 2);
     buffer[3] = CURRENT_OP >> 6;
-    buffer[4] = ((pos + 1) << 4) & 0x70;
+    buffer[4] = ((selectedPdo + 1) << 4) & 0x70; // PDOs positions are 1-indexed in the protocol
     
     I2C_Write(AP33772_ADDR, &buffer, sizeof(buffer));
+    
+    DrawString(0, 0, "PDO # of # selected   ");
+    OLED_DrawNumber8(0, 4, selectedPdo + 1, 1);
+    OLED_DrawNumber8(0, 9, pdoCount, 1);
     
     union Status status = { 0 };
     while (!status.ready)
@@ -178,11 +171,35 @@ uint8_t SelectPDO(void)
     return status.success;
 }
 
-void AP33772Init(void)
+uint8_t AP33772Init(void)
 {
+    DrawString(0, 0, "Waiting for AP33772...");
+    
     // Wait for the AP33772 to bootstrap
     while (!IsReady()) __delay_ms(10);
     
-    UpdatePDOs();
-    SelectPDO();
+    DrawString(0, 0, "Waiting for PDOs...   ");
+
+    while (pdoCount == 0)
+    {
+        UpdatePDOs();
+        __delay_ms(10);
+    }
+    
+    return SelectPDO();
+}
+
+void AP33772_GetStatus(struct AP33772_Status* buffer)
+{
+    uint8_t command = AP33772_CMD_CURRENT;
+    uint8_t rawCurrent = 0;
+    I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &rawCurrent, sizeof(rawCurrent));
+
+    command = AP33772_CMD_VOLTAGE;
+    uint8_t rawVoltage = 0;
+    I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &rawVoltage, sizeof(rawVoltage));
+
+    buffer->status.raw = GetStatus().raw;
+    buffer->current = (uint16_t)rawCurrent * 24; // raw LSB = 24mA
+    buffer->voltage = (uint16_t)rawVoltage * 80; // raw LSB = 80mA
 }
