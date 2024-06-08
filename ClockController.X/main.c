@@ -135,52 +135,15 @@ void UpdateDisplay()
     
     AP33772_GetStatus(&status);
 
-    DrawString(1, 0, "0000 mA, 00000 mV");
+    // USB PD status
+    DrawString(1, 0, ".... mA, .... mV");
     OLED_DrawNumber16(1, 0, status.current, 4);
     OLED_DrawNumber16(1, 9, status.voltage, 5);
     
-    uint8_t x = 0;
-    if (status.status.ready)
-    {
-        DrawString(2, x, "RDY");
-        x += 4;
-    }
-    
-    if (status.status.success)
-    {
-        DrawString(2, x, "SUC");
-        x += 4;
-    }
-    
-    if (status.status.newPDO)
-    {
-        DrawString(2, x, "NEW");
-        x += 4;
-    }
-    
-    if (status.status.overVoltageProtection)
-    {
-        DrawString(2, x, "OVP");
-        x += 4;
-    }
-    
-    if (status.status.overCurrentProtection)
-    {
-        DrawString(2, x, "OCP");
-        x += 4;
-    }
-    
-    if (status.status.overTemperaturProtection)
-    {
-        DrawString(2, x, "OTP");
-        x += 4;
-    }
-    
-    if (status.status.derating)
-    {
-        DrawString(2, x, "OTP");
-        x += 3;
-    }
+    // HV status
+    DrawString(2, 0, "... V - ... % DC");
+    OLED_DrawNumber8(2, 0, gVoltage, 3);
+    OLED_DrawNumber16(2, 8, BoostConverter_GetDutyCyclePct(), 3);
 }
 
 void main(void)
@@ -220,8 +183,6 @@ void main(void)
             CheckGPS();
 
             UpdateNixieDrivers();
-            
-            UpdateDisplay();
         }
 
         if (frameCounter == 0)

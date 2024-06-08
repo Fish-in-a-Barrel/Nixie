@@ -15,8 +15,9 @@
 // By scaling the working DC value, we can have a working value with more granularity than the actual PWM allows. This can allow for some smoother
 // control, depending on the algorithm.
 #define PWM_DC_SCALAR 32
-#define PWM_DC_MIN (uint16_t)(0.85 * (TMR2_RESET << 2) * PWM_DC_SCALAR)
-#define PWM_DC_MAX (uint16_t)(0.95 * (TMR2_RESET << 2) * PWM_DC_SCALAR)
+#define PWX_DC_100 ((TMR2_RESET << 2) * PWM_DC_SCALAR)
+#define PWM_DC_MIN (uint16_t)(0.85 * PWX_DC_100)
+#define PWM_DC_MAX (uint16_t)(0.95 * PWX_DC_100)
 
 static uint16_t gPwmDutyCycle = (PWM_DC_MIN + PWM_DC_MAX) / 2;
 
@@ -36,4 +37,9 @@ void UpdateBoostConverter()
     else if (gPwmDutyCycle < PWM_DC_MIN) gPwmDutyCycle = PWM_DC_MIN;
     
     SetPwmDutyCycle(gPwmDutyCycle / PWM_DC_SCALAR);
+}
+
+uint16_t BoostConverter_GetDutyCyclePct(void)
+{
+    return gPwmDutyCycle / (PWX_DC_100 / 100);
 }
