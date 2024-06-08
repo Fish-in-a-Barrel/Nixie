@@ -103,8 +103,6 @@ union Status GetStatus(void)
 uint8_t IsReady(void)
 {
     union Status status = GetStatus();
-    OLED_DrawNumber8(2, 18, status.raw, 3);
-    
     return (status.raw != 0xFF) && status.ready && status.newPDO && status.success;
 }
 
@@ -175,8 +173,22 @@ uint8_t AP33772Init(void)
 {
     DrawString(0, 0, "Waiting for AP33772...");
     
+    uint8_t waitCounter = 0;
+    
     // Wait for the AP33772 to bootstrap
-    while (!IsReady()) __delay_ms(10);
+    while (!IsReady())
+    {
+        // If we've waited 1+ seconds, reset the AP33772
+        if (waitCounter++ > 99)
+        {
+            waitCounter = 0;
+            
+            uint8_t buffer[5] = { AP33772_CMD_RDO, 0, 0, 0, 0 };
+            I2C_Write(AP33772_ADDR, &buffer, sizeof(buffer));
+        }
+        
+        __delay_ms(10);
+    }
     
     DrawString(0, 0, "Waiting for PDOs...   ");
 
