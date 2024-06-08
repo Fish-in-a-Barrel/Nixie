@@ -1,4 +1,5 @@
 #include "adc.h"
+#include "pps_inputs.h"
 
 uint16_t gAdcCv = 0;
 uint8_t gVoltage = 0;
@@ -32,13 +33,8 @@ void InitAdc(void)
     // Use the internal fixed voltage reference (FVR)  (§27.4.2)
     ADCON1bits.ADPREF = 0x3;
     
-#ifndef BREADBOARD
-    // Select RA0 as the ADC channel (§27.4.1)
-    ADCON0bits.CHS = 0;
-#else
-    // Select RC5 as the ADC channel (§27.4.1)
-    ADCON0bits.CHS = 0x15;
-#endif
+    // Select RC2 as the ADC channel (§27.4.1)
+    ADCON0bits.CHS = PPS_INPUT(PPS_PORT_C, 2); 
     
     // Trigger acquisition with TMR2 post-scaled (§27.4.3)
     ADACTbits.ACT = 0x4;
