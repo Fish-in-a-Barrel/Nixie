@@ -1,4 +1,4 @@
-#include <xc.H>
+#include <xc.h>
 
 #include "gps.h"
 #include "bcd_utils.h"
