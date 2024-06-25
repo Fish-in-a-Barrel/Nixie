@@ -57,6 +57,14 @@ void OLED_Clear(void)
  
 void SetupDisplay(void)
 {
+    /*
+     * If pins are on the left:
+     * A1, C8
+     * 
+     * If pins are on the right:
+     * A0, C0
+     */
+    
     const uint8_t initCmds[] =
     {
         0x00,           // Start command sequence
@@ -67,10 +75,10 @@ void SetupDisplay(void)
         0x40 | 0x00,    // Set display start line (10.1.6)
         0x8D, 0x14,     // Set charge pump (2.1 of the application note)
         0x20, 0x00,     // Set memory mode: horizontal addressing (10.1.3)
-        0xA0 | 0x00,    // Set segment remapping: 0 (10.1.8)
-        0xC8,           // Set COM output scan direction: normal (10.1.14)
+        0xA0,           // Set segment remapping: 1 (10.1.8) *
+        0xC0,           // Set COM output scan direction: normal (10.1.14) *
         0xDA, 0x02,     // Set pin configuration: normal (10.1.18)
-        0x81 | 0xA0,    // Set contrast: 0 (10.1.7)
+        0x81, 0xA0,    // Set contrast: 0 (10.1.7)
         0xA4,           // Render w/ RAM contents (10.1.9)
         0xA6,           // Set pixel state: normal (10.1.10)
         0x2E,           // Deactivate scrolling (10.2.3)
