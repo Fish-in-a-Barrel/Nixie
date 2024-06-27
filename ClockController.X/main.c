@@ -125,7 +125,7 @@ void main(void)
     // Give other devices (*cough*OLED*cough*) time to finish power-up.
     __delay_ms(50);
     
-    SetupDisplay();
+    OLED_Init();
 
 #ifndef SKIP_PD
     if (!AP33772Init()) while (1);

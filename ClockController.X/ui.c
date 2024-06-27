@@ -24,9 +24,9 @@ void DrawPageTemplate(void)
     {
         case PAGE_STATUS:
             OLED_DrawStringInverted(0, 0, "1/1 - STATUS        ");
-            DrawString(1, 0, "20##-##-##");
-            DrawString(2, 0, "##:##:##");
-            DrawString(3, 0, "###V @ ##% / GPS:");
+            OLED_DrawString(1, 0, "20##-##-##");
+            OLED_DrawString(2, 0, "##:##:##");
+            OLED_DrawString(3, 0, "###V @ ##% / GPS:");
             break;
     }
 }
@@ -73,7 +73,7 @@ void DrawStatusPage(void)
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
     
     // GPS
-    DrawString(3, 17, 'A' == gpsData.status ? "OK" : "Acq");
+    OLED_DrawString(3, 17, 'A' == gpsData.status ? "OK" : "Acq");
 }
 
 void UI_Update(void)

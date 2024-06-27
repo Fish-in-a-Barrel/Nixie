@@ -55,7 +55,7 @@ void OLED_Clear(void)
 }
 
  
-void SetupDisplay(void)
+void OLED_Init(void)
 {
     /*
      * If pins are on the left:
@@ -99,7 +99,7 @@ void DrawCharacterImpl(uint8_t row, uint8_t col, uint8_t ascii, uint8_t invert)
     I2C_Write(I2C_ADDRESS, buffer, sizeof(buffer));
 }
 
-void DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii)
+void OLED_DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii)
 {
     DrawCharacterImpl(row, col, ascii, 0);
 }
@@ -109,10 +109,10 @@ void OLED_DrawCharacterInverted(uint8_t row, uint8_t col, uint8_t ascii)
     DrawCharacterImpl(row, col, ascii, 1);
 }
 
-void DrawString(uint8_t row, uint8_t col, const char* str)
+void OLED_DrawString(uint8_t row, uint8_t col, const char* str)
 {
     char* c = (char*)str;
-    while (*c != 0) DrawCharacter(row, col++, *(c++));
+    while (*c != 0) OLED_DrawCharacter(row, col++, *(c++));
 }
 
 void OLED_DrawStringInverted(uint8_t row, uint8_t col, const char* str)
@@ -125,7 +125,7 @@ void OLED_DrawNumber8(uint8_t row, uint8_t col, uint8_t number, int8_t digitCoun
 {
     while (digitCount > 0)
     {
-        DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
+        OLED_DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
         number /= 10;
     }
 }
@@ -134,12 +134,12 @@ void OLED_DrawNumber16(uint8_t row, uint8_t col, uint16_t number, int8_t digitCo
 {
     while (digitCount > 0)
     {
-        DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
+        OLED_DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
         number /= 10;
     }
 }
 
-void InvertDisplay(uint8_t invert)
+void OLED_InvertDisplay(uint8_t invert)
 {
     uint8_t command[] = { 0x00, 0xA6 };
     if (invert) command[1] = 0xA7;

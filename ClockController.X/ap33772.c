@@ -142,7 +142,7 @@ uint8_t SelectPDO(void)
     
     if (selectedPdo >= pdoCount)
     {
-        DrawString(0, 0, "No suitable PDO found ");
+        OLED_DrawString(0, 0, "No suitable PDO found ");
         return 0;
     }
     
@@ -155,7 +155,7 @@ uint8_t SelectPDO(void)
     
     I2C_Write(AP33772_ADDR, &buffer, sizeof(buffer));
     
-    DrawString(0, 0, "PDO # of # selected   ");
+    OLED_DrawString(0, 0, "PDO # of # selected   ");
     OLED_DrawNumber8(0, 4, selectedPdo + 1, 1);
     OLED_DrawNumber8(0, 9, pdoCount, 1);
     
@@ -171,7 +171,7 @@ uint8_t SelectPDO(void)
 
 uint8_t AP33772Init(void)
 {
-    DrawString(0, 0, "Waiting for AP33772...");
+    OLED_DrawString(0, 0, "Waiting for AP33772...");
     
     uint8_t waitCounter = 0;
     
@@ -190,7 +190,7 @@ uint8_t AP33772Init(void)
         __delay_ms(10);
     }
     
-    DrawString(0, 0, "Waiting for PDOs...   ");
+    OLED_DrawString(0, 0, "Waiting for PDOs...   ");
 
     while (pdoCount == 0)
     {
