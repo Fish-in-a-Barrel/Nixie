@@ -3,7 +3,7 @@
 
 #include <xc.h>
 
-#define _I2C_TRACE 1
+//#define _I2C_TRACE
 
 struct WriteCallbackContext
 {

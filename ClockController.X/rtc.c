@@ -1,4 +1,23 @@
 #include "rtc.h"
+#include "i2c.h"
+
+struct RtcData gRtc;
+
+void RTC_Read()
+{
+    uint8_t READ_START_ADDRESS = 0x00;
+
+    I2C_WriteRead(I2C_RTC_ADDRESS, &READ_START_ADDRESS, sizeof(READ_START_ADDRESS), &gRtc, sizeof(gRtc));
+}
+
+void RTC_Set(volatile struct DateTime* dt)
+{
+    // Byte 0 is the starting register address for the write.
+    uint8_t buffer[sizeof(struct RtcData) + 1] = { 0 };
+    ConvertDateTimeToRtc((struct RtcData*)(buffer + 1), dt, HOUR_TYPE_24);
+    
+    I2C_Write(I2C_RTC_ADDRESS, buffer, sizeof(buffer));
+}
 
 void ConvertRtcToDateTime(const volatile struct RtcData* rtc, volatile struct DateTime* datetime)
 {

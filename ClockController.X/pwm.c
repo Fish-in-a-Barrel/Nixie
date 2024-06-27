@@ -13,9 +13,6 @@ void InitPwmPins(void)
 void InitPWM()
 {
     InitPwmPins();
-
-    // Inverted due to level-shifting
-    PWM3CONbits.PWM3POL = 1;
     
     // Enable PWM3
     PWM3CONbits.EN = 1;

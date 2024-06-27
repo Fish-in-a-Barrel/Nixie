@@ -90,19 +90,35 @@ void SetupDisplay(void)
     OLED_Clear();
 }
 
-void DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii)
+void DrawCharacterImpl(uint8_t row, uint8_t col, uint8_t ascii, uint8_t invert)
 {
-    uint8_t buffer[] = { 0x40, 0, 0, 0, 0, 0, 0 };
-    for (uint8_t i = 0; i < FONT_WIDTH; ++i) buffer[i + 1] = font8x5[ascii][i];
+    uint8_t buffer[] = { 0x40, 0, 0, 0, 0, 0, invert ? 0xFF : 0 };
+    for (uint8_t i = 0; i < FONT_WIDTH; ++i) buffer[i + 1] = invert ? ~font8x5[ascii][i] : font8x5[ascii][i];
     
     SendAddressBounds(row, row + 1, col * 6, (col + 1) * 6);
     I2C_Write(I2C_ADDRESS, buffer, sizeof(buffer));
+}
+
+void DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii)
+{
+    DrawCharacterImpl(row, col, ascii, 0);
+}
+
+void OLED_DrawCharacterInverted(uint8_t row, uint8_t col, uint8_t ascii)
+{
+    DrawCharacterImpl(row, col, ascii, 1);
 }
 
 void DrawString(uint8_t row, uint8_t col, const char* str)
 {
     char* c = (char*)str;
     while (*c != 0) DrawCharacter(row, col++, *(c++));
+}
+
+void OLED_DrawStringInverted(uint8_t row, uint8_t col, const char* str)
+{
+    char* c = (char*)str;
+    while (*c != 0) OLED_DrawCharacterInverted(row, col++, *(c++));
 }
 
 void OLED_DrawNumber8(uint8_t row, uint8_t col, uint8_t number, int8_t digitCount)

@@ -31,7 +31,7 @@ void UpdateBoostConverter()
     CaptureAdc();
 
     if (gAdcCv + ADC_DEADBAND < ADC_SP) ++gPwmDutyCycle;
-    else if (gAdcCv- ADC_DEADBAND > ADC_SP) --gPwmDutyCycle;
+    else if (gAdcCv - ADC_DEADBAND > ADC_SP) --gPwmDutyCycle;
     
     if (gPwmDutyCycle > PWM_DC_MAX) gPwmDutyCycle = PWM_DC_MAX;
     else if (gPwmDutyCycle < PWM_DC_MIN) gPwmDutyCycle = PWM_DC_MIN;

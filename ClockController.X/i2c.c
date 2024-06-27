@@ -3,19 +3,15 @@
 #include "clock.h"
 #include "pps_outputs.h"
 
-#if _I2C_TRACE
+#ifdef _I2C_TRACE
     char gEventTrace[128] = {0};
     uint8_t gEventIndex = 0;
 
     #define RESET_TRACE() gEventTrace[gEventIndex] = '.'; gEventIndex = 0;
     #define ADD_EVENT(C) gEventTrace[gEventIndex++ % 128] = C;
-
-    char* I2C_GetEventTrace(void) { return gEventTrace; }
 #else
     #define RESET_TRACE()
     #define ADD_EVENT(C)
-
-    char* I2C_GetEventTrace(void) { return null; }
 #endif
 
 #define I2C_BAUD (400 * 1000ul) // 400 kHz

@@ -48,6 +48,12 @@ struct RtcData
     uint8_t year10:4;
 };
 
+extern struct RtcData gRtc;
+
+void RTC_Read(void);
+
+void RTC_Set(volatile struct DateTime* dt);
+
 void ConvertRtcToDateTime(const volatile struct RtcData* rtc, volatile struct DateTime* datetime);
 
 void ConvertDateTimeToRtc(volatile struct RtcData* rtc, const volatile struct DateTime* datetime, uint8_t hourType);

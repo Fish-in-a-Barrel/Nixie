@@ -127,9 +127,9 @@ void UpdatePDOs(void)
 // We're looking for a 20V supply. The LSB of the voltage is 50mV, so the value we're looking for is 400.
 // Operating current is 500mA -> 50
 // Max current is 1000mA -> 100
-#define VOLTAGE_OP 400
-#define CURRENT_OP 50
-#define CURRENT_MAX 100
+#define VOLTAGE_OP (20000 / 50) // 20,000 mV
+#define CURRENT_OP (500 / 10)   // 500 mA
+#define CURRENT_MAX (1000 / 10) // 1,000 mA
 
 uint8_t SelectPDO(void)
 {

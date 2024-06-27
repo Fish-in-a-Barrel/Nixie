@@ -15,6 +15,7 @@
 #include "boost_control.h"
 #include "button.h"
 #include "oled.h"
+#include "ui.h"
 
 int8_t gTimeZoneOffset = -6;
 
@@ -48,8 +49,6 @@ void EnableInterrupts()
     PIE1bits.ADIE = 1;
 }
 
-struct RtcData rtc;
-
 uint8_t CRC(void* data, uint8_t size)
 {
     uint8_t crc = 0;
@@ -61,50 +60,34 @@ uint8_t CRC(void* data, uint8_t size)
 void UpdateNixieDrivers()
 {
     static uint8_t lastCRC = 0;
-    uint8_t crc = CRC(&rtc, sizeof(rtc));
+    uint8_t crc = CRC(&gRtc, sizeof(gRtc));
     
     if (lastCRC == crc) return;
     lastCRC = crc;    
     
     uint8_t digit;
     
-    digit = rtc.hour10;   I2C_Write(0x01, &digit, sizeof(digit));
-    digit = rtc.hour01;   I2C_Write(0x02, &digit, sizeof(digit));
-    digit = rtc.minute10; I2C_Write(0x03, &digit, sizeof(digit));
-    digit = rtc.minute01; I2C_Write(0x04, &digit, sizeof(digit));
-    digit = rtc.second10; I2C_Write(0x05, &digit, sizeof(digit));
-    digit = rtc.second01; I2C_Write(0x06, &digit, sizeof(digit));
+    digit = gRtc.hour10;   I2C_Write(0x01, &digit, sizeof(digit));
+    digit = gRtc.hour01;   I2C_Write(0x02, &digit, sizeof(digit));
+    digit = gRtc.minute10; I2C_Write(0x03, &digit, sizeof(digit));
+    digit = gRtc.minute01; I2C_Write(0x04, &digit, sizeof(digit));
+    digit = gRtc.second10; I2C_Write(0x05, &digit, sizeof(digit));
+    digit = gRtc.second01; I2C_Write(0x06, &digit, sizeof(digit));
 
-    digit = rtc.date10;  I2C_Write(0x09, &digit, sizeof(digit));
-    digit = rtc.date01;  I2C_Write(0x0A, &digit, sizeof(digit));
-    digit = rtc.month10; I2C_Write(0x0B, &digit, sizeof(digit));
-    digit = rtc.month01; I2C_Write(0x0C, &digit, sizeof(digit));
-    digit = rtc.year10;  I2C_Write(0x0D, &digit, sizeof(digit));
-    digit = rtc.year01;  I2C_Write(0x0E, &digit, sizeof(digit));
-}
-
-void ReadRTC()
-{
-    uint8_t READ_START_ADDRESS = 0x00;
-
-    I2C_WriteRead(I2C_RTC_ADDRESS, &READ_START_ADDRESS, sizeof(READ_START_ADDRESS), &rtc, sizeof(rtc));
-}
-
-void SetRTC()
-{
-    // Byte 0 is the starting register address for the write.
-    uint8_t buffer[sizeof(rtc) + 1] = { 0 };
-    ConvertDateTimeToRtc((struct RtcData*)(buffer + 1), &gpsData.datetime, HOUR_TYPE_24);
-    
-    I2C_Write(I2C_RTC_ADDRESS, buffer, sizeof(buffer));
+    digit = gRtc.date10;  I2C_Write(0x09, &digit, sizeof(digit));
+    digit = gRtc.date01;  I2C_Write(0x0A, &digit, sizeof(digit));
+    digit = gRtc.month10; I2C_Write(0x0B, &digit, sizeof(digit));
+    digit = gRtc.month01; I2C_Write(0x0C, &digit, sizeof(digit));
+    digit = gRtc.year10;  I2C_Write(0x0D, &digit, sizeof(digit));
+    digit = gRtc.year01;  I2C_Write(0x0E, &digit, sizeof(digit));
 }
 
 void SynchronizeTime()
 {
     struct DateTime rtcTime;
-    ConvertRtcToDateTime(&rtc, &rtcTime);
+    ConvertRtcToDateTime(&gRtc, &rtcTime);
 
-    if (!TimesAreClose(&gpsData.datetime, &rtcTime)) SetRTC();
+    if (!TimesAreClose(&gpsData.datetime, &rtcTime)) RTC_Set(&gpsData.datetime);
 }
 
 void CheckGPS()
@@ -121,30 +104,14 @@ void CheckGPS()
     }
 }
 
-void UpdateTimeZoneOffset()
+void HandleUserInteraction()
 {
     UpdateButtons();
     
-    if (ROTATION_CW == gButtonState.rotation) ++gTimeZoneOffset;
-    if (ROTATION_CCW == gButtonState.rotation) --gTimeZoneOffset;
+    if (ROTATION_CW == gButtonState.rotation) UI_HandleRotationCW();
+    if (ROTATION_CCW == gButtonState.rotation) UI_HandleRotationCCW();
 }
-
-void UpdateDisplay()
-{
-    struct AP33772_Status status;
-    
-    AP33772_GetStatus(&status);
-
-    // USB PD status
-    DrawString(1, 0, ".... mA, .... mV");
-    OLED_DrawNumber16(1, 0, status.current, 4);
-    OLED_DrawNumber16(1, 9, status.voltage, 5);
-    
-    // HV status
-    DrawString(2, 0, "... V - ... % DC");
-    OLED_DrawNumber8(2, 0, gVoltage, 3);
-    OLED_DrawNumber16(2, 8, BoostConverter_GetDutyCyclePct(), 3);
-}
+#define SKIP_PD
 
 void main(void)
 {
@@ -160,8 +127,10 @@ void main(void)
     
     SetupDisplay();
 
+#ifndef SKIP_PD
     if (!AP33772Init()) while (1);
-
+#endif
+    
     InitButtons();
     
     InitTimer();
@@ -176,18 +145,19 @@ void main(void)
     {
         UpdateBoostConverter();
         
-        if (frameCounter % 16 == 0)
+        if (frameCounter % 4 == 0)
         {
-            UpdateTimeZoneOffset();
-            ReadRTC();
+            HandleUserInteraction();
+            RTC_Read();
             CheckGPS();
 
             UpdateNixieDrivers();
+            UI_TickSpinner();
         }
 
-        if (frameCounter == 0)
+        if (frameCounter % 64 == 0)
         {
-            UpdateDisplay();
+            UI_Update();
         }
         
         ++frameCounter;
