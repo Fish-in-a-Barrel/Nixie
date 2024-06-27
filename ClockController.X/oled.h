@@ -5,6 +5,10 @@
 
 void OLED_Init(void);
 
+void OLED_On(void);
+
+void OLED_Off(void);
+
 void OLED_Clear(void);
 
 void OLED_DrawCharacter(uint8_t row, uint8_t col, uint8_t code);

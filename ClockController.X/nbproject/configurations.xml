@@ -26,6 +26,7 @@
       <itemPath>font8x5.h</itemPath>
       <itemPath>oled.h</itemPath>
       <itemPath>ui.h</itemPath>
+      <itemPath>time_zone.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -58,6 +59,7 @@
       <itemPath>oled.c</itemPath>
       <itemPath>font8x5.c</itemPath>
       <itemPath>ui.c</itemPath>
+      <itemPath>time_zone.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

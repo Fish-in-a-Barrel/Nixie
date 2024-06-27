@@ -16,8 +16,7 @@
 #include "button.h"
 #include "oled.h"
 #include "ui.h"
-
-int8_t gTimeZoneOffset = -6;
+#include "time_zone.h"
 
 void __interrupt() ISR()
 {
@@ -108,9 +107,12 @@ void HandleUserInteraction()
 {
     UpdateButtons();
     
-    if (ROTATION_CW == gButtonState.rotation) UI_HandleRotationCW();
-    if (ROTATION_CCW == gButtonState.rotation) UI_HandleRotationCCW();
+    if (ROTATION_CW == gButtonState.rotation)
+        UI_HandleRotationCW();
+    if (ROTATION_CCW == gButtonState.rotation)
+        UI_HandleRotationCCW();
 }
+
 #define SKIP_PD
 
 void main(void)
@@ -144,10 +146,10 @@ void main(void)
     while (1)
     {
         UpdateBoostConverter();
+        HandleUserInteraction();
         
         if (frameCounter % 4 == 0)
         {
-            HandleUserInteraction();
             RTC_Read();
             CheckGPS();
 

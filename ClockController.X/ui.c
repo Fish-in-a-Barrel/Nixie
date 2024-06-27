@@ -4,17 +4,30 @@
 #include "rtc.h"
 #include "adc.h"
 #include "boost_control.h"
+#include "time_zone.h"
 
 #include <xc.h>
 
+#define DISPLAY_TIMEOUT 100
+#define DISPLAY_STATE_ON 1
+#define DISPLAY_STATE_OFF 0
+
+static uint16_t gDisplayTimer = DISPLAY_TIMEOUT;
+static uint8_t gDisplayState = DISPLAY_STATE_ON;
+
+
 #define STATE_PAGE_SCROLL 0
+
+static uint8_t gState = STATE_PAGE_SCROLL;
+
 
 #define PAGE_NONE  0xFF
 #define PAGE_STATUS 0
-#define PAGE_COUNT 1
+#define PAGE_TIME_ZONE 1
+#define PAGE_COUNT 2
 
-static uint8_t gState = STATE_PAGE_SCROLL;
 static uint8_t gCurrentPage = PAGE_NONE;
+
 
 void DrawPageTemplate(void)
 {
@@ -23,10 +36,16 @@ void DrawPageTemplate(void)
     switch (gCurrentPage)
     {
         case PAGE_STATUS:
-            OLED_DrawStringInverted(0, 0, "1/1 - STATUS        ");
+            OLED_DrawStringInverted(0, 0, "1/2 STATUS          ");
             OLED_DrawString(1, 0, "20##-##-##");
             OLED_DrawString(2, 0, "##:##:##");
             OLED_DrawString(3, 0, "###V @ ##% / GPS:");
+            break;
+        case PAGE_TIME_ZONE:
+            OLED_DrawStringInverted(0, 0, "2/2 Time Zone & DST ");
+            OLED_DrawString(1, 0, "20##-##-## ##:##:##");
+            OLED_DrawString(2, 0, "TZ: UTC");
+            OLED_DrawString(3, 0, "DST: ");
             break;
     }
 }
@@ -41,16 +60,38 @@ void UI_TickSpinner()
     spinnerState = (spinnerState + 1) % sizeof(SPINNER);
 }
 
+void KeepDisplayAlive(void)
+{
+    if (DISPLAY_STATE_OFF == gDisplayState)
+    {
+        OLED_On();
+        gDisplayState = DISPLAY_STATE_ON;
+    }
+    
+    gDisplayTimer = DISPLAY_TIMEOUT;
+}
+
 void UI_HandleRotationCW(void)
 {
     gCurrentPage = (gCurrentPage + 1) % PAGE_COUNT;
-    DrawPageTemplate();
+    DrawPageTemplate();    
+    UI_Update();
+    
+    KeepDisplayAlive();
 }
 
 void UI_HandleRotationCCW(void)
 {
     gCurrentPage = gCurrentPage > 0 ? gCurrentPage - 1 : PAGE_COUNT - 1;
     DrawPageTemplate();
+    UI_Update();
+    
+    KeepDisplayAlive();
+}
+
+void UI_HandleButtonPress(void)
+{
+    KeepDisplayAlive();
 }
 
 void DrawStatusPage(void)
@@ -76,13 +117,56 @@ void DrawStatusPage(void)
     OLED_DrawString(3, 17, 'A' == gpsData.status ? "OK" : "Acq");
 }
 
+void DrawTimeZonePage(void)
+{
+    struct DateTime rtcTime;
+    ConvertRtcToDateTime(&gRtc, &rtcTime);
+
+    // Date
+    OLED_DrawNumber8(1, 2, rtcTime.year, 2);
+    OLED_DrawNumber8(1, 5, rtcTime.month, 2);
+    OLED_DrawNumber8(1, 8, rtcTime.day, 2);
+    
+    // Time
+    OLED_DrawNumber8(1, 11, rtcTime.hour, 2);
+    OLED_DrawNumber8(1, 14, rtcTime.minute, 2);
+    OLED_DrawNumber8(1, 17, rtcTime.second, 2);
+    
+    // Time Zone
+    OLED_DrawCharacter(2, 7, gTimeZoneOffset < 0 ? '-' : '+');
+    OLED_DrawNumber8(2, 8, (uint8_t)(gTimeZoneOffset < 0 ? -gTimeZoneOffset : gTimeZoneOffset), 2);
+    OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][TZ_LIST]);
+}
+
+typedef void PageDrawingFunction();
+
 void UI_Update(void)
 {
-    if (PAGE_NONE == gCurrentPage) UI_HandleRotationCW();
-
-    switch (gCurrentPage)
+    static PageDrawingFunction* PAGE_DRAWING_FUNC[] =
     {
-        case PAGE_STATUS: DrawStatusPage(); break;
+        &DrawStatusPage,
+        &DrawTimeZonePage,
+    };
+    
+    if (gDisplayTimer == 0)
+    {
+        OLED_Off();
+        gDisplayState = DISPLAY_STATE_OFF;
     }
+    else
+    {
+        --gDisplayTimer;
+    }
+    
+    if (DISPLAY_STATE_OFF == gDisplayState) return;
+    
+    // First pass initialization
+    if (PAGE_NONE == gCurrentPage)
+    {
+        gCurrentPage = PAGE_STATUS;
+        DrawPageTemplate();
+    }
+
+    PAGE_DRAWING_FUNC[gCurrentPage]();
 }
 

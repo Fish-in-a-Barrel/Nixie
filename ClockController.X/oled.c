@@ -90,6 +90,28 @@ void OLED_Init(void)
     OLED_Clear();
 }
 
+void OLED_On()
+{
+    const uint8_t command[] =
+    {
+        0x00,           // Start command sequence
+        0xAF,           // Display off (10.1.12)
+    };
+    
+    I2C_Write(I2C_ADDRESS, command, sizeof(command));
+}
+
+void OLED_Off()
+{
+    const uint8_t command[] =
+    {
+        0x00,           // Start command sequence
+        0xAE,           // Display off (10.1.12)
+    };
+    
+    I2C_Write(I2C_ADDRESS, command, sizeof(command));
+}
+
 void DrawCharacterImpl(uint8_t row, uint8_t col, uint8_t ascii, uint8_t invert)
 {
     uint8_t buffer[] = { 0x40, 0, 0, 0, 0, 0, invert ? 0xFF : 0 };
