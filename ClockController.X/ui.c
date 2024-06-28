@@ -6,6 +6,8 @@
 #include "boost_control.h"
 #include "time_zone.h"
 #include "button.h"
+#include "boost_control.h"
+#include "timer.h"
 
 #include <xc.h>
 
@@ -22,13 +24,16 @@ static uint8_t gDisplayState = DISPLAY_STATE_ON;
 static uint8_t gState = STATE_PAGE_SCROLL;
 
 
-#define PAGE_NONE  0xFF
-#define PAGE_STATUS 0
-#define PAGE_TIME_ZONE 1
-#define PAGE_COUNT 2
+#define PAGE_NONE  0
+#define PAGE_STATUS 1
+#define PAGE_TIME_ZONE 2
+#define PAGE_BOOST 3
+#define PAGE_COUNT 3
 
 static uint8_t gCurrentPage = PAGE_NONE;
 
+#define xstr(s) str(s)
+#define str(s) #s
 
 void DrawPageTemplate(void)
 {
@@ -37,17 +42,27 @@ void DrawPageTemplate(void)
     switch (gCurrentPage)
     {
         case PAGE_STATUS:
-            OLED_DrawStringInverted(0, 0, "1/2 STATUS           ");
+            OLED_DrawStringInverted(0, 0, xstr(PAGE_STATUS) "/" xstr(PAGE_COUNT) " STATUS           ");
             OLED_DrawString(1, 0, "20##-##-##");
             OLED_DrawString(2, 0, "##:##:##");
             OLED_DrawString(3, 0, "###V @ ##% / GPS:");
             break;
+            
         case PAGE_TIME_ZONE:
-            OLED_DrawStringInverted(0, 0, "2/2 Time Zone & DST  ");
+            OLED_DrawStringInverted(0, 0, xstr(PAGE_TIME_ZONE) "/" xstr(PAGE_COUNT) " Time Zone & DST  ");
             OLED_DrawString(1, 0, "20##-##-## ##:##:##");
             OLED_DrawString(2, 0, "TZ: UTC");
             OLED_DrawString(3, 0, "DST: ");
             break;
+            
+        case PAGE_BOOST:
+            OLED_DrawStringInverted(0, 0, xstr(PAGE_BOOST) "/" xstr(PAGE_COUNT) " Boost Converter  ");
+            OLED_DrawString(1, 0, "Output: ### V");
+            OLED_DrawString(2, 0, "PWM: ####/#### (##%)");
+            OLED_DrawNumber16(2, 10, (TMR2_RESET << 2), 4);
+            OLED_DrawString(3, 0, "ADC: #### mV");
+            break;
+            
     }
 }
 
@@ -74,7 +89,7 @@ void KeepDisplayAlive(void)
 
 void UI_HandleRotationCW(void)
 {
-    gCurrentPage = (gCurrentPage + 1) % PAGE_COUNT;
+    gCurrentPage = gCurrentPage < PAGE_COUNT ? gCurrentPage + 1 : 1;
     DrawPageTemplate();    
     UI_Update();
     
@@ -84,7 +99,7 @@ void UI_HandleRotationCW(void)
 
 void UI_HandleRotationCCW(void)
 {
-    gCurrentPage = gCurrentPage > 0 ? gCurrentPage - 1 : PAGE_COUNT - 1;
+    gCurrentPage = gCurrentPage > 1 ? gCurrentPage - 1 : PAGE_COUNT;
     DrawPageTemplate();
     UI_Update();
     
@@ -141,6 +156,14 @@ void DrawTimeZonePage(void)
     OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][TZ_LIST]);
 }
 
+void DrawBoostPage(void)
+{
+    OLED_DrawNumber8(1, 8, gVoltage, 3);
+    OLED_DrawNumber16(2, 5, BoostConverter_GetDutyCycle(), 4);
+    OLED_DrawNumber16(2, 16, BoostConverter_GetDutyCyclePct(), 2);
+    OLED_DrawNumber16(3, 5, gAdcCv * 4, 4);
+}
+
 typedef void PageDrawingFunction();
 
 void UI_Update(void)
@@ -149,6 +172,7 @@ void UI_Update(void)
     {
         &DrawStatusPage,
         &DrawTimeZonePage,
+        &DrawBoostPage,
     };
     
     if (gDisplayTimer == 0)
@@ -170,6 +194,6 @@ void UI_Update(void)
         DrawPageTemplate();
     }
 
-    PAGE_DRAWING_FUNC[gCurrentPage]();
+    PAGE_DRAWING_FUNC[gCurrentPage - 1]();
 }
 

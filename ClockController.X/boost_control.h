@@ -13,6 +13,8 @@ void InitBoostConverter(void);
 
 void UpdateBoostConverter(void);
 
+uint16_t BoostConverter_GetDutyCycle(void);
+
 uint16_t BoostConverter_GetDutyCyclePct(void);
 
 #endif	/* BOOST_CONTROL_H */

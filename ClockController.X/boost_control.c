@@ -39,6 +39,11 @@ void UpdateBoostConverter()
     SetPwmDutyCycle(gPwmDutyCycle / PWM_DC_SCALAR);
 }
 
+uint16_t BoostConverter_GetDutyCycle(void)
+{
+    return gPwmDutyCycle / PWM_DC_SCALAR;
+}
+
 uint16_t BoostConverter_GetDutyCyclePct(void)
 {
     return gPwmDutyCycle / (PWX_DC_100 / 100);

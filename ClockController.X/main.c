@@ -112,6 +112,8 @@ void HandleUserInteraction()
     if (gButtonState.deltaR >= 2) UI_HandleRotationCW();
     if (gButtonState.deltaR <= -2) UI_HandleRotationCCW();
     
+    if (gButtonState.c.state && gButtonState.c.edge) UI_HandleButtonPress();
+    
     gButtonState.rotation = ROTATION_NONE;
 }
 
