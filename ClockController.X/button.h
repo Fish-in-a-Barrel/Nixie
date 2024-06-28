@@ -8,8 +8,6 @@ union ButtonState
     struct
     {
         uint8_t state : 1;      // The current debounced state of the button
-        uint8_t _pinLast: 1;    // internal, the last pin state
-        uint8_t _pin: 1;        // internal, the current pin state
         uint8_t edge : 1;       // 1 if the state changed on the last update
     };
 
@@ -27,11 +25,12 @@ struct
     union ButtonState c;
     
     uint8_t rotation;
+    volatile int8_t deltaR; // CCW < 0 < CW
 } gButtonState;
 
-void InitButtons(void);
+void Buttons_Init(void);
 
-void UpdateButtons(void);
+void Buttons_HandleInterrupt(void);
 
 #endif	/* BUTTON_H */
 

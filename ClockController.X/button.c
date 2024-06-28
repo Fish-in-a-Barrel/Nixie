@@ -2,23 +2,17 @@
 
 static uint8_t gLastRotation = ROTATION_NONE;
 
-void InitButtons(void)
+void Buttons_Init(void)
 {
     // RC3, RC4, and RC5 are button inputs
     TRISC |= (1 << 3) | (1 << 4) | (1 << 5);
     WPUC |= (1 << 3) | (1 << 4) | (1 << 5);
     
-    UpdateButtons();
-}
-
-void Debounce(union ButtonState* button)
-{
-    if ((button->_raw & 0x7) == 0b001) button->_raw = 0x8; // transition from 1 -> 0
-    else if ((button->_raw & 0x7) == 0b110) button->_raw = 0xF; // transition from 0 -> 1
-    else button->edge = 0;
+    // Set up Interrupt On Change (IOC) for the pins (§17.3)
+    IOCCP |= (1 << 3) | (1 << 4) | (1 << 5);
+    IOCCN |= (1 << 3) | (1 << 4) | (1 << 5);
     
-    // Remember the current pin state for debouncing next pass.
-    button->_pinLast = button->_pin;
+    gButtonState.deltaR = 0;
 }
 
 void UpdateRotation(void)
@@ -47,7 +41,7 @@ void UpdateRotation(void)
         ROTATION_CW,    // 1010 - A -> 1, B = 0
         ROTATION_CCW,   // 1011 - A -> 1, B = 1
         
-        // Skipping 11xx because those are dual transition events, which shouldn't be possible.
+        // 11xx dual transition events, which shouldn't be possible.
         ROTATION_NONE,
         ROTATION_NONE,
         ROTATION_NONE,
@@ -56,6 +50,8 @@ void UpdateRotation(void)
     
     uint8_t rotation = ROTATION_FROM_STATE[state];
     gButtonState.rotation = ROTATION_NONE;
+    if (ROTATION_CW == rotation) ++gButtonState.deltaR;
+    else if (ROTATION_CCW == rotation) --gButtonState.deltaR;
 
     // Each click generates two rotation events, so don't set the rotation state until two events of the same type.
     if (rotation != ROTATION_NONE)
@@ -72,15 +68,21 @@ void UpdateRotation(void)
     }
 }
 
-void UpdateButtons(void)
+void Buttons_HandleInterrupt(void)
 {
-    gButtonState.a._pin = RC5;
-    gButtonState.b._pin = RC4;
-    gButtonState.c._pin = RC3;
+    // IOCxF is a set of flags, so care must be taken to only clear flags we handle in this call.
+    // If IOCxF is cleared by this operation, IOCIF is automatically cleared. (§17.5)
+    uint8_t iocif = IOCCF;
+    IOCCF &= ~iocif;
+
+    gButtonState.a.state = RC5;
+    gButtonState.b.state = RC4;
+    gButtonState.c.state = RC3;
     
-    Debounce(&gButtonState.a);
-    Debounce(&gButtonState.b);
-    Debounce(&gButtonState.c);
-    
+    // Detect the edges (§17.4)
+    gButtonState.a.edge = (iocif >> 5) & 1;
+    gButtonState.b.edge = (iocif >> 4) & 1;
+    gButtonState.c.edge = (iocif >> 3) & 1;
+
     UpdateRotation();
 }

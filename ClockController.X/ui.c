@@ -5,6 +5,7 @@
 #include "adc.h"
 #include "boost_control.h"
 #include "time_zone.h"
+#include "button.h"
 
 #include <xc.h>
 
@@ -36,13 +37,13 @@ void DrawPageTemplate(void)
     switch (gCurrentPage)
     {
         case PAGE_STATUS:
-            OLED_DrawStringInverted(0, 0, "1/2 STATUS          ");
+            OLED_DrawStringInverted(0, 0, "1/2 STATUS           ");
             OLED_DrawString(1, 0, "20##-##-##");
             OLED_DrawString(2, 0, "##:##:##");
             OLED_DrawString(3, 0, "###V @ ##% / GPS:");
             break;
         case PAGE_TIME_ZONE:
-            OLED_DrawStringInverted(0, 0, "2/2 Time Zone & DST ");
+            OLED_DrawStringInverted(0, 0, "2/2 Time Zone & DST  ");
             OLED_DrawString(1, 0, "20##-##-## ##:##:##");
             OLED_DrawString(2, 0, "TZ: UTC");
             OLED_DrawString(3, 0, "DST: ");
@@ -78,6 +79,7 @@ void UI_HandleRotationCW(void)
     UI_Update();
     
     KeepDisplayAlive();
+    gButtonState.deltaR -= 2;
 }
 
 void UI_HandleRotationCCW(void)
@@ -87,6 +89,7 @@ void UI_HandleRotationCCW(void)
     UI_Update();
     
     KeepDisplayAlive();
+    gButtonState.deltaR += 2;
 }
 
 void UI_HandleButtonPress(void)

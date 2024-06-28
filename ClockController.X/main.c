@@ -25,13 +25,17 @@ void __interrupt() ISR()
     if (PIR1bits.RC1IF) GPS_HandleInterrupt();
     if (PIR1bits.TMR2IF) TimerInterruptHandler();
     if (PIR1bits.ADIF) AdcInterruptHandler();
+    if (PIR0bits.IOCIF) Buttons_HandleInterrupt();
 }
 
 void EnableInterrupts()
 {
     // Enable global and peripheral interrupts (§12.4)
     INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1; 
+    INTCONbits.PEIE = 1;    
+    
+    // Enable IOC interrupts (§17.2)
+    PIE0bits.IOCIE = 1;
 
     // Enable MSSP Interrupts (§12.9.3)
     PIE1bits.SSP1IE = 1;
@@ -105,12 +109,10 @@ void CheckGPS()
 
 void HandleUserInteraction()
 {
-    UpdateButtons();
+    if (gButtonState.deltaR >= 2) UI_HandleRotationCW();
+    if (gButtonState.deltaR <= -2) UI_HandleRotationCCW();
     
-    if (ROTATION_CW == gButtonState.rotation)
-        UI_HandleRotationCW();
-    if (ROTATION_CCW == gButtonState.rotation)
-        UI_HandleRotationCCW();
+    gButtonState.rotation = ROTATION_NONE;
 }
 
 #define SKIP_PD
@@ -133,7 +135,7 @@ void main(void)
     if (!AP33772Init()) while (1);
 #endif
     
-    InitButtons();
+    Buttons_Init();
     
     InitTimer();
     InitAdc();
