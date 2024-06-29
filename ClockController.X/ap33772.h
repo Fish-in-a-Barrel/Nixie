@@ -25,6 +25,10 @@ struct AP33772_Status
     union Status status;
     uint16_t current; // In mA
     uint16_t voltage; // in mV
+    
+    uint8_t selectedPdoPos;
+    uint8_t pdoMaxAmps;
+    uint8_t pdoMaxVolts;
 } AP33772_StatusAndPower;
 
 uint8_t AP33772Init(void);

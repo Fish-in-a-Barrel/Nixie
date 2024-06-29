@@ -123,6 +123,7 @@ void UpdatePDOs(void)
 }
 
 #define GetVoltage(pdo) ((pdo.raw[1] >> 2) | (((uint16_t)pdo.raw[2] & 0xF) << 6))
+#define GetAmperage(pdo) (pdo.raw[0] | (((uint16_t)pdo.raw[1] & 0x3) << 8))
 
 // We're looking for a 20V supply. The LSB of the voltage is 50mV, so the value we're looking for is 400.
 // Operating current is 500mA -> 50
@@ -214,4 +215,8 @@ void AP33772_GetStatus(struct AP33772_Status* buffer)
     buffer->status.raw = GetStatus().raw;
     buffer->current = (uint16_t)rawCurrent * 24; // raw LSB = 24mA
     buffer->voltage = (uint16_t)rawVoltage * 80; // raw LSB = 80mA
+    
+    buffer->selectedPdoPos = selectedPdo;
+    buffer->pdoMaxAmps = (uint8_t)(GetAmperage(pdos[selectedPdo]) / 100);
+    buffer->pdoMaxVolts = (uint8_t)(GetVoltage(pdos[selectedPdo]) / 20);
 }

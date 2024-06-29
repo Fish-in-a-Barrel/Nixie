@@ -8,6 +8,7 @@
 #include "button.h"
 #include "boost_control.h"
 #include "timer.h"
+#include "ap33772.h"
 
 #include <xc.h>
 
@@ -28,7 +29,9 @@ static uint8_t gState = STATE_PAGE_SCROLL;
 #define PAGE_STATUS 1
 #define PAGE_TIME_ZONE 2
 #define PAGE_BOOST 3
-#define PAGE_COUNT 3
+#define PAGE_USB_PD 4
+
+#define PAGE_COUNT 4
 
 static uint8_t gCurrentPage = PAGE_NONE;
 
@@ -61,8 +64,13 @@ void DrawPageTemplate(void)
             OLED_DrawString(2, 0, "PWM: ####/#### (##%)");
             OLED_DrawNumber16(2, 10, (TMR2_RESET << 2), 4);
             OLED_DrawString(3, 0, "ADC: #### mV");
-            break;
+            break;            
             
+        case PAGE_USB_PD:
+            OLED_DrawStringInverted(0, 0, xstr(PAGE_USB_PD) "/" xstr(PAGE_COUNT) " USB PD           ");
+            OLED_DrawString(1, 0, "PDO #: ## A @ ## V");
+            OLED_DrawString(2, 0, "#### mA @ ##### mV");
+            break;
     }
 }
 
@@ -164,6 +172,19 @@ void DrawBoostPage(void)
     OLED_DrawNumber16(3, 5, gAdcCv * 4, 4);
 }
 
+void DrawUsbPdPage(void)
+{
+    struct AP33772_Status status;
+    AP33772_GetStatus(&status);
+    
+    OLED_DrawNumber8(1, 4, status.selectedPdoPos, 1);
+    OLED_DrawNumber8(1, 7, status.pdoMaxAmps, 2);
+    OLED_DrawNumber8(1, 14, status.pdoMaxVolts, 2);
+    
+    OLED_DrawNumber16(2, 0, status.current, 4);
+    OLED_DrawNumber16(2, 10, status.voltage, 5);
+}
+
 typedef void PageDrawingFunction();
 
 void UI_Update(void)
@@ -173,6 +194,7 @@ void UI_Update(void)
         &DrawStatusPage,
         &DrawTimeZonePage,
         &DrawBoostPage,
+        &DrawUsbPdPage,
     };
     
     if (gDisplayTimer == 0)
