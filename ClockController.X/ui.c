@@ -114,7 +114,11 @@ void UI_HandleRotationCW(void)
             
         case STATE_FIELD_SELECT:
             gField = !gField;
-            break;            
+            break;
+            
+        case STATE_VALUE_SCROLL:
+            // Time zone range is [-12, +14]]
+            if (0 == gField) gTimeZoneOffset = gTimeZoneOffset < 14 ? gTimeZoneOffset + 1 : -12;
     }
     
     UI_Update();
@@ -134,7 +138,11 @@ void UI_HandleRotationCCW(void)
             
         case STATE_FIELD_SELECT:
             gField = !gField;
-            break;            
+            break;
+            
+        case STATE_VALUE_SCROLL:
+            // Time zone range is [-12, +14]]
+            if (0 == gField) gTimeZoneOffset = gTimeZoneOffset > -12 ? gTimeZoneOffset - 1 : 14;
     }
     
     KeepDisplayAlive();
@@ -207,6 +215,7 @@ void DrawTimeZonePage(void)
     // Time Zone
     OLED_DrawCharacter(2, 7, gTimeZoneOffset < 0 ? '-' : '+');
     OLED_DrawNumber8(2, 8, (uint8_t)(gTimeZoneOffset < 0 ? -gTimeZoneOffset : gTimeZoneOffset), 2);
+    OLED_DrawString(2, 13, "  "); // Erase any straggling letters from previous TZ
     OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][TZ_LIST]);
     
     char* indicators[2] = { "  ", "  " }; 

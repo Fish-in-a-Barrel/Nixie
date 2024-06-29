@@ -9,7 +9,7 @@ extern int8_t gTimeZoneOffset;
 #define TZ_LIST_ST 1
 #define TZ_LIST_DST 2
 
-extern char TIME_ZONE_ABRV[27][3][4];
+extern const char* TIME_ZONE_ABRV[27][3];
 
 #endif	/* TIME_ZONE_H */
 

@@ -2,7 +2,7 @@
 
 int8_t gTimeZoneOffset = -6;
 
-char TIME_ZONE_ABRV[27][3][4] =
+const char* TIME_ZONE_ABRV[27][3] =
 { //   _TZ_    _ST_    _DT_
     { "BIT",  "BIT",  "BIT"  }, // -12
     { "ST",   "SST",  "SDT"  }, // -11
