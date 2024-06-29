@@ -90,20 +90,26 @@ void UI_TickSpinner()
     spinnerState = (spinnerState + 1) % sizeof(SPINNER);
 }
 
-void KeepDisplayAlive(void)
+uint8_t KeepDisplayAlive(void)
 {
+    uint8_t ignoreAction = 0;
+    
     if (DISPLAY_STATE_OFF == gDisplayState)
     {
         OLED_On();
         gDisplayState = DISPLAY_STATE_ON;
+        ignoreAction = 1;
     }
     
     gDisplayTimer = DISPLAY_TIMEOUT;
+    
+    return ignoreAction;
 }
 
 void UI_HandleRotationCW(void)
 {
     gButtonState.deltaR -= 2;
+    if (KeepDisplayAlive()) return;
 
     switch (gState)
     {
@@ -132,12 +138,12 @@ void UI_HandleRotationCW(void)
     }
     
     UI_Update();
-    KeepDisplayAlive();
 }
 
 void UI_HandleRotationCCW(void)
 {
     gButtonState.deltaR += 2;
+    if (KeepDisplayAlive()) return;
 
     switch (gState)
     {
@@ -164,13 +170,12 @@ void UI_HandleRotationCCW(void)
             TimeZone_Save();
             break;
     }
-    
-    KeepDisplayAlive();
 }
 
 void UI_HandleButtonPress(void)
 {
     gButtonState.c.edge = 0;
+    if (KeepDisplayAlive()) return;
     
     if (gCurrentPage == PAGE_TIME_ZONE)
     {
@@ -189,7 +194,6 @@ void UI_HandleButtonPress(void)
     }
     
     UI_Update();
-    KeepDisplayAlive();
 }
 
 void DrawStatusPage(void)
