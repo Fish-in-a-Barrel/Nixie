@@ -246,7 +246,7 @@ void DrawTimeZonePage(void)
     OLED_DrawCharacter(2, 7, gTimeZoneOffset < 0 ? '-' : '+');
     OLED_DrawNumber8(2, 8, (uint8_t)(gTimeZoneOffset < 0 ? -gTimeZoneOffset : gTimeZoneOffset), 2);
     OLED_DrawString(2, 13, "  "); // Erase any straggling letters from previous TZ
-    OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][TZ_LIST]);
+    OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][gGpsData.datetime.dst]);
     
     // DST
     OLED_DrawString(3, 7, DST_TYPE_ABRV[gDstType]);

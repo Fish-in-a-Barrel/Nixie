@@ -117,8 +117,6 @@ void HandleUserInteraction()
     gButtonState.rotation = ROTATION_NONE;
 }
 
-#define SKIP_PD
-
 void main(void)
 {
     InitClock();

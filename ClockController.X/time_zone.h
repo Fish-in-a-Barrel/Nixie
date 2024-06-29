@@ -13,7 +13,7 @@ extern uint8_t gDstType;
 #define TZ_LIST_ST 1
 #define TZ_LIST_DST 2
 
-extern const char* TIME_ZONE_ABRV[27][3];
+extern const char* TIME_ZONE_ABRV[27][2];
 
 extern const char* DST_TYPE_ABRV[2];
 

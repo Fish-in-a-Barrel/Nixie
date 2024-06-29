@@ -5,35 +5,35 @@ uint8_t gDstType = DST_TYPE_AUTO_US;
 
 #define TIME_ZONE_MEMORY_LOCATION 0x8000
 
-const char* TIME_ZONE_ABRV[27][3] =
+const char* TIME_ZONE_ABRV[27][2] =
 { //   _TZ_    _ST_    _DT_
-    { "BIT",  "BIT",  "BIT"  }, // -12
-    { "ST",   "SST",  "SDT"  }, // -11
-    { "HT",   "HST",  "HDT"  }, // -10
-    { "AKT",  "AKST", "AKDT" }, // -09
-    { "PT",   "PST",  "PDT"  }, // -08
-    { "MT",   "MST",  "MDT"  }, // -07
-    { "CT",   "CST",  "CDT"  }, // -06
-    { "ET",   "EST",  "EDT"  }, // -05
-    { "AT",   "AST",  "ADT"  }, // -04
-    { "BRT",  "BRT",  "BRT"  }, // -03
-    { "GST",  "GST",  "GST"  }, // -02
-    { "CVT",  "CVT",  "CVT"  }, // -01
-    { "GMT",  "GMT",  "GMT"  }, //  00
-    { "CET",  "CET",  "CEST" }, // +01
-    { "EET",  "EET",  "EEST" }, // +02
-    { "MSK",  "MSK",  "MSK"  }, // +03
-    { "GST",  "GST",  "GST"  }, // +04
-    { "PKT",  "PKT",  "PKT"  }, // +05
-    { "IOT",  "IOT",  "IOT"  }, // +06
-    { "ICT",  "ICT",  "ICT"  }, // +07
-    { "CST",  "CST",  "CST"  }, // +08
-    { "JST",  "JST",  "JST"  }, // +09
-    { "AET",  "AEST", "AEDT" }, // +10
-    { "VUT",  "VUT",  "VUT"  }, // +11
-    { "NZT",  "NZST", "NZDT" }, // +12
-    { "TOT",  "TOT",  "TOT"  }, // +13
-    { "LINT", "LINT", "LINT" }, // +14
+    { "BIT",  "BIT"  }, // -12
+    { "SST",  "NUT"  }, // -11
+    { "HST",  "SDT"  }, // -10
+    { "AKST", "HDT"  }, // -09
+    { "PST",  "AKDT" }, // -08
+    { "MST",  "PDT"  }, // -07
+    { "CST",  "MDT"  }, // -06
+    { "EST",  "CDT"  }, // -05
+    { "AST",  "EDT"  }, // -04
+    { "BRT",  "ADT"  }, // -03
+    { "GST",  "GST"  }, // -02
+    { "CVT",  "CVT"  }, // -01
+    { "GMT",  "GMT"  }, //  00
+    { "CET",  "MET"  }, // +01
+    { "EET",  "CEST" }, // +02
+    { "MSK",  "EEST" }, // +03
+    { "GST",  "GST"  }, // +04
+    { "PKT",  "PKT"  }, // +05
+    { "IOT",  "IOT"  }, // +06
+    { "ICT",  "ICT"  }, // +07
+    { "CST",  "CST"  }, // +08
+    { "JST",  "JST"  }, // +09
+    { "AEST", "PGT"  }, // +10
+    { "VUT",  "AEDT" }, // +11
+    { "NZST", "TVT"  }, // +12
+    { "TOT",  "NZDT" }, // +13
+    { "LINT", "LINT" }, // +14
 };
 
 const char* DST_TYPE_ABRV[2] =
