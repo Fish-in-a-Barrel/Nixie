@@ -21,7 +21,7 @@ struct GpsData
     uint8_t updated;
 };
 
-volatile extern struct GpsData gpsData;
+volatile extern struct GpsData gGpsData;
 
 void GPS_HandleInterrupt(void);
 

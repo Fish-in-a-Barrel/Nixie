@@ -143,7 +143,7 @@ uint8_t SelectPDO(void)
     
     if (selectedPdo >= pdoCount)
     {
-        OLED_DrawString(0, 0, "No suitable PDO found ");
+        OLED_DrawString(3, 0, "No suitable PDO found");
         return 0;
     }
     
@@ -155,10 +155,6 @@ uint8_t SelectPDO(void)
     buffer[4] = ((selectedPdo + 1) << 4) & 0x70; // PDOs positions are 1-indexed in the protocol
     
     I2C_Write(AP33772_ADDR, &buffer, sizeof(buffer));
-    
-    OLED_DrawString(0, 0, "PDO # of # selected   ");
-    OLED_DrawNumber8(0, 4, selectedPdo + 1, 1);
-    OLED_DrawNumber8(0, 9, pdoCount, 1);
     
     union Status status = { 0 };
     while (!status.ready)
@@ -172,7 +168,7 @@ uint8_t SelectPDO(void)
 
 uint8_t AP33772Init(void)
 {
-    OLED_DrawString(0, 0, "Waiting for AP33772...");
+    OLED_DrawStringInverted(0, 0, "Waiting for USB PD...");
     
     uint8_t waitCounter = 0;
     
@@ -191,7 +187,7 @@ uint8_t AP33772Init(void)
         __delay_ms(10);
     }
     
-    OLED_DrawString(0, 0, "Waiting for PDOs...   ");
+    OLED_DrawStringInverted(1, 0, "  Waiting for PDOs...");
 
     while (pdoCount == 0)
     {

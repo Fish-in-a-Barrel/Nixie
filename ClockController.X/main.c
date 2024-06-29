@@ -90,20 +90,20 @@ void SynchronizeTime()
     struct DateTime rtcTime;
     ConvertRtcToDateTime(&gRtc, &rtcTime);
 
-    if (!TimesAreClose(&gpsData.datetime, &rtcTime)) RTC_Set(&gpsData.datetime);
+    if (!TimesAreClose(&gGpsData.datetime, &rtcTime)) RTC_Set(&gGpsData.datetime);
 }
 
 void CheckGPS()
 {
-    if (gpsData.updated)
+    if (gGpsData.updated)
     {
-        if ('A' == gpsData.status)
+        if ('A' == gGpsData.status)
         {
             GPS_ConvertToLocalTime(gTimeZoneOffset);
             SynchronizeTime();
         }
         
-        gpsData.updated = 0;
+        gGpsData.updated = 0;
     }
 }
 
@@ -144,7 +144,7 @@ void main(void)
     InitPWM();
     InitBoostConverter();
     
-    gpsData.updated = 0;
+    gGpsData.updated = 0;
     
     uint8_t frameCounter = 0;
     while (1)

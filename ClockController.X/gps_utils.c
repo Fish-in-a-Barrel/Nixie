@@ -6,25 +6,25 @@
 
 void RollYearBack()
 {
-    --gpsData.datetime.year;
+    --gGpsData.datetime.year;
 }
 
 void RollMonthBack()
 {
-    if (--gpsData.datetime.month == 0)
+    if (--gGpsData.datetime.month == 0)
     {
-        gpsData.datetime.month = 12;
+        gGpsData.datetime.month = 12;
         RollYearBack();
     }
 }
 
 void RollDayBack()
 {
-    if (--gpsData.datetime.day == 0)
+    if (--gGpsData.datetime.day == 0)
     {
         RollMonthBack();
         
-        switch (gpsData.datetime.month)
+        switch (gGpsData.datetime.month)
         {
             // 31 day months
             case 1: // January
@@ -34,7 +34,7 @@ void RollDayBack()
             case 8: // August
             case 10: // October
             case 12: // December
-                gpsData.datetime.day = 31;
+                gGpsData.datetime.day = 31;
                 break;
                 
             // 30 day months
@@ -42,13 +42,13 @@ void RollDayBack()
             case 6: // June
             case 9: // September
             case 11: // November
-                gpsData.datetime.day = 30;
+                gGpsData.datetime.day = 30;
                 break;
                 
             // February - I'm not bothering with anything more than standard leap days
             case 2:
             {
-                gpsData.datetime.day = (gpsData.datetime.year % 4) ? 29 : 28;
+                gGpsData.datetime.day = (gGpsData.datetime.year % 4) ? 29 : 28;
                 break;
             }
 
@@ -64,7 +64,7 @@ void RollTimeBack(int8_t tzOffset)
 {
     if (tzOffset >= 0) return;
     
-    int8_t hour = (int8_t)gpsData.datetime.hour;
+    int8_t hour = (int8_t)gGpsData.datetime.hour;
     hour += tzOffset;
     
     // If hour < 0, then UTC is already at tomorrow and we need to roll the date back one day.
@@ -74,23 +74,23 @@ void RollTimeBack(int8_t tzOffset)
         RollDayBack();
     }
     
-    gpsData.datetime.hour = (uint8_t)hour;
+    gGpsData.datetime.hour = (uint8_t)hour;
 }
 
 uint8_t GetDstOffset()
 {
     // DST starts on the second Sunday in March
-    struct DateTime dstStart = { gpsData.datetime.year, 3, 1, 2, 0, 0};
+    struct DateTime dstStart = { gGpsData.datetime.year, 3, 1, 2, 0, 0};
     FindDayOfWeekN(&dstStart, DOW_SUNDAY, 2);
     
-    if (DateTimeBefore(&gpsData.datetime, &dstStart)) return 0;
+    if (DateTimeBefore(&gGpsData.datetime, &dstStart)) return 0;
 
     // DST ends on the first Sunday in November
     // Times are in standard time, so the end time is 1AM instead of 2AM.
-    struct DateTime dstEnd = { gpsData.datetime.year, 11, 1, 1, 0, 0};
+    struct DateTime dstEnd = { gGpsData.datetime.year, 11, 1, 1, 0, 0};
     FindDayOfWeekN(&dstEnd, DOW_SUNDAY, 1);
 
-    if (DateTimeAfter(&gpsData.datetime, &dstEnd)) return 0;
+    if (DateTimeAfter(&gGpsData.datetime, &dstEnd)) return 0;
 
     return 1;
 }
@@ -98,7 +98,7 @@ uint8_t GetDstOffset()
 // UTC to local time conversion
 void GPS_ConvertToLocalTime(int8_t tzOffset)
 {
-    tzOffset += GetDstOffset();
+    tzOffset += gGpsData.datetime.dst = GetDstOffset();
     RollTimeBack(tzOffset);
 }
 

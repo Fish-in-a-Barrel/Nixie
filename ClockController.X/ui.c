@@ -46,9 +46,9 @@ void DrawPageTemplate(void)
     {
         case PAGE_STATUS:
             OLED_DrawStringInverted(0, 0, xstr(PAGE_STATUS) "/" xstr(PAGE_COUNT) " STATUS           ");
-            OLED_DrawString(1, 0, "20##-##-##");
-            OLED_DrawString(2, 0, "##:##:##");
-            OLED_DrawString(3, 0, "###V @ ##% / GPS:");
+            OLED_DrawString(1, 0, "20##-##-## ##:##:##");
+            OLED_DrawString(2, 0, "GPS:");
+            OLED_DrawString(3, 0, "###V @ ##%");
             break;
             
         case PAGE_TIME_ZONE:
@@ -131,16 +131,18 @@ void DrawStatusPage(void)
     OLED_DrawNumber8(1, 8, rtcTime.day, 2);
     
     // Time
-    OLED_DrawNumber8(2, 0, rtcTime.hour, 2);
-    OLED_DrawNumber8(2, 3, rtcTime.minute, 2);
-    OLED_DrawNumber8(2, 6, rtcTime.second, 2);
+    OLED_DrawNumber8(1, 11, rtcTime.hour, 2);
+    OLED_DrawNumber8(1, 14, rtcTime.minute, 2);
+    OLED_DrawNumber8(1, 17, rtcTime.second, 2);
+    
+    // GPS
+    OLED_DrawString(2, 5, 
+            'A' == gGpsData.status ? "OK " : 
+              0 == gGpsData.status ? "?  " : "Acq");
 
     // "PD: ###V @ ##%"
     OLED_DrawNumber8(3, 0, gVoltage, 3);
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
-    
-    // GPS
-    OLED_DrawString(3, 17, 'A' == gpsData.status ? "OK" : "Acq");
 }
 
 void DrawTimeZonePage(void)

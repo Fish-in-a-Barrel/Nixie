@@ -8,7 +8,7 @@
  * This receives and decodes the NMEA protocol RMC message sent by the GPS receiver. (§20.10)
  */
 
-volatile struct GpsData gpsData;
+volatile struct GpsData gGpsData;
 
 volatile static struct
 {
@@ -165,17 +165,17 @@ void GPS_HandleInterrupt(void)
     // Handle the state machine reaching the end state.
     if (STATE_END == gState)
     {
-        gpsData.datetime.day  = BcdToBinary(rawGpsData.date + 0, 2);
-        gpsData.datetime.month = BcdToBinary(rawGpsData.date + 2, 2);
-        gpsData.datetime.year  = BcdToBinary(rawGpsData.date + 4, 2);
+        gGpsData.datetime.day  = BcdToBinary(rawGpsData.date + 0, 2);
+        gGpsData.datetime.month = BcdToBinary(rawGpsData.date + 2, 2);
+        gGpsData.datetime.year  = BcdToBinary(rawGpsData.date + 4, 2);
 
-        gpsData.datetime.hour   = BcdToBinary(rawGpsData.time + 0, 2);
-        gpsData.datetime.minute = BcdToBinary(rawGpsData.time + 2, 2);
-        gpsData.datetime.second = BcdToBinary(rawGpsData.time + 4, 2);
+        gGpsData.datetime.hour   = BcdToBinary(rawGpsData.time + 0, 2);
+        gGpsData.datetime.minute = BcdToBinary(rawGpsData.time + 2, 2);
+        gGpsData.datetime.second = BcdToBinary(rawGpsData.time + 4, 2);
 
-        gpsData.status = rawGpsData.status;
+        gGpsData.status = rawGpsData.status;
 
-        gpsData.updated = 1;
+        gGpsData.updated = 1;
 
         gState = STATE_AWAIT_START;
     }
