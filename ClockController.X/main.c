@@ -124,6 +124,8 @@ void main(void)
     InitClock();
     InitPins();
     
+    TimeZone_Load();
+    
     I2C_Host_Init();
     SerialInit();
     EnableInterrupts();

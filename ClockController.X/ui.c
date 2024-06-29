@@ -118,7 +118,11 @@ void UI_HandleRotationCW(void)
             
         case STATE_VALUE_SCROLL:
             // Time zone range is [-12, +14]]
-            if (0 == gField) gTimeZoneOffset = gTimeZoneOffset < 14 ? gTimeZoneOffset + 1 : -12;
+            if (0 == gField) 
+            {
+                gTimeZoneOffset = gTimeZoneOffset < 14 ? gTimeZoneOffset + 1 : -12;
+                TimeZone_Save();
+            }                        
     }
     
     UI_Update();
@@ -142,7 +146,11 @@ void UI_HandleRotationCCW(void)
             
         case STATE_VALUE_SCROLL:
             // Time zone range is [-12, +14]]
-            if (0 == gField) gTimeZoneOffset = gTimeZoneOffset > -12 ? gTimeZoneOffset - 1 : 14;
+            if (0 == gField)
+            {
+                gTimeZoneOffset = gTimeZoneOffset > -12 ? gTimeZoneOffset - 1 : 14;
+                TimeZone_Save();
+            }
     }
     
     KeepDisplayAlive();

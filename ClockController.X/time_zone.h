@@ -11,5 +11,9 @@ extern int8_t gTimeZoneOffset;
 
 extern const char* TIME_ZONE_ABRV[27][3];
 
+void TimeZone_Save(void);
+
+void TimeZone_Load(void);
+
 #endif	/* TIME_ZONE_H */
 
