@@ -21,9 +21,15 @@ static uint8_t gDisplayState = DISPLAY_STATE_ON;
 
 
 #define STATE_PAGE_SCROLL 0
+#define STATE_FIELD_SELECT 1
+#define STATE_VALUE_SCROLL 2
 
 static uint8_t gState = STATE_PAGE_SCROLL;
 
+#define FIELD_TIME_ZONE 0
+#define FIELD_DST 1
+
+static uint8_t gField = FIELD_TIME_ZONE;
 
 #define PAGE_NONE  0
 #define PAGE_STATUS 1
@@ -54,8 +60,8 @@ void DrawPageTemplate(void)
         case PAGE_TIME_ZONE:
             OLED_DrawStringInverted(0, 0, xstr(PAGE_TIME_ZONE) "/" xstr(PAGE_COUNT) " Time Zone & DST  ");
             OLED_DrawString(1, 0, "20##-##-## ##:##:##");
-            OLED_DrawString(2, 0, "TZ: UTC");
-            OLED_DrawString(3, 0, "DST: ");
+            OLED_DrawString(2, 0, "  TZ: UTC");
+            OLED_DrawString(3, 0, "  DST: ");
             break;
             
         case PAGE_BOOST:
@@ -97,26 +103,64 @@ void KeepDisplayAlive(void)
 
 void UI_HandleRotationCW(void)
 {
-    gCurrentPage = gCurrentPage < PAGE_COUNT ? gCurrentPage + 1 : 1;
-    DrawPageTemplate();    
-    UI_Update();
-    
-    KeepDisplayAlive();
     gButtonState.deltaR -= 2;
+
+    switch (gState)
+    {
+        case STATE_PAGE_SCROLL:
+            gCurrentPage = gCurrentPage < PAGE_COUNT ? gCurrentPage + 1 : 1;
+            DrawPageTemplate();
+            break;
+            
+        case STATE_FIELD_SELECT:
+            gField = !gField;
+            break;            
+    }
+    
+    UI_Update();
+    KeepDisplayAlive();
 }
 
 void UI_HandleRotationCCW(void)
 {
-    gCurrentPage = gCurrentPage > 1 ? gCurrentPage - 1 : PAGE_COUNT;
-    DrawPageTemplate();
-    UI_Update();
+    gButtonState.deltaR += 2;
+
+    switch (gState)
+    {
+        case STATE_PAGE_SCROLL:
+            gCurrentPage = gCurrentPage > 1 ? gCurrentPage - 1 : PAGE_COUNT;
+            DrawPageTemplate();
+            break;
+            
+        case STATE_FIELD_SELECT:
+            gField = !gField;
+            break;            
+    }
     
     KeepDisplayAlive();
-    gButtonState.deltaR += 2;
 }
 
 void UI_HandleButtonPress(void)
 {
+    gButtonState.c.edge = 0;
+    
+    if (gCurrentPage == PAGE_TIME_ZONE)
+    {
+        switch (gState)
+        {
+            case STATE_PAGE_SCROLL:
+                gState = STATE_FIELD_SELECT;
+                break;
+            case STATE_FIELD_SELECT:
+                gState = STATE_VALUE_SCROLL;
+                break;
+            case STATE_VALUE_SCROLL:
+                gState = STATE_PAGE_SCROLL;
+                break;
+        }
+    }
+    
+    UI_Update();
     KeepDisplayAlive();
 }
 
@@ -164,6 +208,13 @@ void DrawTimeZonePage(void)
     OLED_DrawCharacter(2, 7, gTimeZoneOffset < 0 ? '-' : '+');
     OLED_DrawNumber8(2, 8, (uint8_t)(gTimeZoneOffset < 0 ? -gTimeZoneOffset : gTimeZoneOffset), 2);
     OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][TZ_LIST]);
+    
+    char* indicators[2] = { "  ", "  " }; 
+    if (STATE_FIELD_SELECT == gState) indicators[gField] = "\x10 ";
+    if (STATE_VALUE_SCROLL == gState) indicators[gField] = "\x1E\x1F";
+    
+    OLED_DrawString(2, 0, indicators[0]);
+    OLED_DrawString(3, 0, indicators[1]);
 }
 
 void DrawBoostPage(void)
