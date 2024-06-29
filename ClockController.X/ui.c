@@ -251,6 +251,23 @@ void DrawTimeZonePage(void)
     // DST
     OLED_DrawString(3, 7, DST_TYPE_ABRV[gDstType]);
     
+    // DST indicator
+    if (DST_TYPE_OFF !=  gDstType)
+    {
+        if ('A' == gGpsData.status)
+        {
+            OLED_DrawString(3, 18, gGpsData.datetime.dst ? " ON" : "OFF");
+        }
+        else
+        {
+            OLED_DrawString(3, 18, "???");
+        }
+    }
+    else
+    {
+        OLED_DrawString(3, 18, "   ");
+    }
+    
     char* indicators[2] = { "  ", "  " }; 
     if (STATE_FIELD_SELECT == gState) indicators[gField] = "\x10 ";
     if (STATE_VALUE_SCROLL == gState) indicators[gField] = "\x1E\x1F";
