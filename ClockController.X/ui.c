@@ -192,6 +192,12 @@ void UI_HandleButtonPress(void)
                 break;
         }
     }
+    else
+    {
+        gDisplayTimer = 0;
+        gDisplayState = DISPLAY_STATE_OFF;
+        OLED_Off();
+    }
     
     UI_Update();
 }
