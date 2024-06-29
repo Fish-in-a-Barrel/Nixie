@@ -121,8 +121,14 @@ void UI_HandleRotationCW(void)
             if (0 == gField) 
             {
                 gTimeZoneOffset = gTimeZoneOffset < 14 ? gTimeZoneOffset + 1 : -12;
-                TimeZone_Save();
             }                        
+            else
+            {
+                gDstType = !gDstType;
+            }
+            
+            TimeZone_Save();
+            break;
     }
     
     UI_Update();
@@ -149,8 +155,14 @@ void UI_HandleRotationCCW(void)
             if (0 == gField)
             {
                 gTimeZoneOffset = gTimeZoneOffset > -12 ? gTimeZoneOffset - 1 : 14;
-                TimeZone_Save();
             }
+            else
+            {
+                gDstType = !gDstType;
+            }
+            
+            TimeZone_Save();
+            break;
     }
     
     KeepDisplayAlive();
@@ -225,6 +237,9 @@ void DrawTimeZonePage(void)
     OLED_DrawNumber8(2, 8, (uint8_t)(gTimeZoneOffset < 0 ? -gTimeZoneOffset : gTimeZoneOffset), 2);
     OLED_DrawString(2, 13, "  "); // Erase any straggling letters from previous TZ
     OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][TZ_LIST]);
+    
+    // DST
+    OLED_DrawString(3, 7, DST_TYPE_ABRV[gDstType]);
     
     char* indicators[2] = { "  ", "  " }; 
     if (STATE_FIELD_SELECT == gState) indicators[gField] = "\x10 ";
