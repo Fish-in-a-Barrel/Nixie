@@ -17,7 +17,7 @@
                     <type>2</type>
                 </confElem>
                 <confElem>
-                    <name>Level_2_Opt</name>
+                    <name>optimized_L2</name>
                     <type>2</type>
                 </confElem>
             </confList>
