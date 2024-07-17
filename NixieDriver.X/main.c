@@ -27,6 +27,12 @@
 #define ADDRESS_PIN_2 RC1
 #define ADDRESS_PIN_3 RC0
 
+#define I2C_ADDRESS (\
+    (uint8_t)((uint8_t)ADDRESS_PIN_0 << 1) | \
+    (uint8_t)((uint8_t)ADDRESS_PIN_1 << 2) | \
+    (uint8_t)((uint8_t)ADDRESS_PIN_2 << 3) | \
+    (uint8_t)((uint8_t)ADDRESS_PIN_3 << 4) )
+
 // TOPPS(X) composites the pin register with the suffix "PPS" to form the PPS register associated with that pin.
 #define TOPPS_(RA) RA ## PPS
 #define TOPPS(RA) TOPPS_(RA)
@@ -106,11 +112,7 @@ void InitI2C()
     
     // Set the client address and enable the full address mask (§25.4.2, §25.4.3)
     // (lots of explicit casts to avoid warnings about implicit casts by the | operator)
-    SSP1ADD =
-            (uint8_t)((uint8_t)ADDRESS_PIN_0 << 1) | 
-            (uint8_t)((uint8_t)ADDRESS_PIN_2 << 3) | 
-            (uint8_t)((uint8_t)ADDRESS_PIN_1 << 2) | 
-            (uint8_t)((uint8_t)ADDRESS_PIN_3 << 4);
+    SSP1ADD = I2C_ADDRESS;
     SSP1MSK = 0xFE;
 
     // Enable Interrupts
@@ -152,6 +154,12 @@ void SendAckI2C()
     SSP1CON2bits.ACKEN = 1;
 }
 
+void SendNackI2C()
+{
+    SSP1CON2bits.ACKDT = 1;
+    SSP1CON2bits.ACKEN = 1;
+}
+
 // §25.2.3
 void HandleI2C()
 {
@@ -181,7 +189,7 @@ void HandleI2C()
             gNewDataI2C = 1;
         }
         
-        SendAckI2C();
+        SendNackI2C();
     }
     
     // Release the clock stretch (§25.2.3.6.1)
@@ -310,8 +318,12 @@ void main(void)
     InitInterrupts();
     InitPins();
     InitPWM();
-    InitI2C();
     
+    // Give the address pins time to stabilize.
+    __delay_ms(50);
+    
+    InitI2C();
+
     while(1)
     {
         if (gNewDataI2C)
@@ -324,5 +336,5 @@ void main(void)
         }
         
         __delay_ms(10);
-    }    
+    }
 }
