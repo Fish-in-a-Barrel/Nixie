@@ -5,8 +5,7 @@
 //
 
 #include <xc.h>
-
-#define _XTAL_FREQ (1000 * 1000ul) // 1 MHz
+#include "clock.h"
 
 // The pin GPIO register for each cathode driver.
 #define CATHODE_0_PIN RC3
@@ -111,7 +110,6 @@ void InitI2C()
     SSP1CON3 = 0x00;
     
     // Set the client address and enable the full address mask (§25.4.2, §25.4.3)
-    // (lots of explicit casts to avoid warnings about implicit casts by the | operator)
     SSP1ADD = I2C_ADDRESS;
     SSP1MSK = 0xFE;
 
@@ -148,18 +146,6 @@ void InitPWM()
 volatile uint8_t gDataI2C = 0;
 volatile uint8_t gNewDataI2C = 0;
 
-void SendAckI2C()
-{
-    SSP1CON2bits.ACKDT = 0;
-    SSP1CON2bits.ACKEN = 1;
-}
-
-void SendNackI2C()
-{
-    SSP1CON2bits.ACKDT = 1;
-    SSP1CON2bits.ACKEN = 1;
-}
-
 // §25.2.3
 void HandleI2C()
 {
@@ -174,7 +160,9 @@ void HandleI2C()
         
         // The buffer MUST be read to clear SSPxSTAT.BF (§25.2.3.6.1).
         uint8_t devNull = SSP1BUF;
-        SendAckI2C();
+
+        // Release the clock stretch (§25.2.3.6.1)
+        SSP1CON1bits.CKP = 1;
     }
     else if ((!SSP1STATbits.R_nW) && (SSP1STATbits.BF))
     {
@@ -188,12 +176,11 @@ void HandleI2C()
             gDataI2C = buf;
             gNewDataI2C = 1;
         }
-        
-        SendNackI2C();
+
+        // Release the clock stretch. (§25.2.3.6.1)
+        // The data sheet does not say to do this here, but the bus locks up 100% of the time if I don't.
+        SSP1CON1bits.CKP = 1;
     }
-    
-    // Release the clock stretch (§25.2.3.6.1)
-    SSP1CON1bits.CKP = 1;
 }
 
 void __interrupt() ISR()
@@ -315,6 +302,7 @@ void RefreshCathodes()
 
 void main(void)
 {
+    InitClock();
     InitInterrupts();
     InitPins();
     InitPWM();
