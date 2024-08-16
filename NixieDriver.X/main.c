@@ -6,6 +6,8 @@
 
 #include <xc.h>
 #include "clock.h"
+#include "pps_inputs.h"
+#include "pps_outputs.h"
 
 // The pin GPIO register for each cathode driver.
 #define CATHODE_0_PIN RC3
@@ -61,6 +63,12 @@ void InitPins()
      * I2C:
      * SCL = RB4
      * SDA = RB6
+     * 
+     * Address:
+     * A0 = RA0
+     * A1 = RA1
+     * A2 = RC1
+     * A3 = RC3
      */
     
     // I2C pins must be configured as inputs (§25.2.2.3)
@@ -80,12 +88,12 @@ void InitPins()
     PORTC = 0;
     
     // Set PPS input pins (§18.2, Table 18-1; §18.8.1)
-    SSP1CLKPPS = (0b001 << 3) | 4;
-    SSP1DATPPS = (0b001 << 3) | 6;
+    SSP1CLKPPS = PPS_INPUT(PPS_PORT_B, 4);
+    SSP1DATPPS = PPS_INPUT(PPS_PORT_B, 6);
 
     // Set PPS output pins (§18.8.2)
-    RB4PPS = 0x07; // SCL
-    RB6PPS = 0x08; // SDA
+    RB4PPS = PPS_OUT_SCL1;
+    RB6PPS = PPS_OUT_SDA1;
 }
 
 void InitInterrupts()
@@ -122,10 +130,6 @@ void InitI2C()
 
 void InitPWM()
 {
-    //
-    // 1 Hz cycle time
-    //
-    
     // Use the F_osc/4 source, as required for PWM (§21.10.5, §23.9)
     T2CLKCON = 0x1;
     
@@ -135,12 +139,16 @@ void InitPWM()
     // Mode is free-running, period-pulse, software-gated (§21.10.4)
     T2HLT = 0x00;    
     
-    // Enable the timer with a 1:1 pre-scaler (§21.10.3)
-    T2CON = 0x80 | 0x00 | 0x00;
+    // Enable the timer with a 1:16 pre-scaler (§21.10.3)
+    T2CONbits.CKPS = 0;
+    T2CONbits.ON = 1;
 
-    // Enable the PWMs (PWM4 inverted §23.11.1)
-    PWM3CON = 0x80;
-    PWM4CON = 0x90;
+    // Invert PWM 4 (§23.11.1)
+    PWM4CONbits.POL = 1;
+    
+    // Enable the PWMs (§23.11.1)
+    PWM3CONbits.EN = 1;
+    PWM4CONbits.EN = 1;
 }
 
 volatile uint8_t gDataI2C = 0;
