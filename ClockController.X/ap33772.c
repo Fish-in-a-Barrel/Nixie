@@ -26,6 +26,13 @@ static const uint8_t AP33772_ADDR = 0x51;
 #define AP33772_PDO_TYPE_FIXED 0
 #define AP33772_PDO_TYPE_AUG 0b11
 
+// Least-significant-bit values of different voltage/amperage values
+#define REG_V_LSB 80
+#define REG_A_LSB 24
+#define PDO_V_LSB 50
+#define PDO_A_LSB 10
+#define RDO_FIXED_A_LSB 10
+
 struct AP33772_PowerDataObject
 {
   union
@@ -87,8 +94,6 @@ struct AP33772_RequestDataObject {
 struct AP33772_PowerDataObject pdos[AP33772_MaxPdoCount];
 uint8_t pdoCount = 0;
 uint8_t selectedPdo = 0;
-uint8_t current24mA = 0;
-uint8_t voltage80mV = 0;
 
 union Status GetStatus(void)
 {
@@ -125,36 +130,35 @@ void UpdatePDOs(void)
 #define GetVoltage(pdo) ((pdo.raw[1] >> 2) | (((uint16_t)pdo.raw[2] & 0xF) << 6))
 #define GetAmperage(pdo) (pdo.raw[0] | (((uint16_t)pdo.raw[1] & 0x3) << 8))
 
-// We're looking for a 20V supply. The LSB of the voltage is 50mV, so the value we're looking for is 400.
-// Operating current is 500mA -> 50
-// Max current is 1000mA -> 100
-#define VOLTAGE_OP (20000 / 50) // 20,000 mV
-#define CURRENT_OP (500 / 10)   // 500 mA
-#define CURRENT_MAX (1000 / 10) // 1,000 mA
+#define VOLTAGE 12
+#define PDO_RAW_VOLTAGE ((VOLTAGE * 1000) / PDO_V_LSB)
+#define RDO_CURRENT_OP (500 / RDO_FIXED_A_LSB)
+#define RDO_CURRENT_MAX (1000 / RDO_FIXED_A_LSB)
 
 uint8_t SelectPDO(void)
 {
+    // Find a fixed PDO with the desired voltage
     while (selectedPdo < pdoCount)
     {        
         if ((AP33772_PDO_TYPE_FIXED == pdos[selectedPdo].any.type) && 
-                (GetVoltage(pdos[selectedPdo]) == VOLTAGE_OP)) break;
+                (GetVoltage(pdos[selectedPdo]) == PDO_RAW_VOLTAGE)) break;
         ++selectedPdo;
     }
     
     if (selectedPdo >= pdoCount)
     {
-        OLED_DrawString(3, 0, "No suitable PDO found");
+        OLED_DrawString(3, 2, "Inadequate power!");
         return 0;
     }
     
-    uint8_t buffer[5] = { AP33772_CMD_RDO, 0, 0, 0, 0 };
+    uint8_t rdo[5] = { AP33772_CMD_RDO, 0, 0, 0, 0 };
     
-    buffer[1] = CURRENT_MAX & 0xFF;
-    buffer[2] = ((CURRENT_MAX >> 8) & 0x3) | (CURRENT_OP << 2);
-    buffer[3] = CURRENT_OP >> 6;
-    buffer[4] = ((selectedPdo + 1) << 4) & 0x70; // PDOs positions are 1-indexed in the protocol
+    rdo[1] = RDO_CURRENT_MAX & 0xFF;
+    rdo[2] = ((RDO_CURRENT_MAX >> 8) & 0x3) | (RDO_CURRENT_OP << 2);
+    rdo[3] = RDO_CURRENT_OP >> 6;
+    rdo[4] = ((selectedPdo + 1) << 4) & 0x70; // PDO positions are 1-indexed in the protocol
     
-    I2C_Write(AP33772_ADDR, &buffer, sizeof(buffer));
+    I2C_Write(AP33772_ADDR, &rdo, sizeof(rdo));
     
     union Status status = { 0 };
     while (!status.ready)
@@ -166,7 +170,7 @@ uint8_t SelectPDO(void)
     return status.success;
 }
 
-uint8_t AP33772Init(void)
+uint8_t AP33772_Init(void)
 {
     OLED_DrawStringInverted(0, 0, "Waiting for USB PD...");
     
@@ -209,10 +213,10 @@ void AP33772_GetStatus(struct AP33772_Status* buffer)
     I2C_WriteRead(AP33772_ADDR, &command, sizeof(command), &rawVoltage, sizeof(rawVoltage));
 
     buffer->status.raw = GetStatus().raw;
-    buffer->current = (uint16_t)rawCurrent * 24; // raw LSB = 24mA
-    buffer->voltage = (uint16_t)rawVoltage * 80; // raw LSB = 80mA
+    buffer->current = (uint16_t)rawCurrent * REG_A_LSB;
+    buffer->voltage = (uint16_t)rawVoltage * REG_V_LSB;
     
     buffer->selectedPdoPos = selectedPdo;
-    buffer->pdoMaxAmps = (uint8_t)(GetAmperage(pdos[selectedPdo]) / 100);
-    buffer->pdoMaxVolts = (uint8_t)(GetVoltage(pdos[selectedPdo]) / 20);
+    buffer->pdoMaxAmps = (uint8_t)(GetAmperage(pdos[selectedPdo]) / (1000 / PDO_A_LSB));
+    buffer->pdoMaxVolts = (uint8_t)(GetVoltage(pdos[selectedPdo]) / (1000 / PDO_V_LSB));
 }

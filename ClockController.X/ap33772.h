@@ -5,7 +5,7 @@
 
 union Status
 {
-    uint8_t raw;
+    uint8_t raw; ///< The full status byte.
     
     struct
     {
@@ -22,16 +22,21 @@ union Status
 
 struct AP33772_Status
 {
-    union Status status;
-    uint16_t current; // In mA
-    uint16_t voltage; // in mV
+    union Status status; ///< The status bits.
+    uint16_t current; ///< In mA
+    uint16_t voltage; ///< in mV
     
-    uint8_t selectedPdoPos;
-    uint8_t pdoMaxAmps;
-    uint8_t pdoMaxVolts;
+    uint8_t selectedPdoPos; ///< The position of the selected PDO (1-indexed).
+    uint8_t pdoMaxAmps; ///< In Amps
+    uint8_t pdoMaxVolts; ///< In Volts
 } AP33772_StatusAndPower;
 
-uint8_t AP33772Init(void);
+/// Initializes the AP337772 USB PD client.
+///
+/// @result A PDO will be selected from the PD host, powering the system.
+/// @remark Status messages will be displayed while initializing and on error.
+/// @return 1 on success, 0 if an error is encountered.
+uint8_t AP33772_Init(void);
 
 void AP33772_GetStatus(struct AP33772_Status* buffer);
 

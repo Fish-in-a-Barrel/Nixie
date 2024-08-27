@@ -7,7 +7,7 @@
     char gEventTrace[128] = {0};
     uint8_t gEventIndex = 0;
 
-    #define RESET_TRACE() gEventTrace[gEventIndex] = '.'; gEventIndex = 0;
+    #define RESET_TRACE() gEventTrace[gEventIndex] = 0; gEventIndex = 0;
     #define ADD_EVENT(C) gEventTrace[gEventIndex++ % 128] = C;
 #else
     #define RESET_TRACE()
@@ -111,7 +111,7 @@ void SynchronizeClients(void)
 
 void ResetBus()
 {
-    if (SSP1STATbits.S || SSP1STATbits.BF)
+    if (SSP1STATbits.S || SSP1STATbits.BF || !RC1)
     {
         // Reset the port
         SSP1CON1bits.SSPEN = 0;
@@ -166,7 +166,7 @@ void Start(void)
 
 uint8_t Stop(void)
 {
-    ADD_EVENT('Q');
+    ADD_EVENT('P');
     
     SSP1CON2bits.PEN = 1;
     ClearOp();
@@ -242,7 +242,7 @@ uint8_t ReadData()
 {
     if (!SSP1STATbits.BF)
     {
-        ADD_EVENT('~');
+        ADD_EVENT('a');
         
         // ACK received, enable receive mode.
         SSP1CON2bits.RCEN = 1;
@@ -277,7 +277,11 @@ uint8_t ReadData()
 
 void ExecuteStateMachine()
 {   
-    if (SSP1CON2bits.ACKSTAT) HandleError();
+//    if (SSP1CON2bits.ACKSTAT) 
+//    {
+//        ADD_EVENT('~');
+//        HandleError();
+//    }
     
     switch (operation.state)
     {

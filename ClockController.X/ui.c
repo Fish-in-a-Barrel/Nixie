@@ -80,7 +80,7 @@ void DrawPageTemplate(void)
     }
 }
 
-void UI_TickSpinner()
+void UI_TickSpinner(void)
 {
     static const char SPINNER[] = { '/', '-', '\\', '|' };
     static uint8_t spinnerState = 0;
@@ -90,6 +90,9 @@ void UI_TickSpinner()
     spinnerState = (spinnerState + 1) % sizeof(SPINNER);
 }
 
+/// Keeps the screen on in response to user interaction.
+///
+/// @return 1 if the action should be discarded before further processing because the screen was off.
 uint8_t KeepDisplayAlive(void)
 {
     uint8_t ignoreAction = 0;
@@ -311,7 +314,7 @@ void UI_Update(void)
     
     if (gDisplayTimer == 0)
     {
-        OLED_Off();
+        //OLED_Off();
         gDisplayState = DISPLAY_STATE_OFF;
     }
     else

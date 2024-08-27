@@ -70,12 +70,12 @@ void UpdateNixieDrivers()
     
     uint8_t digit;
     
-    digit = gRtc.hour10;   I2C_Write(0x01, &digit, sizeof(digit));
-    digit = gRtc.hour01;   I2C_Write(0x02, &digit, sizeof(digit));
-    digit = gRtc.minute10; I2C_Write(0x03, &digit, sizeof(digit));
-    digit = gRtc.minute01; I2C_Write(0x04, &digit, sizeof(digit));
-    digit = gRtc.second10; I2C_Write(0x05, &digit, sizeof(digit));
     digit = gRtc.second01; I2C_Write(0x06, &digit, sizeof(digit));
+    digit = gRtc.second10; I2C_Write(0x05, &digit, sizeof(digit));
+    digit = gRtc.minute01; I2C_Write(0x04, &digit, sizeof(digit));
+    digit = gRtc.minute10; I2C_Write(0x03, &digit, sizeof(digit));
+    digit = gRtc.hour01;   I2C_Write(0x02, &digit, sizeof(digit));
+    digit = gRtc.hour10;   I2C_Write(0x01, &digit, sizeof(digit));
 
     digit = gRtc.date10;  I2C_Write(0x09, &digit, sizeof(digit));
     digit = gRtc.date01;  I2C_Write(0x0A, &digit, sizeof(digit));
@@ -134,7 +134,7 @@ void main(void)
     OLED_Init();
 
 #ifndef SKIP_PD
-    if (!AP33772Init()) while (1);
+    if (!AP33772_Init()) while (1);
 #endif
     
     Buttons_Init();
