@@ -51,31 +51,31 @@ void DrawPageTemplate(void)
     switch (gCurrentPage)
     {
         case PAGE_STATUS:
-            OLED_DrawStringInverted(0, 0, xstr(PAGE_STATUS) "/" xstr(PAGE_COUNT) " STATUS           ");
-            OLED_DrawString(1, 0, "20##-##-## ##:##:##");
-            OLED_DrawString(2, 0, "GPS:");
-            OLED_DrawString(3, 0, "###V @ ##%");
+            OLED_DrawString(0, 0, xstr(PAGE_STATUS) "/" xstr(PAGE_COUNT) " STATUS           ", 1);
+            OLED_DrawString(1, 0, "20##-##-## ##:##:##", 0);
+            OLED_DrawString(2, 0, "GPS:", 0);
+            OLED_DrawString(3, 0, "###V @ ##%", 0);
             break;
             
         case PAGE_TIME_ZONE:
-            OLED_DrawStringInverted(0, 0, xstr(PAGE_TIME_ZONE) "/" xstr(PAGE_COUNT) " Time Zone & DST  ");
-            OLED_DrawString(1, 0, "20##-##-## ##:##:##");
-            OLED_DrawString(2, 0, "  TZ: UTC");
-            OLED_DrawString(3, 0, "  DST: ");
+            OLED_DrawString(0, 0, xstr(PAGE_TIME_ZONE) "/" xstr(PAGE_COUNT) " Time Zone & DST  ", 1);
+            OLED_DrawString(1, 0, "20##-##-## ##:##:##", 0);
+            OLED_DrawString(2, 0, "  TZ: UTC", 0);
+            OLED_DrawString(3, 0, "  DST: ", 0);
             break;
             
         case PAGE_BOOST:
-            OLED_DrawStringInverted(0, 0, xstr(PAGE_BOOST) "/" xstr(PAGE_COUNT) " Boost Converter  ");
-            OLED_DrawString(1, 0, "Output: ### V");
-            OLED_DrawString(2, 0, "PWM: ####/#### (##%)");
+            OLED_DrawString(0, 0, xstr(PAGE_BOOST) "/" xstr(PAGE_COUNT) " Boost Converter  ", 1);
+            OLED_DrawString(1, 0, "Output: ### V", 0);
+            OLED_DrawString(2, 0, "PWM: ####/#### (##%)", 0);
             OLED_DrawNumber16(2, 10, (TMR2_RESET << 2), 4);
-            OLED_DrawString(3, 0, "ADC: #### mV");
+            OLED_DrawString(3, 0, "ADC: #### mV", 0);
             break;            
             
         case PAGE_USB_PD:
-            OLED_DrawStringInverted(0, 0, xstr(PAGE_USB_PD) "/" xstr(PAGE_COUNT) " USB PD           ");
-            OLED_DrawString(1, 0, "PDO #: ## A @ ## V");
-            OLED_DrawString(2, 0, "#### mA @ ##### mV");
+            OLED_DrawString(0, 0, xstr(PAGE_USB_PD) "/" xstr(PAGE_COUNT) " USB PD           ", 1);
+            OLED_DrawString(1, 0, "PDO #: ## A @ ## V", 0);
+            OLED_DrawString(2, 0, "#### mA @ ##### mV", 0);
             break;
     }
 }
@@ -85,7 +85,7 @@ void UI_TickSpinner(void)
     static const char SPINNER[] = { '/', '-', '\\', '|' };
     static uint8_t spinnerState = 0;
     
-    OLED_DrawCharacterInverted(0, 20, SPINNER[spinnerState]);
+    OLED_DrawCharacter(0, 20, SPINNER[spinnerState], 1);
     
     spinnerState = (spinnerState + 1) % sizeof(SPINNER);
 }
@@ -221,9 +221,11 @@ void DrawStatusPage(void)
     OLED_DrawNumber8(1, 17, rtcTime.second, 2);
     
     // GPS
-    OLED_DrawString(2, 5, 
-            'A' == gGpsData.status ? "OK " : 
-              0 == gGpsData.status ? "?  " : "Acq");
+    OLED_DrawString(
+        2,
+        5, 
+        'A' == gGpsData.status ? "OK " : (0 == gGpsData.status ? "?  " : "Acq"),
+        0);
 
     // "PD: ###V @ ##%"
     OLED_DrawNumber8(3, 0, gVoltage, 3);
@@ -246,37 +248,37 @@ void DrawTimeZonePage(void)
     OLED_DrawNumber8(1, 17, rtcTime.second, 2);
     
     // Time Zone
-    OLED_DrawCharacter(2, 7, gTimeZoneOffset < 0 ? '-' : '+');
+    OLED_DrawCharacter(2, 7, gTimeZoneOffset < 0 ? '-' : '+', 0);
     OLED_DrawNumber8(2, 8, (uint8_t)(gTimeZoneOffset < 0 ? -gTimeZoneOffset : gTimeZoneOffset), 2);
-    OLED_DrawString(2, 13, "  "); // Erase any straggling letters from previous TZ
-    OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][gGpsData.datetime.dst]);
+    OLED_DrawString(2, 13, "  ", 0); // Erase any straggling letters from previous TZ
+    OLED_DrawString(2, 11, TIME_ZONE_ABRV[gTimeZoneOffset + 12][gGpsData.datetime.dst], 0);
     
     // DST
-    OLED_DrawString(3, 7, DST_TYPE_ABRV[gDstType]);
+    OLED_DrawString(3, 7, DST_TYPE_ABRV[gDstType], 0);
     
     // DST indicator
     if (DST_TYPE_OFF !=  gDstType)
     {
         if ('A' == gGpsData.status)
         {
-            OLED_DrawString(3, 18, gGpsData.datetime.dst ? " ON" : "OFF");
+            OLED_DrawString(3, 18, gGpsData.datetime.dst ? " ON" : "OFF", 0);
         }
         else
         {
-            OLED_DrawString(3, 18, "???");
+            OLED_DrawString(3, 18, "???", 0);
         }
     }
     else
     {
-        OLED_DrawString(3, 18, "   ");
+        OLED_DrawString(3, 18, "   ", 0);
     }
     
     char* indicators[2] = { "  ", "  " }; 
     if (STATE_FIELD_SELECT == gState) indicators[gField] = "\x10 ";
     if (STATE_VALUE_SCROLL == gState) indicators[gField] = "\x1E\x1F";
     
-    OLED_DrawString(2, 0, indicators[0]);
-    OLED_DrawString(3, 0, indicators[1]);
+    OLED_DrawString(2, 0, indicators[0], 0);
+    OLED_DrawString(3, 0, indicators[1], 0);
 }
 
 void DrawBoostPage(void)

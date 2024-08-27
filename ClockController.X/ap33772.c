@@ -147,7 +147,7 @@ uint8_t SelectPDO(void)
     
     if (selectedPdo >= pdoCount)
     {
-        OLED_DrawString(3, 2, "Inadequate power!");
+        OLED_DrawString(3, 2, "Inadequate power!", 0);
         return 0;
     }
     
@@ -172,7 +172,7 @@ uint8_t SelectPDO(void)
 
 uint8_t AP33772_Init(void)
 {
-    OLED_DrawStringInverted(0, 0, "Waiting for USB PD...");
+    OLED_DrawString(0, 0, "Waiting for USB PD...", 1);
     
     uint8_t waitCounter = 0;
     
@@ -191,7 +191,7 @@ uint8_t AP33772_Init(void)
         __delay_ms(10);
     }
     
-    OLED_DrawStringInverted(1, 0, "  Waiting for PDOs...");
+    OLED_DrawString(1, 0, "  Waiting for PDOs...", 1);
 
     while (pdoCount == 0)
     {

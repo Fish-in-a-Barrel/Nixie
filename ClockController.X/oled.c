@@ -112,7 +112,7 @@ void OLED_Off()
     I2C_Write(I2C_ADDRESS, command, sizeof(command));
 }
 
-void DrawCharacterImpl(uint8_t row, uint8_t col, uint8_t ascii, uint8_t invert)
+void OLED_DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii, uint8_t invert)
 {
     uint8_t buffer[] = { 0x40, 0, 0, 0, 0, 0, invert ? 0xFF : 0 };
     for (uint8_t i = 0; i < FONT_WIDTH; ++i) buffer[i + 1] = invert ? ~font8x5[ascii][i] : font8x5[ascii][i];
@@ -121,33 +121,17 @@ void DrawCharacterImpl(uint8_t row, uint8_t col, uint8_t ascii, uint8_t invert)
     I2C_Write(I2C_ADDRESS, buffer, sizeof(buffer));
 }
 
-void OLED_DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii)
-{
-    DrawCharacterImpl(row, col, ascii, 0);
-}
-
-void OLED_DrawCharacterInverted(uint8_t row, uint8_t col, uint8_t ascii)
-{
-    DrawCharacterImpl(row, col, ascii, 1);
-}
-
-void OLED_DrawString(uint8_t row, uint8_t col, const char* str)
+void OLED_DrawString(uint8_t row, uint8_t col, const char* str, uint8_t invert)
 {
     char* c = (char*)str;
-    while (*c != 0) OLED_DrawCharacter(row, col++, *(c++));
-}
-
-void OLED_DrawStringInverted(uint8_t row, uint8_t col, const char* str)
-{
-    char* c = (char*)str;
-    while (*c != 0) OLED_DrawCharacterInverted(row, col++, *(c++));
+    while (*c != 0) OLED_DrawCharacter(row, col++, *(c++), invert);
 }
 
 void OLED_DrawNumber8(uint8_t row, uint8_t col, uint8_t number, int8_t digitCount)
 {
     while (digitCount > 0)
     {
-        OLED_DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
+        OLED_DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10, 0);
         number /= 10;
     }
 }
@@ -156,7 +140,7 @@ void OLED_DrawNumber16(uint8_t row, uint8_t col, uint16_t number, int8_t digitCo
 {
     while (digitCount > 0)
     {
-        OLED_DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10);
+        OLED_DrawCharacter(row, (uint8_t)(col + --digitCount), '0' + number % 10, 0);
         number /= 10;
     }
 }
