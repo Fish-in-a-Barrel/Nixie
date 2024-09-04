@@ -17,6 +17,7 @@
 #include "oled.h"
 #include "ui.h"
 #include "time_zone.h"
+#include "nixie.h"
 
 void __interrupt() ISR()
 {
@@ -50,39 +51,6 @@ void EnableInterrupts()
     // Enable ACD interrupt
     PIR1bits.ADIF = 0;
     PIE1bits.ADIE = 1;
-}
-
-uint8_t CRC(void* data, uint8_t size)
-{
-    uint8_t crc = 0;
-    for (uint8_t i = 0; i < size; ++i) crc ^= ((uint8_t*)data)[i];
-    
-    return crc;
-}
-
-void UpdateNixieDrivers()
-{
-    static uint8_t lastCRC = 0;
-    uint8_t crc = CRC(&gRtc, sizeof(gRtc));
-    
-    if (lastCRC == crc) return;
-    lastCRC = crc;    
-    
-    uint8_t digit;
-    
-    digit = gRtc.second01; I2C_Write(0x06, &digit, sizeof(digit));
-    digit = gRtc.second10; I2C_Write(0x05, &digit, sizeof(digit));
-    digit = gRtc.minute01; I2C_Write(0x04, &digit, sizeof(digit));
-    digit = gRtc.minute10; I2C_Write(0x03, &digit, sizeof(digit));
-    digit = gRtc.hour01;   I2C_Write(0x02, &digit, sizeof(digit));
-    digit = gRtc.hour10;   I2C_Write(0x01, &digit, sizeof(digit));
-
-    digit = gRtc.date10;  I2C_Write(0x09, &digit, sizeof(digit));
-    digit = gRtc.date01;  I2C_Write(0x0A, &digit, sizeof(digit));
-    digit = gRtc.month10; I2C_Write(0x0B, &digit, sizeof(digit));
-    digit = gRtc.month01; I2C_Write(0x0C, &digit, sizeof(digit));
-    digit = gRtc.year10;  I2C_Write(0x0D, &digit, sizeof(digit));
-    digit = gRtc.year01;  I2C_Write(0x0E, &digit, sizeof(digit));
 }
 
 void SynchronizeTime()

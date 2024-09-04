@@ -1,5 +1,7 @@
 #include "bcd_utils.h"
 
+#pragma warning disable 520 // ignore function never called warnings
+
 uint8_t BcdToBinary(volatile const char bcd[], uint8_t len)
 {
     uint8_t binary = 0;

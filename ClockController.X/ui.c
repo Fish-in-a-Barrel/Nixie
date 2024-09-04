@@ -9,6 +9,7 @@
 #include "boost_control.h"
 #include "timer.h"
 #include "ap33772.h"
+#include "nixie.h"
 
 #include <xc.h>
 
@@ -36,8 +37,9 @@ static uint8_t gField = FIELD_TIME_ZONE;
 #define PAGE_TIME_ZONE 2
 #define PAGE_BOOST 3
 #define PAGE_USB_PD 4
+#define PAGE_NIXIE_STATUS 5
 
-#define PAGE_COUNT 4
+#define PAGE_COUNT 5
 
 static uint8_t gCurrentPage = PAGE_NONE;
 
@@ -77,6 +79,12 @@ void DrawPageTemplate(void)
             OLED_DrawString(1, 0, "PDO #: ## A @ ## V", 0);
             OLED_DrawString(2, 0, "#### mA @ ##### mV", 0);
             break;
+            
+        case PAGE_NIXIE_STATUS:
+            OLED_DrawString(0, 0, xstr(PAGE_NIXIE_STATUS) "/" xstr(PAGE_COUNT) " Nixie Tubes      ", 1);
+            OLED_DrawString(1, 0, "?? : ?? : ??", 0);
+            OLED_DrawString(2, 0, "?? : ?? : ??", 0);
+            break;            
     }
 }
 
@@ -302,7 +310,24 @@ void DrawUsbPdPage(void)
     OLED_DrawNumber16(2, 10, status.voltage, 5);
 }
 
-typedef void PageDrawingFunction();
+void DrawNixieStatusPage(void)
+{
+    OLED_DrawCharacter(1,  0, ((gNixieStatus >> 0x1) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(1,  1, ((gNixieStatus >> 0x2) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(1,  5, ((gNixieStatus >> 0x3) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(1,  6, ((gNixieStatus >> 0x4) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(1, 10, ((gNixieStatus >> 0x5) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(1, 11, ((gNixieStatus >> 0x6) & 1) ? '\x03' : '!', 0);
+    
+    OLED_DrawCharacter(2,  0, ((gNixieStatus >> 0xB) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(2,  1, ((gNixieStatus >> 0xC) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(2,  5, ((gNixieStatus >> 0x9) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(2,  6, ((gNixieStatus >> 0xA) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(2, 10, ((gNixieStatus >> 0xD) & 1) ? '\x03' : '!', 0);
+    OLED_DrawCharacter(2, 11, ((gNixieStatus >> 0xE) & 1) ? '\x03' : '!', 0);
+}
+
+typedef void PageDrawingFunction(void);
 
 void UI_Update(void)
 {
@@ -312,6 +337,7 @@ void UI_Update(void)
         &DrawTimeZonePage,
         &DrawBoostPage,
         &DrawUsbPdPage,
+        &DrawNixieStatusPage,
     };
     
     if (gDisplayTimer == 0)

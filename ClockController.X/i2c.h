@@ -3,6 +3,8 @@
 
 #include <xc.h>
 
+#pragma warning disable 520 // ignore function never called warnings
+
 // Defining this macro will enable debug code that logs the I2C interrupts and operations.
 //#define _I2C_TRACE
 
