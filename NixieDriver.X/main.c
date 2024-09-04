@@ -168,14 +168,17 @@ void HandleI2C()
         
         // The buffer MUST be read to clear SSPxSTAT.BF (§25.2.3.6.1).
         uint8_t devNull = SSP1BUF;
+        
+        // If this is a read, immediately respond with the first byte (§25.2.3.7.2).
+        if (SSP1STATbits.R_nW) SSP1BUF = gDataI2C;
 
         // Release the clock stretch (§25.2.3.6.1)
         SSP1CON1bits.CKP = 1;
     }
-    else if ((!SSP1STATbits.R_nW) && (SSP1STATbits.BF))
+    else if (SSP1STATbits.BF)
     {
         //
-        // Handle data
+        // Handle data - write
         //
 
         uint8_t buf = SSP1BUF;
