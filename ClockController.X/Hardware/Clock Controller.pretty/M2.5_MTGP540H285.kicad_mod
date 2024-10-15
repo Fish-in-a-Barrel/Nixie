@@ -1,0 +1,120 @@
+(footprint "M2.5_MTGP540H285"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Hardware Standard: ISO (metric) Fit: Loose Hardware on PCB: Pan Head")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "46633ffe-bb14-4fbc-941c-181af88d2df9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "21e14ac9-be75-4665-8fc3-ebbd74d05380")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "11332cbf-5d58-4b8d-b910-3c6e26538b2b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "13f04b6d-ed93-4da2-b088-801a9dbf01c7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0d33722e-7ed8-42fb-b72b-73bb7524eab3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.485 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "B.Fab")
+		(uuid "69f8c3ac-8a3b-4dd2-b7fe-c4dce8ac4837")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.64 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "B.Fab")
+		(uuid "035af4b6-a16a-4a30-8c41-524df203e61c")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.485 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "24bb1bf3-3181-4e03-993d-9cb082f287c5")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.64 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "34f95533-d6f1-4d5a-992f-d181463c0877")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 5.4 5.4)
+		(drill 2.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(zone_connect 2)
+		(thermal_bridge_angle 0)
+		(uuid "b7a9a2e6-e4a4-40e0-ba7f-ef6f8f33de9f")
+	)
+)

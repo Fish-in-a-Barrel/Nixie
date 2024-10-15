@@ -1,0 +1,425 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "0f5e626c-f39b-48d5-89a3-7c1a1e478343")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Clock Controller-eagle-import:M2.5_MTGP540H285"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "MH"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:M2.5_MTGP540H285"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "M2.5_MTGP540H285_1_0"
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 -3.175 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 157.48 105.41) (xy 157.48 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2514768b-77d5-4c28-94bb-765ed90a11f1")
+	)
+	(wire
+		(pts
+			(xy 146.05 105.41) (xy 146.05 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4f72ca2d-43c9-4b1b-9e2e-deb955b63d20")
+	)
+	(wire
+		(pts
+			(xy 134.62 105.41) (xy 134.62 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "e8173ef3-cb3d-4549-9cf4-07fe0d1d17b0")
+	)
+	(text "MH1"
+		(exclude_from_sim no)
+		(at 132.873 101.6 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "37ca405a-956c-4819-8bc1-cc1d2e371fa0")
+	)
+	(text "MH3"
+		(exclude_from_sim no)
+		(at 155.406 101.6 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "5373d67b-e4fa-467f-8763-9cf47e5c0059")
+	)
+	(text "MH2"
+		(exclude_from_sim no)
+		(at 143.976 101.6 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "cccbd439-b634-4eb9-bc8d-83bd697acac8")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 134.62 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "252662fc-b293-4fc6-a7a3-57472675201d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 140.9933 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 157.48 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3191a600-a008-4fb3-ba39-be1ef08564c9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 163.8533 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 146.05 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "a9fc4c60-09a0-4c78-9697-2591d4e35cec")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.4233 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:M2.5_MTGP540H285")
+		(at 134.62 102.235 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "07aafa4d-f44b-4e77-8c76-9e1994a683c4")
+		(property "Reference" "MH1"
+			(at 134.62 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "M2.5_MTGP540H285"
+			(at 134.62 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:M2.5_MTGP540H285"
+			(at 134.62 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 134.62 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "035635cf-7f34-49ac-b692-e87b05431236")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/70fc2848-2605-4874-bf04-b4bbdf7c1213"
+					(reference "MH1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:M2.5_MTGP540H285")
+		(at 157.48 102.235 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7a32e97f-b062-4975-8152-78a559b7a7b2")
+		(property "Reference" "MH3"
+			(at 157.48 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "M2.5_MTGP540H285"
+			(at 157.48 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:M2.5_MTGP540H285"
+			(at 157.48 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7825b3b-db95-40cf-8e98-8f82f9f7e84f")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/70fc2848-2605-4874-bf04-b4bbdf7c1213"
+					(reference "MH3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:M2.5_MTGP540H285")
+		(at 146.05 102.235 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "87f51faa-57eb-4149-9554-41e59cf17675")
+		(property "Reference" "MH2"
+			(at 146.05 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "M2.5_MTGP540H285"
+			(at 146.05 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:M2.5_MTGP540H285"
+			(at 146.05 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 146.05 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20f71ed0-c0d0-4823-b4cd-7cf283148a8f")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/70fc2848-2605-4874-bf04-b4bbdf7c1213"
+					(reference "MH2")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

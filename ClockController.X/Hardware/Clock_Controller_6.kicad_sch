@@ -1,0 +1,2580 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "1f9e3df8-3a46-43b6-a58d-4af57a28f3c2")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Clock Controller-eagle-import:CAP_0603"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:CAP_0603"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CAP_0603_1_0"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.33 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.33 -1.905) (xy -0.33 1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.305 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.944 1.911)
+					(mid 0.3044 0.0001)
+					(end 0.9439 -1.9109)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:GND_DIGITAL"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_DIGITAL_1_0"
+				(polyline
+					(pts
+						(xy -1.905 1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name "GNDD"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:PEC11S-929K-S0015"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "S1"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PEC11S-929K-S0015"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:IC5_PEC11S-929K-S0015_BRN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PEC11S-929K-S0015_1_0"
+				(polyline
+					(pts
+						(xy 7.62 -10.16) (xy 33.02 -10.16)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 -10.16)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 -10.16) (xy 33.02 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at 0 0 0)
+					(length 7.62)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -12.7 90)
+					(length 2.54)
+					(name "Chassis"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -2.54 0)
+					(length 7.62)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -5.08 0)
+					(length 7.62)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 40.64 -2.54 180)
+					(length 7.62)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 40.64 0 180)
+					(length 7.62)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 20.32 -12.7 90)
+					(length 2.54)
+					(name "Chassis"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:RC3"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC3_1_0"
+				(circle
+					(center -0.476 0)
+					(radius 0.794)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.317 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:RC4"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC4_1_0"
+				(circle
+					(center -0.476 0)
+					(radius 0.794)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.317 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:RC5"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC5_1_0"
+				(circle
+					(center -0.476 0)
+					(radius 0.794)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.317 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:RES_0603"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:RES_0603"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RES_0603_1_0"
+				(polyline
+					(pts
+						(xy -3.81 0) (xy -3.175 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 1.27) (xy -1.905 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -0.635 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 1.27) (xy 3.175 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 -1.27) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -6.35 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 123.19 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "192fb2f2-5bbc-4cc5-b19d-0c3847abd328")
+	)
+	(junction
+		(at 123.19 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29521f0b-88b1-4c86-b5de-2afe1ea00fdc")
+	)
+	(junction
+		(at 173.99 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b31e21b8-6424-42a0-8a42-c1c043903d9d")
+	)
+	(wire
+		(pts
+			(xy 173.99 97.79) (xy 173.99 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "0812f255-66f4-4b51-9595-57125eb4101b")
+	)
+	(wire
+		(pts
+			(xy 173.99 119.38) (xy 173.99 123.19)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "0dabe96e-252e-48b2-a940-0fa36b12345c")
+	)
+	(wire
+		(pts
+			(xy 111.76 140.97) (xy 111.76 135.89)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "139afb5e-b09d-425c-98a0-2d40585fddc0")
+	)
+	(wire
+		(pts
+			(xy 123.19 123.19) (xy 123.19 128.27)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1df2dfd0-b12c-4d2d-ab26-792f7064ec67")
+	)
+	(wire
+		(pts
+			(xy 121.92 97.79) (xy 128.27 97.79)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2ca43b32-86c5-4d3a-95c6-7745cb7311b8")
+	)
+	(wire
+		(pts
+			(xy 123.19 95.25) (xy 128.27 95.25)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2f47b8a1-3571-47cb-bc44-d99acf30d421")
+	)
+	(wire
+		(pts
+			(xy 123.19 106.68) (xy 123.19 100.33)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "31ea3c62-a704-4b74-acc1-14b5b9ca1784")
+	)
+	(wire
+		(pts
+			(xy 123.19 72.39) (xy 123.19 76.2)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "3312e65a-19f3-4cf7-8747-0802b8dbd160")
+	)
+	(wire
+		(pts
+			(xy 182.88 123.19) (xy 182.88 128.27)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4d725e96-3a07-4b00-96f8-b3f9e2b8479e")
+	)
+	(wire
+		(pts
+			(xy 168.91 95.25) (xy 175.26 95.25)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "6381e7f2-049e-432d-83bc-5769c675f5f9")
+	)
+	(wire
+		(pts
+			(xy 173.99 128.27) (xy 173.99 123.19)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "6da50b1d-00db-48c6-af37-13437d888838")
+	)
+	(wire
+		(pts
+			(xy 182.88 140.97) (xy 182.88 135.89)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "7be48d9b-611d-4795-8784-aa4c46a26b6d")
+	)
+	(wire
+		(pts
+			(xy 111.76 128.27) (xy 111.76 123.19)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "7ddced6f-6f1e-4050-bd08-fa2c9c681e20")
+	)
+	(wire
+		(pts
+			(xy 123.19 88.9) (xy 123.19 95.25)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "97c0b339-e3c2-4e03-9af4-1aac422af84c")
+	)
+	(wire
+		(pts
+			(xy 111.76 72.39) (xy 123.19 72.39)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a8442b36-53a0-4966-957e-2d27d8287af7")
+	)
+	(wire
+		(pts
+			(xy 123.19 67.31) (xy 123.19 72.39)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "adb0c34a-9c5b-4f55-b5d2-8926c2586068")
+	)
+	(wire
+		(pts
+			(xy 173.99 123.19) (xy 182.88 123.19)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "b0158fd5-b2fe-420a-893c-9af46b4a4f22")
+	)
+	(wire
+		(pts
+			(xy 111.76 91.44) (xy 111.76 86.36)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "bc03cab2-967e-431a-b4f6-ad9751e8333a")
+	)
+	(wire
+		(pts
+			(xy 111.76 78.74) (xy 111.76 72.39)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c0101c20-e1dc-452d-8b02-d62c5a0adbc1")
+	)
+	(wire
+		(pts
+			(xy 123.19 119.38) (xy 123.19 123.19)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c2de86bc-4da5-42c3-8fc5-4caaa81c91b3")
+	)
+	(wire
+		(pts
+			(xy 123.19 100.33) (xy 128.27 100.33)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c45434d1-c2d1-4fa4-85a9-cf64d1c7556b")
+	)
+	(wire
+		(pts
+			(xy 168.91 97.79) (xy 173.99 97.79)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "ccc5d85f-47b6-4585-9981-c943ec2570d1")
+	)
+	(wire
+		(pts
+			(xy 148.59 115.57) (xy 148.59 107.95)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "d0be2866-96e8-4aab-b2f3-8e40b0c33da4")
+	)
+	(wire
+		(pts
+			(xy 111.76 123.19) (xy 123.19 123.19)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "d90f80fa-ec57-4b2f-8105-c4869b674889")
+	)
+	(text "10k"
+		(exclude_from_sim no)
+		(at 124.46 114.595 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "0cd1b02d-e9ee-4875-8460-12f062faea01")
+	)
+	(text "C7"
+		(exclude_from_sim no)
+		(at 109.849 133.372 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "12c8901d-7562-4ebd-8aa2-d912bf0cd172")
+	)
+	(text "10k"
+		(exclude_from_sim no)
+		(at 124.46 84.115 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "14264f6d-8f2f-4279-80a5-31005be32157")
+	)
+	(text "C8"
+		(exclude_from_sim no)
+		(at 109.849 83.842 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "150d50e5-959c-4220-8926-426d84a0d753")
+	)
+	(text "10nF"
+		(exclude_from_sim no)
+		(at 184.791 134.354 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "1e0f9096-0dc2-49a1-8169-c08c599cb73c")
+	)
+	(text "10k"
+		(exclude_from_sim no)
+		(at 175.26 114.595 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "2a380218-03b6-4b03-a392-674a551195c3")
+	)
+	(text "R12"
+		(exclude_from_sim no)
+		(at 121.92 114.704 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a242572-1c63-4707-a922-e28b9f55cd54")
+	)
+	(text "C9"
+		(exclude_from_sim no)
+		(at 180.969 133.336 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "477279af-6e91-497c-919d-2d8e0bd91252")
+	)
+	(text "10nF"
+		(exclude_from_sim no)
+		(at 113.671 84.824 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "7ab934a3-4636-47c0-8de6-07145a8cca66")
+	)
+	(text "RC5"
+		(exclude_from_sim no)
+		(at 122.396 65.538 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "ad46a7c4-73ef-436f-be5a-ff34cacbbe08")
+	)
+	(text "RC3"
+		(exclude_from_sim no)
+		(at 173.196 134.118 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "c0e20698-1fb0-429f-a287-4a07d0974afe")
+	)
+	(text "R13"
+		(exclude_from_sim no)
+		(at 172.72 114.704 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd8dcbe3-4ed6-4007-9220-37749b7a42c8")
+	)
+	(text "10nF"
+		(exclude_from_sim no)
+		(at 113.671 134.354 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "d41051c0-f8c1-49bf-947b-57a44fd8608d")
+	)
+	(text "RC4"
+		(exclude_from_sim no)
+		(at 122.396 134.154 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "e177a270-797d-43c5-af24-263a2cb55120")
+	)
+	(text "S1"
+		(exclude_from_sim no)
+		(at 127.341 87.63 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5afe6dd-e724-4d96-a5f8-a38f2fc9cd4f")
+	)
+	(text "R8"
+		(exclude_from_sim no)
+		(at 121.92 83.805 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "fed7770a-894a-4326-99b6-47c2fc6e39db")
+	)
+	(global_label "Button"
+		(shape bidirectional)
+		(at 173.99 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "047bcd4e-71f7-49de-9da2-05195a914b49")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.2017 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Rotary_A"
+		(shape bidirectional)
+		(at 111.76 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "1f242e7d-c987-459a-9351-c9c89f252651")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 121.52 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Rotary_B"
+		(shape bidirectional)
+		(at 123.19 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "bb9fc901-49e3-4fac-849a-4e59a5cc0916")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.0951 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:CAP_0603")
+		(at 111.76 82.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0f6ee6c2-6882-47e4-8ec2-6ee9f5a3ed3b")
+		(property "Reference" "C8"
+			(at 111.76 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10nF"
+			(at 111.76 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:CAP_0603"
+			(at 111.76 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "857c8750-d0ad-4853-b707-b348a436e102")
+		)
+		(pin "1"
+			(uuid "80f9b392-8b79-464a-9aaf-acc1e1403826")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 118.11 97.79 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "24bfc54d-a50d-4d2b-87cd-7dc9893dca7a")
+		(property "Reference" "#NetPort015"
+			(at 118.11 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 118.11 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05413fee-0b48-4663-837b-602592be8585")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:RC5")
+		(at 123.19 63.5 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "24c2c23b-695e-45b4-bae7-2a6b82898d63")
+		(property "Reference" "#NetPort031"
+			(at 123.19 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "RC5"
+			(at 123.19 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c7d031d-5cfb-4af7-92d8-2f67a1b17a8a")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:CAP_0603")
+		(at 111.76 132.08 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2c5685ea-d970-4a8c-9328-4dd5163179b0")
+		(property "Reference" "C7"
+			(at 111.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10nF"
+			(at 111.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:CAP_0603"
+			(at 111.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9708a1dc-4620-47c3-8c78-8edd818489cd")
+		)
+		(pin "1"
+			(uuid "efe886d1-5b10-4a06-b71b-60d6527c0bd5")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 148.59 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3c809fcc-773e-487a-97c6-892d21c4e3f2")
+		(property "Reference" "#NetPort02"
+			(at 148.59 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 148.59 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e95470c8-f2e9-4b3a-854a-61898a60119b")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:RES_0603")
+		(at 123.19 82.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "66e4b940-fbf8-4606-bb13-e8e759a0e61f")
+		(property "Reference" "R8"
+			(at 123.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10k"
+			(at 123.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:RES_0603"
+			(at 123.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "70b24ce0-0c8f-4e84-bf62-708134494cdb")
+		)
+		(pin "1"
+			(uuid "b3110450-8744-4ab7-b223-8039a654a597")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:CAP_0603")
+		(at 182.88 132.08 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7687ca74-df93-4743-aa29-f06a7602ed23")
+		(property "Reference" "C9"
+			(at 182.88 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10nF"
+			(at 182.88 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:CAP_0603"
+			(at 182.88 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8be52e96-3383-48d6-bf8d-50925a18186d")
+		)
+		(pin "1"
+			(uuid "cab4671e-3bd1-4008-985c-89dc7a00cf5c")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 179.07 95.25 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "80289171-1e88-4206-84d0-846dfb8891e8")
+		(property "Reference" "#NetPort014"
+			(at 179.07 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 179.07 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 179.07 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.07 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 179.07 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e00fd3fd-4aa2-4a11-ab3d-d7c2e8c811f7")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:PEC11S-929K-S0015")
+		(at 128.27 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "81e3bb0c-0422-41bb-9048-e6ac6db8bc07")
+		(property "Reference" "S1"
+			(at 128.27 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PEC11S-929K-S0015"
+			(at 128.27 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:IC5_PEC11S-929K-S0015_BRN"
+			(at 128.27 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42febc68-cab3-466e-8628-08d7ccb4d0b1")
+		)
+		(pin "10"
+			(uuid "f2ae720f-6f8a-4677-af62-ff28671cad54")
+		)
+		(pin "2"
+			(uuid "346c1b93-e0e0-47d9-bd94-6b66fe340953")
+		)
+		(pin "3"
+			(uuid "e49af24e-c8ab-4f45-a3a1-190047181ad3")
+		)
+		(pin "6"
+			(uuid "b6d562bd-f1ba-4837-a35a-e1da7c74015f")
+		)
+		(pin "4"
+			(uuid "60222647-b852-4ad8-bd16-e2691248343c")
+		)
+		(pin "5"
+			(uuid "a4292c3d-439c-4e3a-a0a2-aaf793206796")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "S1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 182.88 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "82b1f5b7-a1ed-4cfe-802a-1f924e92e36b")
+		(property "Reference" "#NetPort032"
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e0565279-cbc8-40fb-b401-40cf734c3a3e")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:RES_0603")
+		(at 123.19 113.03 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "82c42274-b577-4d8c-92d8-954c687c05ba")
+		(property "Reference" "R12"
+			(at 123.19 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10k"
+			(at 123.19 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:RES_0603"
+			(at 123.19 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4ded5d87-6d14-4337-9d28-70c827032dd1")
+		)
+		(pin "1"
+			(uuid "44a6e1d6-9c83-4910-97bf-75f4a65b7a6a")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 111.76 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d1ee22c-82c7-4cdc-809b-bbfbbe61fb5c")
+		(property "Reference" "#NetPort034"
+			(at 111.76 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 111.76 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60209586-8b7a-4254-b89e-4a1fe4aa3aaa")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:RES_0603")
+		(at 173.99 113.03 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f15a3ed-03f4-41f7-a753-78793a9fba52")
+		(property "Reference" "R13"
+			(at 173.99 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10k"
+			(at 173.99 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:RES_0603"
+			(at 173.99 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 173.99 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "64009906-e976-4b16-b4c5-14e6d5222a74")
+		)
+		(pin "2"
+			(uuid "5312ea46-fe90-4ec3-84a5-00c30f9eeee9")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 111.76 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a27010d5-bc7d-4476-93db-2c397d090131")
+		(property "Reference" "#NetPort033"
+			(at 111.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 111.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "151c66e1-b852-4131-a032-cfec3ee38817")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:RC4")
+		(at 123.19 132.08 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b7754932-bbee-4f35-b7a3-45b25ffa3489")
+		(property "Reference" "#NetPort035"
+			(at 123.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "RC4"
+			(at 123.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9974b677-4d74-4bf6-880e-c9b4da10f8a5")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:RC3")
+		(at 173.99 132.08 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e29c0716-7b6e-418d-9ec0-91e110375732")
+		(property "Reference" "#NetPort036"
+			(at 173.99 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "RC3"
+			(at 173.99 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 173.99 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c01f0baa-d6ef-4d1a-accf-a1655225d806")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
+					(reference "#NetPort036")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

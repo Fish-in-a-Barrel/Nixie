@@ -1,0 +1,4189 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "175f5d12-2ea1-43ef-93ac-5003397b9249")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Clock Controller-eagle-import:+180V"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+180V_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "+24V"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:+20V"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+20V_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "+20V"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:+5V"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:CAP_1206"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:CAP_1206"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CAP_1206_1_0"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.33 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.33 -1.905) (xy -0.33 1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.305 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.944 1.911)
+					(mid 0.3044 0.0001)
+					(end 0.9439 -1.9109)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:DSS120U"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:SODFL390X160X160L90X160N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "DSS120U_1_0"
+				(polyline
+					(pts
+						(xy -3.81 0) (xy -1.6 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.6 -1.905) (xy 1.575 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.6 1.905) (xy -1.6 -1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.94 -1.905) (xy 0.94 -1.429)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.94 -1.905) (xy 1.575 -1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.575 -1.905) (xy 1.575 1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.575 0) (xy -1.6 1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.575 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.575 1.905) (xy 2.21 1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.21 1.429) (xy 2.21 1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.6 1.905) (xy -1.6 -1.905) (xy 1.575 0)
+					)
+					(stroke
+						(width 0.002)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -6.35 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:FDD7N25LZTM"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q2"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "FDD7N25LZTM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:DPAK3P457_990X250L129X75T444X550N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FDD7N25LZTM_1_0"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 6.985 0)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.509 -3.365) (xy 5.27 -2.096)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.509 -3.365) (xy 5.27 -2.096)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 -2.032) (xy 4.318 -2.286)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 -2.032) (xy 6.096 -2.032)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 -0.762) (xy 6.096 -0.762)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 -0.762) (xy 6.096 -0.762)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.27 -2.096) (xy 6.033 -3.365)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.27 -2.096) (xy 6.033 -3.365)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.334 -4.572) (xy 5.334 0)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.334 -2.032) (xy 4.572 -0.762)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.334 -2.032) (xy 4.572 -0.762)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.334 -2.032) (xy 5.08 -0.762)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.033 -3.365) (xy 4.509 -3.365)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.096 -2.032) (xy 6.35 -1.778)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.096 -0.762) (xy 5.334 -2.032)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -2.54) (xy 6.985 2.54)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -2.54) (xy 7.62 -1.27)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -1.905) (xy 9.525 -1.905)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -0.635) (xy 7.62 0.635)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 8.89 -0.635)
+					)
+					(stroke
+						(width 0.025)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 1.27) (xy 7.62 2.54)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 1.905) (xy 9.525 1.905)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 0) (xy 9.525 0)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 0.635) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.025)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -2.54) (xy 9.525 0)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -2.54) (xy 10.795 -2.54)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 1.905) (xy 9.525 2.54)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 2.54) (xy 10.795 2.54)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -4.572) (xy 5.334 -4.572)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 10.16 -5.08)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -0.635) (xy 10.795 0.635)
+					)
+					(stroke
+						(width 0.025)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 5.08) (xy 10.16 2.54)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.795 -2.54) (xy 10.795 -0.635)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.795 0.635) (xy 10.795 2.54)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 -0.635) (xy 10.16 -0.635)
+					)
+					(stroke
+						(width 0.025)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 0.635) (xy 10.16 0.635)
+					)
+					(stroke
+						(width 0.203)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.509 -3.365) (xy 5.27 -2.096) (xy 6.033 -3.365)
+					)
+					(stroke
+						(width 0.002)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.334 -2.032) (xy 4.572 -0.762) (xy 6.096 -0.762)
+					)
+					(stroke
+						(width 0.002)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 0.635) (xy 7.62 0) (xy 8.89 -0.635)
+					)
+					(stroke
+						(width 0.002)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 -0.635) (xy 10.16 -0.635) (xy 10.795 0.635)
+					)
+					(stroke
+						(width 0.002)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 5.334 0)
+					(radius 0.025)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 8.89 0)
+					(radius 6.35)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 9.525 -1.905)
+					(radius 0.025)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 10.16 -4.572)
+					(radius 0.025)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 10.16 -2.54)
+					(radius 0.025)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 10.16 2.54)
+					(radius 0.025)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at 0 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 -7.62 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 7.62 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:GND_DIGITAL"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_DIGITAL_1_0"
+				(polyline
+					(pts
+						(xy -1.905 1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name "GNDD"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:HDR-1X2H"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:HDR-1X2H"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HDR-1X2H_1_0"
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy -5.08 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 5.08 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 7.62 1.27 180)
+					(length 2.54)
+					(name "P1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -1.27 180)
+					(length 2.54)
+					(name "P2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:MMBT2222A-TP"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:SOT23-3P95_240X110L43X44N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MMBT2222A-TP_1_0"
+				(polyline
+					(pts
+						(xy 3.505 0) (xy 4.775 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.775 -2.21) (xy 4.775 2.21)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.775 -0.94) (xy 8.585 -2.21)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.775 0.94) (xy 8.585 2.21)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.045 -1.905) (xy 6.35 -0.94)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 -0.94) (xy 7.62 -1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -1.905) (xy 6.045 -1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.585 -2.54) (xy 8.585 -2.21)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.585 2.21) (xy 8.585 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.35 0)
+					(radius 3.81)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0.965 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.585 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.585 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:MMBT2907ALT1G"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:SOT23-3P95_240X110L43X44N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MMBT2907ALT1G_1_0"
+				(polyline
+					(pts
+						(xy -2.845 0.572) (xy -1.575 0.572)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.575 -0.368) (xy 2.235 -1.638)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.575 1.511) (xy 2.235 2.781)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.575 2.781) (xy -1.575 -1.638)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.841) (xy 0.965 1.841)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 2.781) (xy -0.635 1.841)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.965 1.841) (xy 0.635 2.781)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.235 -1.638) (xy 2.235 -4.381)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.235 3.111) (xy 2.235 2.781)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0.571)
+					(radius 3.81)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.385 0.572 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.235 5.639 270)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.235 -4.496 90)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:RA2"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#NetPort"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RA2_1_0"
+				(circle
+					(center -0.476 0)
+					(radius 0.794)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.317 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:SRN8040TA-221M"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:SRN8040TA221M"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SRN8040TA-221M_1_0"
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 3.81 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 0) (xy 6.35 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 0) (xy 8.89 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 0) (xy 11.43 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 13.97 0) (xy 13.97 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 6.35 1.27)
+					(mid 5.08 2.5401)
+					(end 3.81 1.2699)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.89 1.27)
+					(mid 7.62 2.5401)
+					(end 6.35 1.2699)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 11.43 1.27)
+					(mid 10.16 2.5401)
+					(end 8.89 1.2699)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 13.97 1.27)
+					(mid 12.7 2.5401)
+					(end 11.43 1.2699)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 1.27 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 16.51 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Clock Controller-eagle-import:TP_1.25MM"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Clock Controller:TP_1.25MM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TP_1.25MM_1_0"
+				(circle
+					(center 0 0.635)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "TP"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "TP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 115.57 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "44192b0c-fc0b-4065-8cc3-696187fa904c")
+	)
+	(junction
+		(at 172.72 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5476486d-41ad-444e-ac1e-8e029d44bcb3")
+	)
+	(junction
+		(at 148.59 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80b0d218-478f-4303-99df-78cd1475a5bd")
+	)
+	(junction
+		(at 148.59 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "91d9a00f-af71-4261-85f3-33df8c88394a")
+	)
+	(junction
+		(at 104.14 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9dc4a23-340e-4835-99ca-df71892bd310")
+	)
+	(wire
+		(pts
+			(xy 198.12 77.47) (xy 198.12 71.12)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "168db6e0-654a-4fd7-951b-681efd4d29b7")
+	)
+	(wire
+		(pts
+			(xy 148.59 125.73) (xy 148.59 135.89)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1dab7369-319e-42bb-9363-4565cb5e1951")
+	)
+	(wire
+		(pts
+			(xy 115.57 109.22) (xy 115.57 118.11)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "239cfa20-80f4-4f59-944b-a1239fd08750")
+	)
+	(wire
+		(pts
+			(xy 148.59 135.89) (xy 172.72 135.89)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2bdf8182-e6a6-4fec-9b73-8f77e5788a57")
+	)
+	(wire
+		(pts
+			(xy 85.09 120.65) (xy 85.09 121.92)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "389e8890-fb21-4353-b345-419421996e6e")
+	)
+	(wire
+		(pts
+			(xy 205.74 71.12) (xy 205.74 72.39)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4848b2b2-cbee-4aa1-93fa-944b4e57d8a4")
+	)
+	(wire
+		(pts
+			(xy 107.95 69.85) (xy 107.95 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4c2fbac5-85a2-45c4-a95d-86bc49118a05")
+	)
+	(wire
+		(pts
+			(xy 115.57 99.06) (xy 115.57 90.17)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "53477ec6-5105-4be0-82ba-4807316b9ffb")
+	)
+	(wire
+		(pts
+			(xy 107.95 104.14) (xy 104.14 104.14)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "55611da0-b569-4ac7-917b-689f3a763723")
+	)
+	(wire
+		(pts
+			(xy 172.72 135.89) (xy 172.72 104.14)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "568b8993-34b1-4590-8636-16722d5a29f5")
+	)
+	(wire
+		(pts
+			(xy 148.59 147.066) (xy 148.59 135.89)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "5789adfb-bf63-461b-bfbc-35e4d3a4bb0f")
+	)
+	(wire
+		(pts
+			(xy 104.14 104.14) (xy 104.14 118.11)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "637f699a-e318-485d-8ba2-be8d3f5f3de5")
+	)
+	(wire
+		(pts
+			(xy 119.38 68.58) (xy 119.38 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "65686d5e-2c43-4a00-ae75-9b2a11d3f95d")
+	)
+	(wire
+		(pts
+			(xy 116.84 77.47) (xy 116.84 68.58)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "684a71c5-fb2b-4ade-b0fa-c2f4e6a2a742")
+	)
+	(wire
+		(pts
+			(xy 172.72 77.47) (xy 198.12 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "69cf175d-6a77-4648-b090-19b92dab382f")
+	)
+	(wire
+		(pts
+			(xy 148.59 110.49) (xy 148.59 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "7c1eb1db-a2bf-4337-b008-de551a9cbb84")
+	)
+	(wire
+		(pts
+			(xy 97.79 118.11) (xy 104.14 118.11)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "7e52428d-b3cb-4952-9c74-69e33f63c5c7")
+	)
+	(wire
+		(pts
+			(xy 148.59 77.47) (xy 153.67 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "943654be-d5d3-48f7-863a-32142856ffec")
+	)
+	(wire
+		(pts
+			(xy 115.57 118.11) (xy 115.57 127.013)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "97d4ebaa-702c-4e40-a8ed-5284740bdd8a")
+	)
+	(wire
+		(pts
+			(xy 138.43 118.11) (xy 115.57 118.11)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a0a45d54-2a4e-41a5-92bd-e4c28b68e792")
+	)
+	(wire
+		(pts
+			(xy 166.37 77.47) (xy 172.72 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a24a16e3-a2f0-41ca-9aa2-e39448e653c7")
+	)
+	(wire
+		(pts
+			(xy 172.72 77.47) (xy 172.72 96.52)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a95765fe-6944-4603-8df4-7b0e1af23ecf")
+	)
+	(wire
+		(pts
+			(xy 107.95 77.47) (xy 116.84 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "b42afd40-f7f6-46fd-836a-7cb386b3efa4")
+	)
+	(wire
+		(pts
+			(xy 104.14 118.11) (xy 104.14 132.08)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "bd69c5bd-335b-42ed-81ac-d2aa55f577d9")
+	)
+	(wire
+		(pts
+			(xy 104.14 132.08) (xy 107.95 132.08)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "d7309bcb-9013-4fed-92c1-66289009be32")
+	)
+	(wire
+		(pts
+			(xy 115.57 137.147) (xy 115.57 147.066)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "dd27b2cd-7160-48e3-913a-c37a8578610a")
+	)
+	(wire
+		(pts
+			(xy 142.24 77.47) (xy 148.59 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "e712f052-e80f-4c0c-9a09-689d96013227")
+	)
+	(wire
+		(pts
+			(xy 119.38 77.47) (xy 127 77.47)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "ef09b070-4719-4558-a74a-d96fbd8b1285")
+	)
+	(text "MMBT2222A-TP"
+		(exclude_from_sim no)
+		(at 98.142 111.76 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "04620a7d-0225-43c3-939d-8e1512ec2029")
+	)
+	(text "FDD7N25LZTM"
+		(exclude_from_sim no)
+		(at 130.499 127 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "15072719-3c76-4673-8bb2-b1100ca36e3e")
+	)
+	(text "+180V"
+		(exclude_from_sim no)
+		(at 194.737 68.52 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "15b68cd5-b203-4306-9dc2-9b12f6d2efe7")
+	)
+	(text "D1"
+		(exclude_from_sim no)
+		(at 159.091 75.565 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "1be26265-0db1-4436-8987-f6019e4eeca6")
+	)
+	(text "J2"
+		(exclude_from_sim no)
+		(at 119.22 55.88 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify right bottom)
+		)
+		(uuid "24f9ea4d-dc56-46e2-a5be-9a5d70c16284")
+	)
+	(text "PWM"
+		(exclude_from_sim no)
+		(at 82.797 117.475 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "306ffda4-9d71-4d42-af18-8d3400e3060c")
+	)
+	(text "C3"
+		(exclude_from_sim no)
+		(at 170.809 101.622 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "47a1c61d-b302-4ec7-8f01-b94a112f08f3")
+	)
+	(text "DSS120U"
+		(exclude_from_sim no)
+		(at 155.363 79.375 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "5431ce7d-fea5-4fd3-968a-af7e33ed3f94")
+	)
+	(text "Vnn"
+		(exclude_from_sim no)
+		(at 203.885 67.945 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "58363318-f697-4ad3-bb22-cc745a1a0a76")
+	)
+	(text "RA2"
+		(exclude_from_sim no)
+		(at 92.71 120.185 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "78a1ca36-0919-44e4-ae6b-430994b0b07e")
+	)
+	(text "Q2"
+		(exclude_from_sim no)
+		(at 137.101 109.22 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "824b8cef-0feb-4a08-b0a8-e1a89de21b36")
+	)
+	(text "MMBT2907ALT1G"
+		(exclude_from_sim no)
+		(at 104.058 140.843 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "87190522-9e7f-4edf-9f41-6b36123d535e")
+	)
+	(text "220uH"
+		(exclude_from_sim no)
+		(at 122.346 78.74 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "8bfe0306-bf89-4f5b-b304-538a54b9a67a")
+	)
+	(text "+5V"
+		(exclude_from_sim no)
+		(at 113.35 87.57 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0115bbb-9ac8-4f8a-9c59-f8498c19ece0")
+	)
+	(text "Q4"
+		(exclude_from_sim no)
+		(at 111.969 124.46 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "b898b773-6d60-44b2-9a5f-fbf3d80b4e18")
+	)
+	(text "Q3"
+		(exclude_from_sim no)
+		(at 105.655 96.52 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd07a56e-67fd-435f-8acb-a63d7621dc4d")
+	)
+	(text "+20V"
+		(exclude_from_sim no)
+		(at 104.984 67.25 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "d93cf481-ea38-4d0c-81d0-9892d805de14")
+	)
+	(text "L1"
+		(exclude_from_sim no)
+		(at 124.875 76.2 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "da8a121d-1d27-4e52-b798-5c887e4834e2")
+	)
+	(text "10uF"
+		(exclude_from_sim no)
+		(at 174.631 102.604 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "deb20e7a-f86b-420d-b2fa-2433059fe2f7")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 148.59 147.066 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "0cb877f3-deb3-4d67-9db6-784eda2d9f96")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 154.9633 147.066 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VNN"
+		(shape bidirectional)
+		(at 166.37 77.47 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "73e66a45-ebd6-48ac-9b7d-eff464c2243a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 160.0934 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM"
+		(shape bidirectional)
+		(at 85.09 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "7ac06534-d244-4d3c-a669-5a8a7e0ef4ca")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.7051 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VNN"
+		(shape bidirectional)
+		(at 205.74 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "9ee418f6-ccfa-4864-a864-2df44c001f53")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.0166 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 115.57 137.147 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "a1b5f921-1777-4d31-8429-07691f262340")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 121.9433 137.147 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM"
+		(shape bidirectional)
+		(at 107.95 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "c7347922-c6e2-48c7-8580-d24943ce65b7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.5651 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:HDR-1X2H")
+		(at 118.11 60.96 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4b2c7840-70a9-4f5c-87b8-7eb1f9e6b20a")
+		(property "Reference" "J2"
+			(at 118.11 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "HDR-1X2H"
+			(at 118.11 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:HDR-1X2H"
+			(at 118.11 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b65d21a0-2139-437f-b2ca-93743bd74427")
+		)
+		(pin "2"
+			(uuid "b381c16d-a50f-461e-8b4d-49ac36b44f0e")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 148.59 150.876 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "537d872d-b633-48da-b353-067d2e0fda4e")
+		(property "Reference" "#NetPort013"
+			(at 148.59 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 148.59 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e5fc4a7-e7ba-483a-a8cc-4d9887a6657b")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "#NetPort013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:+180V")
+		(at 198.12 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5a099310-3286-47ab-a641-beec87a70a41")
+		(property "Reference" "#NetPort07"
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+180V"
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fddd8520-8ec1-4c3d-aff7-5a890527be8d")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "#NetPort07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:DSS120U")
+		(at 160.02 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5aab8098-00cb-46ba-af56-c14fb461d908")
+		(property "Reference" "D1"
+			(at 160.02 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "DSS120U"
+			(at 160.02 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:SODFL390X160X160L90X160N"
+			(at 160.02 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66360f52-b8d4-4876-aee4-86b756b138f6")
+		)
+		(pin "2"
+			(uuid "da5a818d-68f8-4904-8824-e5258ab6ab13")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:FDD7N25LZTM")
+		(at 138.43 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6475d5fb-8648-4b25-8b8e-4dadd69fc497")
+		(property "Reference" "Q2"
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "FDD7N25LZTM"
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:DPAK3P457_990X250L129X75T444X550N"
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "73adcfb4-92be-4ee4-8638-c4409b03fb6d")
+		)
+		(pin "2"
+			(uuid "0d791584-abcd-47ab-9fef-02d2f3bbd8aa")
+		)
+		(pin "3"
+			(uuid "9d64ff8e-3cca-4d0e-80a5-e311209f3b05")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:MMBT2907ALT1G")
+		(at 113.335 132.652 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6ad5bcf5-48aa-432c-afb2-230fdbf72f5e")
+		(property "Reference" "Q4"
+			(at 113.335 132.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBT2907ALT1G"
+			(at 113.335 132.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:SOT23-3P95_240X110L43X44N"
+			(at 113.335 132.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.335 132.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.335 132.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e142dbd9-31f9-478f-9aae-82f3cc57c836")
+		)
+		(pin "2"
+			(uuid "23710c00-6fbc-46a5-b397-fe1749e928a1")
+		)
+		(pin "3"
+			(uuid "eb258e8a-6f34-4bd3-ba6c-1480e7619667")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:TP_1.25MM")
+		(at 205.74 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72d043a7-6e98-4b20-a129-05d85d1794d6")
+		(property "Reference" "Vnn0"
+			(at 205.74 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Most Density"
+			(at 205.74 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:TP_1.25MM"
+			(at 205.74 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "TP"
+			(uuid "fac342c8-19ef-4600-b294-d1bc00caf07b")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "Vnn0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:RA2")
+		(at 93.98 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8017d885-bf3a-4c56-af13-5874f1b64430")
+		(property "Reference" "#NetPort05"
+			(at 93.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "RA2"
+			(at 93.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8cb4034b-be91-45b3-b012-a9802ed83bdd")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "#NetPort05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:CAP_1206")
+		(at 172.72 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "83be487f-aaa7-407e-9430-162fad21c08e")
+		(property "Reference" "C3"
+			(at 172.72 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10uF"
+			(at 172.72 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:CAP_1206"
+			(at 172.72 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cadd796c-ee74-44f1-b366-5a2059ad3775")
+		)
+		(pin "2"
+			(uuid "e0cbe315-74a5-4644-bc44-9eaa129bf3a9")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:SRN8040TA-221M")
+		(at 125.73 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9bf7571b-5a2c-4493-b6b7-7870ea8879fa")
+		(property "Reference" "L1"
+			(at 125.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "220uH"
+			(at 125.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:SRN8040TA221M"
+			(at 125.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7353ce2-ba78-41cf-a5ed-a5222bf09bdf")
+		)
+		(pin "2"
+			(uuid "b3279db2-43f3-47a7-8262-0a979233158e")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:TP_1.25MM")
+		(at 85.09 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a9ea0d61-bfda-40d8-93cb-a92cb80bd28c")
+		(property "Reference" "PWM0"
+			(at 85.09 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Most Density"
+			(at 85.09 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:TP_1.25MM"
+			(at 85.09 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "TP"
+			(uuid "ac1a1747-c137-41bb-b680-0f0255904e95")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "PWM0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:+5V")
+		(at 115.57 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d0f65095-fe54-4670-af2e-8b1244fe2b63")
+		(property "Reference" "#NetPort019"
+			(at 115.57 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 115.57 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "daa6c032-0957-4dc6-aa22-9c9fc580de1e")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "#NetPort019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
+		(at 115.57 150.876 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e446bce2-0cf5-4ba3-a65e-542e0a0aff08")
+		(property "Reference" "#NetPort012"
+			(at 115.57 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_DIGITAL"
+			(at 115.57 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2ed6b01-927d-48bd-a649-324e287b6bf5")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "#NetPort012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:+20V")
+		(at 107.95 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3419f8e-4e4c-45b9-9b70-55de9295a754")
+		(property "Reference" "#NetPort011"
+			(at 107.95 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+20V"
+			(at 107.95 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 107.95 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "366aeeff-b7ba-4389-b6b5-ce68dd0cfebd")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "#NetPort011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Clock Controller-eagle-import:MMBT2222A-TP")
+		(at 106.985 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f653136a-67e0-4e25-8fdf-d3b469c9f93c")
+		(property "Reference" "Q3"
+			(at 106.985 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBT2222A-TP"
+			(at 106.985 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Clock Controller:SOT23-3P95_240X110L43X44N"
+			(at 106.985 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.985 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 106.985 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "65f12665-babf-4657-af77-c439c4a4b705")
+		)
+		(pin "1"
+			(uuid "812bba15-29bc-4b59-b79d-a2da1212a704")
+		)
+		(pin "3"
+			(uuid "f04c2ff0-5208-492a-926e-e4866638a1e6")
+		)
+		(instances
+			(project ""
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
