@@ -2531,7 +2531,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 129.54 116.84 0)
 			(effects
 				(font
@@ -2600,7 +2600,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:HDR-2X4"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
 			(at 116.84 93.98 0)
 			(effects
 				(font
@@ -2687,7 +2687,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 129.54 125.73 0)
 			(effects
 				(font
@@ -2756,7 +2756,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_1206"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 154.94 73.66 0)
 			(effects
 				(font
@@ -2891,7 +2891,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:SOT23-3P95_240X110L43X44N"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 173.99 91.745 0)
 			(effects
 				(font
@@ -3029,7 +3029,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:HDR-1X4"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 116.84 68.58 0)
 			(effects
 				(font
@@ -3170,7 +3170,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:SOT23-3P95_240X110L43X44N"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 154.94 86.665 0)
 			(effects
 				(font
@@ -3242,7 +3242,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_1206"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 173.99 73.66 0)
 			(effects
 				(font

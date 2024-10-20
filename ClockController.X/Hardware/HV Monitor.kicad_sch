@@ -870,7 +870,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 102.87 87.63 0)
 			(effects
 				(font
@@ -939,7 +939,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 102.87 115.57 0)
 			(effects
 				(font

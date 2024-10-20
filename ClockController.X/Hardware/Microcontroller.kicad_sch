@@ -841,6 +841,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.89 77.47) (xy 138.43 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04e2c24d-ca98-4c9f-980f-5795cd4a5182")
+	)
+	(wire
+		(pts
 			(xy 68.58 130.81) (xy 68.58 100.33)
 		)
 		(stroke
@@ -868,16 +878,6 @@
 			(type solid)
 		)
 		(uuid "1badeec2-5fce-40f5-8243-dcaa59f0bcf9")
-	)
-	(wire
-		(pts
-			(xy 129.54 82.55) (xy 128.27 82.55)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "21f6d09a-4306-4b4e-ac4c-364cb867f664")
 	)
 	(wire
 		(pts
@@ -931,6 +931,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.89 80.01) (xy 138.43 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "558c724c-fbbb-4ef4-b5b2-d7ffe0c43706")
+	)
+	(wire
+		(pts
 			(xy 209.55 102.87) (xy 207.01 102.87)
 		)
 		(stroke
@@ -971,16 +981,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 87.63) (xy 137.16 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68540970-da5d-4b72-9d7e-0e12c02e3b17")
-	)
-	(wire
-		(pts
 			(xy 78.74 118.11) (xy 80.01 118.11)
 		)
 		(stroke
@@ -1018,6 +1018,26 @@
 			(type default)
 		)
 		(uuid "7d43f348-ec85-4daf-8e51-46a7acd20685")
+	)
+	(wire
+		(pts
+			(xy 135.89 87.63) (xy 138.43 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85182748-9203-45d0-bc8f-c984973d8c84")
+	)
+	(wire
+		(pts
+			(xy 130.81 82.55) (xy 138.43 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bc4369c-0905-4909-87a3-c9d195ccac8f")
 	)
 	(wire
 		(pts
@@ -1071,16 +1091,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 80.01) (xy 138.43 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9dcc6918-5516-4167-b49f-32eaba356b81")
-	)
-	(wire
-		(pts
 			(xy 78.74 120.65) (xy 80.01 120.65)
 		)
 		(stroke
@@ -1121,26 +1131,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 77.47) (xy 138.43 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d93f76d8-f2ce-4e26-83e4-cbe423aa519e")
-	)
-	(wire
-		(pts
-			(xy 129.54 82.55) (xy 138.43 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d990bf08-40b5-41ac-8980-886a95dda0ca")
-	)
-	(wire
-		(pts
 			(xy 209.55 102.87) (xy 205.74 102.87)
 		)
 		(stroke
@@ -1178,6 +1168,16 @@
 			(type solid)
 		)
 		(uuid "ef27e198-4ac1-4a70-825f-7935d62fd221")
+	)
+	(wire
+		(pts
+			(xy 135.89 85.09) (xy 138.43 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f789f773-b0f9-4905-b540-87dfa47e5a12")
 	)
 	(text "PIC16F15224-I/SL"
 		(exclude_from_sim no)
@@ -1235,7 +1235,7 @@
 		(uuid "063a1747-742e-4e42-a745-3bca8784d37c")
 	)
 	(label "ICSPDAT"
-		(at 137.16 80.01 180)
+		(at 135.89 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1246,7 +1246,7 @@
 		(uuid "4369ed43-07aa-4eaf-808b-7ceaf58019f9")
 	)
 	(label "~{MCLR}"
-		(at 137.16 87.63 180)
+		(at 135.89 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1257,7 +1257,7 @@
 		(uuid "4490afec-185a-4c40-8e24-fa0680431965")
 	)
 	(label "ICSPCLK"
-		(at 137.16 77.47 180)
+		(at 135.89 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1511,7 +1511,7 @@
 	)
 	(global_label "V5V"
 		(shape bidirectional)
-		(at 138.43 85.09 180)
+		(at 135.89 80.01 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1521,7 +1521,7 @@
 		)
 		(uuid "daef526a-67bb-472c-9d64-b122725b3123")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.4437 85.09 0)
+			(at 129.9037 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1580,7 +1580,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:SOIC14P127_869X599X175L84X42N"
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 143.51 110.49 0)
 			(effects
 				(font
@@ -1660,7 +1660,7 @@
 	)
 	(symbol
 		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
-		(at 124.46 82.55 270)
+		(at 127 82.55 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1668,7 +1668,7 @@
 		(dnp no)
 		(uuid "8f4d239f-8851-4302-88b8-f0828e0e9048")
 		(property "Reference" "#NetPort04"
-			(at 124.46 82.55 0)
+			(at 127 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1677,7 +1677,7 @@
 			)
 		)
 		(property "Value" "GND_DIGITAL"
-			(at 124.46 82.55 0)
+			(at 127 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1686,7 +1686,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 82.55 0)
+			(at 127 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1695,7 +1695,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 82.55 0)
+			(at 127 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1704,7 +1704,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 124.46 82.55 0)
+			(at 127 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1751,7 +1751,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RHDRRA5W60P0X254_1X5_1320X850X274P"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Horizontal"
 			(at 138.43 87.63 0)
 			(effects
 				(font
@@ -1829,7 +1829,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:CAP_0805"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 143.51 130.81 0)
 			(effects
 				(font

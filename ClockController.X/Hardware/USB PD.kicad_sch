@@ -2939,13 +2939,13 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 72.39) (xy 142.24 72.39)
+			(xy 142.24 72.39) (xy 149.86 72.39)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "5d7984cb-0406-49b4-ad69-9da40e40bcbd")
+		(uuid "5f144796-4778-450b-a599-f3a3e18b9f6e")
 	)
 	(wire
 		(pts
@@ -3109,16 +3109,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 72.39) (xy 166.37 72.39)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "a243b7a7-27f2-4ca9-a803-e9f98508e559")
-	)
-	(wire
-		(pts
 			(xy 88.9 123.19) (xy 88.9 119.38)
 		)
 		(stroke
@@ -3166,6 +3156,16 @@
 			(type default)
 		)
 		(uuid "acca7852-a891-4869-a436-98cba3541824")
+	)
+	(wire
+		(pts
+			(xy 157.48 72.39) (xy 166.37 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b90f73e4-83ba-46c7-8202-8ae7a33f197d")
 	)
 	(wire
 		(pts
@@ -3867,7 +3867,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:CAP_1206"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 83.82 73.66 0)
 			(effects
 				(font
@@ -4068,7 +4068,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:LED_1206(3216_METRIC)_N_BLUE"
+		(property "Footprint" "LED_SMD:LED_1206_3216Metric"
 			(at 234.95 101.6 0)
 			(effects
 				(font
@@ -4137,7 +4137,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_1206"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 116.84 95.25 0)
 			(effects
 				(font
@@ -4338,7 +4338,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 116.84 82.55 0)
 			(effects
 				(font
@@ -4407,7 +4407,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:CAP_0805"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 153.67 72.39 0)
 			(effects
 				(font
@@ -4476,7 +4476,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "CUI_UJC-VP-3-SMT-TR"
+		(property "Footprint" "Connector USB:CUI_UJC-VP-3-SMT-TR"
 			(at 52.07 100.33 0)
 			(effects
 				(font
@@ -4681,7 +4681,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 139.7 120.65 0)
 			(effects
 				(font
@@ -4816,7 +4816,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 234.95 124.46 0)
 			(effects
 				(font
@@ -4951,7 +4951,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:LED_1206(3216_METRIC)_N_GREEN"
+		(property "Footprint" "LED_SMD:LED_1206_3216Metric"
 			(at 116.84 120.65 0)
 			(effects
 				(font
@@ -5020,7 +5020,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 88.9 113.03 0)
 			(effects
 				(font
@@ -5089,7 +5089,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:W-QFN4040-24_(TYPE_A1)"
+		(property "Footprint" "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm"
 			(at 212.09 97.79 0)
 			(effects
 				(font
@@ -5227,7 +5227,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:POWERDI3333-8"
+		(property "Footprint" "Diodes Incorporated:TRANS_DMP3017SFGQ-7"
 			(at 107.95 82.55 0)
 			(effects
 				(font
@@ -5368,7 +5368,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0805"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 78.74 113.03 0)
 			(effects
 				(font

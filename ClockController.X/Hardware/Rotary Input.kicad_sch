@@ -1512,7 +1512,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:CAP_0603"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 111.76 82.55 0)
 			(effects
 				(font
@@ -1713,7 +1713,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:CAP_0603"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 111.76 132.08 0)
 			(effects
 				(font
@@ -1848,7 +1848,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 123.19 82.55 0)
 			(effects
 				(font
@@ -1917,7 +1917,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:CAP_0603"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 182.88 132.08 0)
 			(effects
 				(font
@@ -2202,7 +2202,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 123.19 113.03 0)
 			(effects
 				(font
@@ -2337,7 +2337,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:RES_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 173.99 113.03 0)
 			(effects
 				(font
