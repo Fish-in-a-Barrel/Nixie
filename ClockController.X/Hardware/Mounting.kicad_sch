@@ -282,7 +282,7 @@
 			(uuid "035635cf-7f34-49ac-b692-e87b05431236")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/70fc2848-2605-4874-bf04-b4bbdf7c1213"
 					(reference "MH1")
 					(unit 1)
@@ -348,7 +348,7 @@
 			(uuid "d7825b3b-db95-40cf-8e98-8f82f9f7e84f")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/70fc2848-2605-4874-bf04-b4bbdf7c1213"
 					(reference "MH3")
 					(unit 1)
@@ -414,7 +414,7 @@
 			(uuid "20f71ed0-c0d0-4823-b4cd-7cf283148a8f")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/70fc2848-2605-4874-bf04-b4bbdf7c1213"
 					(reference "MH2")
 					(unit 1)

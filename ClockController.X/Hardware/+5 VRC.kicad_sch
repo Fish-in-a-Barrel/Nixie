@@ -988,7 +988,7 @@
 			(uuid "0906ce53-f29b-4ba0-a6f2-d8fdcb1c096f")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
 					(reference "Vcc0")
 					(unit 1)
@@ -1054,7 +1054,7 @@
 			(uuid "f64ba6f6-0f45-42a7-a88b-8a48cb97fad0")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
 					(reference "#NetPort029")
 					(unit 1)
@@ -1120,7 +1120,7 @@
 			(uuid "a45841b4-fbd1-4b21-a96b-72d40a40c419")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
 					(reference "#NetPort028")
 					(unit 1)
@@ -1252,7 +1252,7 @@
 			(uuid "24b78e4b-5d08-40c7-9bbf-134b9af68abe")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
 					(reference "#NetPort027")
 					(unit 1)
@@ -1321,7 +1321,7 @@
 			(uuid "22f8ca03-0c44-455d-82f0-ed96f031aea9")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
 					(reference "C6")
 					(unit 1)
@@ -1390,7 +1390,7 @@
 			(uuid "3f4221c1-2fb5-43ff-821d-c2ed51ce9bff")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
 					(reference "C5")
 					(unit 1)
@@ -1528,7 +1528,7 @@
 			(uuid "6326ca15-d4a1-46af-b78f-da33e566be80")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
 					(reference "U2")
 					(unit 1)

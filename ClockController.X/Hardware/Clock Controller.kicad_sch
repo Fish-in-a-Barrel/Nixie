@@ -26,7 +26,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_4.kicad_sch"
+		(property "Sheetfile" "Boost Converter.kicad_sch"
 			(at 177.8 29.7946 0)
 			(effects
 				(font
@@ -64,7 +64,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_7.kicad_sch"
+		(property "Sheetfile" "Mounting.kicad_sch"
 			(at 76.2 80.5946 0)
 			(effects
 				(font
@@ -102,7 +102,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_5.kicad_sch"
+		(property "Sheetfile" "HV Monitor.kicad_sch"
 			(at 228.6 29.7946 0)
 			(effects
 				(font
@@ -140,7 +140,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_3.kicad_sch"
+		(property "Sheetfile" "USB PD.kicad_sch"
 			(at 127 29.7946 0)
 			(effects
 				(font
@@ -178,7 +178,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_1.kicad_sch"
+		(property "Sheetfile" "Microcontroller.kicad_sch"
 			(at 25.4 29.7946 0)
 			(effects
 				(font
@@ -216,7 +216,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_6.kicad_sch"
+		(property "Sheetfile" "Rotary Input.kicad_sch"
 			(at 25.4 80.5946 0)
 			(effects
 				(font
@@ -254,7 +254,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_8.kicad_sch"
+		(property "Sheetfile" "+5 VRC.kicad_sch"
 			(at 127 80.5946 0)
 			(effects
 				(font
@@ -292,7 +292,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Clock_Controller_2.kicad_sch"
+		(property "Sheetfile" "Headers.kicad_sch"
 			(at 76.2 29.7946 0)
 			(effects
 				(font

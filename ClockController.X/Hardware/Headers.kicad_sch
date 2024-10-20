@@ -2565,7 +2565,7 @@
 			(uuid "644c7f1a-dced-450d-b8ba-19ff2a72d67b")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "RDA0")
 					(unit 1)
@@ -2652,7 +2652,7 @@
 			(uuid "c9290af7-790c-4168-b79d-e92bf54c6e25")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "DISP0")
 					(unit 1)
@@ -2721,7 +2721,7 @@
 			(uuid "e5f4f07f-cb43-4d86-8d5f-75140fb98ca3")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "RCL0")
 					(unit 1)
@@ -2790,7 +2790,7 @@
 			(uuid "29dfb594-0a03-40f0-bcd3-1cbc2d9daf43")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "R1")
 					(unit 1)
@@ -2856,7 +2856,7 @@
 			(uuid "0584c900-c23c-4d58-8724-edeceb6dc0c2")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "#NetPort03")
 					(unit 1)
@@ -2928,7 +2928,7 @@
 			(uuid "26365503-6cc6-42f9-92da-7aa17c1d7d2c")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "Q6")
 					(unit 1)
@@ -2994,7 +2994,7 @@
 			(uuid "3e77251c-c5b7-4466-bb05-ed2371f3fa58")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "#NetPort010")
 					(unit 1)
@@ -3069,7 +3069,7 @@
 			(uuid "22b04c89-faac-43aa-aa5a-6f77f9406593")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "OLED0")
 					(unit 1)
@@ -3135,7 +3135,7 @@
 			(uuid "5f0aa48c-45de-41d0-a8a9-6fc081d3b196")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "#NetPort030")
 					(unit 1)
@@ -3207,7 +3207,7 @@
 			(uuid "92842ead-ae7c-4452-a7fa-f16c9f19c592")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "Q5")
 					(unit 1)
@@ -3276,7 +3276,7 @@
 			(uuid "2b32585e-f4f3-4560-a954-392bad4be49d")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "R2")
 					(unit 1)
