@@ -823,6 +823,22 @@
 			)
 		)
 	)
+	(junction
+		(at 68.58 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "46c7dc92-6c26-4227-b99f-032594d16e37")
+	)
+	(wire
+		(pts
+			(xy 68.58 130.81) (xy 139.7 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "027ba9c8-40da-47bb-9ab4-3fcb93eff348")
+	)
 	(wire
 		(pts
 			(xy 68.58 130.81) (xy 68.58 100.33)
@@ -855,16 +871,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 130.81) (xy 68.58 130.81)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "2095d844-9500-4856-98af-678d82430e89")
-	)
-	(wire
-		(pts
 			(xy 129.54 82.55) (xy 128.27 82.55)
 		)
 		(stroke
@@ -882,6 +888,16 @@
 			(type solid)
 		)
 		(uuid "28bd2e0c-5973-4658-89e7-57a67564974d")
+	)
+	(wire
+		(pts
+			(xy 209.55 110.49) (xy 205.74 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "400f0f0b-f3e1-44b0-9225-a9a501789413")
 	)
 	(wire
 		(pts
@@ -915,16 +931,6 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 110.49) (xy 207.01 110.49)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "4c4ce9f3-486a-4fb8-bc18-4824da113001")
-	)
-	(wire
-		(pts
 			(xy 209.55 102.87) (xy 207.01 102.87)
 		)
 		(stroke
@@ -932,6 +938,16 @@
 			(type solid)
 		)
 		(uuid "5b1cbf3e-338b-4255-8dd0-dfc7093788ab")
+	)
+	(wire
+		(pts
+			(xy 68.58 133.35) (xy 68.58 130.81)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "5e911d75-ec19-4d93-ad39-fd8a4e6ccc5d")
 	)
 	(wire
 		(pts
@@ -945,7 +961,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 113.03) (xy 207.01 113.03)
+			(xy 209.55 113.03) (xy 207.01 113.03)
 		)
 		(stroke
 			(width 0.25)
@@ -972,6 +988,16 @@
 			(type solid)
 		)
 		(uuid "76a9225c-d410-4085-80e0-dfa6e71247b7")
+	)
+	(wire
+		(pts
+			(xy 68.58 133.35) (xy 68.58 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a3f3b89-c803-413e-b223-b35e8de7b92a")
 	)
 	(wire
 		(pts
@@ -1005,6 +1031,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 105.41) (xy 205.74 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cdabd1a-003d-49b6-a35e-4f1f3b439b02")
+	)
+	(wire
+		(pts
 			(xy 209.55 100.33) (xy 205.74 100.33)
 		)
 		(stroke
@@ -1012,6 +1048,16 @@
 			(type default)
 		)
 		(uuid "93c90f00-1f9a-4bbe-aaef-baef86ba74b9")
+	)
+	(wire
+		(pts
+			(xy 209.55 113.03) (xy 205.74 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95a3dc06-ac0a-4a5f-822b-d67641520345")
 	)
 	(wire
 		(pts
@@ -1055,7 +1101,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 105.41) (xy 207.01 105.41)
+			(xy 209.55 105.41) (xy 207.01 105.41)
 		)
 		(stroke
 			(width 0.25)
@@ -1178,13 +1224,13 @@
 		(uuid "f65e79be-70de-4b38-8492-c250efb0d96f")
 	)
 	(label "~{MCLR}"
-		(at 205.74 105.41 0)
+		(at 209.55 105.41 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify left)
 		)
 		(uuid "063a1747-742e-4e42-a745-3bca8784d37c")
 	)
@@ -1222,24 +1268,24 @@
 		(uuid "667e2fba-038c-4bb0-bf80-d61f6bb2fdea")
 	)
 	(label "ICSPCLK"
-		(at 205.74 110.49 0)
+		(at 209.55 110.49 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify left)
 		)
 		(uuid "76589623-c11c-4078-83b1-c96728eec2e9")
 	)
 	(label "ICSPDAT"
-		(at 205.74 113.03 0)
+		(at 209.55 113.03 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify left)
 		)
 		(uuid "fa4f169a-92b1-4fb5-b85b-0131d9dd66c7")
 	)
@@ -1311,22 +1357,22 @@
 	)
 	(global_label "GND"
 		(shape bidirectional)
-		(at 139.7 130.81 0)
+		(at 68.58 133.35 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "79560f49-c350-4799-b6c1-4835e950f9ea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.0733 130.81 0)
+			(at 68.58 139.7233 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -1437,28 +1483,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape bidirectional)
-		(at 129.54 82.55 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "d152e34b-ff9b-478d-93ee-509569ebab85")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.54 88.9233 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)

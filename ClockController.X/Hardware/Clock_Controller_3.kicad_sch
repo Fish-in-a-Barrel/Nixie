@@ -2684,13 +2684,13 @@
 		(uuid "4b49ecae-8eb7-4b15-bb2c-d8cb6bf01b19")
 	)
 	(junction
-		(at 95.25 95.25)
+		(at 99.06 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5d1fc807-1252-40bd-8277-e6620c6cb194")
 	)
 	(junction
-		(at 95.25 73.66)
+		(at 99.06 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6cf59cbe-fef0-419c-a50f-a6b9d8fb89d1")
@@ -2759,7 +2759,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 117.475) (xy 198.12 118.745)
+			(xy 198.12 120.65) (xy 198.12 118.745)
 		)
 		(stroke
 			(width 0.25)
@@ -2769,7 +2769,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 120.65) (xy 109.22 120.65)
+			(xy 106.68 120.65) (xy 109.22 120.65)
 		)
 		(stroke
 			(width 0.25)
@@ -2789,6 +2789,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 77.47) (xy 99.06 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20b15a9a-95a1-4146-9593-a42792d1d2b9")
+	)
+	(wire
+		(pts
 			(xy 212.09 97.79) (xy 214.63 97.79)
 		)
 		(stroke
@@ -2799,7 +2809,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 82.55) (xy 102.87 82.55)
+			(xy 110.49 82.55) (xy 106.68 82.55)
 		)
 		(stroke
 			(width 0.25)
@@ -2819,7 +2829,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 95.25) (xy 69.85 95.25)
+			(xy 99.06 95.25) (xy 69.85 95.25)
 		)
 		(stroke
 			(width 0.25)
@@ -2829,7 +2839,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 95.25) (xy 95.25 95.25)
+			(xy 110.49 95.25) (xy 99.06 95.25)
 		)
 		(stroke
 			(width 0.25)
@@ -2849,7 +2859,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 80.01) (xy 95.25 73.66)
+			(xy 99.06 77.47) (xy 99.06 73.66)
 		)
 		(stroke
 			(width 0.25)
@@ -2869,7 +2879,17 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 73.66) (xy 133.35 73.66)
+			(xy 198.12 120.65) (xy 198.12 117.475)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45bd041b-8cb2-4ead-94cb-edbaa81897fc")
+	)
+	(wire
+		(pts
+			(xy 99.06 73.66) (xy 133.35 73.66)
 		)
 		(stroke
 			(width 0.25)
@@ -2879,7 +2899,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 90.17) (xy 95.25 95.25)
+			(xy 99.06 90.17) (xy 99.06 95.25)
 		)
 		(stroke
 			(width 0.25)
@@ -2949,7 +2969,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 73.66) (xy 95.25 73.66)
+			(xy 87.63 73.66) (xy 99.06 73.66)
 		)
 		(stroke
 			(width 0.25)
@@ -3109,7 +3129,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 105.41) (xy 95.25 105.41)
+			(xy 214.63 105.41) (xy 99.06 105.41)
 		)
 		(stroke
 			(width 0.25)
@@ -3119,13 +3139,23 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 105.41) (xy 95.25 95.25)
+			(xy 99.06 105.41) (xy 99.06 95.25)
 		)
 		(stroke
 			(width 0.25)
 			(type solid)
 		)
 		(uuid "ab5dc016-6fe2-4489-ba9b-df85bdb945aa")
+	)
+	(wire
+		(pts
+			(xy 106.68 120.65) (xy 110.49 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac911219-4ec8-4a65-a6db-ebfbd04e8dd9")
 	)
 	(wire
 		(pts
@@ -3339,7 +3369,7 @@
 	)
 	(text "Q1"
 		(exclude_from_sim no)
-		(at 100.33 83.552 90)
+		(at 106.426 87.122 90)
 		(effects
 			(font
 				(size 1.48 1.48)
@@ -3427,7 +3457,7 @@
 	)
 	(text "DMG7430LFG-7"
 		(exclude_from_sim no)
-		(at 111.76 91.246 90)
+		(at 93.726 92.71 90)
 		(effects
 			(font
 				(size 1.48 1.48)
@@ -3482,44 +3512,22 @@
 	)
 	(global_label "GND"
 		(shape bidirectional)
-		(at 234.95 130.81 0)
+		(at 198.12 120.65 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left)
-		)
-		(uuid "0afc4ef5-b552-43f1-b7d9-0f8eb50f06f9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.3233 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape bidirectional)
-		(at 198.12 117.475 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "116db0c5-6aec-46ae-8154-0d9da0df1d8f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 204.4933 117.475 0)
+			(at 198.12 127.0233 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -3548,22 +3556,22 @@
 	)
 	(global_label "V5V"
 		(shape bidirectional)
-		(at 166.37 85.09 0)
+		(at 166.37 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "252397fe-9cdd-4bdc-bedb-f6a292ba60cd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.3563 85.09 0)
+			(at 160.3837 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -3614,50 +3622,6 @@
 	)
 	(global_label "GND"
 		(shape bidirectional)
-		(at 149.86 72.39 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "5d238068-5253-4fd3-9efe-779ebc599091")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.2333 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape bidirectional)
-		(at 146.05 120.65 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "6b4ba5d3-ed7b-4f3a-9956-3ee0dbf94551")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.6767 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape bidirectional)
 		(at 69.85 123.19 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3669,28 +3633,6 @@
 		(uuid "6dcde7e0-7bb2-499e-b909-af620333fd89")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 76.2233 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape bidirectional)
-		(at 80.01 73.66 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "716abf36-253f-4e84-b701-2d43ee90f3bf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.3833 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3746,28 +3688,6 @@
 	)
 	(global_label "GND"
 		(shape bidirectional)
-		(at 212.09 92.71 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "a3254b1f-1665-4da7-9334-719996294eb3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 205.7167 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape bidirectional)
 		(at 88.9 123.19 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3790,7 +3710,7 @@
 	)
 	(global_label "+20V"
 		(shape bidirectional)
-		(at 95.25 80.01 0)
+		(at 99.06 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3800,7 +3720,7 @@
 		)
 		(uuid "ad3d6fa0-119d-4418-9448-0a6a04c32b52")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.5909 80.01 0)
+			(at 106.4009 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3823,28 +3743,6 @@
 		(uuid "c7fcbbf4-c28f-4304-b8d2-97a9de1816ab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 159.6353 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape bidirectional)
-		(at 160.02 97.79 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "c8ea5ef8-a8c0-4802-8837-a0c5d9809390")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.6467 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3878,22 +3776,22 @@
 	)
 	(global_label "V5V"
 		(shape bidirectional)
-		(at 110.49 120.65 0)
+		(at 106.68 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "d94af480-654c-417f-ae51-1c710e995ff7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.4763 120.65 0)
+			(at 100.6937 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5304,7 +5202,7 @@
 	)
 	(symbol
 		(lib_id "Clock Controller-eagle-import:DMG7430LFG-7")
-		(at 104.14 82.55 180)
+		(at 107.95 82.55 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5312,7 +5210,7 @@
 		(dnp no)
 		(uuid "d6098a33-ce35-4c20-9ad0-1afa08e9d5ed")
 		(property "Reference" "Q1"
-			(at 104.14 82.55 0)
+			(at 107.95 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5321,7 +5219,7 @@
 			)
 		)
 		(property "Value" "DMG7430LFG-7"
-			(at 104.14 82.55 0)
+			(at 107.95 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5330,7 +5228,7 @@
 			)
 		)
 		(property "Footprint" "Clock Controller:POWERDI3333-8"
-			(at 104.14 82.55 0)
+			(at 107.95 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5339,7 +5237,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 82.55 0)
+			(at 107.95 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5348,7 +5246,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 104.14 82.55 0)
+			(at 107.95 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
