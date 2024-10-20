@@ -3105,7 +3105,8 @@
 	)
 	(symbol
 		(lib_id "Clock Controller-eagle-import:HDR-1X2H")
-		(at 118.11 60.96 270)
+		(at 118.11 60.96 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
