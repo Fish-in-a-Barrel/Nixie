@@ -696,7 +696,7 @@
 						(justify right top)
 					)
 				)
-				(pin no_connect line
+				(pin power_in line
 					(at 6.35 -1.802 180)
 					(length 2.54)
 					(name "V+"
@@ -714,7 +714,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 5.818 0)
 					(length 2.54)
 					(name "'2'"
@@ -732,7 +732,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 8.358 0)
 					(length 2.54)
 					(name "'1'"
@@ -750,7 +750,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 -14.502 0)
 					(length 2.54)
 					(name "DP"
@@ -768,7 +768,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 10.898 0)
 					(length 2.54)
 					(name "'0'"
@@ -786,7 +786,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 -11.962 0)
 					(length 2.54)
 					(name "'9'"
@@ -804,7 +804,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 -9.422 0)
 					(length 2.54)
 					(name "'8'"
@@ -822,7 +822,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 -6.882 0)
 					(length 2.54)
 					(name "'7'"
@@ -840,7 +840,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 -4.342 0)
 					(length 2.54)
 					(name "'6'"
@@ -858,7 +858,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 -1.802 0)
 					(length 2.54)
 					(name "'5'"
@@ -876,7 +876,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 0.738 0)
 					(length 2.54)
 					(name "'4'"
@@ -894,7 +894,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -6.35 3.278 0)
 					(length 2.54)
 					(name "'3'"
@@ -905,239 +905,6 @@
 						)
 					)
 					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Nixie Driver-eagle-import:MMBTA42LT1G"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MMBTA42LT1G_1_0"
-				(circle
-					(center 0 -0.571)
-					(radius 3.81)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.845 -0.572) (xy -1.575 -0.572)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.575 -2.781) (xy -1.575 1.638)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.575 -1.511) (xy 2.235 -2.781)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.575 0.368) (xy 2.235 1.638)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.8 -2.311) (xy -0.47 -1.372)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.47 -1.372) (xy 0.8 -2.311)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.8 -2.311) (xy -0.8 -2.311)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.235 -3.111) (xy 2.235 -2.781)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.235 1.638) (xy 2.235 4.381)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.385 -0.572 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.235 -5.639 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.235 4.496 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1795,176 +1562,580 @@
 				)
 			)
 		)
+		(symbol "Transistor_BJT:MMBTA42"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MMBTA42"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "NPN High Voltage Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MMBTA42_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBTA42_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.08)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+48V"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+48V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+48V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+48V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+48V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND1"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND1"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND1_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND1_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 123.19 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cf5b94a4-a303-47bb-8eee-7527c4598977")
+	)
+	(no_connect
+		(at 81.28 43.18)
+		(uuid "682d534a-b9ef-4f42-a56d-0b3ada59fc56")
 	)
 	(wire
 		(pts
-			(xy 142.24 132.08) (xy 140.97 132.08)
+			(xy 128.27 58.42) (xy 129.54 58.42)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "01637a3b-6fda-4f7d-93d2-337677fe4925")
+		(uuid "09d143d5-2aef-48f8-bd62-55114616577e")
 	)
 	(wire
 		(pts
-			(xy 175.26 101.613) (xy 175.26 100.343)
+			(xy 128.27 55.88) (xy 129.54 55.88)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "04d6f9a6-655d-4c41-b861-d8ab0be405a9")
+		(uuid "0fe34883-3339-410f-a256-0998217b206f")
 	)
 	(wire
 		(pts
-			(xy 208.28 55.88) (xy 209.55 55.88)
+			(xy 209.55 66.04) (xy 208.28 66.04)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "08467267-c270-4229-b5f1-6977e9a76976")
+		(uuid "14f4890d-6c57-4ae8-ab71-52033419d0c7")
 	)
 	(wire
 		(pts
-			(xy 104.14 50.8) (xy 104.14 52.07)
+			(xy 209.55 50.8) (xy 208.28 50.8)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "085badfe-ee5b-467b-af6d-d19d8f24d7e7")
+		(uuid "161363af-2aaa-499a-a258-bf89c18d0c3f")
 	)
 	(wire
 		(pts
-			(xy 83.82 152.806) (xy 83.82 151.536)
+			(xy 82.55 63.5) (xy 81.28 63.5)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "08820239-9268-4587-9e60-25070f52b6fa")
-	)
-	(wire
-		(pts
-			(xy 81.28 71.12) (xy 82.55 71.12)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "094834c1-3ac4-47b3-b70b-8acee1f5fe8f")
-	)
-	(wire
-		(pts
-			(xy 129.54 50.8) (xy 104.14 50.8)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "0b447a3c-0ffd-44b4-a269-0e6f7ce5dc29")
-	)
-	(wire
-		(pts
-			(xy 83.82 162.941) (xy 83.82 164.211)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "164a478b-1827-4813-ab5e-0acbc3249bca")
-	)
-	(wire
-		(pts
-			(xy 129.54 76.2) (xy 128.27 76.2)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "17645f41-3df4-4f17-a2bd-423b3958cccf")
-	)
-	(wire
-		(pts
-			(xy 137.16 106.68) (xy 135.89 106.68)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "1bcad362-bd81-4f8c-9a88-91c466f5ede4")
-	)
-	(wire
-		(pts
-			(xy 119.38 137.147) (xy 119.38 138.417)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "1c0175b9-3e1a-4f08-a746-1e9472dda552")
-	)
-	(wire
-		(pts
-			(xy 144.78 111.747) (xy 144.78 113.017)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "212c95fa-ad3e-45d3-a742-f5bcaac7ecaf")
-	)
-	(wire
-		(pts
-			(xy 81.28 40.64) (xy 82.55 40.64)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "23555836-b140-4019-b23c-2b4e85f3e94a")
-	)
-	(wire
-		(pts
-			(xy 180.34 168.91) (xy 180.34 170.18)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "23a52b16-43c1-4436-9082-8da8915ff0e0")
-	)
-	(wire
-		(pts
-			(xy 208.28 58.42) (xy 209.55 58.42)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "23d78b28-398e-400a-b71c-6771e4199d72")
-	)
-	(wire
-		(pts
-			(xy 81.28 63.5) (xy 82.55 63.5)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "2a7179cc-1bed-412f-bac3-7759cf8e85ba")
-	)
-	(wire
-		(pts
-			(xy 208.28 63.5) (xy 209.55 63.5)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "2bdb4c5d-b3fd-4100-9e3d-44bac5228e2f")
+		(uuid "22eb3cfe-1f46-433e-85c5-1d0066779275")
 	)
 	(wire
 		(pts
@@ -1978,53 +2149,83 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 101.613) (xy 144.78 100.343)
+			(xy 209.55 55.88) (xy 208.28 55.88)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "36b47e9d-6942-481a-a1ce-d7ec3b020c4a")
+		(uuid "34ecc43a-67cb-406c-83f7-6a92e5408603")
 	)
 	(wire
 		(pts
-			(xy 224.79 132.08) (xy 226.06 132.08)
+			(xy 128.27 81.28) (xy 129.54 81.28)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "379db7cd-9d12-4e86-a1a3-f88be7c9258d")
+		(uuid "36e6f44d-95c7-40f7-a48e-4f1686c4b35d")
 	)
 	(wire
 		(pts
-			(xy 81.28 66.04) (xy 82.55 66.04)
+			(xy 128.27 76.2) (xy 129.54 76.2)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "394ce76e-535b-4a21-93be-5ac4cc7066b2")
+		(uuid "3b06ea77-d348-4c55-b42c-89cef8bd608e")
 	)
 	(wire
 		(pts
-			(xy 106.68 157.48) (xy 105.41 157.48)
+			(xy 209.55 58.42) (xy 208.28 58.42)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "467face3-8270-4f59-b227-7b8f6ef345a6")
+		(uuid "3bf6182c-f9b1-4099-bef3-328d9ad8c5e6")
 	)
 	(wire
 		(pts
-			(xy 81.28 48.26) (xy 82.55 48.26)
+			(xy 209.55 60.96) (xy 208.28 60.96)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "47453b74-4bf5-47c5-98d2-99a370320858")
+		(uuid "3c83e0c1-c736-4414-8443-e93bd0c88c22")
+	)
+	(wire
+		(pts
+			(xy 226.06 121.92) (xy 224.79 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d1e98cf-546d-4f31-9d20-77d0a3ededfb")
+	)
+	(wire
+		(pts
+			(xy 82.55 40.64) (xy 81.28 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f43b6f2-d906-42f3-80ff-dc96d090f609")
+	)
+	(wire
+		(pts
+			(xy 82.55 68.58) (xy 81.28 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4380d962-1909-4fb2-9f6f-4a31d90faf9e")
 	)
 	(wire
 		(pts
@@ -2038,113 +2239,73 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 81.28) (xy 128.27 81.28)
+			(xy 226.06 124.46) (xy 224.79 124.46)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "48e00ce3-49de-479b-ae12-3c1c7fb2e7d4")
+		(uuid "48fad3a1-122d-496c-8b5f-eb1b61ea9bf7")
 	)
 	(wire
 		(pts
-			(xy 114.3 111.747) (xy 114.3 113.017)
+			(xy 226.06 111.76) (xy 224.79 111.76)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "4b5cd37d-7665-4362-9183-1be83f60f9a0")
+		(uuid "59046025-2bd1-4805-97fc-47a27850f66c")
 	)
 	(wire
 		(pts
-			(xy 129.54 63.5) (xy 128.27 63.5)
+			(xy 226.06 127) (xy 224.79 127)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "4f7fa384-8470-42d6-ba4b-24784b5a60ef")
+		(uuid "5d9c9926-bb81-4c7a-ac2c-7a2be17e0dec")
 	)
 	(wire
 		(pts
-			(xy 111.76 132.08) (xy 110.49 132.08)
+			(xy 82.55 66.04) (xy 81.28 66.04)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "4f863488-da65-4bb7-a446-8df8874c0c92")
+		(uuid "69898f1a-e2d1-4675-8246-db934e2cf90d")
 	)
 	(wire
 		(pts
-			(xy 224.79 121.92) (xy 226.06 121.92)
+			(xy 209.55 68.58) (xy 208.28 68.58)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "600336af-f8e8-4876-9e8d-ba558f61048a")
+		(uuid "6d7b60c6-ca25-49e1-934f-917d34380943")
 	)
 	(wire
 		(pts
-			(xy 129.54 66.04) (xy 128.27 66.04)
+			(xy 226.06 109.22) (xy 224.79 109.22)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "642f3b10-f1e0-4bfe-8ff7-93f0a37581f2")
+		(uuid "70dbee3c-f7a6-47ef-b31c-25cf49eb36f3")
 	)
 	(wire
 		(pts
-			(xy 81.28 68.58) (xy 82.55 68.58)
+			(xy 86.36 48.26) (xy 81.28 48.26)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "67f2485a-02bd-4210-bc79-47360dc06a1a")
-	)
-	(wire
-		(pts
-			(xy 149.86 127.013) (xy 149.86 125.743)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "68bee579-365e-4925-be8c-bdc81ba2edd2")
-	)
-	(wire
-		(pts
-			(xy 224.79 134.62) (xy 226.06 134.62)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "69fd3a12-83ad-4746-b155-38ba26c37bbb")
-	)
-	(wire
-		(pts
-			(xy 144.78 162.547) (xy 144.78 163.817)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "6abf0cb5-7e64-4805-80eb-29a86ef64f40")
-	)
-	(wire
-		(pts
-			(xy 76.2 157.874) (xy 74.93 157.874)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "6c3e05af-267b-4e47-b6a9-b8321862a944")
+		(uuid "7217d8b7-9478-490f-9e63-dfb630875f1f")
 	)
 	(wire
 		(pts
@@ -2158,66 +2319,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 55.88) (xy 128.27 55.88)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "756889f8-4dca-432f-8983-018ae51341e4")
-	)
-	(wire
-		(pts
-			(xy 81.28 132.474) (xy 80.01 132.474)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "77488e80-c5d4-455d-a2b0-c1daac408513")
-	)
-	(wire
-		(pts
-			(xy 81.28 53.34) (xy 82.55 53.34)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "79a8ca7b-6ba1-4500-a070-2905f273da9b")
-	)
-	(wire
-		(pts
-			(xy 83.82 101.613) (xy 83.82 100.343)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "79e1e1c8-93aa-4c07-b269-23be3948e946")
-	)
-	(wire
-		(pts
-			(xy 119.38 127.013) (xy 119.38 125.743)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "7aa27743-21e3-4a5a-8eb7-5937c5a1466c")
-	)
-	(wire
-		(pts
-			(xy 114.3 101.613) (xy 114.3 100.343)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "7caee733-5f60-475a-b85f-05dcef83d267")
-	)
-	(wire
-		(pts
 			(xy 82.55 78.74) (xy 129.54 78.74)
 		)
 		(stroke
@@ -2228,127 +2329,47 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 114.3) (xy 226.06 114.3)
+			(xy 226.06 116.84) (xy 224.79 116.84)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "84eb135a-5d7b-4f44-8bf3-6569ec6af9f6")
+		(uuid "87c5700a-e581-4178-ac41-9a3a48d51725")
 	)
 	(wire
 		(pts
-			(xy 83.82 111.747) (xy 83.82 113.017)
+			(xy 209.55 63.5) (xy 208.28 63.5)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "8623d14f-491f-4a94-b1aa-4f1c728ad932")
+		(uuid "8a2e1dd6-acb1-4323-9793-bf7739923413")
 	)
 	(wire
 		(pts
-			(xy 208.28 68.58) (xy 209.55 68.58)
+			(xy 123.19 45.72) (xy 123.19 50.8)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "8634cfd1-877c-42b9-a233-3c24fd1413dd")
+		(uuid "90feeca1-c146-4154-bcfe-c50a09c7d953")
 	)
 	(wire
 		(pts
-			(xy 180.34 127.013) (xy 180.34 125.743)
+			(xy 226.06 134.62) (xy 224.79 134.62)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "8b07f2fd-52c3-4f82-8ad8-a53013d723bf")
+		(uuid "a6210a20-b34e-4825-ad3f-d6510a407200")
 	)
 	(wire
 		(pts
-			(xy 203.2 121.92) (xy 203.2 128.27)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "90381d06-3ea3-4b49-984d-529da8fd1c6c")
-	)
-	(wire
-		(pts
-			(xy 224.79 129.54) (xy 226.06 129.54)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "9143cb8a-eb29-4c61-ab8f-3481283110ee")
-	)
-	(wire
-		(pts
-			(xy 81.28 45.72) (xy 82.55 45.72)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "96580f97-c831-4ef5-9cb3-7c8e5f4b322b")
-	)
-	(wire
-		(pts
-			(xy 175.26 111.747) (xy 175.26 113.017)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "96e66d5a-a683-4e5c-b097-ff72cc3f691d")
-	)
-	(wire
-		(pts
-			(xy 208.28 53.34) (xy 209.55 53.34)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "9a4553b7-96a5-41f8-b237-877f7d05485c")
-	)
-	(wire
-		(pts
-			(xy 129.54 68.58) (xy 128.27 68.58)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "9f3c79cf-1388-4064-bf6c-4baddc589b23")
-	)
-	(wire
-		(pts
-			(xy 180.34 137.147) (xy 180.34 156.21)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "a519c075-0784-4922-a73b-9660e243d70e")
-	)
-	(wire
-		(pts
-			(xy 224.79 127) (xy 226.06 127)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "a6976270-5de0-48c8-9253-452b283dcf82")
-	)
-	(wire
-		(pts
-			(xy 81.28 50.8) (xy 82.55 50.8)
+			(xy 81.28 50.8) (xy 88.9 50.8)
 		)
 		(stroke
 			(width 0.25)
@@ -2358,476 +2379,176 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 111.76) (xy 226.06 111.76)
+			(xy 82.55 53.34) (xy 81.28 53.34)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "aa882c7e-63bb-4a1a-8c7b-862acc189c1e")
+		(uuid "a90ec2bd-f299-448d-b29d-fe7fbf8cc9f2")
 	)
 	(wire
 		(pts
-			(xy 167.64 106.68) (xy 166.37 106.68)
+			(xy 128.27 60.96) (xy 129.54 60.96)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "b4930600-e09f-4eca-b196-29a848795c96")
+		(uuid "aa97419c-debc-4231-bf0e-6815f7a2a168")
 	)
 	(wire
 		(pts
-			(xy 212.09 121.92) (xy 203.2 121.92)
+			(xy 226.06 129.54) (xy 224.79 129.54)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "b8114638-1ab6-47e3-8b97-4db2ae0f9529")
+		(uuid "ab2c02be-d927-459b-bbf6-a356d7163961")
 	)
 	(wire
 		(pts
-			(xy 88.9 137.541) (xy 88.9 138.811)
+			(xy 209.55 53.34) (xy 208.28 53.34)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "bb51b968-e7ed-417b-a2b3-4dda01f80b4b")
+		(uuid "ab692f2c-cc48-49ff-8d9d-fc05a70c5bf9")
 	)
 	(wire
 		(pts
-			(xy 129.54 60.96) (xy 128.27 60.96)
+			(xy 208.28 118.11) (xy 208.28 121.92)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "bdc35942-fe92-4569-84dc-f56c9a7b9c2e")
+		(uuid "ab7277c1-d7c8-4cc0-85db-93b6e609f764")
 	)
 	(wire
 		(pts
-			(xy 224.79 119.38) (xy 226.06 119.38)
+			(xy 118.11 50.8) (xy 123.19 50.8)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "c2a2187f-b5e8-430b-9198-3399b700ebfa")
+		(uuid "ae872c4f-8ab6-4b11-874a-9ae0e0591391")
 	)
 	(wire
 		(pts
-			(xy 203.2 140.97) (xy 203.2 142.24)
+			(xy 128.27 63.5) (xy 129.54 63.5)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "c2f49ddc-4d66-45d6-bc9a-6c4fdb6f9319")
+		(uuid "b473346f-8afa-4d9c-af0f-c4db4b537d55")
 	)
 	(wire
 		(pts
-			(xy 137.16 157.48) (xy 135.89 157.48)
+			(xy 226.06 132.08) (xy 224.79 132.08)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "c474aa36-4ef5-452f-aee0-03e638946d8b")
+		(uuid "b8d344fe-2623-4965-821f-906f99cdf5c9")
 	)
 	(wire
 		(pts
-			(xy 106.68 106.68) (xy 105.41 106.68)
+			(xy 128.27 68.58) (xy 129.54 68.58)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "c87fdcb2-a413-47b5-b9ca-dd8ab9a3dd31")
+		(uuid "c2f97c86-b0b1-43fc-810e-3f9c3bb0ee6a")
 	)
 	(wire
 		(pts
-			(xy 224.79 124.46) (xy 226.06 124.46)
+			(xy 86.36 45.72) (xy 81.28 45.72)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "d18116f6-6d49-43cc-b90e-fa7040f5a9c8")
+		(uuid "cbe0f620-e2d8-4e77-b591-4b434bd3a683")
 	)
 	(wire
 		(pts
-			(xy 114.3 152.413) (xy 114.3 151.143)
+			(xy 128.27 66.04) (xy 129.54 66.04)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "dd3b490b-6ee9-4ca5-aa7a-ba5927453fa4")
+		(uuid "cd821f8b-9a8c-4e2a-bc26-91a51d8e75fd")
 	)
 	(wire
 		(pts
-			(xy 208.28 60.96) (xy 209.55 60.96)
+			(xy 82.55 71.12) (xy 81.28 71.12)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "ddf6978d-eff2-4b62-bf6f-aa73ebab7385")
+		(uuid "dbe58678-a676-48b0-aeaf-9af886c91b52")
 	)
 	(wire
 		(pts
-			(xy 144.78 152.413) (xy 144.78 151.143)
+			(xy 123.19 50.8) (xy 129.54 50.8)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "de29b716-343b-4fec-9a73-ba4af474ec61")
+		(uuid "ea10ac3e-6de0-4a74-b18e-80acba732234")
 	)
 	(wire
 		(pts
-			(xy 208.28 81.28) (xy 209.55 81.28)
+			(xy 226.06 114.3) (xy 224.79 114.3)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "e116ee83-939a-4306-93a5-d5753e16f011")
+		(uuid "ec72ab33-00e4-4573-be99-6387cb7bf673")
 	)
 	(wire
 		(pts
-			(xy 88.9 127.406) (xy 88.9 126.136)
+			(xy 208.28 121.92) (xy 212.09 121.92)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "e637089d-eb22-461d-babe-a45948c0af64")
+		(uuid "f1060bdf-208a-4261-8472-a6ad6db86185")
 	)
 	(wire
 		(pts
-			(xy 129.54 58.42) (xy 128.27 58.42)
+			(xy 165.1 137.16) (xy 165.1 146.05)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "eb67195f-e5f9-4c0d-83d2-2a27f9f7d158")
+		(uuid "f10dfd8d-533a-4bcd-8899-e4d38d167404")
 	)
 	(wire
 		(pts
-			(xy 76.2 106.68) (xy 74.93 106.68)
+			(xy 226.06 119.38) (xy 224.79 119.38)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "ed6dc447-49a5-44a7-9021-10605cf1a9f2")
-	)
-	(wire
-		(pts
-			(xy 208.28 50.8) (xy 209.55 50.8)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "f2236ab2-4086-4644-ab9c-c93a024408e3")
-	)
-	(wire
-		(pts
-			(xy 104.14 59.69) (xy 104.14 60.96)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "f246c3b6-1734-4ade-9768-f81eb8a028db")
-	)
-	(wire
-		(pts
-			(xy 224.79 109.22) (xy 226.06 109.22)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "f8af58f7-249e-4a04-bbd9-ef45f94f3b1d")
-	)
-	(wire
-		(pts
-			(xy 149.86 137.147) (xy 149.86 138.417)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "f99a98fb-be7f-42b8-876a-679c460b0317")
-	)
-	(wire
-		(pts
-			(xy 114.3 162.547) (xy 114.3 163.817)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "fc57f1b5-d644-428c-956d-7d3c795f162c")
-	)
-	(wire
-		(pts
-			(xy 208.28 66.04) (xy 209.55 66.04)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "fc738cf9-f16c-4a73-bd1c-b7f08f0961c0")
-	)
-	(wire
-		(pts
-			(xy 224.79 116.84) (xy 226.06 116.84)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "fc854f08-bade-4edc-a58c-4e4cba5048be")
-	)
-	(wire
-		(pts
-			(xy 172.72 132.08) (xy 171.45 132.08)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "ff570aef-0f92-42a2-ad50-8b19b0301e2a")
-	)
-	(text "Q2"
-		(exclude_from_sim no)
-		(at 85.395 158.632 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "0eb93726-9411-478f-b423-a95a981a7d36")
-	)
-	(text "Q1"
-		(exclude_from_sim no)
-		(at 90.475 132.904 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "13767161-bc5c-45b3-b519-cd15c31a1fc7")
-	)
-	(text "Q6"
-		(exclude_from_sim no)
-		(at 146.355 107.401 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "1b781f0d-4494-44dd-9f0e-fa2c217cf039")
-	)
-	(text "Q9"
-		(exclude_from_sim no)
-		(at 176.835 107.402 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "36b93ec8-1593-4123-bdca-8d4894b325f1")
-	)
-	(text "R1"
-		(exclude_from_sim no)
-		(at 179.07 163.489 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "60a4e19e-7595-43e6-bf64-600b3a98e9df")
-	)
-	(text "Q4"
-		(exclude_from_sim no)
-		(at 120.955 132.874 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "6ebaccea-6e0c-4695-b9a4-2896b0fd5f1c")
-	)
-	(text "IN-12B"
-		(exclude_from_sim no)
-		(at 214.63 144.042 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "71098364-4670-4fbb-b35e-940d0b47ed70")
-	)
-	(text "100nF"
-		(exclude_from_sim no)
-		(at 106.051 58.9 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "710fa72c-8c7b-452f-b0b3-86a6f070caab")
-	)
-	(text "J2"
-		(exclude_from_sim no)
-		(at 72.55 62.23 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "74e105d2-428d-4bae-8cd7-642b27676a2c")
-	)
-	(text "Q5"
-		(exclude_from_sim no)
-		(at 115.875 158.238 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "74e67ccb-87d6-47c6-a6d7-744332dfb3ce")
-	)
-	(text "Q7"
-		(exclude_from_sim no)
-		(at 151.435 132.838 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "7d6cb055-640c-48ea-98f8-ef743761de31")
-	)
-	(text "Q3"
-		(exclude_from_sim no)
-		(at 115.875 107.438 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "825b060c-8bbd-4e19-89ff-1a1b959501b4")
-	)
-	(text "U1"
-		(exclude_from_sim no)
-		(at 167.981 48.26 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "9715b4eb-fe20-44f7-a082-6cda2170be58")
-	)
-	(text "Q8"
-		(exclude_from_sim no)
-		(at 146.355 158.237 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "a092f406-d652-486e-bd0e-97d35296e54c")
-	)
-	(text "R3"
-		(exclude_from_sim no)
-		(at 201.93 135.876 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "a32e4deb-1205-44d3-8d95-c3460869dedb")
-	)
-	(text "C2"
-		(exclude_from_sim no)
-		(at 102.229 57.172 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "b0096597-04f9-4f28-90ce-aebd2b25071e")
-	)
-	(text "V1"
-		(exclude_from_sim no)
-		(at 217.439 107.006 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "cdfa6a9f-6af6-4b8a-9b1d-65fa2bf5e08b")
-	)
-	(text "Q10"
-		(exclude_from_sim no)
-		(at 181.915 133.256 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "ce32ce2d-4b31-42f1-9a81-48377fa05445")
-	)
-	(text "Q0"
-		(exclude_from_sim no)
-		(at 85.395 107.438 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "e0188fd0-7d04-4929-824b-a9f7c6a7e5f0")
-	)
-	(text "J1"
-		(exclude_from_sim no)
-		(at 72.877 39.37 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "fdb0583b-7da8-4482-b770-17cb9fb22022")
+		(uuid "f20fde91-2521-4792-b254-48cef0d4ab8d")
 	)
 	(label "Cathode_3"
-		(at 114.3 101.613 0)
+		(at 114.3 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2837,19 +2558,8 @@
 		)
 		(uuid "0b24dd36-3567-429e-917e-a64f9558fea3")
 	)
-	(label "N_GND"
-		(at 180.34 168.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "0dd53f7b-6e54-43e4-8224-e5920eeca650")
-	)
 	(label "Cathode_6"
-		(at 144.78 101.613 0)
+		(at 139.7 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2860,18 +2570,18 @@
 		(uuid "12ee8c52-fa7c-4031-a00a-833f435df698")
 	)
 	(label "Cathode_6"
-		(at 224.79 119.38 180)
+		(at 226.06 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "151308de-0565-4f9d-baea-28ce928b0215")
 	)
 	(label "Cathode_7"
-		(at 149.86 127.013 0)
+		(at 139.7 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2882,73 +2592,62 @@
 		(uuid "15ccdc73-1595-4923-a780-df77759b43b4")
 	)
 	(label "Driver_Dot"
-		(at 172.72 132.08 0)
+		(at 157.48 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "1a7ca822-43b1-49fc-8e02-38e37f21076a")
 	)
 	(label "Driver_5"
-		(at 208.28 63.5 180)
+		(at 209.55 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "28b5c75d-383c-45a4-b4f6-401331e6d2be")
 	)
 	(label "Driver_5"
-		(at 106.68 157.48 0)
+		(at 106.68 157.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "28fa47df-b480-47c1-8cd1-9fcfa98e130b")
 	)
 	(label "Driver_3"
-		(at 129.54 68.58 0)
+		(at 128.27 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "29352da3-09ac-47db-959c-11c1b721a497")
 	)
 	(label "Driver_7"
-		(at 129.54 81.28 0)
+		(at 128.27 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "2a2a3dfe-cb03-4bb4-aa25-8a88149b7e20")
 	)
 	(label "Cathode_4"
-		(at 224.79 124.46 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "2dc1748a-7926-46cb-ba67-9bc08be1f1b7")
-	)
-	(label "Driver_4"
-		(at 111.76 132.08 0)
+		(at 226.06 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2956,10 +2655,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "34c46f1c-679a-4604-9fc8-5401891237b2")
+		(uuid "2dc1748a-7926-46cb-ba67-9bc08be1f1b7")
 	)
-	(label "Driver_9"
-		(at 208.28 66.04 180)
+	(label "Driver_4"
+		(at 106.68 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2967,10 +2666,21 @@
 			)
 			(justify right bottom)
 		)
+		(uuid "34c46f1c-679a-4604-9fc8-5401891237b2")
+	)
+	(label "Driver_9"
+		(at 209.55 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
 		(uuid "351e930e-645b-4202-8dc5-2ac9856d65b7")
 	)
 	(label "Cathode_0"
-		(at 83.82 101.613 0)
+		(at 88.9 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2981,106 +2691,51 @@
 		(uuid "378045b7-4e6e-4ac5-872d-a696ec703c9a")
 	)
 	(label "ADDR1/CLK"
-		(at 129.54 58.42 0)
+		(at 128.27 58.42 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "3930e87b-7090-4dd1-89ec-5ff2c9fa7170")
 	)
-	(label "N_GND"
-		(at 88.9 137.541 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "3e7e4ec3-d9c0-4b20-9136-be6c91454d6f")
-	)
-	(label "N_GND"
-		(at 144.78 162.547 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "3e80ddff-7b45-4571-8eb8-f8f269ce2e8c")
-	)
 	(label "Driver_Dot"
-		(at 129.54 76.2 0)
+		(at 128.27 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "3fdcc429-d81c-41a4-a391-9b725dd0de54")
 	)
 	(label "Driver_8"
-		(at 137.16 157.48 0)
+		(at 132.08 157.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "40c1bcdf-630e-42dd-9ad5-7a12450ec500")
 	)
 	(label "Cathode_2"
-		(at 224.79 129.54 180)
+		(at 226.06 129.54 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "44604cc5-34c8-4517-84a6-573990cd54df")
 	)
 	(label "Driver_7"
-		(at 142.24 132.08 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "48d4a7b5-86f6-4abe-8094-b392760c2ff7")
-	)
-	(label "N_GND"
-		(at 83.82 162.941 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "4f94ef08-0bed-4e9f-8f29-649ead15385c")
-	)
-	(label "Driver_1"
-		(at 81.28 132.474 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "5189980c-b946-420a-9e7e-c3c9ea503f88")
-	)
-	(label "ADDR3"
-		(at 81.28 71.12 180)
+		(at 132.08 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3088,32 +2743,32 @@
 			)
 			(justify right bottom)
 		)
+		(uuid "48d4a7b5-86f6-4abe-8094-b392760c2ff7")
+	)
+	(label "Driver_1"
+		(at 81.28 132.08 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "5189980c-b946-420a-9e7e-c3c9ea503f88")
+	)
+	(label "ADDR3"
+		(at 82.55 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
 		(uuid "548cbbb0-214a-4d5b-9708-b7918265c1d9")
 	)
-	(label "N_GND"
-		(at 149.86 137.147 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "55e87ece-aad9-4286-b676-2dd44ed95a30")
-	)
-	(label "N_GND"
-		(at 114.3 111.747 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "5f6fb085-5888-43b8-8641-312aea3c8440")
-	)
 	(label "Cathode_Dot"
-		(at 180.34 127.013 0)
+		(at 165.1 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3124,7 +2779,7 @@
 		(uuid "66377136-3197-4681-8792-5985704e62ef")
 	)
 	(label "Cathode_9"
-		(at 175.26 101.613 0)
+		(at 165.1 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3135,51 +2790,62 @@
 		(uuid "6e583764-3257-4321-9172-a3ad4662d179")
 	)
 	(label "Driver_2"
-		(at 76.2 157.874 0)
+		(at 81.28 157.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "71e53b58-8f6a-4d73-a039-d3fcc20a2665")
 	)
 	(label "Cathode_7"
-		(at 224.79 116.84 180)
+		(at 226.06 116.84 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "72969223-32b4-45b2-b7cb-6f24b2896ba2")
 	)
 	(label "Driver_6"
-		(at 208.28 60.96 180)
+		(at 209.55 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "74e7ee65-7296-407a-bf65-30577470f76c")
 	)
 	(label "ADDR1/CLK"
-		(at 81.28 66.04 180)
+		(at 82.55 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "76701a98-1d85-4093-b1b1-b265c9ced145")
 	)
 	(label "Cathode_8"
-		(at 224.79 114.3 180)
+		(at 226.06 114.3 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c8636c8-a877-443b-8672-bc781b9e91ec")
+	)
+	(label "Driver_3"
+		(at 106.68 106.68 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3187,54 +2853,21 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "7c8636c8-a877-443b-8672-bc781b9e91ec")
-	)
-	(label "N_GND"
-		(at 175.26 111.747 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "7fd510f7-c29d-40fe-88fc-0c1edb5fd46f")
-	)
-	(label "Driver_3"
-		(at 106.68 106.68 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
 		(uuid "81b672ac-a721-4060-b288-55c0137d451b")
 	)
-	(label "N_GND"
-		(at 83.82 111.747 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "852f9471-efb4-4c76-a4ee-8c27037ee022")
-	)
 	(label "Driver_9"
-		(at 167.64 106.68 0)
+		(at 157.48 106.68 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "89e2b074-6313-4630-93db-be595f7d6a3e")
 	)
 	(label "Cathode_8"
-		(at 144.78 152.413 0)
+		(at 139.7 152.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3244,140 +2877,107 @@
 		)
 		(uuid "8cb8dd5c-c164-4678-afbe-7580745cec39")
 	)
-	(label "N_GND"
-		(at 119.38 137.147 0)
+	(label "ADDR0/DAT"
+		(at 82.55 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
 			(justify left bottom)
-		)
-		(uuid "8e8fd5ca-ba2e-462f-bcb5-4011c840b932")
-	)
-	(label "ADDR0/DAT"
-		(at 81.28 63.5 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
 		)
 		(uuid "94fc0d58-b790-495d-80f7-76695b55baea")
 	)
 	(label "ADDR2"
-		(at 208.28 53.34 180)
+		(at 209.55 53.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "9a0f9e8c-4680-4942-837c-f8b0bed04c10")
 	)
 	(label "Driver_0"
-		(at 208.28 58.42 180)
+		(at 209.55 58.42 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "9a1bc7b8-e4a4-4cff-b9c4-d33169cf2277")
 	)
-	(label "VDD"
-		(at 104.14 50.8 0)
+	(label "SCL"
+		(at 101.6 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.016 1.016)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "9a6830c4-b0b8-412a-823e-ebcfcf65b2bd")
-	)
-	(label "N_GND"
-		(at 114.3 162.547 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "a35232a9-3f4a-43fe-83a9-86fc114b42c4")
+		(uuid "a761a2b0-c741-4343-b137-4c6949ee9af7")
 	)
 	(label "Cathode_5"
-		(at 224.79 121.92 180)
+		(at 226.06 121.92 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "a7e0ede1-732f-4317-94cb-21263b190c02")
 	)
 	(label "Cathode_1"
-		(at 224.79 132.08 180)
+		(at 226.06 132.08 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "a8d3c06c-bf6c-4d8e-b256-c7e9d730d9d8")
 	)
 	(label "~{MCLR}"
-		(at 81.28 40.64 180)
+		(at 82.55 40.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "aabf65ab-2651-4357-a401-86013b79d5ff")
 	)
 	(label "Cathode_9"
-		(at 224.79 111.76 180)
+		(at 226.06 111.76 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "aff94050-8b21-4b96-9a4a-14bd7297064d")
 	)
 	(label "ADDR3"
-		(at 208.28 50.8 180)
+		(at 209.55 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "b09fe149-8891-4f32-aa92-26e2e74d18f2")
 	)
 	(label "~{MCLR}"
-		(at 129.54 63.5 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "b284f050-de14-4060-9b3b-e8ce205e5084")
-	)
-	(label "GND"
-		(at 208.28 81.28 180)
+		(at 128.27 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3385,43 +2985,43 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b5b22556-340e-4c16-a2f5-1bcf66bbf5db")
+		(uuid "b284f050-de14-4060-9b3b-e8ce205e5084")
+	)
+	(label "SDA"
+		(at 101.6 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4565dbd-03b8-4586-bb4b-4e10e619434c")
 	)
 	(label "Driver_6"
-		(at 137.16 106.68 0)
+		(at 132.08 106.68 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "b5d5b2a7-9a34-4c02-8baf-efe69134f0e4")
 	)
 	(label "Cathode_Dot"
-		(at 224.79 109.22 180)
+		(at 226.06 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "b6e04315-16d9-43ed-9cdb-255a2779f5c2")
 	)
-	(label "VDD"
-		(at 81.28 45.72 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "b7adaeac-39c6-44eb-926d-960b90a3a357")
-	)
 	(label "Cathode_2"
-		(at 83.82 152.806 0)
+		(at 88.9 152.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3432,7 +3032,7 @@
 		(uuid "bf1baa87-59c9-4593-849a-fe8652fa0017")
 	)
 	(label "Cathode_4"
-		(at 119.38 127.013 0)
+		(at 114.3 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3443,18 +3043,18 @@
 		(uuid "bfcb9e29-9e37-4739-9694-a08cafe8aeff")
 	)
 	(label "ADDR0/DAT"
-		(at 129.54 55.88 0)
+		(at 128.27 55.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "bfd84f48-f626-4340-ac35-e51f933e89aa")
 	)
 	(label "Cathode_1"
-		(at 88.9 127.406 0)
+		(at 88.9 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3465,29 +3065,18 @@
 		(uuid "c75fff52-5179-4bfc-968d-ca07699a3612")
 	)
 	(label "Driver_8"
-		(at 208.28 68.58 180)
+		(at 209.55 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "c9280a0c-22e7-449f-85a1-6ab7c2851419")
 	)
-	(label "GND"
-		(at 104.14 59.69 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "cb1f602f-57ab-423e-933f-954142d0b48c")
-	)
-	(label "N_GND"
-		(at 81.28 53.34 180)
+	(label "Driver_2"
+		(at 128.27 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3495,29 +3084,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ce723a5b-e872-4999-9b31-1a5a6461e8ad")
-	)
-	(label "Driver_2"
-		(at 129.54 60.96 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
 		(uuid "d2d1df7b-2eeb-4a17-983f-1e71f2abd35e")
-	)
-	(label "VNN"
-		(at 203.2 140.97 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "d3609593-fe96-4650-ba81-f0e6c31b52db")
 	)
 	(label "Cathode_5"
 		(at 114.3 152.413 0)
@@ -3531,73 +3098,62 @@
 		(uuid "d3731e8e-85a0-4bcd-81fc-b368583e8cdc")
 	)
 	(label "Driver_0"
-		(at 76.2 106.68 0)
+		(at 81.28 106.68 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "d6485d2e-f4eb-46fc-acd9-c18642897387")
 	)
 	(label "Cathode_0"
-		(at 224.79 134.62 180)
+		(at 226.06 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "d9e855c1-2275-48f9-a62a-2da10e696d7e")
 	)
 	(label "Driver_1"
-		(at 208.28 55.88 180)
+		(at 209.55 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "e446d2f6-1fee-4d72-b5d8-7d7e0fca6217")
 	)
 	(label "ADDR2"
-		(at 81.28 68.58 180)
+		(at 82.55 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "ea1db9c1-ef4e-4ffd-808a-5d18e2ba021c")
 	)
 	(label "Driver_4"
-		(at 129.54 66.04 0)
+		(at 128.27 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "f5af6f01-5c21-4da4-9207-c2cd9b236a44")
 	)
 	(label "Cathode_3"
-		(at 224.79 127 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "f6d82fc9-ede8-440d-b1c8-783118fe2fa7")
-	)
-	(label "N_GND"
-		(at 144.78 111.747 0)
+		(at 226.06 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3605,29 +3161,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f7823208-dd95-4a27-b4af-365a4ad2abba")
-	)
-	(label "GND"
-		(at 81.28 50.8 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "fb6e17b8-857d-4c63-b2c0-eb971831b52d")
-	)
-	(label "VNN"
-		(at 81.28 48.26 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "fe5c2f30-d38c-4c6c-9d6c-0e1a98a71a7f")
+		(uuid "f6d82fc9-ede8-440d-b1c8-783118fe2fa7")
 	)
 	(symbol
 		(lib_id "Nixie Driver-eagle-import:HDR-2X3")
@@ -3639,12 +3173,11 @@
 		(dnp no)
 		(uuid "0b88452f-63c1-454f-9ae3-ce7b0a60b5ab")
 		(property "Reference" "J2"
-			(at 73.66 69.85 0)
+			(at 73.66 60.706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "HDR-2X3"
@@ -3656,7 +3189,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:HDR-2X3"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical"
 			(at 73.66 69.85 0)
 			(effects
 				(font
@@ -3711,6 +3244,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+48V")
+		(at 123.19 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "15136ad0-3e13-4f3e-a68e-ce71bce33561")
+		(property "Reference" "#PWR017"
+			(at 123.19 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Vdd"
+			(at 123.19 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+48V\""
+			(at 123.19 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bc8753a4-58d9-41ee-9dff-527dfdacc5a2")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Nixie Driver-eagle-import:PI16F15243T-I/SS")
 		(at 168.91 66.04 0)
 		(unit 1)
@@ -3720,24 +3319,22 @@
 		(dnp no)
 		(uuid "180f43f6-44ef-443b-8c51-0f0bdf37b8d5")
 		(property "Reference" "U1"
-			(at 168.91 66.04 0)
+			(at 168.91 46.736 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Value" "100nF"
-			(at 168.91 66.04 0)
+		(property "Value" "PIC16F15243"
+			(at 199.136 46.736 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOP20P65_720X770X160L50X30N"
+		(property "Footprint" "Package_SO:SSOP-20_5.3x7.2mm_P0.65mm"
 			(at 168.91 66.04 0)
 			(effects
 				(font
@@ -3834,8 +3431,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 112.065 106.109 0)
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 111.76 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3843,16 +3440,15 @@
 		(dnp no)
 		(uuid "1c0192fa-910a-4310-9b3c-be24017e58ef")
 		(property "Reference" "Q3"
-			(at 112.065 106.109 0)
+			(at 118.364 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "MMBTA42LT1G"
-			(at 112.065 106.109 0)
+			(at 111.76 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3860,26 +3456,29 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 112.065 106.109 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 116.84 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 111.76 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 112.065 106.109 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 112.065 106.109 0)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 111.76 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3906,16 +3505,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:RES_1206")
-		(at 203.2 134.62 270)
+		(lib_id "power:GND1")
+		(at 88.9 162.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "30806cb4-9029-4f0b-b2a7-6a8d4de77f92")
-		(property "Reference" "R3"
-			(at 203.2 134.62 0)
+		(fields_autoplaced yes)
+		(uuid "2ae46225-e5fb-43da-a7cc-d174d03cc1dd")
+		(property "Reference" "#PWR011"
+			(at 88.9 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3923,17 +3523,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "15k"
-			(at 203.2 134.62 0)
+		(property "Value" "N_GND"
+			(at 88.9 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:RES_1206"
-			(at 203.2 134.62 0)
+		(property "Footprint" ""
+			(at 88.9 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3942,7 +3541,137 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 134.62 0)
+			(at 88.9 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 88.9 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1e6e82a8-2b23-4f05-98d4-a789aae315b6")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 139.7 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2cb3593c-9284-4692-84ed-28742ee74132")
+		(property "Reference" "#PWR010"
+			(at 139.7 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "N_GND"
+			(at 139.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 139.7 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8164c000-0443-4822-a684-3657a099d6e9")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:RES_1206")
+		(at 208.28 111.76 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30806cb4-9029-4f0b-b2a7-6a8d4de77f92")
+		(property "Reference" "R3"
+			(at 205.486 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "15k"
+			(at 210.82 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 208.28 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3951,7 +3680,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 134.62 0)
+			(at 208.28 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3975,16 +3704,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:CAP_0603")
-		(at 104.14 55.88 270)
+		(lib_id "power:GND1")
+		(at 139.7 162.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "582f1a1c-fb85-4b7f-abff-058f903c2e43")
-		(property "Reference" "C2"
-			(at 104.14 55.88 0)
+		(fields_autoplaced yes)
+		(uuid "3302f1b3-1388-460d-9455-7b323bbe14c5")
+		(property "Reference" "#PWR013"
+			(at 139.7 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3992,17 +3722,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100nF"
-			(at 104.14 55.88 0)
+		(property "Value" "N_GND"
+			(at 139.7 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:CAP_0603"
-			(at 104.14 55.88 0)
+		(property "Footprint" ""
+			(at 139.7 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4011,7 +3740,203 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 55.88 0)
+			(at 139.7 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 139.7 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7de9809b-7f39-44af-8654-d4bc36721273")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 82.55 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "47a9742e-3053-4f1b-a349-4ea03773ac25")
+		(property "Reference" "#PWR03"
+			(at 82.55 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "N_GND"
+			(at 82.55 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 82.55 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8ebfac6e-20b0-4dde-bd8a-305aad9e8234")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 165.1 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56dda577-e02a-4875-a8da-98c598d9a5a2")
+		(property "Reference" "#PWR014"
+			(at 165.1 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "N_GND"
+			(at 165.1 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 165.1 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1fd6968f-8d9f-49b8-aedd-3bf08a6a782d")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:CAP_0603")
+		(at 114.3 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "582f1a1c-fb85-4b7f-abff-058f903c2e43")
+		(property "Reference" "C2"
+			(at 114.3 47.498 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 114.3 54.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 114.3 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4020,7 +3945,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 104.14 55.88 0)
+			(at 114.3 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4044,6 +3969,205 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND1")
+		(at 88.9 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d7ba934-28a0-4f4e-b17c-e4607b472e62")
+		(property "Reference" "#PWR04"
+			(at 88.9 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "N_GND"
+			(at 88.9 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 88.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae02ef3c-db4d-4ab8-bfe8-34c2698dc30d")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 114.3 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6381d677-7c7f-4656-bfa8-a409a3e666e0")
+		(property "Reference" "#PWR05"
+			(at 114.3 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "N_GND"
+			(at 114.3 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 114.3 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2010c780-8391-4556-9034-62de96e5b3b2")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 208.28 81.28 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "67aa5e0b-98f6-4a1b-99a1-a50c7f6ea4a9")
+		(property "Reference" "#PWR019"
+			(at 214.63 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 212.09 81.2799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 208.28 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9328f910-ebce-4b5e-8a4f-10a751d693f3")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Nixie Driver-eagle-import:IN-12B")
 		(at 218.44 123.722 180)
 		(unit 1)
@@ -4053,12 +4177,12 @@
 		(dnp no)
 		(uuid "6b5431a2-3396-4975-a206-e0ee5f1ea630")
 		(property "Reference" "V1"
-			(at 218.44 123.722 0)
+			(at 218.44 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify bottom)
 			)
 		)
 		(property "Value" "IN-12B"
@@ -4143,16 +4267,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 173.025 106.109 0)
+		(lib_id "power:GND1")
+		(at 114.3 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6dce319e-c75e-438c-b5bb-fce0a7bb8157")
-		(property "Reference" "Q9"
-			(at 173.025 106.109 0)
+		(fields_autoplaced yes)
+		(uuid "6d0bf5a8-5cec-47e0-8c7b-ad0373f43ba8")
+		(property "Reference" "#PWR09"
+			(at 114.3 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4160,17 +4285,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "MMBTA42LT1G"
-			(at 173.025 106.109 0)
+		(property "Value" "N_GND"
+			(at 114.3 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 173.025 106.109 0)
+		(property "Footprint" ""
+			(at 114.3 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4179,7 +4303,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.025 106.109 0)
+			(at 114.3 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4187,8 +4311,76 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 173.025 106.109 0)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 114.3 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72888577-8c9f-4dbd-8563-9ded44b941ca")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 162.56 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6dce319e-c75e-438c-b5bb-fce0a7bb8157")
+		(property "Reference" "Q9"
+			(at 168.656 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 162.56 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 167.64 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 162.56 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 162.56 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4215,8 +4407,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 112.065 156.908 0)
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 111.76 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4224,16 +4416,15 @@
 		(dnp no)
 		(uuid "6e0e1dbe-721d-4567-a7bb-b8b6db1936c9")
 		(property "Reference" "Q5"
-			(at 112.065 156.908 0)
+			(at 117.856 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "MMBTA42LT1G"
-			(at 112.065 156.908 0)
+			(at 111.76 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4241,26 +4432,29 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 112.065 156.908 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 116.84 159.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 111.76 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 112.065 156.908 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 112.065 156.908 0)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 111.76 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4287,8 +4481,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 86.665 131.902 0)
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 86.36 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4296,16 +4490,15 @@
 		(dnp no)
 		(uuid "6e7bd2c1-352e-4dd0-b6e9-618a079dcd1f")
 		(property "Reference" "Q1"
-			(at 86.665 131.902 0)
+			(at 92.964 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "MMBTA42LT1G"
-			(at 86.665 131.902 0)
+			(at 86.36 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4313,26 +4506,29 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 86.665 131.902 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 91.44 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 86.36 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 86.665 131.902 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 86.665 131.902 0)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 86.36 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4359,16 +4555,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 142.545 106.109 0)
+		(lib_id "power:+48V")
+		(at 86.36 48.26 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "778faa0f-7949-40ae-9815-7849e316ae11")
-		(property "Reference" "Q6"
-			(at 142.545 106.109 0)
+		(fields_autoplaced yes)
+		(uuid "6ed2dae7-d4c1-4ada-9c70-cec860aa5706")
+		(property "Reference" "#PWR016"
+			(at 82.55 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4376,17 +4573,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "MMBTA42LT1G"
-			(at 142.545 106.109 0)
+		(property "Value" "Vnn"
+			(at 90.17 48.2599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 142.545 106.109 0)
+		(property "Footprint" ""
+			(at 86.36 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4395,7 +4592,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.545 106.109 0)
+			(at 86.36 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4403,8 +4600,76 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 142.545 106.109 0)
+		(property "Description" "Power symbol creates a global label with name \"+48V\""
+			(at 86.36 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60abd2c1-f2ed-4de9-9483-713731f81f7b")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 137.16 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "778faa0f-7949-40ae-9815-7849e316ae11")
+		(property "Reference" "Q6"
+			(at 143.764 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 137.16 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 142.24 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 137.16 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 137.16 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4431,16 +4696,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 117.145 131.509 0)
+		(lib_id "power:+48V")
+		(at 86.36 45.72 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "929901d7-cd9b-45bc-a04b-dcd59dd186ad")
-		(property "Reference" "Q4"
-			(at 117.145 131.509 0)
+		(fields_autoplaced yes)
+		(uuid "7fbfa7af-7e13-488e-932e-e386d9b8473c")
+		(property "Reference" "#PWR018"
+			(at 82.55 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4448,17 +4714,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "MMBTA42LT1G"
-			(at 117.145 131.509 0)
+		(property "Value" "Vdd"
+			(at 90.17 45.7199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 117.145 131.509 0)
+		(property "Footprint" ""
+			(at 86.36 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4467,7 +4733,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 117.145 131.509 0)
+			(at 86.36 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4475,8 +4741,76 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 117.145 131.509 0)
+		(property "Description" "Power symbol creates a global label with name \"+48V\""
+			(at 86.36 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "186042ff-d905-48b4-9e6a-4cc376602bb7")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 111.76 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "929901d7-cd9b-45bc-a04b-dcd59dd186ad")
+		(property "Reference" "Q4"
+			(at 117.856 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 111.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 116.84 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 111.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 111.76 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4503,16 +4837,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 81.585 157.302 0)
+		(lib_id "power:+48V")
+		(at 208.28 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9eab9026-50da-4d84-b41f-fdfb0b91dbfe")
-		(property "Reference" "Q2"
-			(at 81.585 157.302 0)
+		(fields_autoplaced yes)
+		(uuid "999de4d0-2b33-4f0d-bf81-4dccb3a5a5e3")
+		(property "Reference" "#PWR015"
+			(at 208.28 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4520,17 +4855,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "MMBTA42LT1G"
-			(at 81.585 157.302 0)
+		(property "Value" "Vnn"
+			(at 208.28 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 81.585 157.302 0)
+		(property "Footprint" ""
+			(at 208.28 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4539,7 +4873,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.585 157.302 0)
+			(at 208.28 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4547,8 +4881,76 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 81.585 157.302 0)
+		(property "Description" "Power symbol creates a global label with name \"+48V\""
+			(at 208.28 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4d27297a-b3d6-44ba-984a-424b3f48632c")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 86.36 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9eab9026-50da-4d84-b41f-fdfb0b91dbfe")
+		(property "Reference" "Q2"
+			(at 92.456 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 86.36 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 91.44 159.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 86.36 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 86.36 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4575,16 +4977,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 142.545 156.908 0)
+		(lib_id "power:GND1")
+		(at 165.1 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a20b0a6e-547d-4c77-9d5d-135152e1dddd")
-		(property "Reference" "Q8"
-			(at 142.545 156.908 0)
+		(fields_autoplaced yes)
+		(uuid "a117a92d-f6b7-458f-850d-225a749ad320")
+		(property "Reference" "#PWR07"
+			(at 165.1 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4592,17 +4995,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "MMBTA42LT1G"
-			(at 142.545 156.908 0)
+		(property "Value" "N_GND"
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 142.545 156.908 0)
+		(property "Footprint" ""
+			(at 165.1 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4611,7 +5013,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.545 156.908 0)
+			(at 165.1 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4619,8 +5021,76 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 142.545 156.908 0)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 165.1 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e8dff33c-45ec-4821-b39e-fd6e08eb7e8f")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 137.16 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a20b0a6e-547d-4c77-9d5d-135152e1dddd")
+		(property "Reference" "Q8"
+			(at 143.51 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 137.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 142.24 159.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 137.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 137.16 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4647,8 +5117,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 178.105 131.509 0)
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 162.56 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4656,16 +5126,15 @@
 		(dnp no)
 		(uuid "ab1f6c68-5863-42fa-81c2-862944c00740")
 		(property "Reference" "Q10"
-			(at 178.105 131.509 0)
+			(at 169.418 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "MMBTA42LT1G"
-			(at 178.105 131.509 0)
+			(at 162.56 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4673,26 +5142,29 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 178.105 131.509 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 167.64 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 162.56 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 178.105 131.509 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 178.105 131.509 0)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 162.56 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4719,6 +5191,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 110.49 50.8 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "adb0f0a0-5a8d-4865-b4e1-9639fd47e120")
+		(property "Reference" "#PWR01"
+			(at 104.14 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 50.7999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f788a17d-e3ad-41cf-b0ae-191a6e0e77d5")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Nixie Driver-eagle-import:HDR-2X3")
 		(at 73.66 46.99 0)
 		(unit 1)
@@ -4728,12 +5267,11 @@
 		(dnp no)
 		(uuid "b5946aa9-7f92-44c0-ae03-f4c69bf3bf82")
 		(property "Reference" "J1"
-			(at 73.66 46.99 0)
+			(at 73.66 37.846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "HDR-2X3"
@@ -4745,7 +5283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:HDR-2X3"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical"
 			(at 73.66 46.99 0)
 			(effects
 				(font
@@ -4800,16 +5338,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 81.585 106.109 0)
+		(lib_id "power:GND1")
+		(at 88.9 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ca268027-77e4-4f95-8e95-9a702c44a1e4")
-		(property "Reference" "Q0"
-			(at 81.585 106.109 0)
+		(fields_autoplaced yes)
+		(uuid "b628d55f-407f-4464-82ec-e1572c8024c1")
+		(property "Reference" "#PWR08"
+			(at 88.9 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4817,17 +5356,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "MMBTA42LT1G"
-			(at 81.585 106.109 0)
+		(property "Value" "N_GND"
+			(at 88.9 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 81.585 106.109 0)
+		(property "Footprint" ""
+			(at 88.9 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4836,7 +5374,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.585 106.109 0)
+			(at 88.9 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4844,8 +5382,274 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 81.585 106.109 0)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 88.9 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "15241e9c-539c-4721-9856-e89c27c0f4c4")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 139.7 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b69f28cc-2d10-4278-aa76-3e5269090066")
+		(property "Reference" "#PWR06"
+			(at 139.7 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "N_GND"
+			(at 139.7 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 139.7 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "806971cc-6dd5-476d-ae6e-f8e44a757fc1")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 88.9 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c092fbe7-29d3-4217-9b9f-c7c8ed05c3ac")
+		(property "Reference" "#PWR02"
+			(at 88.9 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.9 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f788a17d-e3ad-41cf-b0ae-191a6e0e77d5")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 114.3 162.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c573ecf9-1a12-4ba4-b572-ddac581a055c")
+		(property "Reference" "#PWR012"
+			(at 114.3 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "N_GND"
+			(at 114.3 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 114.3 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c2a1e253-d3bd-42ff-9de5-78c87b337614")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 86.36 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ca268027-77e4-4f95-8e95-9a702c44a1e4")
+		(property "Reference" "Q0"
+			(at 92.964 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 86.36 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 91.44 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 86.36 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 86.36 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4872,8 +5676,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
-		(at 147.625 131.509 0)
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 137.16 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4881,16 +5685,15 @@
 		(dnp no)
 		(uuid "d1d0b209-b560-4d23-8fa0-a3634f03144b")
 		(property "Reference" "Q7"
-			(at 147.625 131.509 0)
+			(at 143.51 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "MMBTA42LT1G"
-			(at 147.625 131.509 0)
+			(at 137.16 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4898,26 +5701,29 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
-			(at 147.625 131.509 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 142.24 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 137.16 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 147.625 131.509 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 147.625 131.509 0)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 137.16 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4945,7 +5751,7 @@
 	)
 	(symbol
 		(lib_id "Nixie Driver-eagle-import:RES_1206")
-		(at 180.34 162.56 90)
+		(at 165.1 152.4 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4953,25 +5759,23 @@
 		(dnp no)
 		(uuid "f894e222-198b-4c50-88ef-be6cf1bc9816")
 		(property "Reference" "R1"
-			(at 180.34 162.56 0)
+			(at 162.56 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "75"
-			(at 180.34 162.56 0)
+			(at 168.148 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Nixie Driver:RES_1206"
-			(at 180.34 162.56 0)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 165.1 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4980,7 +5784,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 162.56 0)
+			(at 165.1 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4989,7 +5793,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 180.34 162.56 0)
+			(at 165.1 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)

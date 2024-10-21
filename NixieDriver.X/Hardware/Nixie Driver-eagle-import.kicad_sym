@@ -693,7 +693,7 @@
 					(justify right top)
 				)
 			)
-			(pin no_connect line
+			(pin power_in line
 				(at 6.35 -1.802 180)
 				(length 2.54)
 				(name "V+"
@@ -711,7 +711,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 5.818 0)
 				(length 2.54)
 				(name "'2'"
@@ -729,7 +729,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 8.358 0)
 				(length 2.54)
 				(name "'1'"
@@ -747,7 +747,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 -14.502 0)
 				(length 2.54)
 				(name "DP"
@@ -765,7 +765,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 10.898 0)
 				(length 2.54)
 				(name "'0'"
@@ -783,7 +783,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 -11.962 0)
 				(length 2.54)
 				(name "'9'"
@@ -801,7 +801,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 -9.422 0)
 				(length 2.54)
 				(name "'8'"
@@ -819,7 +819,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 -6.882 0)
 				(length 2.54)
 				(name "'7'"
@@ -837,7 +837,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 -4.342 0)
 				(length 2.54)
 				(name "'6'"
@@ -855,7 +855,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 -1.802 0)
 				(length 2.54)
 				(name "'5'"
@@ -873,7 +873,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 0.738 0)
 				(length 2.54)
 				(name "'4'"
@@ -891,7 +891,7 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin output line
 				(at -6.35 3.278 0)
 				(length 2.54)
 				(name "'3'"
