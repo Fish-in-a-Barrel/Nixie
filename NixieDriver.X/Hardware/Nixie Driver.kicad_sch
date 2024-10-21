@@ -3087,7 +3087,7 @@
 		(uuid "d2d1df7b-2eeb-4a17-983f-1e71f2abd35e")
 	)
 	(label "Cathode_5"
-		(at 114.3 152.413 0)
+		(at 114.3 152.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
