@@ -1,0 +1,5020 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "a603c7dd-0964-4ab1-bdb5-8ff7833b36d7")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Nixie Driver-eagle-import:CAP_0603"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Nixie Driver:CAP_0603"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CAP_0603_1_0"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.33 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.33 -1.905) (xy -0.33 1.905)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.305 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.944 1.911)
+					(mid 0.3044 0.0001)
+					(end 0.9439 -1.9109)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Nixie Driver-eagle-import:HDR-2X3"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Nixie Driver:HDR-2X3"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HDR-2X3_1_0"
+				(polyline
+					(pts
+						(xy -5.08 -7.62) (xy -5.08 7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 7.62) (xy 5.08 7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -6.35) (xy 0.635 -7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -6.35) (xy 0.635 -5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -6.35) (xy 5.08 -6.35)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 0.635 -5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 5.08 -3.81)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 5.08 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 3.81) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 3.81) (xy 0.635 5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 3.81) (xy 5.08 3.81)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 6.35) (xy 0.635 5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 6.35) (xy 0.635 7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 6.35) (xy 5.08 6.35)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -7.62) (xy -5.08 -7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 7.62) (xy 5.08 -7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 7.62 -6.35 180)
+					(length 2.54)
+					(name "P1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -3.81 180)
+					(length 2.54)
+					(name "P2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -1.27 180)
+					(length 2.54)
+					(name "P3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 1.27 180)
+					(length 2.54)
+					(name "P4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 3.81 180)
+					(length 2.54)
+					(name "P5"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 6.35 180)
+					(length 2.54)
+					(name "P6"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Nixie Driver-eagle-import:IN-12B"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Nixie Driver:IN-12[A_B]"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IN-12B_1_0"
+				(arc
+					(start -3.81 -15.772)
+					(mid 0.0001 -18.518)
+					(end 3.8101 -15.7718)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -15.772) (xy -3.81 12.168)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 12.168) (xy 3.81 -15.772)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.81 12.168)
+					(mid -0.0001 14.914)
+					(end -3.8101 12.1678)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "IN-12B"
+					(at 3.81 18.518 0)
+					(effects
+						(font
+							(size 1.48 1.48)
+						)
+						(justify right top)
+					)
+				)
+				(pin no_connect line
+					(at 6.35 -1.802 180)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 5.818 0)
+					(length 2.54)
+					(name "'2'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 8.358 0)
+					(length 2.54)
+					(name "'1'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 -14.502 0)
+					(length 2.54)
+					(name "DP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 10.898 0)
+					(length 2.54)
+					(name "'0'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 -11.962 0)
+					(length 2.54)
+					(name "'9'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 -9.422 0)
+					(length 2.54)
+					(name "'8'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 -6.882 0)
+					(length 2.54)
+					(name "'7'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 -4.342 0)
+					(length 2.54)
+					(name "'6'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 -1.802 0)
+					(length 2.54)
+					(name "'5'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 0.738 0)
+					(length 2.54)
+					(name "'4'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 3.278 0)
+					(length 2.54)
+					(name "'3'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Nixie Driver-eagle-import:MMBTA42LT1G"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MMBTA42LT1G_1_0"
+				(circle
+					(center 0 -0.571)
+					(radius 3.81)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.845 -0.572) (xy -1.575 -0.572)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.575 -2.781) (xy -1.575 1.638)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.575 -1.511) (xy 2.235 -2.781)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.575 0.368) (xy 2.235 1.638)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.8 -2.311) (xy -0.47 -1.372)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.47 -1.372) (xy 0.8 -2.311)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.8 -2.311) (xy -0.8 -2.311)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.235 -3.111) (xy 2.235 -2.781)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.235 1.638) (xy 2.235 4.381)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.385 -0.572 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.235 -5.639 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.235 4.496 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Nixie Driver-eagle-import:PI16F15243T-I/SS"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Nixie Driver:SOP20P65_720X770X160L50X30N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PI16F15243T-I/SS_1_0"
+				(polyline
+					(pts
+						(xy -36.83 -17.78) (xy -36.83 17.78)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -36.83 17.78) (xy 36.83 17.78)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 36.83 -17.78) (xy -36.83 -17.78)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 36.83 17.78) (xy 36.83 -17.78)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at -39.37 15.24 0)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 -15.24 0)
+					(length 2.54)
+					(name "RB7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 -12.7 0)
+					(length 2.54)
+					(name "RB6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 -10.16 0)
+					(length 2.54)
+					(name "RB5/AN11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 -7.62 0)
+					(length 2.54)
+					(name "RB4/AN10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 10.16 180)
+					(length 2.54)
+					(name "RC2/AN6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 12.7 180)
+					(length 2.54)
+					(name "RC1/AN5/PWM4/NCO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 15.24 180)
+					(length 2.54)
+					(name "RC0/AN4/CLC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 5.08 0)
+					(length 2.54)
+					(name "RA2/AN2/T0CKI/INT/PWM3/CLC1/~{CWG1FLT}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 7.62 0)
+					(length 2.54)
+					(name "RA1/AN1/VREF+/ICSPCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 10.16 0)
+					(length 2.54)
+					(name "RA0/AN0/ICSPDAT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 -2.54 0)
+					(length 2.54)
+					(name "RA5/CLKIN/T1CKI/NCO1CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 39.37 -15.24 180)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -39.37 0 0)
+					(length 2.54)
+					(name "RA4/AN3/CLKOUT/T1G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -39.37 2.54 0)
+					(length 2.54)
+					(name "RA3/CLC1IN0/VPP/~{MCLR}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 2.54 180)
+					(length 2.54)
+					(name "RC5/PWM1/CLC1/CWG1A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 5.08 180)
+					(length 2.54)
+					(name "RC4/CLC2IN1/CWG1B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 7.62 180)
+					(length 2.54)
+					(name "RC3/AN7/PWM2/CLC2IN0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 0 180)
+					(length 2.54)
+					(name "RC6/AN8/NCO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 39.37 -2.54 180)
+					(length 2.54)
+					(name "RC7/AN9/CLC1IN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Nixie Driver-eagle-import:RES_1206"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Nixie Driver:RES_1206"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RES_1206_1_0"
+				(polyline
+					(pts
+						(xy -3.81 0) (xy -3.175 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 1.27) (xy -1.905 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -0.635 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 1.27) (xy 3.175 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 -1.27) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -6.35 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 142.24 132.08) (xy 140.97 132.08)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "01637a3b-6fda-4f7d-93d2-337677fe4925")
+	)
+	(wire
+		(pts
+			(xy 175.26 101.613) (xy 175.26 100.343)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "04d6f9a6-655d-4c41-b861-d8ab0be405a9")
+	)
+	(wire
+		(pts
+			(xy 208.28 55.88) (xy 209.55 55.88)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "08467267-c270-4229-b5f1-6977e9a76976")
+	)
+	(wire
+		(pts
+			(xy 104.14 50.8) (xy 104.14 52.07)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "085badfe-ee5b-467b-af6d-d19d8f24d7e7")
+	)
+	(wire
+		(pts
+			(xy 83.82 152.806) (xy 83.82 151.536)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "08820239-9268-4587-9e60-25070f52b6fa")
+	)
+	(wire
+		(pts
+			(xy 81.28 71.12) (xy 82.55 71.12)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "094834c1-3ac4-47b3-b70b-8acee1f5fe8f")
+	)
+	(wire
+		(pts
+			(xy 129.54 50.8) (xy 104.14 50.8)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "0b447a3c-0ffd-44b4-a269-0e6f7ce5dc29")
+	)
+	(wire
+		(pts
+			(xy 83.82 162.941) (xy 83.82 164.211)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "164a478b-1827-4813-ab5e-0acbc3249bca")
+	)
+	(wire
+		(pts
+			(xy 129.54 76.2) (xy 128.27 76.2)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "17645f41-3df4-4f17-a2bd-423b3958cccf")
+	)
+	(wire
+		(pts
+			(xy 137.16 106.68) (xy 135.89 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1bcad362-bd81-4f8c-9a88-91c466f5ede4")
+	)
+	(wire
+		(pts
+			(xy 119.38 137.147) (xy 119.38 138.417)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1c0175b9-3e1a-4f08-a746-1e9472dda552")
+	)
+	(wire
+		(pts
+			(xy 144.78 111.747) (xy 144.78 113.017)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "212c95fa-ad3e-45d3-a742-f5bcaac7ecaf")
+	)
+	(wire
+		(pts
+			(xy 81.28 40.64) (xy 82.55 40.64)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "23555836-b140-4019-b23c-2b4e85f3e94a")
+	)
+	(wire
+		(pts
+			(xy 180.34 168.91) (xy 180.34 170.18)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "23a52b16-43c1-4436-9082-8da8915ff0e0")
+	)
+	(wire
+		(pts
+			(xy 208.28 58.42) (xy 209.55 58.42)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "23d78b28-398e-400a-b71c-6771e4199d72")
+	)
+	(wire
+		(pts
+			(xy 81.28 63.5) (xy 82.55 63.5)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2a7179cc-1bed-412f-bac3-7759cf8e85ba")
+	)
+	(wire
+		(pts
+			(xy 208.28 63.5) (xy 209.55 63.5)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2bdb4c5d-b3fd-4100-9e3d-44bac5228e2f")
+	)
+	(wire
+		(pts
+			(xy 81.28 73.66) (xy 129.54 73.66)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2d4b2b5d-67f6-4224-a85e-cac7341e555c")
+	)
+	(wire
+		(pts
+			(xy 144.78 101.613) (xy 144.78 100.343)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "36b47e9d-6942-481a-a1ce-d7ec3b020c4a")
+	)
+	(wire
+		(pts
+			(xy 224.79 132.08) (xy 226.06 132.08)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "379db7cd-9d12-4e86-a1a3-f88be7c9258d")
+	)
+	(wire
+		(pts
+			(xy 81.28 66.04) (xy 82.55 66.04)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "394ce76e-535b-4a21-93be-5ac4cc7066b2")
+	)
+	(wire
+		(pts
+			(xy 106.68 157.48) (xy 105.41 157.48)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "467face3-8270-4f59-b227-7b8f6ef345a6")
+	)
+	(wire
+		(pts
+			(xy 81.28 48.26) (xy 82.55 48.26)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "47453b74-4bf5-47c5-98d2-99a370320858")
+	)
+	(wire
+		(pts
+			(xy 82.55 76.2) (xy 81.28 76.2)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "47d4d3de-deed-4659-b423-a5d939b833d3")
+	)
+	(wire
+		(pts
+			(xy 129.54 81.28) (xy 128.27 81.28)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "48e00ce3-49de-479b-ae12-3c1c7fb2e7d4")
+	)
+	(wire
+		(pts
+			(xy 114.3 111.747) (xy 114.3 113.017)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4b5cd37d-7665-4362-9183-1be83f60f9a0")
+	)
+	(wire
+		(pts
+			(xy 129.54 63.5) (xy 128.27 63.5)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4f7fa384-8470-42d6-ba4b-24784b5a60ef")
+	)
+	(wire
+		(pts
+			(xy 111.76 132.08) (xy 110.49 132.08)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4f863488-da65-4bb7-a446-8df8874c0c92")
+	)
+	(wire
+		(pts
+			(xy 224.79 121.92) (xy 226.06 121.92)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "600336af-f8e8-4876-9e8d-ba558f61048a")
+	)
+	(wire
+		(pts
+			(xy 129.54 66.04) (xy 128.27 66.04)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "642f3b10-f1e0-4bfe-8ff7-93f0a37581f2")
+	)
+	(wire
+		(pts
+			(xy 81.28 68.58) (xy 82.55 68.58)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "67f2485a-02bd-4210-bc79-47360dc06a1a")
+	)
+	(wire
+		(pts
+			(xy 149.86 127.013) (xy 149.86 125.743)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "68bee579-365e-4925-be8c-bdc81ba2edd2")
+	)
+	(wire
+		(pts
+			(xy 224.79 134.62) (xy 226.06 134.62)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "69fd3a12-83ad-4746-b155-38ba26c37bbb")
+	)
+	(wire
+		(pts
+			(xy 144.78 162.547) (xy 144.78 163.817)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "6abf0cb5-7e64-4805-80eb-29a86ef64f40")
+	)
+	(wire
+		(pts
+			(xy 76.2 157.874) (xy 74.93 157.874)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "6c3e05af-267b-4e47-b6a9-b8321862a944")
+	)
+	(wire
+		(pts
+			(xy 82.55 76.2) (xy 82.55 78.74)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "743a2db5-54cd-41aa-b3d7-30fe6fdd3337")
+	)
+	(wire
+		(pts
+			(xy 129.54 55.88) (xy 128.27 55.88)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "756889f8-4dca-432f-8983-018ae51341e4")
+	)
+	(wire
+		(pts
+			(xy 81.28 132.474) (xy 80.01 132.474)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "77488e80-c5d4-455d-a2b0-c1daac408513")
+	)
+	(wire
+		(pts
+			(xy 81.28 53.34) (xy 82.55 53.34)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "79a8ca7b-6ba1-4500-a070-2905f273da9b")
+	)
+	(wire
+		(pts
+			(xy 83.82 101.613) (xy 83.82 100.343)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "79e1e1c8-93aa-4c07-b269-23be3948e946")
+	)
+	(wire
+		(pts
+			(xy 119.38 127.013) (xy 119.38 125.743)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "7aa27743-21e3-4a5a-8eb7-5937c5a1466c")
+	)
+	(wire
+		(pts
+			(xy 114.3 101.613) (xy 114.3 100.343)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "7caee733-5f60-475a-b85f-05dcef83d267")
+	)
+	(wire
+		(pts
+			(xy 82.55 78.74) (xy 129.54 78.74)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "816a845c-9671-49b2-afe7-44e9a347d732")
+	)
+	(wire
+		(pts
+			(xy 224.79 114.3) (xy 226.06 114.3)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "84eb135a-5d7b-4f44-8bf3-6569ec6af9f6")
+	)
+	(wire
+		(pts
+			(xy 83.82 111.747) (xy 83.82 113.017)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "8623d14f-491f-4a94-b1aa-4f1c728ad932")
+	)
+	(wire
+		(pts
+			(xy 208.28 68.58) (xy 209.55 68.58)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "8634cfd1-877c-42b9-a233-3c24fd1413dd")
+	)
+	(wire
+		(pts
+			(xy 180.34 127.013) (xy 180.34 125.743)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "8b07f2fd-52c3-4f82-8ad8-a53013d723bf")
+	)
+	(wire
+		(pts
+			(xy 203.2 121.92) (xy 203.2 128.27)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "90381d06-3ea3-4b49-984d-529da8fd1c6c")
+	)
+	(wire
+		(pts
+			(xy 224.79 129.54) (xy 226.06 129.54)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "9143cb8a-eb29-4c61-ab8f-3481283110ee")
+	)
+	(wire
+		(pts
+			(xy 81.28 45.72) (xy 82.55 45.72)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "96580f97-c831-4ef5-9cb3-7c8e5f4b322b")
+	)
+	(wire
+		(pts
+			(xy 175.26 111.747) (xy 175.26 113.017)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "96e66d5a-a683-4e5c-b097-ff72cc3f691d")
+	)
+	(wire
+		(pts
+			(xy 208.28 53.34) (xy 209.55 53.34)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "9a4553b7-96a5-41f8-b237-877f7d05485c")
+	)
+	(wire
+		(pts
+			(xy 129.54 68.58) (xy 128.27 68.58)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "9f3c79cf-1388-4064-bf6c-4baddc589b23")
+	)
+	(wire
+		(pts
+			(xy 180.34 137.147) (xy 180.34 156.21)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a519c075-0784-4922-a73b-9660e243d70e")
+	)
+	(wire
+		(pts
+			(xy 224.79 127) (xy 226.06 127)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a6976270-5de0-48c8-9253-452b283dcf82")
+	)
+	(wire
+		(pts
+			(xy 81.28 50.8) (xy 82.55 50.8)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a8750804-f8eb-4270-a003-b0809466892a")
+	)
+	(wire
+		(pts
+			(xy 224.79 111.76) (xy 226.06 111.76)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "aa882c7e-63bb-4a1a-8c7b-862acc189c1e")
+	)
+	(wire
+		(pts
+			(xy 167.64 106.68) (xy 166.37 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "b4930600-e09f-4eca-b196-29a848795c96")
+	)
+	(wire
+		(pts
+			(xy 212.09 121.92) (xy 203.2 121.92)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "b8114638-1ab6-47e3-8b97-4db2ae0f9529")
+	)
+	(wire
+		(pts
+			(xy 88.9 137.541) (xy 88.9 138.811)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "bb51b968-e7ed-417b-a2b3-4dda01f80b4b")
+	)
+	(wire
+		(pts
+			(xy 129.54 60.96) (xy 128.27 60.96)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "bdc35942-fe92-4569-84dc-f56c9a7b9c2e")
+	)
+	(wire
+		(pts
+			(xy 224.79 119.38) (xy 226.06 119.38)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c2a2187f-b5e8-430b-9198-3399b700ebfa")
+	)
+	(wire
+		(pts
+			(xy 203.2 140.97) (xy 203.2 142.24)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c2f49ddc-4d66-45d6-bc9a-6c4fdb6f9319")
+	)
+	(wire
+		(pts
+			(xy 137.16 157.48) (xy 135.89 157.48)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c474aa36-4ef5-452f-aee0-03e638946d8b")
+	)
+	(wire
+		(pts
+			(xy 106.68 106.68) (xy 105.41 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c87fdcb2-a413-47b5-b9ca-dd8ab9a3dd31")
+	)
+	(wire
+		(pts
+			(xy 224.79 124.46) (xy 226.06 124.46)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "d18116f6-6d49-43cc-b90e-fa7040f5a9c8")
+	)
+	(wire
+		(pts
+			(xy 114.3 152.413) (xy 114.3 151.143)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "dd3b490b-6ee9-4ca5-aa7a-ba5927453fa4")
+	)
+	(wire
+		(pts
+			(xy 208.28 60.96) (xy 209.55 60.96)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "ddf6978d-eff2-4b62-bf6f-aa73ebab7385")
+	)
+	(wire
+		(pts
+			(xy 144.78 152.413) (xy 144.78 151.143)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "de29b716-343b-4fec-9a73-ba4af474ec61")
+	)
+	(wire
+		(pts
+			(xy 208.28 81.28) (xy 209.55 81.28)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "e116ee83-939a-4306-93a5-d5753e16f011")
+	)
+	(wire
+		(pts
+			(xy 88.9 127.406) (xy 88.9 126.136)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "e637089d-eb22-461d-babe-a45948c0af64")
+	)
+	(wire
+		(pts
+			(xy 129.54 58.42) (xy 128.27 58.42)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "eb67195f-e5f9-4c0d-83d2-2a27f9f7d158")
+	)
+	(wire
+		(pts
+			(xy 76.2 106.68) (xy 74.93 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "ed6dc447-49a5-44a7-9021-10605cf1a9f2")
+	)
+	(wire
+		(pts
+			(xy 208.28 50.8) (xy 209.55 50.8)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "f2236ab2-4086-4644-ab9c-c93a024408e3")
+	)
+	(wire
+		(pts
+			(xy 104.14 59.69) (xy 104.14 60.96)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "f246c3b6-1734-4ade-9768-f81eb8a028db")
+	)
+	(wire
+		(pts
+			(xy 224.79 109.22) (xy 226.06 109.22)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "f8af58f7-249e-4a04-bbd9-ef45f94f3b1d")
+	)
+	(wire
+		(pts
+			(xy 149.86 137.147) (xy 149.86 138.417)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "f99a98fb-be7f-42b8-876a-679c460b0317")
+	)
+	(wire
+		(pts
+			(xy 114.3 162.547) (xy 114.3 163.817)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "fc57f1b5-d644-428c-956d-7d3c795f162c")
+	)
+	(wire
+		(pts
+			(xy 208.28 66.04) (xy 209.55 66.04)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "fc738cf9-f16c-4a73-bd1c-b7f08f0961c0")
+	)
+	(wire
+		(pts
+			(xy 224.79 116.84) (xy 226.06 116.84)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "fc854f08-bade-4edc-a58c-4e4cba5048be")
+	)
+	(wire
+		(pts
+			(xy 172.72 132.08) (xy 171.45 132.08)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "ff570aef-0f92-42a2-ad50-8b19b0301e2a")
+	)
+	(text "Q2"
+		(exclude_from_sim no)
+		(at 85.395 158.632 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "0eb93726-9411-478f-b423-a95a981a7d36")
+	)
+	(text "Q1"
+		(exclude_from_sim no)
+		(at 90.475 132.904 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "13767161-bc5c-45b3-b519-cd15c31a1fc7")
+	)
+	(text "Q6"
+		(exclude_from_sim no)
+		(at 146.355 107.401 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "1b781f0d-4494-44dd-9f0e-fa2c217cf039")
+	)
+	(text "Q9"
+		(exclude_from_sim no)
+		(at 176.835 107.402 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "36b93ec8-1593-4123-bdca-8d4894b325f1")
+	)
+	(text "R1"
+		(exclude_from_sim no)
+		(at 179.07 163.489 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "60a4e19e-7595-43e6-bf64-600b3a98e9df")
+	)
+	(text "Q4"
+		(exclude_from_sim no)
+		(at 120.955 132.874 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "6ebaccea-6e0c-4695-b9a4-2896b0fd5f1c")
+	)
+	(text "IN-12B"
+		(exclude_from_sim no)
+		(at 214.63 144.042 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "71098364-4670-4fbb-b35e-940d0b47ed70")
+	)
+	(text "100nF"
+		(exclude_from_sim no)
+		(at 106.051 58.9 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "710fa72c-8c7b-452f-b0b3-86a6f070caab")
+	)
+	(text "J2"
+		(exclude_from_sim no)
+		(at 72.55 62.23 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "74e105d2-428d-4bae-8cd7-642b27676a2c")
+	)
+	(text "Q5"
+		(exclude_from_sim no)
+		(at 115.875 158.238 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "74e67ccb-87d6-47c6-a6d7-744332dfb3ce")
+	)
+	(text "Q7"
+		(exclude_from_sim no)
+		(at 151.435 132.838 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "7d6cb055-640c-48ea-98f8-ef743761de31")
+	)
+	(text "Q3"
+		(exclude_from_sim no)
+		(at 115.875 107.438 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "825b060c-8bbd-4e19-89ff-1a1b959501b4")
+	)
+	(text "U1"
+		(exclude_from_sim no)
+		(at 167.981 48.26 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "9715b4eb-fe20-44f7-a082-6cda2170be58")
+	)
+	(text "Q8"
+		(exclude_from_sim no)
+		(at 146.355 158.237 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "a092f406-d652-486e-bd0e-97d35296e54c")
+	)
+	(text "R3"
+		(exclude_from_sim no)
+		(at 201.93 135.876 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "a32e4deb-1205-44d3-8d95-c3460869dedb")
+	)
+	(text "C2"
+		(exclude_from_sim no)
+		(at 102.229 57.172 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0096597-04f9-4f28-90ce-aebd2b25071e")
+	)
+	(text "V1"
+		(exclude_from_sim no)
+		(at 217.439 107.006 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "cdfa6a9f-6af6-4b8a-9b1d-65fa2bf5e08b")
+	)
+	(text "Q10"
+		(exclude_from_sim no)
+		(at 181.915 133.256 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "ce32ce2d-4b31-42f1-9a81-48377fa05445")
+	)
+	(text "Q0"
+		(exclude_from_sim no)
+		(at 85.395 107.438 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "e0188fd0-7d04-4929-824b-a9f7c6a7e5f0")
+	)
+	(text "J1"
+		(exclude_from_sim no)
+		(at 72.877 39.37 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "fdb0583b-7da8-4482-b770-17cb9fb22022")
+	)
+	(label "Cathode_3"
+		(at 114.3 101.613 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "0b24dd36-3567-429e-917e-a64f9558fea3")
+	)
+	(label "N_GND"
+		(at 180.34 168.91 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "0dd53f7b-6e54-43e4-8224-e5920eeca650")
+	)
+	(label "Cathode_6"
+		(at 144.78 101.613 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "12ee8c52-fa7c-4031-a00a-833f435df698")
+	)
+	(label "Cathode_6"
+		(at 224.79 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "151308de-0565-4f9d-baea-28ce928b0215")
+	)
+	(label "Cathode_7"
+		(at 149.86 127.013 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "15ccdc73-1595-4923-a780-df77759b43b4")
+	)
+	(label "Driver_Dot"
+		(at 172.72 132.08 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "1a7ca822-43b1-49fc-8e02-38e37f21076a")
+	)
+	(label "Driver_5"
+		(at 208.28 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "28b5c75d-383c-45a4-b4f6-401331e6d2be")
+	)
+	(label "Driver_5"
+		(at 106.68 157.48 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "28fa47df-b480-47c1-8cd1-9fcfa98e130b")
+	)
+	(label "Driver_3"
+		(at 129.54 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "29352da3-09ac-47db-959c-11c1b721a497")
+	)
+	(label "Driver_7"
+		(at 129.54 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a2a3dfe-cb03-4bb4-aa25-8a88149b7e20")
+	)
+	(label "Cathode_4"
+		(at 224.79 124.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "2dc1748a-7926-46cb-ba67-9bc08be1f1b7")
+	)
+	(label "Driver_4"
+		(at 111.76 132.08 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "34c46f1c-679a-4604-9fc8-5401891237b2")
+	)
+	(label "Driver_9"
+		(at 208.28 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "351e930e-645b-4202-8dc5-2ac9856d65b7")
+	)
+	(label "Cathode_0"
+		(at 83.82 101.613 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "378045b7-4e6e-4ac5-872d-a696ec703c9a")
+	)
+	(label "ADDR1/CLK"
+		(at 129.54 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "3930e87b-7090-4dd1-89ec-5ff2c9fa7170")
+	)
+	(label "N_GND"
+		(at 88.9 137.541 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "3e7e4ec3-d9c0-4b20-9136-be6c91454d6f")
+	)
+	(label "N_GND"
+		(at 144.78 162.547 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "3e80ddff-7b45-4571-8eb8-f8f269ce2e8c")
+	)
+	(label "Driver_Dot"
+		(at 129.54 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "3fdcc429-d81c-41a4-a391-9b725dd0de54")
+	)
+	(label "Driver_8"
+		(at 137.16 157.48 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "40c1bcdf-630e-42dd-9ad5-7a12450ec500")
+	)
+	(label "Cathode_2"
+		(at 224.79 129.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "44604cc5-34c8-4517-84a6-573990cd54df")
+	)
+	(label "Driver_7"
+		(at 142.24 132.08 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "48d4a7b5-86f6-4abe-8094-b392760c2ff7")
+	)
+	(label "N_GND"
+		(at 83.82 162.941 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f94ef08-0bed-4e9f-8f29-649ead15385c")
+	)
+	(label "Driver_1"
+		(at 81.28 132.474 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "5189980c-b946-420a-9e7e-c3c9ea503f88")
+	)
+	(label "ADDR3"
+		(at 81.28 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "548cbbb0-214a-4d5b-9708-b7918265c1d9")
+	)
+	(label "N_GND"
+		(at 149.86 137.147 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "55e87ece-aad9-4286-b676-2dd44ed95a30")
+	)
+	(label "N_GND"
+		(at 114.3 111.747 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f6fb085-5888-43b8-8641-312aea3c8440")
+	)
+	(label "Cathode_Dot"
+		(at 180.34 127.013 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "66377136-3197-4681-8792-5985704e62ef")
+	)
+	(label "Cathode_9"
+		(at 175.26 101.613 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e583764-3257-4321-9172-a3ad4662d179")
+	)
+	(label "Driver_2"
+		(at 76.2 157.874 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "71e53b58-8f6a-4d73-a039-d3fcc20a2665")
+	)
+	(label "Cathode_7"
+		(at 224.79 116.84 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "72969223-32b4-45b2-b7cb-6f24b2896ba2")
+	)
+	(label "Driver_6"
+		(at 208.28 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "74e7ee65-7296-407a-bf65-30577470f76c")
+	)
+	(label "ADDR1/CLK"
+		(at 81.28 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "76701a98-1d85-4093-b1b1-b265c9ced145")
+	)
+	(label "Cathode_8"
+		(at 224.79 114.3 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "7c8636c8-a877-443b-8672-bc781b9e91ec")
+	)
+	(label "N_GND"
+		(at 175.26 111.747 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7fd510f7-c29d-40fe-88fc-0c1edb5fd46f")
+	)
+	(label "Driver_3"
+		(at 106.68 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "81b672ac-a721-4060-b288-55c0137d451b")
+	)
+	(label "N_GND"
+		(at 83.82 111.747 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "852f9471-efb4-4c76-a4ee-8c27037ee022")
+	)
+	(label "Driver_9"
+		(at 167.64 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "89e2b074-6313-4630-93db-be595f7d6a3e")
+	)
+	(label "Cathode_8"
+		(at 144.78 152.413 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "8cb8dd5c-c164-4678-afbe-7580745cec39")
+	)
+	(label "N_GND"
+		(at 119.38 137.147 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "8e8fd5ca-ba2e-462f-bcb5-4011c840b932")
+	)
+	(label "ADDR0/DAT"
+		(at 81.28 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "94fc0d58-b790-495d-80f7-76695b55baea")
+	)
+	(label "ADDR2"
+		(at 208.28 53.34 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "9a0f9e8c-4680-4942-837c-f8b0bed04c10")
+	)
+	(label "Driver_0"
+		(at 208.28 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "9a1bc7b8-e4a4-4cff-b9c4-d33169cf2277")
+	)
+	(label "VDD"
+		(at 104.14 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a6830c4-b0b8-412a-823e-ebcfcf65b2bd")
+	)
+	(label "N_GND"
+		(at 114.3 162.547 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "a35232a9-3f4a-43fe-83a9-86fc114b42c4")
+	)
+	(label "Cathode_5"
+		(at 224.79 121.92 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "a7e0ede1-732f-4317-94cb-21263b190c02")
+	)
+	(label "Cathode_1"
+		(at 224.79 132.08 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "a8d3c06c-bf6c-4d8e-b256-c7e9d730d9d8")
+	)
+	(label "~{MCLR}"
+		(at 81.28 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "aabf65ab-2651-4357-a401-86013b79d5ff")
+	)
+	(label "Cathode_9"
+		(at 224.79 111.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "aff94050-8b21-4b96-9a4a-14bd7297064d")
+	)
+	(label "ADDR3"
+		(at 208.28 50.8 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "b09fe149-8891-4f32-aa92-26e2e74d18f2")
+	)
+	(label "~{MCLR}"
+		(at 129.54 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "b284f050-de14-4060-9b3b-e8ce205e5084")
+	)
+	(label "GND"
+		(at 208.28 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "b5b22556-340e-4c16-a2f5-1bcf66bbf5db")
+	)
+	(label "Driver_6"
+		(at 137.16 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "b5d5b2a7-9a34-4c02-8baf-efe69134f0e4")
+	)
+	(label "Cathode_Dot"
+		(at 224.79 109.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "b6e04315-16d9-43ed-9cdb-255a2779f5c2")
+	)
+	(label "VDD"
+		(at 81.28 45.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "b7adaeac-39c6-44eb-926d-960b90a3a357")
+	)
+	(label "Cathode_2"
+		(at 83.82 152.806 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf1baa87-59c9-4593-849a-fe8652fa0017")
+	)
+	(label "Cathode_4"
+		(at 119.38 127.013 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "bfcb9e29-9e37-4739-9694-a08cafe8aeff")
+	)
+	(label "ADDR0/DAT"
+		(at 129.54 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "bfd84f48-f626-4340-ac35-e51f933e89aa")
+	)
+	(label "Cathode_1"
+		(at 88.9 127.406 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "c75fff52-5179-4bfc-968d-ca07699a3612")
+	)
+	(label "Driver_8"
+		(at 208.28 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "c9280a0c-22e7-449f-85a1-6ab7c2851419")
+	)
+	(label "GND"
+		(at 104.14 59.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb1f602f-57ab-423e-933f-954142d0b48c")
+	)
+	(label "N_GND"
+		(at 81.28 53.34 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "ce723a5b-e872-4999-9b31-1a5a6461e8ad")
+	)
+	(label "Driver_2"
+		(at 129.54 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2d1df7b-2eeb-4a17-983f-1e71f2abd35e")
+	)
+	(label "VNN"
+		(at 203.2 140.97 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3609593-fe96-4650-ba81-f0e6c31b52db")
+	)
+	(label "Cathode_5"
+		(at 114.3 152.413 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3731e8e-85a0-4bcd-81fc-b368583e8cdc")
+	)
+	(label "Driver_0"
+		(at 76.2 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6485d2e-f4eb-46fc-acd9-c18642897387")
+	)
+	(label "Cathode_0"
+		(at 224.79 134.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "d9e855c1-2275-48f9-a62a-2da10e696d7e")
+	)
+	(label "Driver_1"
+		(at 208.28 55.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "e446d2f6-1fee-4d72-b5d8-7d7e0fca6217")
+	)
+	(label "ADDR2"
+		(at 81.28 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "ea1db9c1-ef4e-4ffd-808a-5d18e2ba021c")
+	)
+	(label "Driver_4"
+		(at 129.54 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "f5af6f01-5c21-4da4-9207-c2cd9b236a44")
+	)
+	(label "Cathode_3"
+		(at 224.79 127 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "f6d82fc9-ede8-440d-b1c8-783118fe2fa7")
+	)
+	(label "N_GND"
+		(at 144.78 111.747 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7823208-dd95-4a27-b4af-365a4ad2abba")
+	)
+	(label "GND"
+		(at 81.28 50.8 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "fb6e17b8-857d-4c63-b2c0-eb971831b52d")
+	)
+	(label "VNN"
+		(at 81.28 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "fe5c2f30-d38c-4c6c-9d6c-0e1a98a71a7f")
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:HDR-2X3")
+		(at 73.66 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0b88452f-63c1-454f-9ae3-ce7b0a60b5ab")
+		(property "Reference" "J2"
+			(at 73.66 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "HDR-2X3"
+			(at 73.66 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:HDR-2X3"
+			(at 73.66 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "cecd0820-a6b5-4d98-b958-9b9f8c4624a6")
+		)
+		(pin "5"
+			(uuid "573f9087-7034-4dd4-94f7-d9de5cd28f38")
+		)
+		(pin "6"
+			(uuid "b4bc4504-22c2-4310-a648-9c98e2bf4dbe")
+		)
+		(pin "2"
+			(uuid "066a9ada-e356-4a47-8278-c8917a4d11f7")
+		)
+		(pin "3"
+			(uuid "6cae66b1-8a2e-4a21-bb0b-58e97a5d0590")
+		)
+		(pin "1"
+			(uuid "46d9b0f1-540a-4bad-bd9b-80d475928703")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:PI16F15243T-I/SS")
+		(at 168.91 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "180f43f6-44ef-443b-8c51-0f0bdf37b8d5")
+		(property "Reference" "U1"
+			(at 168.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "100nF"
+			(at 168.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOP20P65_720X770X160L50X30N"
+			(at 168.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 168.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "14"
+			(uuid "8b206145-6d07-4536-8f81-99c4b51cd9fa")
+		)
+		(pin "19"
+			(uuid "3d4f8212-9829-476b-a5f2-0ae5f4d74f59")
+		)
+		(pin "10"
+			(uuid "58a35e7a-54d8-4078-b5ad-e1c08103ea94")
+		)
+		(pin "2"
+			(uuid "6088c4de-70c5-4ce0-be78-b22713ff8d54")
+		)
+		(pin "11"
+			(uuid "5ffaf0a5-e6da-4544-8a86-c05dcbb21c12")
+		)
+		(pin "7"
+			(uuid "f6732e1b-07cd-4358-bc10-b7386ddf6372")
+		)
+		(pin "18"
+			(uuid "4a7cc81a-0bed-4269-b72c-033d855a24d7")
+		)
+		(pin "6"
+			(uuid "6b1e1a99-7260-413c-a56c-600713782166")
+		)
+		(pin "17"
+			(uuid "60cdf7a7-847e-4a08-b25c-9b6314c55706")
+		)
+		(pin "3"
+			(uuid "84a1858f-4f0c-44c5-87c2-e1716d04303e")
+		)
+		(pin "13"
+			(uuid "2d913bb8-56a1-4eff-9552-836f22b58c0d")
+		)
+		(pin "4"
+			(uuid "514626df-6d7c-4007-8e10-d7571f59973d")
+		)
+		(pin "5"
+			(uuid "be1d364a-4e18-44f9-9459-060f8e97719a")
+		)
+		(pin "8"
+			(uuid "6ed67650-5d6c-4936-8e2a-1587f36a5706")
+		)
+		(pin "1"
+			(uuid "3ed7d01e-21ca-487e-9401-0fbf5522dfd5")
+		)
+		(pin "9"
+			(uuid "857882bb-6662-41bb-8d71-1dd78e53a6ad")
+		)
+		(pin "15"
+			(uuid "bdd686e8-f1a1-4048-845a-c9c019557ad4")
+		)
+		(pin "16"
+			(uuid "326863c4-08c8-4a2f-b92a-8c9e88ced66e")
+		)
+		(pin "20"
+			(uuid "79dcdc87-93aa-4da4-af66-b4027b136ffb")
+		)
+		(pin "12"
+			(uuid "c3ac6291-3804-4e88-b8cd-dd1f75d256af")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 112.065 106.109 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1c0192fa-910a-4310-9b3c-be24017e58ef")
+		(property "Reference" "Q3"
+			(at 112.065 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 112.065 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 112.065 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 112.065 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.065 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2d81e918-4beb-4078-a6ef-bb8a32fad214")
+		)
+		(pin "2"
+			(uuid "8f5836e5-3e38-4492-8518-7491ad45e559")
+		)
+		(pin "3"
+			(uuid "77b35ab5-87df-4e10-9811-32e0c3754d16")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:RES_1206")
+		(at 203.2 134.62 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30806cb4-9029-4f0b-b2a7-6a8d4de77f92")
+		(property "Reference" "R3"
+			(at 203.2 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "15k"
+			(at 203.2 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:RES_1206"
+			(at 203.2 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4efdbc41-5cf1-4562-a7e6-ba7a092922c4")
+		)
+		(pin "2"
+			(uuid "0bbd917a-02e8-4fb4-9f6a-1594369255fb")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:CAP_0603")
+		(at 104.14 55.88 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "582f1a1c-fb85-4b7f-abff-058f903c2e43")
+		(property "Reference" "C2"
+			(at 104.14 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "100nF"
+			(at 104.14 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:CAP_0603"
+			(at 104.14 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6a9b6311-6533-4c51-9bcb-33899a0ad371")
+		)
+		(pin "2"
+			(uuid "b4f62e82-ab27-4c70-88ca-58e140b4f27a")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:IN-12B")
+		(at 218.44 123.722 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6b5431a2-3396-4975-a206-e0ee5f1ea630")
+		(property "Reference" "V1"
+			(at 218.44 123.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "IN-12B"
+			(at 218.44 123.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:IN-12[A_B]"
+			(at 218.44 123.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 123.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 123.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "905d052f-e781-4a67-bfe8-057614da8214")
+		)
+		(pin "2"
+			(uuid "cb93e14e-d09f-4d1b-8e9f-91aa9b55ab58")
+		)
+		(pin "12"
+			(uuid "4e28e520-9ff6-49f0-9f21-fae3470c7842")
+		)
+		(pin "3"
+			(uuid "5f18314e-126c-40ff-b0a2-896e3abef40b")
+		)
+		(pin "11"
+			(uuid "12a8fdcb-dbae-4128-b2f0-b9b35bec4566")
+		)
+		(pin "1"
+			(uuid "ad4d097b-732a-4e36-a231-68513a5a42e7")
+		)
+		(pin "10"
+			(uuid "c2c829c8-526a-4be2-91d9-dcd05e4b85a6")
+		)
+		(pin "7"
+			(uuid "f6c857a7-d026-4044-9396-09170f9546ef")
+		)
+		(pin "8"
+			(uuid "20c4c49b-0392-4a91-b8bd-c5d3613ff7a5")
+		)
+		(pin "6"
+			(uuid "cf1817ad-a9e1-49e4-8dab-44e121c03047")
+		)
+		(pin "9"
+			(uuid "7880811e-d4f1-4abe-9023-a2cda8fdd2ff")
+		)
+		(pin "5"
+			(uuid "85e2ed6e-b6a2-4aa1-beab-6f07894c18a2")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "V1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 173.025 106.109 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6dce319e-c75e-438c-b5bb-fce0a7bb8157")
+		(property "Reference" "Q9"
+			(at 173.025 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 173.025 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 173.025 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.025 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 173.025 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7680428c-4db0-43cb-bfdb-5312cf87bd13")
+		)
+		(pin "1"
+			(uuid "53ea4909-7375-43da-a5b7-1b97e198c6a8")
+		)
+		(pin "3"
+			(uuid "afb2568b-40f0-4c86-b460-fab72ba5c447")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 112.065 156.908 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e0e1dbe-721d-4567-a7bb-b8b6db1936c9")
+		(property "Reference" "Q5"
+			(at 112.065 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 112.065 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 112.065 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 112.065 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.065 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "27a8640b-2386-4d87-a2bf-a6cb161cf69e")
+		)
+		(pin "2"
+			(uuid "9b9493d1-f0ef-4b3c-b6ff-b8dcb4ca86e3")
+		)
+		(pin "3"
+			(uuid "dbfaa295-e81f-4c4d-94e6-48bc0700ee78")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 86.665 131.902 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e7bd2c1-352e-4dd0-b6e9-618a079dcd1f")
+		(property "Reference" "Q1"
+			(at 86.665 131.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 86.665 131.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 86.665 131.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.665 131.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.665 131.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "99a2fa0c-de6a-49c2-aca1-17e9e016d44e")
+		)
+		(pin "1"
+			(uuid "f34ee5a5-90a7-48a3-9e6f-b6cda40aa699")
+		)
+		(pin "3"
+			(uuid "29627fbb-ac3d-4237-813f-35e4327c1f14")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 142.545 106.109 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "778faa0f-7949-40ae-9815-7849e316ae11")
+		(property "Reference" "Q6"
+			(at 142.545 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 142.545 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 142.545 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.545 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.545 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "9d599628-4564-4a37-9c3d-a2caee5c4d90")
+		)
+		(pin "1"
+			(uuid "e52e3835-7bc7-4c23-961f-4825ec7ddeb6")
+		)
+		(pin "2"
+			(uuid "1a713622-ab54-4a57-b787-23c008a67b40")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 117.145 131.509 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "929901d7-cd9b-45bc-a04b-dcd59dd186ad")
+		(property "Reference" "Q4"
+			(at 117.145 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 117.145 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 117.145 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 117.145 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 117.145 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "7f648239-a62e-4387-9cd6-14a0b9f2768e")
+		)
+		(pin "1"
+			(uuid "f4abfb5d-3717-4a0c-a34e-cc949366a7ae")
+		)
+		(pin "2"
+			(uuid "49f63c9b-2f94-4b7e-ba7e-1ff77198547c")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 81.585 157.302 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9eab9026-50da-4d84-b41f-fdfb0b91dbfe")
+		(property "Reference" "Q2"
+			(at 81.585 157.302 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 81.585 157.302 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 81.585 157.302 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.585 157.302 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.585 157.302 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b7c8a76-773d-4bdf-892c-b7a7d50caf09")
+		)
+		(pin "2"
+			(uuid "95acb3f3-6c05-4a28-af1d-338d7098f31e")
+		)
+		(pin "3"
+			(uuid "0e625662-bbe8-4415-a96a-f1f6d15d398b")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 142.545 156.908 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a20b0a6e-547d-4c77-9d5d-135152e1dddd")
+		(property "Reference" "Q8"
+			(at 142.545 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 142.545 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 142.545 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.545 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.545 156.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c4a125c3-374d-4fc9-907f-8ee28ae8092b")
+		)
+		(pin "1"
+			(uuid "67d7f2e0-71c7-4f19-b79e-b84c05f8572e")
+		)
+		(pin "3"
+			(uuid "15eb2763-e923-439d-a8e4-a8b9f75498b1")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 178.105 131.509 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab1f6c68-5863-42fa-81c2-862944c00740")
+		(property "Reference" "Q10"
+			(at 178.105 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 178.105 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 178.105 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 178.105 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 178.105 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d176ad4d-d28e-41cb-b66b-a96f9bbbae5a")
+		)
+		(pin "1"
+			(uuid "47258baf-1cf2-4ef1-8bab-5261bf584d2c")
+		)
+		(pin "3"
+			(uuid "f28ee668-14cc-468e-b027-3a5b8b9f04bd")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:HDR-2X3")
+		(at 73.66 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5946aa9-7f92-44c0-ae03-f4c69bf3bf82")
+		(property "Reference" "J1"
+			(at 73.66 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "HDR-2X3"
+			(at 73.66 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:HDR-2X3"
+			(at 73.66 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "c6866252-421e-4419-ae2f-1cfbfdab505f")
+		)
+		(pin "4"
+			(uuid "50169d99-3eb1-40f8-b3a7-d6416a10b4ff")
+		)
+		(pin "5"
+			(uuid "a97af018-fc6c-4621-a0a8-d564f8f33f53")
+		)
+		(pin "6"
+			(uuid "c2e03c70-8f0a-443a-a042-2c21cefc19fb")
+		)
+		(pin "1"
+			(uuid "97d0afaa-87a9-43de-920a-5683b1e8dc0a")
+		)
+		(pin "2"
+			(uuid "8fe52877-30db-4a1f-9bde-c87d0a291648")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 81.585 106.109 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ca268027-77e4-4f95-8e95-9a702c44a1e4")
+		(property "Reference" "Q0"
+			(at 81.585 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 81.585 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 81.585 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.585 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.585 106.109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "83c2a835-bd60-48e0-a6fb-e2b58628d8c2")
+		)
+		(pin "2"
+			(uuid "d5c2fa26-ebbc-46ba-9d62-cd233ca17730")
+		)
+		(pin "3"
+			(uuid "288fb091-3e54-478b-8101-38449803a50f")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:MMBTA42LT1G")
+		(at 147.625 131.509 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1d0b209-b560-4d23-8fa0-a3634f03144b")
+		(property "Reference" "Q7"
+			(at 147.625 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MMBTA42LT1G"
+			(at 147.625 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:SOT23-3P95_240X110L43X44N"
+			(at 147.625 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.625 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.625 131.509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "46e5c052-1129-407a-864d-bad4b859b4f3")
+		)
+		(pin "3"
+			(uuid "9082c751-da4b-4aaa-97ef-c9fbaaa9a9c4")
+		)
+		(pin "2"
+			(uuid "bc6d67bf-c670-4acc-b5f0-4022751bb30d")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:RES_1206")
+		(at 180.34 162.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f894e222-198b-4c50-88ef-be6cf1bc9816")
+		(property "Reference" "R1"
+			(at 180.34 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "75"
+			(at 180.34 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie Driver:RES_1206"
+			(at 180.34 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 180.34 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6293316-a811-4e66-8fed-e49c42b737ec")
+		)
+		(pin "2"
+			(uuid "9e530299-9094-424c-9a2e-c354f7d1dfa2")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
