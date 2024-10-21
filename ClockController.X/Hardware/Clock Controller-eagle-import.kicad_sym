@@ -1610,11 +1610,14 @@
 		)
 	)
 	(symbol "DMG7430LFG-7"
+		(pin_names
+			(offset 0.002)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "Q"
-			(at 0 0 0)
+			(at 12.7 2.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1632,7 +1635,7 @@
 			)
 		)
 		(property "Footprint" "Clock Controller:POWERDI3333-8"
-			(at 0 0 0)
+			(at 7.62 14.224 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1656,14 +1659,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "ki_locked" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(symbol "DMG7430LFG-7_1_0"
@@ -1964,7 +1959,7 @@
 				(number "1"
 					(effects
 						(font
-							(size 0 0)
+							(size 1.27 1.27)
 						)
 					)
 				)
@@ -1980,6 +1975,24 @@
 					)
 				)
 				(number "2"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 -2.54 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "3"
 					(effects
 						(font
 							(size 0 0)
@@ -2019,6 +2032,60 @@
 					(effects
 						(font
 							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 7.62 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 7.62 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 7.62 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 0 0)
 						)
 					)
 				)

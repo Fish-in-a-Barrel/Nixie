@@ -2899,16 +2899,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 90.17) (xy 99.06 95.25)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "53111d01-420b-4109-883c-171aa6496f0c")
-	)
-	(wire
-		(pts
 			(xy 166.37 92.71) (xy 129.54 92.71)
 		)
 		(stroke
@@ -2936,6 +2926,16 @@
 			(type solid)
 		)
 		(uuid "5d098b3f-85ae-4936-95ff-b6e41d60eca8")
+	)
+	(wire
+		(pts
+			(xy 99.06 90.17) (xy 99.06 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ea6d8da-bf48-48b1-a481-f69287be80e0")
 	)
 	(wire
 		(pts
@@ -5227,7 +5227,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diodes Incorporated:TRANS_DMP3017SFGQ-7"
+		(property "Footprint" "Diodes Incorporated:PowerDI3333-8"
 			(at 107.95 82.55 0)
 			(effects
 				(font
