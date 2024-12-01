@@ -46,6 +46,8 @@ static uint8_t gCurrentPage = PAGE_NONE;
 #define xstr(s) str(s)
 #define str(s) #s
 
+static uint8_t gFirstClick = 1;
+
 void DrawPageTemplate(void)
 {
     OLED_Clear();
@@ -186,6 +188,14 @@ void UI_HandleRotationCCW(void)
 void UI_HandleButtonPress(void)
 {
     gButtonState.c.edge = 0;
+    
+    // The button is "clicked" by power coming up. Ignore this phantom click.
+    if (gFirstClick)
+    {
+        gFirstClick = 0;
+        return;
+    }
+    
     if (KeepDisplayAlive()) return;
     
     if (gCurrentPage == PAGE_TIME_ZONE)
