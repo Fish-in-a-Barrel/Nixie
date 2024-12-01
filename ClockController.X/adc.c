@@ -43,7 +43,7 @@ void InitAdc(void)
     ADCON0bits.CHS = PPS_INPUT(PPS_PORT_C, 2); 
     
     // Trigger acquisition with PWM3, which is driving the boost converter (§27.4.3)
-    ADACTbits.ACT = 0x3;
+    ADACTbits.ACT = 0x4;
     
     // Enable the ADC (§27.4.1)
     ADCON0bits.ON = 1;
@@ -52,6 +52,7 @@ void InitAdc(void)
 void AdcInterruptHandler(void)
 {
     PIR1bits.ADIF = 0;
+    
     if (ADRES > ADC_HI_LIMIT)
     {
         // Safe voltage levels have been exceeded. Shut the boost converter down.
@@ -74,7 +75,7 @@ void CaptureAdc(void)
     }
     
     uint32_t accum;
-    uint32_t count;
+    uint16_t count;
     
     // Pause global interrupts while reading the ADC value because this is not atomic.
     INTCONbits.GIE = 0;

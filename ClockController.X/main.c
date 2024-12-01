@@ -126,11 +126,11 @@ void main(void)
             CheckGPS();
 
             UpdateNixieDrivers();
-            UI_TickSpinner();
         }
 
         if (frameCounter % 64 == 0)
         {
+            UI_TickSpinner();
             UI_Update();
         }
         
