@@ -35,5 +35,4 @@ void InitTimer()
 void TimerInterruptHandler(void)
 {
     PIR1bits.TMR2IF = 0;
-    ++gTickCount;
 }

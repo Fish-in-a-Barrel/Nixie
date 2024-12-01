@@ -92,7 +92,7 @@ void CaptureAdc(void)
     // divide by 1000 to convert from mV to volts
     // This works out to (63.5 * (4096 / 1024)) / 1000 = 0.254, or ~(1/4 + 1/250).
     // The exact values used will depend on the precise value of the resistors.
-    gVoltage = (uint8_t)(gAdcCv / 4) + (uint8_t)(gAdcCv / 210);
+    gVoltage = (uint8_t)(gAdcCv / 4) - (uint8_t)(gAdcCv / 330);
 }
 
 uint8_t AdcOverVoltageProtectionTripped(void)

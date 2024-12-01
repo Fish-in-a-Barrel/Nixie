@@ -251,7 +251,7 @@ void DrawStatusPage(void)
 
     if (AdcOverVoltageProtectionTripped())
     {
-        OLED_DrawString(3, 16, "OVP", 1);
+        OLED_DrawString(3, 16, " ! OVP ! ", 1);
     }
 }
 
