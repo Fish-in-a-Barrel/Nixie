@@ -6,9 +6,9 @@
 #include <xc.h>
 
 // The ADC returns a 10-bit value dividing the range 0mv to 4096mV evenly so mV/4 = ADC.
-// The expected voltage from the voltage divider is 2,800mV, which means the expected ADC value is 700. This will vary with the exact resistance of
+// The expected voltage from the voltage divider is ~2,835mV, which means the expected ADC value is ~709. This will vary with the exact resistance of
 // the resistors in the voltage divider.
-#define ADC_SP 715L
+#define ADC_SP 709L
 #define ADC_DEADBAND 5
 
 // The voltage booster is controlled by changing the duty-cycle (DC) of the PWM signal driving it.

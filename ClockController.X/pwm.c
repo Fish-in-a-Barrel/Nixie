@@ -18,6 +18,11 @@ void InitPWM()
     PWM3CONbits.EN = 1;
 }
 
+void PWM_Disable(void)
+{
+    PWM3CONbits.EN = 0;
+}
+
 void SetPwmDutyCycle(uint16_t dutyCycle)
 {
     // §23.11.2

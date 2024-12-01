@@ -1,5 +1,9 @@
 #include "adc.h"
 #include "pps_inputs.h"
+#include "pwm.h"
+
+// This defines the maximum allowed voltage (~200V).
+#define ADC_HI_LIMIT 787L
 
 uint16_t gAdcCv = 0;
 uint8_t gVoltage = 0;
@@ -9,6 +13,8 @@ static volatile uint16_t gAdcAccumulatorCount = 0;
 
 static volatile uint8_t gAdcResultIndex = 0;
 static volatile uint16_t gAdcResult[2] = { 0, 0 };
+
+static uint8_t gOverVoltageProtection = 0;
 
 void InitAdcPins(void)
 {
@@ -36,8 +42,8 @@ void InitAdc(void)
     // Select RC2 as the ADC channel (§27.4.1)
     ADCON0bits.CHS = PPS_INPUT(PPS_PORT_C, 2); 
     
-    // Trigger acquisition with TMR2 post-scaled (§27.4.3)
-    ADACTbits.ACT = 0x4;
+    // Trigger acquisition with PWM3, which is driving the boost converter (§27.4.3)
+    ADACTbits.ACT = 0x3;
     
     // Enable the ADC (§27.4.1)
     ADCON0bits.ON = 1;
@@ -46,8 +52,17 @@ void InitAdc(void)
 void AdcInterruptHandler(void)
 {
     PIR1bits.ADIF = 0;
-    gAdcAccumulator += ADRES;
-    ++gAdcAccumulatorCount;
+    if (ADRES > ADC_HI_LIMIT)
+    {
+        // Safe voltage levels have been exceeded. Shut the boost converter down.
+        PWM_Disable();
+        gOverVoltageProtection = 1;
+    }
+    else
+    {
+        gAdcAccumulator += ADRES;
+        ++gAdcAccumulatorCount;
+    }
 }
 
 void CaptureAdc(void)
@@ -77,4 +92,9 @@ void CaptureAdc(void)
     // This works out to (63.5 * (4096 / 1024)) / 1000 = 0.254, or ~(1/4 + 1/250).
     // The exact values used will depend on the precise value of the resistors.
     gVoltage = (uint8_t)(gAdcCv / 4) + (uint8_t)(gAdcCv / 210);
+}
+
+uint8_t AdcOverVoltageProtectionTripped(void)
+{
+    return gOverVoltageProtection;
 }

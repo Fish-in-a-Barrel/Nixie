@@ -32,7 +32,7 @@ void OLED_DrawCharacter(uint8_t row, uint8_t col, uint8_t ascii, uint8_t invert)
 ///
 /// @param row The row offset of the first character.
 /// @param col The column offset of first the character.
-/// @param str The ASCII code of the character to draw.
+/// @param str The string of ASCII characters to draw.
 /// @param invert If 1, draws the string in black on a white background.
 void OLED_DrawString(uint8_t row, uint8_t col, const char* str, uint8_t invert);
 

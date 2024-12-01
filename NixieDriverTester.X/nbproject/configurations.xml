@@ -320,13 +320,13 @@
         <targetDevice>PIC16F15213</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PK5Tool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.45</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.23.382"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -597,11 +597,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.45</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.23.382"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

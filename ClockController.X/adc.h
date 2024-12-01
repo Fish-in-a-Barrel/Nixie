@@ -18,5 +18,9 @@ void AdcInterruptHandler(void);
 /// Called to update the gAdcCv and gVoltage globals.
 void CaptureAdc(void);
 
+///
+/// @returns 1 if the over-volage protection has kicked in.
+uint8_t AdcOverVoltageProtectionTripped(void);
+
 #endif	/* ADC_H */
 

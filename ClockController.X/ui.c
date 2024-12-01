@@ -238,6 +238,11 @@ void DrawStatusPage(void)
     // "PD: ###V @ ##%"
     OLED_DrawNumber8(3, 0, gVoltage, 3);
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
+
+    if (AdcOverVoltageProtectionTripped())
+    {
+        OLED_DrawString(3, 16, "OVP", 1);
+    }
 }
 
 void DrawTimeZonePage(void)

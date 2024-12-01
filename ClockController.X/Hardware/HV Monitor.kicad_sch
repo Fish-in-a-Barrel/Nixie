@@ -590,7 +590,7 @@
 		)
 		(uuid "ef422bbe-2d74-41a1-9b1c-f6f93cf74dfa")
 	)
-	(text "12 / (750 + 12) = 1 / 63.5\nVoltage @ J10-1 should be approx:\n2.8V with source @ 180V\n3.8V with source @ 240V\n43mW power consumed"
+	(text "12 / (750 + 12) = 1 / 63.5\nVoltage @ J10-1 should be approx:\n2.8V  with source @ 180V\n3.15V with source @ 200V\n3.8V  with source @ 240V\n43mW power consumed"
 		(exclude_from_sim no)
 		(at 125.73 97.79 0)
 		(effects

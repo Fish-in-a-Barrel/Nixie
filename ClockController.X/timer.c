@@ -9,7 +9,7 @@ uint32_t gTickCount = 0;
     - pre-scale the clock (§21.10.3)
     - lower the system oscillator frequency
     - decrease the frequency
- */
+*/
 #error Timer reset value to large for T2PR
 #endif
 
