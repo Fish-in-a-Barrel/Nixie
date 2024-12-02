@@ -86,3 +86,12 @@ void Buttons_HandleInterrupt(void)
 
     UpdateRotation();
 }
+
+void Button_ResetEdges(void)
+{
+    gButtonState.a.edge = 0;
+    gButtonState.b.edge = 0;
+    gButtonState.c.edge = 0;
+    gButtonState.deltaR = 0;
+    gButtonState.rotation = 0;
+}

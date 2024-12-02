@@ -32,5 +32,7 @@ void Buttons_Init(void);
 
 void Buttons_HandleInterrupt(void);
 
+void Button_ResetEdges(void);
+
 #endif	/* BUTTON_H */
 

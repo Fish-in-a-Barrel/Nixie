@@ -96,6 +96,8 @@ void main(void)
     SerialInit();
     EnableInterrupts();
     
+    Buttons_Init();
+    
     // Give other devices (*cough*OLED*cough*) time to finish power-up.
     __delay_ms(50);
     
@@ -105,12 +107,14 @@ void main(void)
     if (!AP33772_Init()) while (1);
 #endif
     
-    Buttons_Init();
-    
     InitTimer();
     InitAdc();
     InitPWM();
     InitBoostConverter();
+    
+    // Power-on can be detected as a state change in buttons. That should have stabilized at this point, so reset the
+    // edge states.
+    Button_ResetEdges();
     
     gGpsData.updated = 0;
     
