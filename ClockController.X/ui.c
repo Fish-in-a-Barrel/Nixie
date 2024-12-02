@@ -46,8 +46,6 @@ static uint8_t gCurrentPage = PAGE_NONE;
 #define xstr(s) str(s)
 #define str(s) #s
 
-static uint8_t gFirstClick = 1;
-
 void DrawPageTemplate(void)
 {
     OLED_Clear();
@@ -189,13 +187,6 @@ void UI_HandleButtonPress(void)
 {
     gButtonState.c.edge = 0;
     
-    // The button is "clicked" by power coming up. Ignore this phantom click.
-    if (gFirstClick)
-    {
-        gFirstClick = 0;
-        return;
-    }
-    
     if (KeepDisplayAlive()) return;
     
     if (gCurrentPage == PAGE_TIME_ZONE)
@@ -245,13 +236,13 @@ void DrawStatusPage(void)
         'A' == gGpsData.status ? "OK " : (0 == gGpsData.status ? "?  " : "Acq"),
         0);
 
-    // "PD: ###V @ ##%"
+    // "###V @ ##%"
     OLED_DrawNumber8(3, 0, gVoltage, 3);
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
 
     if (AdcOverVoltageProtectionTripped())
     {
-        OLED_DrawString(3, 16, " ! OVP ! ", 1);
+        OLED_DrawString(3, 14, "! OVP !", 1);
     }
 }
 
