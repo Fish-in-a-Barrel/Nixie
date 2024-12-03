@@ -240,10 +240,8 @@ void DrawStatusPage(void)
     OLED_DrawNumber8(3, 0, BoostConverter_GetVoltage(), 3);
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
 
-    if (BoostConverter_OverVoltageProtectionOn())
-    {
-        OLED_DrawString(3, 14, "! OVP !", 1);
-    }
+    uint8_t on = BoostConverter_OverVoltageProtectionOn();
+    OLED_DrawString(3, 14, on ? "! OVP !" : "       ", on);
 }
 
 void DrawTimeZonePage(void)
