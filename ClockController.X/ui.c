@@ -237,10 +237,10 @@ void DrawStatusPage(void)
         0);
 
     // "###V @ ##%"
-    OLED_DrawNumber8(3, 0, gVoltage, 3);
+    OLED_DrawNumber8(3, 0, BoostConverter_GetVoltage(), 3);
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
 
-    if (AdcOverVoltageProtectionTripped())
+    if (BoostConverter_OverVoltageProtectionOn())
     {
         OLED_DrawString(3, 14, "! OVP !", 1);
     }
@@ -297,7 +297,7 @@ void DrawTimeZonePage(void)
 
 void DrawBoostPage(void)
 {
-    OLED_DrawNumber8(1, 8, gVoltage, 3);
+    OLED_DrawNumber8(1, 8, BoostConverter_GetVoltage(), 3);
     OLED_DrawNumber16(2, 5, BoostConverter_GetDutyCycle(), 4);
     OLED_DrawNumber16(2, 16, BoostConverter_GetDutyCyclePct(), 2);
     OLED_DrawNumber16(3, 5, gAdcCv * 4, 4);

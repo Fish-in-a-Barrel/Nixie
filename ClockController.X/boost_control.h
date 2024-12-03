@@ -11,11 +11,16 @@
 
 ///
 /// Initializes the boost converter.
-void InitBoostConverter(void);
+void BoostConverter_Init(void);
 
 ///
 /// Adjusts the boost converter's PWM duty-cycle based on the current ADC reading.
-void UpdateBoostConverter(void);
+/// @param adc The current ADC value.
+void BoostConverter_Update(uint16_t adc);
+
+///
+/// @returns The voltage level.
+uint8_t BoostConverter_GetVoltage(void);
 
 ///
 /// @returns The raw duty cycle value set to the PWM.
@@ -25,5 +30,9 @@ uint16_t BoostConverter_GetDutyCycle(void);
 /// @returns The duty cycle set to the PWM as a percentage.
 /// @note This is a fixed-precision value with 1 decimal digit.
 uint16_t BoostConverter_GetDutyCyclePct(void);
+
+///
+/// @returns 0 if OVP is off, !=0 if it is on.
+uint8_t BoostConverter_OverVoltageProtectionOn(void);
 
 #endif	/* BOOST_CONTROL_H */

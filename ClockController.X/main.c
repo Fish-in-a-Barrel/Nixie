@@ -110,7 +110,7 @@ void main(void)
     InitTimer();
     InitAdc();
     InitPWM();
-    InitBoostConverter();
+    BoostConverter_Init();
     
     // Power-on can be detected as a state change in buttons. That should have stabilized at this point, so reset the
     // edge states.
@@ -121,7 +121,6 @@ void main(void)
     uint8_t frameCounter = 0;
     while (1)
     {
-        UpdateBoostConverter();
         HandleUserInteraction();
         
         if (frameCounter % 4 == 0)
