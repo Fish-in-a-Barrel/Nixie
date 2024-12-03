@@ -47,7 +47,7 @@ uint16_t gPwmDutyCycle = PWM_DC_MIN;
 typedef struct
 {
     uint8_t digit:4; // LSB. The digit to display. Blanks the nixie for values > 9.
-    uint8_t _pad:3;  // unused
+    uint8_t :3;  // unused
     uint8_t comma:1; // 1 = comma lit (for IN-12B)
 } NixieState;
 

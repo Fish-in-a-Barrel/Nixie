@@ -320,10 +320,10 @@
         <targetDevice>PIC16F15213</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>PK5Tool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>3</platform>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>
