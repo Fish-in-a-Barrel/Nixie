@@ -15,11 +15,13 @@
 // By scaling the working DC value, we can have a working value with more granularity than the actual PWM allows. This can allow for some smoother
 // control, depending on the algorithm.
 #define PWM_DC_SCALAR 32
-#define PWX_DC_100 ((TMR2_RESET << 2) * PWM_DC_SCALAR)
-#define PWM_DC_MIN (uint16_t)(0.85 * PWX_DC_100)
-#define PWM_DC_MAX (uint16_t)(0.95 * PWX_DC_100)
+#define PWM_DC_100 ((TMR2_RESET << 2) * PWM_DC_SCALAR)
+#define PWM_DC_MAX (uint16_t)(0.95 * PWM_DC_100)
 
-static uint16_t gPwmDutyCycle = (PWM_DC_MIN + PWM_DC_MAX) / 2;
+#define PID_P_HI 1
+#define PID_P_LO 1
+
+static uint16_t gPwmDutyCycle = (uint16_t)(0.8 * PWM_DC_100);
 
 void InitBoostConverter(void)
 {
@@ -29,12 +31,21 @@ void InitBoostConverter(void)
 void UpdateBoostConverter()
 {
     CaptureAdc();
-
-    if (gAdcCv + ADC_DEADBAND < ADC_SP) ++gPwmDutyCycle;
-    else if (gAdcCv - ADC_DEADBAND > ADC_SP) --gPwmDutyCycle;
     
-    if (gPwmDutyCycle > PWM_DC_MAX) gPwmDutyCycle = PWM_DC_MAX;
-    else if (gPwmDutyCycle < PWM_DC_MIN) gPwmDutyCycle = PWM_DC_MIN;
+    int16_t cvError = gAdcCv - ADC_SP;
+    int16_t dPwmDc = 0;
+    if (cvError > 0)
+    {
+        dPwmDc = cvError * PID_P_HI;
+        if (dPwmDc <= gPwmDutyCycle) gPwmDutyCycle -= dPwmDc;
+        else dPwmDc = 0;
+    }
+    else if (cvError < 0)
+    {
+        dPwmDc = cvError * PID_P_HI;
+        if (gPwmDutyCycle + dPwmDc < PWM_DC_100) gPwmDutyCycle += dPwmDc;
+        else dPwmDc = PWM_DC_100;
+    }
     
     SetPwmDutyCycle(gPwmDutyCycle / PWM_DC_SCALAR);
 }
@@ -46,5 +57,5 @@ uint16_t BoostConverter_GetDutyCycle(void)
 
 uint16_t BoostConverter_GetDutyCyclePct(void)
 {
-    return gPwmDutyCycle / (PWX_DC_100 / 100);
+    return gPwmDutyCycle / (PWM_DC_100 / 100);
 }
