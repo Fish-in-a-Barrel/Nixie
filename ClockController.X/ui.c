@@ -346,7 +346,7 @@ void UI_Update(void)
     
     if (gDisplayTimer == 0)
     {
-        //OLED_Off();
+        OLED_Off();
         gDisplayState = DISPLAY_STATE_OFF;
     }
     else
