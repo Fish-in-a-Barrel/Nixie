@@ -28,7 +28,7 @@
 #define ADDRESS_PIN_2 RC1
 #define ADDRESS_PIN_3 RC0
 
-// Note that this is shifted left 1 bit
+// Note that this is shifted left by 1 bit for convenient use with the I2C registers.
 #define I2C_ADDRESS (\
     (uint8_t)((uint8_t)ADDRESS_PIN_0 << 1) | \
     (uint8_t)((uint8_t)ADDRESS_PIN_1 << 2) | \
@@ -75,13 +75,13 @@ void InitPins()
      * A3 = RC3
      */
     
-    // I2C pins must be configured as inputs (§25.2.2.3)
+    // I2C pins must be configured as inputs (ï¿½25.2.2.3)
     // Address pins are inputs
     TRISA = 0x03;
     TRISB = 0x50;
     TRISC = 0x03;
 
-    // Clear the analog registers (§16.5)
+    // Clear the analog registers (ï¿½16.5)
     ANSELA = 0x00;
     ANSELB = 0x00;
     ANSELC = 0x00;
@@ -91,66 +91,66 @@ void InitPins()
     PORTB = 0;
     PORTC = 0;
     
-    // Set PPS input pins (§18.2, Table 18-1; §18.8.1)
+    // Set PPS input pins (ï¿½18.2, Table 18-1; ï¿½18.8.1)
     SSP1CLKPPS = PPS_INPUT(PPS_PORT_B, 4);
     SSP1DATPPS = PPS_INPUT(PPS_PORT_B, 6);
 
-    // Set PPS output pins (§18.8.2)
+    // Set PPS output pins (ï¿½18.8.2)
     RB4PPS = PPS_OUT_SCL1;
     RB6PPS = PPS_OUT_SDA1;
 }
 
 void InitInterrupts()
 {
-    // Enable global and peripheral interrupts (§12.4)
+    // Enable global and peripheral interrupts (ï¿½12.4)
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1; 
 }
 
 void InitI2C()
 {
-    // Not relevant to clients (§25.4.4)
+    // Not relevant to clients (ï¿½25.4.4)
     SSP1STAT = 0x00;
     
-    // 7-bit addressing client (§25.4.5)
+    // 7-bit addressing client (ï¿½25.4.5)
     SSP1CON1 = 0x06;
     
-    // Enable clock stretching (§25.4.6)
+    // Enable clock stretching (ï¿½25.4.6)
     SSP1CON2 = 0x01;
     
-    // No start/stop interrupts (§25.4.7)
+    // No start/stop interrupts (ï¿½25.4.7)
     SSP1CON3 = 0x00;
     
-    // Set the client address and enable the full address mask (§25.4.2, §25.4.3)
+    // Set the client address and enable the full address mask (ï¿½25.4.2, ï¿½25.4.3)
     SSP1ADD = I2C_ADDRESS;
     SSP1MSK = 0xFE;
 
     // Enable Interrupts
     PIE1bits.SSP1IE = 1;
 
-    // Enable the port (§25.4.5)
+    // Enable the port (ï¿½25.4.5)
     SSP1CON1bits.SSPEN = 1;
 }
 
 void InitPWM()
 {
-    // Use the F_osc/4 source, as required for PWM (§21.10.5, §23.9)
+    // Use the F_osc/4 source, as required for PWM (ï¿½21.10.5, ï¿½23.9)
     T2CLKCON = 0x1;
     
-    // 250 tick counter reset results (§21.10.2)
+    // 250 tick counter reset results (ï¿½21.10.2)
     T2PR = (uint8_t)PWM_MAX;
     
-    // Mode is free-running, period-pulse, software-gated (§21.10.4)
+    // Mode is free-running, period-pulse, software-gated (ï¿½21.10.4)
     T2HLT = 0x00;    
     
-    // Enable the timer with a 1:16 pre-scaler (§21.10.3)
+    // Enable the timer with a 1:16 pre-scaler (ï¿½21.10.3)
     T2CONbits.CKPS = 0;
     T2CONbits.ON = 1;
 
-    // Invert PWM 4 (§23.11.1)
+    // Invert PWM 4 (ï¿½23.11.1)
     PWM4CONbits.POL = 1;
     
-    // Enable the PWMs (§23.11.1)
+    // Enable the PWMs (ï¿½23.11.1)
     PWM3CONbits.EN = 1;
     PWM4CONbits.EN = 1;
 }
@@ -158,7 +158,7 @@ void InitPWM()
 volatile uint8_t gDataI2C = 0xFF;
 volatile uint8_t gNewDataI2C = 0;
 
-// §25.2.3
+// ï¿½25.2.3
 void HandleI2C()
 {
     // Clear the interrupt flag
@@ -170,13 +170,13 @@ void HandleI2C()
         // Handle address message
         //
         
-        // The buffer MUST be read to clear SSPxSTAT.BF (§25.2.3.6.1).
+        // The buffer MUST be read to clear SSPxSTAT.BF (ï¿½25.2.3.6.1).
         uint8_t devNull = SSP1BUF;
         
-        // If this is a read, immediately respond with the first byte (§25.2.3.7.2).
+        // If this is a read, immediately respond with the first byte (ï¿½25.2.3.7.2).
         if (SSP1STATbits.R_nW) SSP1BUF = gDataI2C;
 
-        // Release the clock stretch (§25.2.3.6.1)
+        // Release the clock stretch (ï¿½25.2.3.6.1)
         SSP1CON1bits.CKP = 1;
     }
     else if (SSP1STATbits.BF)
@@ -192,7 +192,7 @@ void HandleI2C()
             gNewDataI2C = 1;
         }
 
-        // Release the clock stretch. (§25.2.3.6.1)
+        // Release the clock stretch. (ï¿½25.2.3.6.1)
         // The data sheet does not say to do this here, but the bus locks up 100% of the time if I don't.
         SSP1CON1bits.CKP = 1;
     }
@@ -205,7 +205,7 @@ void __interrupt() ISR()
 
 void SetPwmDutyCycle(int dc)
 {
-    // §23.11.2
+    // ï¿½23.11.2
     PWM3DCH = PWM4DCH = (uint8_t)dc;
     PWM3DCL = PWM4DCL = 0;
 
