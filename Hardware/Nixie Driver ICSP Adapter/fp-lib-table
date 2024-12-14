@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ICSP Adapter")(type "KiCad")(uri "$(KIPRJMOD)/ICSP Adapter.pretty")(options "")(descr ""))
+)
