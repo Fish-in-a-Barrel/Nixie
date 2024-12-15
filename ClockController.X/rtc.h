@@ -7,8 +7,8 @@
 
 #define I2C_RTC_ADDRESS 0x68
 
-#define HOUR_TYPE_12 0
-#define HOUR_TYPE_24 1
+#define HOUR_TYPE_12 1
+#define HOUR_TYPE_24 0
 
 struct RtcData
 {
@@ -25,7 +25,7 @@ struct RtcData
     // 0x02 - hours
     uint8_t hour01:4;
     uint8_t hour10:2;
-    uint8_t hoursType:1; // 0 = 12, 1 = 24
+    uint8_t hoursType:1;
     uint8_t :1;
     
     // 0x3 - day
