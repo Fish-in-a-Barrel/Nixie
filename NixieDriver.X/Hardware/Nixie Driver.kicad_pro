@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -58,12 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "courtyards_overlap|159403723|92565768|2852733a-cb9f-4943-8a5e-8b483b79445d|a608a7a6-e1a8-4f48-846c-f2ab10a8c1a7",
-        "lib_footprint_mismatch|152385000|88905000|3dcae512-903b-40be-b9b2-1d60aaa30b68|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|152415000|114295000|960b4d42-db8e-4f95-8b8b-11d805b6ddf6|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|153909769|94538800|198cc428-61a3-49ef-9c94-02ef8f8b1448|00000000-0000-0000-0000-000000000000"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -457,7 +452,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2032,
+        "clearance": 0.19,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -474,7 +469,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2032,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -484,14 +479,14 @@
         "name": "Cathode Signal",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2032,
+        "track_width": 0.2,
         "via_diameter": 1.016,
         "via_drill": 0.485667,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.2032,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -501,14 +496,14 @@
         "name": "Ground",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.33,
+        "track_width": 0.2,
         "via_diameter": 1.016,
         "via_drill": 0.485667,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.2032,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -531,79 +526,35 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "ADDR2"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "ADDR3"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "ADDR0/DAT"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "ADDR1/CLK"
       },
       {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_0"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_1"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_2"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_3"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_4"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_5"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_6"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_7"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_8"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_9"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_Dot"
-      },
-      {
-        "netclass": "Ground",
+        "netclass": "Default",
         "pattern": "GND"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "SCL"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "SDA"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "VDD"
       },
       {
@@ -615,8 +566,12 @@
         "pattern": "VNN.2"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Default",
         "pattern": "~{MCLR}"
+      },
+      {
+        "netclass": "Vnn",
+        "pattern": "/Cathode_*"
       }
     ]
   },
@@ -736,7 +691,7 @@
   "sheets": [
     [
       "a603c7dd-0964-4ab1-bdb5-8ff7833b36d7",
-      "Nixie Driver_0"
+      "Root"
     ]
   ],
   "text_variables": {}
