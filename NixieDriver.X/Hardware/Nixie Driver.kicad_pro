@@ -572,6 +572,14 @@
       {
         "netclass": "Vnn",
         "pattern": "/Cathode_*"
+      },
+      {
+        "netclass": "Vnn",
+        "pattern": "Vnn"
+      },
+      {
+        "netclass": "Vnn",
+        "pattern": "N_GND"
       }
     ]
   },

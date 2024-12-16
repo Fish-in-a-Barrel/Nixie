@@ -2147,10 +2147,6 @@
 		(color 0 0 0 0)
 		(uuid "06328863-be7f-40be-8865-fd56510e60d1")
 	)
-	(no_connect
-		(at 144.78 55.88)
-		(uuid "15313c63-34be-4e9b-89c8-5de979b8356b")
-	)
 	(wire
 		(pts
 			(xy 165.1 147.32) (xy 165.1 149.86)
@@ -2410,13 +2406,13 @@
 		(uuid "23dfa072-abcb-4803-abfa-0da8b957d91d")
 	)
 	(label "Driver_5"
-		(at 157.48 88.9 270)
+		(at 193.04 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "28b5c75d-383c-45a4-b4f6-401331e6d2be")
 	)
@@ -2432,7 +2428,7 @@
 		(uuid "28fa47df-b480-47c1-8cd1-9fcfa98e130b")
 	)
 	(label "Driver_3"
-		(at 193.04 82.55 0)
+		(at 193.04 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2443,7 +2439,7 @@
 		(uuid "29352da3-09ac-47db-959c-11c1b721a497")
 	)
 	(label "Driver_7"
-		(at 149.86 88.9 270)
+		(at 144.78 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2509,13 +2505,13 @@
 		(uuid "3930e87b-7090-4dd1-89ec-5ff2c9fa7170")
 	)
 	(label "Driver_Dot"
-		(at 181.61 45.72 90)
+		(at 144.78 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "3fdcc429-d81c-41a4-a391-9b725dd0de54")
 	)
@@ -2707,7 +2703,7 @@
 		(uuid "9a0f9e8c-4680-4942-837c-f8b0bed04c10")
 	)
 	(label "Driver_0"
-		(at 144.78 53.34 180)
+		(at 144.78 55.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2839,7 +2835,7 @@
 		(uuid "c75fff52-5179-4bfc-968d-ca07699a3612")
 	)
 	(label "Driver_8"
-		(at 144.78 60.96 180)
+		(at 157.48 88.9 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2850,7 +2846,7 @@
 		(uuid "c9280a0c-22e7-449f-85a1-6ab7c2851419")
 	)
 	(label "Driver_2"
-		(at 193.04 80.01 0)
+		(at 181.61 45.72 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5578,7 +5574,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f894e222-198b-4c50-88ef-be6cf1bc9816")
-		(property "Reference" "R3"
+		(property "Reference" "R2"
 			(at 168.656 143.51 0)
 			(effects
 				(font
@@ -5630,7 +5626,7 @@
 		(instances
 			(project ""
 				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
-					(reference "R3")
+					(reference "R2")
 					(unit 1)
 				)
 			)
