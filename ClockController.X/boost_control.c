@@ -27,12 +27,14 @@
 #define PWM_DC_MAX (uint16_t)(0.95 * PWM_DC_100)
 
 // Control constants when over SP
-#define PID_P_HI 1
-#define PID_DPWMDC_MAX_HI 0x100
+#define PID_P_NUM_HI 1
+#define PID_P_DENOM_HI 1
+#define PID_DPWMDC_MAX_HI 0x1
 
 // Control constants when below SP
-#define PID_P_LO 1
-#define PID_DPWMDC_MAX_LO 0x40
+#define PID_P_NUM_LO 1
+#define PID_P_DENOM_LO 2
+#define PID_DPWMDC_MAX_LO 0x1
 
 static uint16_t gPwmDutyCycle = (uint16_t)(0.8 * PWM_DC_100);
 static uint8_t gOverVoltageProtection = 0;
@@ -44,6 +46,10 @@ void BoostConverter_Init(void)
 
 void BoostConverter_Update(uint16_t adc)
 {
+#ifdef SKIP_PD
+    return;
+#endif
+    
     // If save voltage levels are exceeded, stop the PWM.
     if (adc > ADC_HI_LIMIT)
     {
@@ -69,7 +75,8 @@ void BoostConverter_Update(uint16_t adc)
     uint16_t dPwmDc = 0;
     if (cvError > 0)
     {
-        dPwmDc = (uint16_t)(cvError * PID_P_HI);
+        dPwmDc = (uint16_t)(cvError * PID_P_NUM_HI);
+        //dPwmDc = (uint16_t)((cvError * PID_P_NUM_HI) / PID_P_DENOM_HI);
         if (dPwmDc > PID_DPWMDC_MAX_HI) dPwmDc = PID_DPWMDC_MAX_HI;
         
         if (dPwmDc <= gPwmDutyCycle) gPwmDutyCycle -= dPwmDc;
@@ -77,7 +84,8 @@ void BoostConverter_Update(uint16_t adc)
     }
     else if (cvError < 0)
     {
-        dPwmDc = (uint16_t)(-cvError * PID_P_LO);
+        dPwmDc = (uint16_t)(-cvError * PID_P_NUM_LO);
+        //dPwmDc = (uint16_t)((cvError * PID_P_NUM_LO) / PID_P_DENOM_LO);
         if (dPwmDc > PID_DPWMDC_MAX_LO) dPwmDc = PID_DPWMDC_MAX_LO;
         
         if (gPwmDutyCycle + dPwmDc < PWM_DC_100) gPwmDutyCycle += dPwmDc;
