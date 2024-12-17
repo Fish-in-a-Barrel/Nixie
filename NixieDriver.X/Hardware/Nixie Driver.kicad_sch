@@ -3541,7 +3541,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 65.024 51.054 90)
 			(effects
 				(font
@@ -5272,22 +5272,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "50d59c83-8c36-4648-aa08-44273fa26f8b")
+			(uuid "50d59c83-8c36-4648-aa08-44273fa26f8c")
 		)
 		(pin "4"
-			(uuid "1c79848b-1bb9-4184-9c17-3d2fee275032")
+			(uuid "1c79848b-1bb9-4184-9c17-3d2fee275033")
 		)
 		(pin "6"
-			(uuid "f29b9a65-7a50-4193-b2cf-822fbf891b14")
+			(uuid "f29b9a65-7a50-4193-b2cf-822fbf891b15")
 		)
 		(pin "2"
-			(uuid "6957c444-38f3-4312-9a14-35061b25a340")
+			(uuid "6957c444-38f3-4312-9a14-35061b25a341")
 		)
 		(pin "5"
-			(uuid "09a29e48-6004-4cee-b95d-d68ecdd3d308")
+			(uuid "09a29e48-6004-4cee-b95d-d68ecdd3d309")
 		)
 		(pin "3"
-			(uuid "d894e93b-5450-42e3-90f0-7440c4a6abb4")
+			(uuid "d894e93b-5450-42e3-90f0-7440c4a6abb5")
 		)
 		(instances
 			(project ""
@@ -5662,7 +5662,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 65.024 61.214 90)
 			(effects
 				(font
@@ -5804,7 +5804,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 208.534 140.716 90)
 			(effects
 				(font
