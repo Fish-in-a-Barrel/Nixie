@@ -75,9 +75,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "C:/Users/aaron/Desktop/Gerber/")
 		)
 	)
 	(net 0 "")
@@ -5392,7 +5392,7 @@
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H6"
-			(at 0 -4.2 360)
+			(at 0 -4.2 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "deee5beb-a472-490e-8733-11b77e663f0c")
@@ -5404,7 +5404,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 0 4.2 360)
+			(at 0 4.2 0)
 			(layer "F.Fab")
 			(uuid "d26f3019-f9eb-4ee5-83c2-d5be20e7f672")
 			(effects
@@ -5481,7 +5481,7 @@
 			(uuid "215e2f43-1989-46cc-93f4-7110f6072075")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "a976fb53-f762-4f1b-a65a-215b4bcac353")
 			(effects
@@ -8216,7 +8216,7 @@
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H3"
-			(at 0 -4.2 360)
+			(at 0 -4.2 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "7c5c5d7e-5a47-46ed-acbe-70194a5d7f63")
@@ -8228,7 +8228,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 0 4.2 360)
+			(at 0 4.2 0)
 			(layer "F.Fab")
 			(uuid "e625d2c6-8232-4f44-b460-fcf6d5519002")
 			(effects
@@ -8305,7 +8305,7 @@
 			(uuid "7fb06dba-20a8-46a2-b24e-075bcb7acd83")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "6dcea7a6-a84a-45fe-bf16-cd057484ecd0")
 			(effects
@@ -11014,7 +11014,7 @@
 		(descr "Through hole straight socket strip, 1x04, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x04 2.54mm single row")
 		(property "Reference" "J1"
-			(at 0 2.77 360)
+			(at 0 2.77 0)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "d655d80b-60a2-4f25-a70c-5782af13867f")
@@ -11610,8 +11610,8 @@
 		(uuid "1341b172-2111-4f1b-9ca3-bc8b3095c525")
 	)
 	(gr_rect
-		(start 174.625 101.981)
-		(end 138.557 76.327)
+		(start 138.557 76.327)
+		(end 174.625 101.981)
 		(stroke
 			(width 0.1)
 			(type default)
