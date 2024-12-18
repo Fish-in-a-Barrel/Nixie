@@ -4101,10 +4101,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "11dcbb70-cb25-4ef4-92eb-a21790496718")
+			(uuid "11dcbb70-cb25-4ef4-92eb-a21790496719")
 		)
 		(pin "2"
-			(uuid "5dde4835-27cb-48b9-ad73-8c43c8241600")
+			(uuid "5dde4835-27cb-48b9-ad73-8c43c8241601")
 		)
 		(instances
 			(project ""
@@ -4172,7 +4172,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a9a22fc3-f792-4d45-834d-56943dde7cc0")
+			(uuid "a9a22fc3-f792-4d45-834d-56943dde7cc1")
 		)
 		(instances
 			(project ""
@@ -4849,7 +4849,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "1c06e83f-c1b8-4d49-8e05-fadaedf09003")
+			(uuid "1c06e83f-c1b8-4d49-8e05-fadaedf09004")
 		)
 		(instances
 			(project ""
@@ -6126,7 +6126,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "1c06e83f-c1b8-4d49-8e05-fadaedf09003")
+			(uuid "1c06e83f-c1b8-4d49-8e05-fadaedf09005")
 		)
 		(instances
 			(project ""
@@ -6531,10 +6531,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "11dcbb70-cb25-4ef4-92eb-a21790496718")
+			(uuid "11dcbb70-cb25-4ef4-92eb-a2179049671a")
 		)
 		(pin "2"
-			(uuid "5dde4835-27cb-48b9-ad73-8c43c8241600")
+			(uuid "5dde4835-27cb-48b9-ad73-8c43c8241602")
 		)
 		(instances
 			(project ""
@@ -7035,7 +7035,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "CONT"
+		(property "Value" "CONTROLLER"
 			(at 48.514 113.03 0)
 			(effects
 				(font
@@ -7504,10 +7504,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "11dcbb70-cb25-4ef4-92eb-a21790496718")
+			(uuid "11dcbb70-cb25-4ef4-92eb-a2179049671b")
 		)
 		(pin "2"
-			(uuid "5dde4835-27cb-48b9-ad73-8c43c8241600")
+			(uuid "5dde4835-27cb-48b9-ad73-8c43c8241603")
 		)
 		(instances
 			(project ""
