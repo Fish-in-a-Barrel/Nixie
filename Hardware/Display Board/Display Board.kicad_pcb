@@ -12006,6 +12006,19 @@
 			(justify bottom)
 		)
 	)
+	(gr_text "JLCJLCJLCJLC"
+		(at 139.7 151.13 0)
+		(layer "F.SilkS")
+		(uuid "5eb3e075-0a4f-4e51-8e7b-00493dd64d56")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
 	(gr_text "Day 01\n0x0A"
 		(at 151.13 142.24 0)
 		(layer "F.SilkS")
