@@ -58,11 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "lib_footprint_mismatch|152385000|88905000|3dcae512-903b-40be-b9b2-1d60aaa30b68|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|152415000|114295000|960b4d42-db8e-4f95-8b8b-11d805b6ddf6|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|153909769|94538800|198cc428-61a3-49ef-9c94-02ef8f8b1448|00000000-0000-0000-0000-000000000000"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -527,7 +523,11 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "N_GND": "Ground",
+      "Net-(J1-Pin_1)": "Ground",
+      "Net-(V1-V+)": "Vnn"
+    },
     "netclass_patterns": [
       {
         "netclass": "Cathode Signal",
@@ -616,6 +616,10 @@
       {
         "netclass": "Cathode Signal",
         "pattern": "~{MCLR}"
+      },
+      {
+        "netclass": "Vnn",
+        "pattern": "N_GND"
       }
     ]
   },
