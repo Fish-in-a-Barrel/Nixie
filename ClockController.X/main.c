@@ -116,6 +116,9 @@ void main(void)
     // edge states.
     Button_ResetEdges();
     
+    // Exercise all the Nixie cathodes on startup.
+    RefreshNixies();
+    
     gGpsData.updated = 0;
     
     uint8_t frameCounter = 0;
@@ -131,7 +134,7 @@ void main(void)
             UpdateNixieDrivers();
         }
 
-        if (frameCounter % 64 == 0)
+        if (frameCounter % 10 == 0)
         {
             UI_TickSpinner();
             UI_Update();

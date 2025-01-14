@@ -216,6 +216,8 @@ void UI_HandleButtonPress(void)
 
 void DrawStatusPage(void)
 {
+    static uint8_t ovpHold = 0;
+    
     struct DateTime rtcTime;
     ConvertRtcToDateTime(&gRtc, &rtcTime);
     
@@ -241,7 +243,10 @@ void DrawStatusPage(void)
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
 
     uint8_t on = BoostConverter_OverVoltageProtectionOn();
-    OLED_DrawString(3, 14, on ? "! OVP !" : "       ", on);
+    if (on) ovpHold = 5;
+    
+    OLED_DrawString(3, 14, (on || ovpHold) ? "! OVP !" : "       ", on);
+    if (!on && ovpHold) --ovpHold;
 }
 
 void DrawTimeZonePage(void)

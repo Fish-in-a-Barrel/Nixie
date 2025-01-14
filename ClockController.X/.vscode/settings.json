@@ -1,0 +1,6 @@
+{
+    "mplab.clangd.arguments": [
+        "--compile-commands-dir=/home/aaron/repos/Nixie/ClockController.X/_build/ClockController/default"
+    ],
+    "mplab.clangd.path": ""
+}
