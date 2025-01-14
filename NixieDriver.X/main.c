@@ -72,7 +72,7 @@ void InitPins()
      * A0 = RA0
      * A1 = RA1
      * A2 = RC1
-     * A3 = RC3
+     * A3 = RC0
      */
     
     // I2C pins must be configured as inputs (�25.2.2.3)
@@ -80,6 +80,9 @@ void InitPins()
     TRISA = 0x03;
     TRISB = 0x50;
     TRISC = 0x03;
+    
+    WPUA = 0x03;
+    WPUC = 0x03;
 
     // Clear the analog registers (�16.5)
     ANSELA = 0x00;
