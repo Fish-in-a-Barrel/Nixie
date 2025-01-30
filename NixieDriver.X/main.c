@@ -219,35 +219,39 @@ void RampCathodePins(uint8_t bcd)
 {
     static uint8_t lastBcd = 0xFF;
     
-    // Set the comma driver
-    CATHODE_COMMA_PIN = bcd >> 7;
+    // Extract the comma bit.
+    uint8_t comma = bcd >> 7;
     bcd &= 0x7F;
     
-    if (bcd == lastBcd) return;
-
-    SetPwmDutyCycle(0);
-
-    // Set the digit drivers.
-    ASSIGN_PPS(CATHODE_0_PPS, 0);
-    ASSIGN_PPS(CATHODE_1_PPS, 1);
-    ASSIGN_PPS(CATHODE_2_PPS, 2);
-    ASSIGN_PPS(CATHODE_3_PPS, 3);
-    ASSIGN_PPS(CATHODE_4_PPS, 4);
-    ASSIGN_PPS(CATHODE_5_PPS, 5);
-    ASSIGN_PPS(CATHODE_6_PPS, 6);
-    ASSIGN_PPS(CATHODE_7_PPS, 7);
-    ASSIGN_PPS(CATHODE_8_PPS, 8);
-    ASSIGN_PPS(CATHODE_9_PPS, 9);
-    
-    // Ramp the duty cycle over time
-    for (int pwm = 0; pwm <= PWM_MAX; pwm += PWM_RAMP_STEP_SIZE)
+    if (bcd != lastBcd)
     {
-        SetPwmDutyCycle(pwm);
-        __delay_ms(PWM_RAMP_STEP_INTERVAL);
+        SetPwmDutyCycle(0);
+
+        // Set the digit drivers.
+        ASSIGN_PPS(CATHODE_0_PPS, 0);
+        ASSIGN_PPS(CATHODE_1_PPS, 1);
+        ASSIGN_PPS(CATHODE_2_PPS, 2);
+        ASSIGN_PPS(CATHODE_3_PPS, 3);
+        ASSIGN_PPS(CATHODE_4_PPS, 4);
+        ASSIGN_PPS(CATHODE_5_PPS, 5);
+        ASSIGN_PPS(CATHODE_6_PPS, 6);
+        ASSIGN_PPS(CATHODE_7_PPS, 7);
+        ASSIGN_PPS(CATHODE_8_PPS, 8);
+        ASSIGN_PPS(CATHODE_9_PPS, 9);
+
+        // Ramp the duty cycle over time
+        for (int pwm = 0; pwm <= PWM_MAX; pwm += PWM_RAMP_STEP_SIZE)
+        {
+            SetPwmDutyCycle(pwm);
+            __delay_ms(PWM_RAMP_STEP_INTERVAL);
+        }
+
+        // Set the duty cycle > max for 100% duty cycle
+        SetPwmDutyCycle(PWM_MAX + 1);
     }
     
-    // Set the duty cycle > max for 100% duty cycle
-    SetPwmDutyCycle(PWM_MAX + 1);
+    // Light the comma if requested, but only if a digit is also lit.
+    CATHODE_COMMA_PIN = comma && (bcd >= 9);
     
     lastBcd = bcd;
 }
