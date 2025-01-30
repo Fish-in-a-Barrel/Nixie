@@ -1,6 +1,7 @@
 build
 buildLog
 dist
+**/cmake/*
 *.log
 *.log.inx
 queuelogs
