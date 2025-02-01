@@ -175,45 +175,37 @@ void UpdateNixieState(void)
 
     NixieState targetState = gCurrentNixieState;
     
-    // Shut off the nixie tube if the voltage is out of range.
-    if ((gVoltage < HV_MIN) || (gVoltage > HV_MAX))
+    if (NIXIE_DIGIT_BLANK == gCurrentNixieState.digit)
     {
-        targetState.digit = NIXIE_DIGIT_BLANK;
+        nixieStartTickCount = gTickCount;
+        targetState.digit = 0;
     }
-    else
+
+    if (gNixieAutoIncrement)
     {
-        if (NIXIE_DIGIT_BLANK == gCurrentNixieState.digit)
+        // This doesn't handle roll-over of the tick counter, but that's not important for this application.
+        if (gTickCount - nixieStartTickCount > TICK_FREQ)
         {
             nixieStartTickCount = gTickCount;
-            targetState.digit = 0;
+            commaToggleTickCount = nixieStartTickCount + TICK_FREQ / 2;
+            targetState.digit = (gCurrentNixieState.digit + 1) % 10;
         }
-        
-        if (gNixieAutoIncrement)
+
+        // Flip the comma state when the toggle tick count is reached.
+        if (gTickCount >= commaToggleTickCount)
         {
-            // This doesn't handle roll-over of the tick counter, but that's not important for this application.
-            if (gTickCount - nixieStartTickCount > TICK_FREQ)
-            {
-                nixieStartTickCount = gTickCount;
-                commaToggleTickCount = nixieStartTickCount + TICK_FREQ / 2;
-                targetState.digit = (gCurrentNixieState.digit + 1) % 10;
-            }
-            
-            // Flip the comma state when the toggle tick count is reached.
-            if (gTickCount >= commaToggleTickCount)
-            {
-                targetState.comma = gCurrentNixieState.comma ? 0 : 1;
-                commaToggleTickCount = (uint32_t)(~0);
-            }
-        }
-        
-        if ((gLastButtonState != gButtonState) && (BUTTON_STATE_RELEASED == gButtonState))
-        {
-            if (gLongPress) gNixieAutoIncrement = !gNixieAutoIncrement;
-            if (!gNixieAutoIncrement) targetState.digit = (gCurrentNixieState.digit + 1) % 10;
+            targetState.comma = gCurrentNixieState.comma ? 0 : 1;
+            commaToggleTickCount = (uint32_t)(~0);
         }
     }
+
+    if ((gLastButtonState != gButtonState) && (BUTTON_STATE_RELEASED == gButtonState))
+    {
+        if (gLongPress) gNixieAutoIncrement = !gNixieAutoIncrement;
+        if (!gNixieAutoIncrement) targetState.digit = (gCurrentNixieState.digit + 1) % 10;
+    }
     
-    if ((gCurrentNixieState.digit != gCurrentNixieState.digit) || (targetState.comma != gCurrentNixieState.comma))
+    if ((targetState.digit != gCurrentNixieState.digit) || (targetState.comma != gCurrentNixieState.comma))
     {
         I2C_Write(0x0F, &targetState, sizeof(targetState));        
 
