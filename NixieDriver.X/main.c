@@ -255,7 +255,7 @@ void RampCathodePins(uint8_t bcd)
     }
     
     // Light the comma if requested, but only if a digit is also lit.
-    CATHODE_COMMA_PIN = comma && (bcd >= 9);
+    CATHODE_COMMA_PIN = comma && (bcd <= 9);
     
     lastBcd = bcd;
 }
