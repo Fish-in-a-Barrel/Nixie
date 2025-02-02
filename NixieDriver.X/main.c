@@ -28,6 +28,7 @@
 #define ADDRESS_PIN_2 RC1
 #define ADDRESS_PIN_3 RC0
 
+// Note that this is shifted left 1 bit
 #define I2C_ADDRESS (\
     (uint8_t)((uint8_t)ADDRESS_PIN_0 << 1) | \
     (uint8_t)((uint8_t)ADDRESS_PIN_1 << 2) | \
@@ -51,9 +52,12 @@
 #define CATHODE_0_PPS TOPPS(CATHODE_0_PIN)
 #define CATHODE_COMMA_PPS TOPPS(CATHODE_COMMA_PIN)
 
-const int PWM_MAX = 250; 
-const int PWM_RAMP_STEPS = 5;
-const int PWM_RAMP_TIME = 150;
+// PWM parameters for cross-fading between digits. Cross-fading is accomplished by assigning one PWM4 (inverted) to the out-going digit and PWM3 to
+// the incoming digit. The duty cycle of the PWMs is increased over a short interval resulting in one digit fading out while another fades in.
+const int PWM_MAX = 250;        // The high limit of the PWM counter.
+const int PWM_RAMP_STEPS = 10;  // The number of duty cycle step changes in the cross-fade.
+const int PWM_RAMP_TIME = 350;  // The duration of the cross-fade, in ms.
+
 const int PWM_RAMP_STEP_SIZE = PWM_MAX / PWM_RAMP_STEPS;
 const int PWM_RAMP_STEP_INTERVAL = PWM_RAMP_TIME / PWM_RAMP_STEPS;
 
@@ -213,7 +217,7 @@ void SetPwmDutyCycle(int dc)
 //   If the pin # matches the selected digit, assign PWM 3 (increasing duty cycle, fade in)
 //   Otherwise, if the pin # matches the previously selected digit, assign PWM 4 (decreasing duty cycle, fade out)
 //   Otherwise, assign GPIO (off)
-#define ASSIGN_PPS(PPS, X) PPS = (X == bcd) ? 3 : (X == lastBcd) ? 4 : 0;
+#define ASSIGN_PPS(PPS, X) PPS = (X == bcd) ? PPS_OUT_PWM3 : (X == lastBcd) ? PPS_OUT_PWM4 : 0;
 
 void RampCathodePins(uint8_t bcd)
 {
