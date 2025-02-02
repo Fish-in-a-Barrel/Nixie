@@ -532,6 +532,7 @@
     "netclass_assignments": {
       "N_GND": "Ground",
       "Net-(J1-Pin_1)": "Ground",
+      "Net-(Q10-E)": "Vnn",
       "Net-(V1-V+)": "Vnn"
     },
     "netclass_patterns": [
