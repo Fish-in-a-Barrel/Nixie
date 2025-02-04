@@ -452,6 +452,23 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Thicc",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -460,7 +477,10 @@
     "net_colors": null,
     "netclass_assignments": {
       "+180V": "Vnn",
-      "/Boost Converter/180V": "Vnn"
+      "/5V VRM/VBUS": "Thicc",
+      "/Boost Converter/180V": "Vnn",
+      "/USB PD/VBUS In": "Thicc",
+      "Net-(D1-A)": "Thicc"
     },
     "netclass_patterns": []
   },

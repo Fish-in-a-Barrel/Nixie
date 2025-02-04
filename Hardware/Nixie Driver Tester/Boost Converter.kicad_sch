@@ -1764,17 +1764,40 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 152.4 76.2 270)
+		(at 121.92 58.42 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "92b4d285-8dec-4d89-9cf0-d3e3c970843f")
-		(property "Netclass" "Vnn"
-			(at 154.94 75.5015 90)
+		(uuid "990852f0-95ea-413c-9adb-d37e01de3157")
+		(property "Netclass" "Thicc"
+			(at 122.6185 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 97.79 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2edff8d-f083-4b11-8a03-9d2f992b4ccd")
+		(property "Netclass" "Thicc"
+			(at 98.4885 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
