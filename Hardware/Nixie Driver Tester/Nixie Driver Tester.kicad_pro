@@ -413,6 +413,10 @@
     [
       "f02fb26c-0046-487f-b7d5-0718c4f74977",
       "5V VRM"
+    ],
+    [
+      "394d8c35-7fb7-4f2e-9832-1fea7fce0352",
+      "Nixie"
     ]
   ],
   "text_variables": {}

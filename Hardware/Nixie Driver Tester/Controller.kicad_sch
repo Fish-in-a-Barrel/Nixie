@@ -1511,7 +1511,7 @@
 		(uuid "ef2c5ef4-08e9-4023-a53a-04c41504ff13")
 	)
 	(hierarchical_label "5V"
-		(shape bidirectional)
+		(shape input)
 		(at 129.54 78.74 90)
 		(fields_autoplaced yes)
 		(effects
@@ -1523,7 +1523,7 @@
 		(uuid "06ad1d11-5103-4a2d-a841-c1f19a0d4d01")
 	)
 	(hierarchical_label "Button"
-		(shape bidirectional)
+		(shape input)
 		(at 162.56 96.52 0)
 		(fields_autoplaced yes)
 		(effects
@@ -1571,7 +1571,7 @@
 		(uuid "ad528d0c-cc76-48fc-8498-169d3b4e2702")
 	)
 	(hierarchical_label "HVMON"
-		(shape bidirectional)
+		(shape input)
 		(at 162.56 93.98 0)
 		(fields_autoplaced yes)
 		(effects

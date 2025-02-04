@@ -6,6 +6,36 @@
 	(paper "USLetter")
 	(lib_symbols)
 	(junction
+		(at 59.69 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ed4c099-7925-408c-99ad-e0b7a96385a6")
+	)
+	(junction
+		(at 110.49 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5232c3e3-0408-4bed-9d85-033adfa52fc0")
+	)
+	(junction
+		(at 53.34 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "759771d0-f414-4ae5-a71f-a30b4818f851")
+	)
+	(junction
+		(at 62.23 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab98c0b9-3eb0-428a-8035-ff33797835c9")
+	)
+	(junction
+		(at 57.15 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d300e4aa-347c-43d0-887c-9f9edfd3a9f9")
+	)
+	(junction
 		(at 64.77 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -13,7 +43,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 30.48) (xy 76.2 30.48)
+			(xy 50.8 30.48) (xy 59.69 30.48)
 		)
 		(stroke
 			(width 0)
@@ -23,7 +53,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 50.8) (xy 110.49 40.64)
+			(xy 110.49 50.8) (xy 110.49 43.18)
 		)
 		(stroke
 			(width 0)
@@ -33,7 +63,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 50.8) (xy 64.77 50.8)
+			(xy 50.8 50.8) (xy 57.15 50.8)
 		)
 		(stroke
 			(width 0)
@@ -43,7 +73,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 27.94) (xy 76.2 27.94)
+			(xy 50.8 27.94) (xy 62.23 27.94)
 		)
 		(stroke
 			(width 0)
@@ -83,6 +113,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 66.04) (xy 59.69 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "404241f6-c88b-48c7-8a82-98f9097673b1")
+	)
+	(wire
+		(pts
 			(xy 53.34 34.29) (xy 53.34 48.26)
 		)
 		(stroke
@@ -110,6 +150,16 @@
 			(type default)
 		)
 		(uuid "5e8b703d-b049-4d97-842e-11a6ae545ca8")
+	)
+	(wire
+		(pts
+			(xy 57.15 50.8) (xy 64.77 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "604fe1fb-ff95-4170-adb3-8eeacda8ddba")
 	)
 	(wire
 		(pts
@@ -153,7 +203,27 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 40.64) (xy 124.46 40.64)
+			(xy 110.49 63.5) (xy 110.49 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7eeb4e74-bd37-4568-8ec4-a70e6f7675f1")
+	)
+	(wire
+		(pts
+			(xy 76.2 69.85) (xy 57.15 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86d8d660-d8e7-4a59-ab38-1a52748d222c")
+	)
+	(wire
+		(pts
+			(xy 110.49 43.18) (xy 124.46 43.18)
 		)
 		(stroke
 			(width 0)
@@ -163,7 +233,57 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 30.48) (xy 110.49 38.1)
+			(xy 62.23 63.5) (xy 62.23 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99889335-12db-484e-aaa6-416d7cb285cf")
+	)
+	(wire
+		(pts
+			(xy 53.34 48.26) (xy 76.2 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a02d4330-8e89-4492-8440-04ef81e17a2a")
+	)
+	(wire
+		(pts
+			(xy 57.15 69.85) (xy 57.15 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7734a61-b965-4047-bb58-e81dc77b1ec5")
+	)
+	(wire
+		(pts
+			(xy 99.06 63.5) (xy 110.49 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa9f84e4-0732-4d20-840d-60fcee9f594a")
+	)
+	(wire
+		(pts
+			(xy 59.69 30.48) (xy 76.2 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2b0be6f-4977-4a98-9cf5-fa6737d0aa7b")
+	)
+	(wire
+		(pts
+			(xy 110.49 30.48) (xy 110.49 40.64)
 		)
 		(stroke
 			(width 0)
@@ -173,7 +293,17 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 38.1) (xy 124.46 38.1)
+			(xy 76.2 63.5) (xy 62.23 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb789bf6-778d-409c-b7e3-9dac5d1bc66e")
+	)
+	(wire
+		(pts
+			(xy 110.49 40.64) (xy 124.46 40.64)
 		)
 		(stroke
 			(width 0)
@@ -193,6 +323,26 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 66.04) (xy 59.69 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f258a7c0-79d7-4307-9d89-d68e63f09ad8")
+	)
+	(wire
+		(pts
+			(xy 62.23 27.94) (xy 76.2 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2633875-93c4-4a6e-b098-f09821183f4b")
+	)
+	(wire
+		(pts
 			(xy 99.06 34.29) (xy 105.41 34.29)
 		)
 		(stroke
@@ -200,6 +350,85 @@
 			(type default)
 		)
 		(uuid "fc433027-629c-4bf4-9d4f-907281bba6ad")
+	)
+	(sheet
+		(at 76.2 60.96)
+		(size 22.86 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "394d8c35-7fb7-4f2e-9832-1fea7fce0352")
+		(property "Sheetname" "Nixie"
+			(at 76.2 60.2484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Nixie.kicad_sch"
+			(at 76.2 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "SCL" bidirectional
+			(at 76.2 63.5 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "c41e68f6-7a65-4c9c-83fb-4a69fed3df9b")
+		)
+		(pin "SDA" bidirectional
+			(at 76.2 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b8855a61-1827-4241-bc92-f015b58fa96e")
+		)
+		(pin "5V" input
+			(at 76.2 69.85 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "459b340c-ac9c-483c-a8c5-9d971b8ed0c9")
+		)
+		(pin "180V" input
+			(at 99.06 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1aac77e5-b354-423f-89e4-63e15a271fb8")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
+					(page "8")
+				)
+			)
+		)
 	)
 	(sheet
 		(at 124.46 25.4)
@@ -311,7 +540,7 @@
 			)
 			(uuid "ac63f012-2a13-4e3c-9437-ae3b2792c1f5")
 		)
-		(pin "HVMON" bidirectional
+		(pin "HVMON" input
 			(at 99.06 30.48 0)
 			(effects
 				(font
@@ -319,9 +548,9 @@
 				)
 				(justify right)
 			)
-			(uuid "dfc960a9-5d05-4375-8cc1-8101c58036b7")
+			(uuid "4baf8230-4142-4ffd-9d40-98cc51c68079")
 		)
-		(pin "Button" bidirectional
+		(pin "Button" input
 			(at 99.06 27.94 0)
 			(effects
 				(font
@@ -329,9 +558,9 @@
 				)
 				(justify right)
 			)
-			(uuid "1ca35875-167b-47ac-be38-c7340495f096")
+			(uuid "36059201-e439-4779-9a91-9174d7780ae0")
 		)
-		(pin "5V" bidirectional
+		(pin "5V" input
 			(at 76.2 34.29 180)
 			(effects
 				(font
@@ -339,7 +568,7 @@
 				)
 				(justify left)
 			)
-			(uuid "3890724f-44eb-4414-a422-4d150c7dd184")
+			(uuid "f7c40442-408b-4483-b7dd-6ac4469a5b9c")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -350,8 +579,8 @@
 		)
 	)
 	(sheet
-		(at 25.4 25.4)
-		(size 25.4 11.43)
+		(at 38.1 25.4)
+		(size 12.7 11.43)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -362,7 +591,7 @@
 		)
 		(uuid "a2c82d8d-ba01-453c-92fd-beb2147f352b")
 		(property "Sheetname" "USB PD"
-			(at 25.4 24.6884 0)
+			(at 38.1 24.6884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -371,7 +600,7 @@
 			)
 		)
 		(property "Sheetfile" "USB PD.kicad_sch"
-			(at 25.4 37.4146 0)
+			(at 38.1 37.4146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -419,7 +648,7 @@
 		)
 	)
 	(sheet
-		(at 124.46 35.56)
+		(at 124.46 38.1)
 		(size 15.24 7.62)
 		(fields_autoplaced yes)
 		(stroke
@@ -431,7 +660,7 @@
 		)
 		(uuid "ae5fc040-94ea-4df2-9d60-7848f7e17a3f")
 		(property "Sheetname" "Voltage Divider"
-			(at 124.46 34.8484 0)
+			(at 124.46 37.3884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -440,7 +669,7 @@
 			)
 		)
 		(property "Sheetfile" "Voltage Divider.kicad_sch"
-			(at 124.46 43.7646 0)
+			(at 124.46 46.3046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -449,17 +678,7 @@
 				(hide yes)
 			)
 		)
-		(pin "HV MON" output
-			(at 124.46 38.1 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "eace33d4-a386-47a8-9235-3573372225a7")
-		)
-		(pin "VBUS" input
+		(pin "HVMON" output
 			(at 124.46 40.64 180)
 			(effects
 				(font
@@ -467,7 +686,17 @@
 				)
 				(justify left)
 			)
-			(uuid "b21b5cba-999d-49cf-9e7e-f0d8fd15b694")
+			(uuid "acb6bee1-16e5-4f62-8f16-864c45587e0f")
+		)
+		(pin "180V" input
+			(at 124.46 43.18 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "fe2c1bb5-4911-4d19-8668-8ee9e4d7ebd7")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -478,8 +707,8 @@
 		)
 	)
 	(sheet
-		(at 25.4 45.72)
-		(size 25.4 7.62)
+		(at 38.1 45.72)
+		(size 12.7 7.62)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -490,7 +719,7 @@
 		)
 		(uuid "f02fb26c-0046-487f-b7d5-0718c4f74977")
 		(property "Sheetname" "5V VRM"
-			(at 25.4 45.0084 0)
+			(at 38.1 45.0084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -499,7 +728,7 @@
 			)
 		)
 		(property "Sheetfile" "5V VRM.kicad_sch"
-			(at 25.4 53.9246 0)
+			(at 38.1 53.9246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
