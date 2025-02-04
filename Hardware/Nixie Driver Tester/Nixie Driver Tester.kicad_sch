@@ -1,0 +1,623 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "c2082ee6-4c2e-4b3c-b2d7-410eae192cfe")
+	(paper "USLetter")
+	(lib_symbols)
+	(junction
+		(at 64.77 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e9031982-43f7-4a90-a68c-241cfa29e3a4")
+	)
+	(wire
+		(pts
+			(xy 50.8 30.48) (xy 76.2 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02194453-d2c9-4252-8ad4-e0ad48b3f3b0")
+	)
+	(wire
+		(pts
+			(xy 110.49 50.8) (xy 110.49 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0768c890-023e-4453-be3b-6f0b647ac095")
+	)
+	(wire
+		(pts
+			(xy 50.8 50.8) (xy 64.77 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13e07571-c20f-4291-8a7a-62d189af5f11")
+	)
+	(wire
+		(pts
+			(xy 50.8 27.94) (xy 76.2 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16421cc0-bbe3-4cc0-8aac-bf82140234c7")
+	)
+	(wire
+		(pts
+			(xy 99.06 50.8) (xy 110.49 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a655f8e-c2cd-415b-9815-3981877e404f")
+	)
+	(wire
+		(pts
+			(xy 64.77 50.8) (xy 76.2 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "283fcf43-3ff3-4155-9f11-44ce57d6ecd5")
+	)
+	(wire
+		(pts
+			(xy 99.06 30.48) (xy 110.49 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "306aaf31-4890-4990-a043-6f984b44f3c4")
+	)
+	(wire
+		(pts
+			(xy 53.34 34.29) (xy 53.34 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4150bb5d-d273-43d7-964e-33c4053aabdc")
+	)
+	(wire
+		(pts
+			(xy 99.06 48.26) (xy 105.41 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ec6bbf3-9548-4324-8c81-8484c419432d")
+	)
+	(wire
+		(pts
+			(xy 53.34 48.26) (xy 50.8 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e8b703d-b049-4d97-842e-11a6ae545ca8")
+	)
+	(wire
+		(pts
+			(xy 50.8 34.29) (xy 53.34 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64d0a3e3-f35e-4793-b964-39c03b279c68")
+	)
+	(wire
+		(pts
+			(xy 64.77 34.29) (xy 64.77 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66388d5d-2497-4997-8837-3aabc6b764cd")
+	)
+	(wire
+		(pts
+			(xy 64.77 34.29) (xy 76.2 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70687090-7ac8-4a58-a218-dcdbd8393f2b")
+	)
+	(wire
+		(pts
+			(xy 105.41 34.29) (xy 105.41 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7938dfe2-cf88-4dfa-854e-ccd1d10b5b6f")
+	)
+	(wire
+		(pts
+			(xy 110.49 40.64) (xy 124.46 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90604322-ff13-4321-8dff-0d0e9b03fef2")
+	)
+	(wire
+		(pts
+			(xy 110.49 30.48) (xy 110.49 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3afd51e-ee26-448a-82d8-da0080b600fa")
+	)
+	(wire
+		(pts
+			(xy 110.49 38.1) (xy 124.46 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd1b92d1-9ff2-4809-a016-cf33c9d3146f")
+	)
+	(wire
+		(pts
+			(xy 99.06 27.94) (xy 124.46 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed54dfc3-bff7-4654-b235-ac6d6ae747c8")
+	)
+	(wire
+		(pts
+			(xy 99.06 34.29) (xy 105.41 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc433027-629c-4bf4-9d4f-907281bba6ad")
+	)
+	(sheet
+		(at 124.46 25.4)
+		(size 15.24 5.08)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6e79d909-830f-4059-b641-0b140124ed9d")
+		(property "Sheetname" "Button"
+			(at 124.46 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Button.kicad_sch"
+			(at 124.46 31.0646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Button" output
+			(at 124.46 27.94 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d2388afa-26e4-43f4-9da1-9a24d96324d0")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 76.2 25.4)
+		(size 22.86 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9f01134a-2f79-4022-9c4f-b5d1e4c08c6e")
+		(property "Sheetname" "Controller"
+			(at 76.2 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Controller.kicad_sch"
+			(at 76.2 37.4146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "SCL" bidirectional
+			(at 76.2 27.94 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e1624d3d-535f-42f6-84a6-d9d15752f900")
+		)
+		(pin "SDA" bidirectional
+			(at 76.2 30.48 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b475b4ab-aa61-4b7a-beaf-b282ffe950c4")
+		)
+		(pin "PWM" output
+			(at 99.06 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ac63f012-2a13-4e3c-9437-ae3b2792c1f5")
+		)
+		(pin "HVMON" bidirectional
+			(at 99.06 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "dfc960a9-5d05-4375-8cc1-8101c58036b7")
+		)
+		(pin "Button" bidirectional
+			(at 99.06 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1ca35875-167b-47ac-be38-c7340495f096")
+		)
+		(pin "5V" bidirectional
+			(at 76.2 34.29 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3890724f-44eb-4414-a422-4d150c7dd184")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 25.4)
+		(size 25.4 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a2c82d8d-ba01-453c-92fd-beb2147f352b")
+		(property "Sheetname" "USB PD"
+			(at 25.4 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "USB PD.kicad_sch"
+			(at 25.4 37.4146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 50.8 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "adbeed5b-1925-48a9-8ee2-a0d268d595fb")
+		)
+		(pin "SCL" bidirectional
+			(at 50.8 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "115e9a5e-11e0-4740-bd35-85cf1e69e205")
+		)
+		(pin "VBUS" output
+			(at 50.8 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "91c5379c-4800-4698-b757-46f502bad3e8")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 124.46 35.56)
+		(size 15.24 7.62)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ae5fc040-94ea-4df2-9d60-7848f7e17a3f")
+		(property "Sheetname" "Voltage Divider"
+			(at 124.46 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Voltage Divider.kicad_sch"
+			(at 124.46 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "HV MON" output
+			(at 124.46 38.1 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "eace33d4-a386-47a8-9235-3573372225a7")
+		)
+		(pin "VBUS" input
+			(at 124.46 40.64 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b21b5cba-999d-49cf-9e7e-f0d8fd15b694")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 45.72)
+		(size 25.4 7.62)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f02fb26c-0046-487f-b7d5-0718c4f74977")
+		(property "Sheetname" "5V VRM"
+			(at 25.4 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "5V VRM.kicad_sch"
+			(at 25.4 53.9246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "VBUS" input
+			(at 50.8 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "763a54c6-fc87-4590-ba70-9fb2496275a9")
+		)
+		(pin "5V" output
+			(at 50.8 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ec6633d4-5574-454b-ad64-2f1e9a300f0f")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 76.2 45.72)
+		(size 22.86 7.62)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f65193b1-af2e-4613-8eac-c37ef85f5db5")
+		(property "Sheetname" "Boost Converter"
+			(at 76.2 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Boost Converter.kicad_sch"
+			(at 76.2 53.9246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "PWM" input
+			(at 99.06 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c1aa1c44-b9ab-4b43-8d72-f9e9884d8622")
+		)
+		(pin "5V" input
+			(at 76.2 50.8 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "68957ee4-dab0-491d-9de8-88f159788ca2")
+		)
+		(pin "VBUS" input
+			(at 76.2 48.26 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "bf09d53d-b0d8-482f-80f6-29b59ee563de")
+		)
+		(pin "180V" output
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0ee1c67c-e757-4966-a724-59d763558a08")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
