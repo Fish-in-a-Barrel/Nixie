@@ -730,7 +730,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "1uF"
 			(at 111.76 102.8699 0)
 			(effects
 				(font
@@ -739,7 +739,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 108.9152 105.41 0)
 			(effects
 				(font

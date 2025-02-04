@@ -612,7 +612,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04"
+		(property "Value" "NIX3"
 			(at 152.4 105.41 90)
 			(effects
 				(font
@@ -621,7 +621,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
 			(at 151.13 109.22 0)
 			(effects
 				(font
@@ -687,7 +687,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "NIX1"
 			(at 147.32 102.8699 0)
 			(effects
 				(font
@@ -697,7 +697,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
 			(at 144.78 101.6 0)
 			(effects
 				(font
@@ -894,7 +894,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "NIX2"
 			(at 157.48 102.8699 0)
 			(effects
 				(font
@@ -904,7 +904,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
 			(at 160.02 101.6 0)
 			(effects
 				(font
