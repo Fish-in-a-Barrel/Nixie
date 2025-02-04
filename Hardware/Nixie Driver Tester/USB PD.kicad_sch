@@ -2555,10 +2555,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "e18180ee-0db2-48bd-9871-a5486c4756c4")
+			(uuid "e18180ee-0db2-48bd-9871-a5486c4756c5")
 		)
 		(pin "2"
-			(uuid "56bb9f3f-bed0-4061-bd0a-5f2aadfafd20")
+			(uuid "56bb9f3f-bed0-4061-bd0a-5f2aadfafd21")
 		)
 		(instances
 			(project ""
