@@ -311,40 +311,32 @@
 				)
 			)
 		)
-		(symbol "Swtich_:B3F-1000"
+		(symbol "Switch:SW_Push"
+			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 7.62 0)
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" ""
-				(at 0 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "Button_Switch_:B3F-10xx"
-				(at 0 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf"
-				(at 0 0 0)
+			(property "Footprint" ""
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -352,7 +344,16 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Push button switch, 6x6mm four pins"
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
 				(at 0 0 0)
 				(effects
 					(font
@@ -370,20 +371,9 @@
 					(hide yes)
 				)
 			)
-			(symbol "B3F-1000_0_1"
+			(symbol "SW_Push_0_1"
 				(circle
-					(center -2.032 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 2.54)
+					(center -2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -395,7 +385,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -0.508) (xy 0 -1.016)
+						(xy 0 1.27) (xy 0 3.048)
 					)
 					(stroke
 						(width 0)
@@ -407,79 +397,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0.508) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.016) (xy 0 1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.032) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 3.048) (xy 0 3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 3.81) (xy 0 5.588)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -1.27) (xy -2.54 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 3.81) (xy -2.54 3.81)
+						(xy 2.54 1.27) (xy -2.54 1.27)
 					)
 					(stroke
 						(width 0)
@@ -490,18 +408,7 @@
 					)
 				)
 				(circle
-					(center 2.032 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 2.54)
+					(center 2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -512,7 +419,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -530,7 +437,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -545,55 +452,6 @@
 								(size 1.27 1.27)
 							)
 						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "B3F-1000_1_1"
-				(rectangle
-					(start -3.175 5.715)
-					(end 3.175 -4.445)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
 					)
 				)
 			)
@@ -701,18 +559,6 @@
 		(color 0 0 0 0)
 		(uuid "9a6db9a8-e613-4945-bf67-e7419ba0efa1")
 	)
-	(junction
-		(at 144.78 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a90ea5aa-d45e-4837-a31a-83104b69833d")
-	)
-	(junction
-		(at 134.62 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b66cc49f-b50f-41ec-83c7-ec9f8b00c302")
-	)
 	(wire
 		(pts
 			(xy 119.38 88.9) (xy 123.19 88.9)
@@ -742,46 +588,6 @@
 			(type default)
 		)
 		(uuid "499f84ca-e49b-4a16-bf8f-a43236f9cf9b")
-	)
-	(wire
-		(pts
-			(xy 144.78 88.9) (xy 144.78 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "586ccb2d-9f10-4236-b239-f204a338974f")
-	)
-	(wire
-		(pts
-			(xy 134.62 86.36) (xy 134.62 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "645ef228-20d8-4159-a6a9-a78ebcfdea10")
-	)
-	(wire
-		(pts
-			(xy 134.62 88.9) (xy 134.62 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83cfa97f-4d1c-413c-a2f6-d35c967b36ef")
-	)
-	(wire
-		(pts
-			(xy 144.78 86.36) (xy 144.78 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a534af5-73da-4575-8e8a-6719fead0250")
 	)
 	(wire
 		(pts
@@ -906,7 +712,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 127.254 87.884 90)
 			(effects
 				(font
@@ -1016,7 +822,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Swtich_:B3F-1000")
+		(lib_id "Switch:SW_Push")
 		(at 139.7 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1042,7 +848,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_:B3F-10xx"
-			(at 139.7 81.28 0)
+			(at 139.7 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1050,8 +856,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf"
-			(at 139.7 88.9 0)
+		(property "Datasheet" "~"
+			(at 139.7 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1059,7 +865,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Push button switch, 6x6mm four pins"
+		(property "Description" "Push button switch, generic, two pins"
 			(at 139.7 88.9 0)
 			(effects
 				(font
@@ -1073,12 +879,6 @@
 		)
 		(pin "1"
 			(uuid "e91f3b1d-8504-4a4b-ac2e-9c41831573db")
-		)
-		(pin "4"
-			(uuid "e87d9d02-f2a1-4793-989b-eb91ede8fc45")
-		)
-		(pin "3"
-			(uuid "91c99bf1-9cfe-439e-8373-a11c181456fd")
 		)
 		(instances
 			(project ""

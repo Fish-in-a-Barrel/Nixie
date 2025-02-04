@@ -621,7 +621,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 151.13 109.22 0)
 			(effects
 				(font
@@ -697,7 +697,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 144.78 101.6 0)
 			(effects
 				(font
@@ -904,7 +904,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 160.02 101.6 0)
 			(effects
 				(font
@@ -932,13 +932,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "e400aad7-a65e-4103-be80-f34253bf1900")
+			(uuid "e400aad7-a65e-4103-be80-f34253bf1901")
 		)
 		(pin "3"
-			(uuid "70f16b29-87e1-47de-b2ff-0881831c2edd")
+			(uuid "70f16b29-87e1-47de-b2ff-0881831c2ede")
 		)
 		(pin "2"
-			(uuid "ba6a631b-6243-4c4e-a748-735cf37a3283")
+			(uuid "ba6a631b-6243-4c4e-a748-735cf37a3284")
 		)
 		(instances
 			(project ""

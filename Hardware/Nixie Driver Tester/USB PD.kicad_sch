@@ -1232,16 +1232,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 52.07) (xy 173.99 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b791daf-d502-49f5-b9f7-867c17906036")
-	)
-	(wire
-		(pts
 			(xy 163.83 54.61) (xy 163.83 46.99)
 		)
 		(stroke
@@ -1282,7 +1272,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 49.53) (xy 173.99 49.53)
+			(xy 180.34 49.53) (xy 181.61 49.53)
 		)
 		(stroke
 			(width 0)
@@ -1342,7 +1332,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 49.53) (xy 166.37 49.53)
+			(xy 160.02 49.53) (xy 172.72 49.53)
 		)
 		(stroke
 			(width 0)
@@ -1352,7 +1342,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 52.07) (xy 166.37 52.07)
+			(xy 160.02 52.07) (xy 172.72 52.07)
 		)
 		(stroke
 			(width 0)
@@ -1369,6 +1359,16 @@
 			(type default)
 		)
 		(uuid "9ae8f619-2ad4-4403-89c2-458b91429e3b")
+	)
+	(wire
+		(pts
+			(xy 180.34 52.07) (xy 181.61 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2295dde-0198-4644-a9c5-3f69eb32bc34")
 	)
 	(wire
 		(pts
@@ -1480,7 +1480,7 @@
 		(uuid "fbbdea2f-8a9d-4de9-82c2-d81b434bbac1")
 	)
 	(label "CC1"
-		(at 179.07 49.53 90)
+		(at 170.18 49.53 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1546,7 +1546,7 @@
 		(uuid "9932d73d-27f2-43c5-974e-319eb1a7baef")
 	)
 	(label "CC2"
-		(at 179.07 52.07 270)
+		(at 170.18 52.07 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2028,7 +2028,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 170.18 49.53 270)
+		(at 176.53 49.53 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2037,7 +2037,7 @@
 		(dnp no)
 		(uuid "8a893e76-91e4-49c2-8ced-460ab7d5f183")
 		(property "Reference" "R6"
-			(at 171.4501 46.99 0)
+			(at 177.8001 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2046,7 +2046,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 168.9101 46.99 0)
+			(at 175.2601 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2054,8 +2054,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 169.926 48.514 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 176.276 48.514 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2064,7 +2064,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 170.18 49.53 0)
+			(at 176.53 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2073,7 +2073,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 170.18 49.53 0)
+			(at 176.53 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2254,7 +2254,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 171.704 87.884 90)
 			(effects
 				(font
@@ -2599,7 +2599,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 170.18 52.07 90)
+		(at 176.53 52.07 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2608,7 +2608,7 @@
 		(dnp no)
 		(uuid "e1a17bc2-5d3c-4be0-82d2-72b4054313a2")
 		(property "Reference" "R7"
-			(at 168.9099 54.61 0)
+			(at 175.2599 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2617,7 +2617,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 171.4499 54.61 0)
+			(at 177.7999 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2625,8 +2625,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 170.434 53.086 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 176.784 53.086 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2635,7 +2635,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 170.18 52.07 0)
+			(at 176.53 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2644,7 +2644,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 170.18 52.07 0)
+			(at 176.53 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
