@@ -1576,7 +1576,7 @@
 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R1"
-			(at 0 1.796051 360)
+			(at 0 1.796051 0)
 			(layer "F.SilkS")
 			(uuid "696f2668-656d-4c09-a5b2-509a759516ad")
 			(effects
@@ -1587,7 +1587,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "bcaf3e0d-d2d8-43be-bba8-b2b5bf7a0f71")
 			(effects
@@ -1742,7 +1742,7 @@
 			(uuid "a12dcd69-f3d3-4a80-b704-880854ee58ad")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "80b9fb33-0c69-45a6-b281-87186e70cb08")
 			(effects
@@ -2552,7 +2552,7 @@
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J1"
-			(at -2.286 0 360)
+			(at -2.286 0 0)
 			(layer "B.SilkS")
 			(uuid "2138a503-3720-4112-a8a0-80fdfb17a9f8")
 			(effects
@@ -2564,7 +2564,7 @@
 			)
 		)
 		(property "Value" "Conn_02x03_Odd_Even"
-			(at 0 -7.41 360)
+			(at 0 -7.41 0)
 			(layer "B.Fab")
 			(uuid "35ae668c-0f1c-4312-a57b-ba286c2d8564")
 			(effects
@@ -5821,7 +5821,7 @@
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 		(layer "B.Cu")
 		(uuid "f69d9021-efee-4e0d-a074-c3fbdcb314c4")
-		(at 161.29 93.995 180)
+		(at 161.29 93.98 180)
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J2"
