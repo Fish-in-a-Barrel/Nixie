@@ -2552,7 +2552,7 @@
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J1"
-			(at -2.286 0 0)
+			(at -1.778 2.286 0)
 			(layer "B.SilkS")
 			(uuid "2138a503-3720-4112-a8a0-80fdfb17a9f8")
 			(effects
@@ -2560,7 +2560,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
-				(justify mirror)
+				(justify left mirror)
 			)
 		)
 		(property "Value" "Conn_02x03_Odd_Even"
@@ -3055,7 +3055,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J3"
-			(at 2.032 0 0)
+			(at 0.762 2.54 0)
 			(layer "B.SilkS")
 			(uuid "1d720d2c-eac5-411a-8f8d-e9a621bd533e")
 			(effects
@@ -5825,7 +5825,7 @@
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J2"
-			(at 2.032 0.015 0)
+			(at 1.778 2.286 0)
 			(layer "B.SilkS")
 			(uuid "5300e49c-9424-4699-a18c-d344a45db8f7")
 			(effects
@@ -5833,7 +5833,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
-				(justify mirror)
+				(justify right mirror)
 			)
 		)
 		(property "Value" "Conn_01x03"
