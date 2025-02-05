@@ -6146,66 +6146,6 @@
 		(layer "B.Paste")
 		(uuid "908ce020-a101-4855-adaa-7e436bd10ad0")
 	)
-	(gr_line
-		(start 184.15 98.806)
-		(end 183.515 100.076)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "80d37de8-0deb-4c14-adc1-7d64b70290df")
-	)
-	(gr_line
-		(start 186.436 106.426)
-		(end 186.436 98.806)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "c599e454-f86f-4aa7-a1df-0a075ad3147c")
-	)
-	(gr_line
-		(start 186.436 98.806)
-		(end 187.071 100.076)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "cde2363f-7b1f-4e6e-80e0-6fda0e25fe23")
-	)
-	(gr_line
-		(start 184.15 98.806)
-		(end 184.785 100.076)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "e8871a30-96d5-412f-967d-11a17b934e1b")
-	)
-	(gr_line
-		(start 186.436 98.806)
-		(end 185.801 100.076)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "eb8534f8-5377-425f-ac83-503749ae54a7")
-	)
-	(gr_line
-		(start 184.15 106.426)
-		(end 184.15 98.806)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "feb8e122-b8de-4bf1-8e97-bcd426b4b6a1")
-	)
 	(gr_arc
 		(start 162.941001 106.934001)
 		(mid 159.8536 114.387601)
@@ -6400,17 +6340,6 @@
 				(thickness 0.1)
 			)
 			(justify left bottom mirror)
-		)
-	)
-	(gr_text "Nixie Driver\nAaron Johnson\n01/14/25"
-		(at 179.832 102.87 270)
-		(layer "F.SilkS")
-		(uuid "c3029878-2612-4810-86e4-a60144fed370")
-		(effects
-			(font
-				(size 1 1)
-				(bold yes)
-			)
 		)
 	)
 	(segment
@@ -8601,18 +8530,6 @@
 				(xy 150.507201 85.957958) (xy 150.514527 85.956615) (xy 151.133045 85.862476) (xy 151.140413 85.861582)
 				(xy 151.763501 85.804958) (xy 151.770929 85.804509) (xy 152.396228 85.785613) (xy 152.403708 85.785613)
 			)
-		)
-	)
-	(group ""
-		(uuid "1b435438-f4ba-4a00-9c24-e0617edb90be")
-		(members "80d37de8-0deb-4c14-adc1-7d64b70290df" "e8871a30-96d5-412f-967d-11a17b934e1b"
-			"feb8e122-b8de-4bf1-8e97-bcd426b4b6a1"
-		)
-	)
-	(group ""
-		(uuid "830447b2-b2e2-4973-b742-2322d5bbd103")
-		(members "c599e454-f86f-4aa7-a1df-0a075ad3147c" "cde2363f-7b1f-4e6e-80e0-6fda0e25fe23"
-			"eb8534f8-5377-425f-ac83-503749ae54a7"
 		)
 	)
 )
