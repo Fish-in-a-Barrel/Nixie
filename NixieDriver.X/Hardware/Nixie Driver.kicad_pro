@@ -532,66 +532,6 @@
     },
     "netclass_patterns": [
       {
-        "netclass": "Cathode Signal",
-        "pattern": "ADDR2"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "ADDR3"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "ADDR0/DAT"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "ADDR1/CLK"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_0"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_1"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_2"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_3"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_4"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_5"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_6"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_7"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_8"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_9"
-      },
-      {
-        "netclass": "Cathode Signal",
-        "pattern": "Driver_Dot"
-      },
-      {
         "netclass": "Ground",
         "pattern": "GND"
       },
@@ -608,14 +548,6 @@
         "pattern": "VDD"
       },
       {
-        "netclass": "Vnn",
-        "pattern": "VNN"
-      },
-      {
-        "netclass": "Vnn",
-        "pattern": "VNN.2"
-      },
-      {
         "netclass": "Cathode Signal",
         "pattern": "~{MCLR}"
       },
@@ -626,6 +558,18 @@
       {
         "netclass": "Vnn",
         "pattern": "/Cathode*"
+      },
+      {
+        "netclass": "Cathode Signal",
+        "pattern": "/Driver*"
+      },
+      {
+        "netclass": "Cathode Signal",
+        "pattern": "/ADDR*"
+      },
+      {
+        "netclass": "Vnn",
+        "pattern": "Vnn"
       }
     ]
   },
