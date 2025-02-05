@@ -58,9 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "lib_footprint_mismatch|119300000|127005000|c9998e80-7540-41cb-80c4-be597c618845|00000000-0000-0000-0000-000000000000"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -593,7 +591,7 @@
   "sheets": [
     [
       "ae91f789-bb81-464a-8682-e957c5da5e12",
-      "ICSP Adapter_0"
+      "Root"
     ]
   ],
   "text_variables": {}
