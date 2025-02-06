@@ -318,6 +318,25 @@
 		)
 		(uuid "dc84f5be-0a09-41fc-90fe-a3b5191d9d09")
 	)
+	(text_box "Power through R3\n	@160V: 34mW\n	@180V: 43mW\n	@200V: 53mW\n\nVoltage to HVMON\n	@160V: 3.137V\n	@180V: 3.529V\n	@200V: 3.921V\n	@208V: 4.078V\n\nHVMON = 4.096V (max)\n	@208.9V"
+		(exclude_from_sim no)
+		(at 138.43 110.49 0)
+		(size 26.67 27.94)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "198e49bf-9211-49b1-a870-9600cc82b80d")
+	)
 	(hierarchical_label "HVMON"
 		(shape output)
 		(at 133.35 106.68 270)
@@ -358,7 +377,7 @@
 				)
 			)
 		)
-		(property "Value" "75k"
+		(property "Value" "750k"
 			(at 123.19 97.79 90)
 			(effects
 				(font
@@ -493,7 +512,7 @@
 				)
 			)
 		)
-		(property "Value" "1.2k"
+		(property "Value" "15k"
 			(at 143.51 97.79 90)
 			(effects
 				(font
