@@ -53,7 +53,8 @@
       },
       "diff_pair_dimensions": [],
       "drc_exclusions": [
-        "courtyards_overlap|160418000|94525000|395d8141-1c42-4dc0-9891-4a9ca4ec6e48|c4b5ef6b-6a19-4ea3-9b1f-fc80cfb694cc"
+        "courtyards_overlap|160418000|94525000|395d8141-1c42-4dc0-9891-4a9ca4ec6e48|c4b5ef6b-6a19-4ea3-9b1f-fc80cfb694cc",
+        "lib_footprint_mismatch|165100000|83540600|933bcf28-7641-4542-aa04-63d8d7125593|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "version": 2
