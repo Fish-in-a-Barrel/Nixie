@@ -1716,7 +1716,6 @@
 	)
 	(label "CC1"
 		(at 170.18 49.53 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1727,7 +1726,6 @@
 	)
 	(label "CC2"
 		(at 152.4 101.6 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1738,7 +1736,6 @@
 	)
 	(label "VBUS In"
 		(at 152.4 91.44 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1749,7 +1746,6 @@
 	)
 	(label "VBUS In"
 		(at 99.06 115.57 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1760,7 +1756,6 @@
 	)
 	(label "CC1"
 		(at 152.4 99.06 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1771,7 +1766,6 @@
 	)
 	(label "VBUS In"
 		(at 99.06 82.55 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1782,7 +1776,6 @@
 	)
 	(label "VBUS In"
 		(at 163.83 54.61 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1793,7 +1786,6 @@
 	)
 	(label "CC2"
 		(at 170.18 52.07 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1805,7 +1797,6 @@
 	(hierarchical_label "SDA"
 		(shape bidirectional)
 		(at 175.26 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1817,7 +1808,6 @@
 	(hierarchical_label "SCL"
 		(shape bidirectional)
 		(at 175.26 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1829,7 +1819,6 @@
 	(hierarchical_label "VBUS"
 		(shape output)
 		(at 120.65 78.74 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

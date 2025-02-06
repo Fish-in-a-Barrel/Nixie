@@ -550,7 +550,6 @@
 	(hierarchical_label "180V"
 		(shape input)
 		(at 165.1 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -562,7 +561,6 @@
 	(hierarchical_label "SDA"
 		(shape bidirectional)
 		(at 139.7 101.6 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -574,7 +572,6 @@
 	(hierarchical_label "SCL"
 		(shape bidirectional)
 		(at 139.7 104.14 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -586,7 +583,6 @@
 	(hierarchical_label "5V"
 		(shape input)
 		(at 165.1 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
