@@ -125,7 +125,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 0 3.5 360)
+			(at 0 3.5 0)
 			(layer "F.Fab")
 			(uuid "cfcc243c-b4f2-4931-80bd-381c07392afd")
 			(effects
@@ -10819,6 +10819,40 @@
 	(dimension
 		(type orthogonal)
 		(layer "User.4")
+		(uuid "4448c73f-3d5a-4e9d-8802-b0ef23b9693d")
+		(pts
+			(xy 127.77 78.94) (xy 141.47 78.94)
+		)
+		(height -8.709)
+		(orientation 0)
+		(gr_text "0.5394 in"
+			(at 134.62 69.081 0)
+			(layer "User.4")
+			(uuid "4448c73f-3d5a-4e9d-8802-b0ef23b9693d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.4")
 		(uuid "8ea3923a-0f02-4ed6-b223-bf01196ccb75")
 		(pts
 			(xy 157.48 121.285) (xy 157.48 123.825)
@@ -10829,6 +10863,74 @@
 			(at 151.765 128.27 90)
 			(layer "User.4")
 			(uuid "8ea3923a-0f02-4ed6-b223-bf01196ccb75")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 2)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.4")
+		(uuid "909058b6-8bf4-4eee-a437-ca5f92f2c6fe")
+		(pts
+			(xy 127.762 78.74) (xy 127.77 91.24)
+		)
+		(height -6.866)
+		(orientation 1)
+		(gr_text "0.4921 in"
+			(at 119.746 84.99 90)
+			(layer "User.4")
+			(uuid "909058b6-8bf4-4eee-a437-ca5f92f2c6fe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.4")
+		(uuid "bb462bea-9c77-48e4-8643-4422ce829e1f")
+		(pts
+			(xy 127.77 77.543) (xy 123.825 77.343)
+		)
+		(height -7.312)
+		(orientation 0)
+		(gr_text "0.1553 in"
+			(at 118.872 70.231 0)
+			(layer "User.4")
+			(uuid "bb462bea-9c77-48e4-8643-4422ce829e1f")
 			(effects
 				(font
 					(size 1 1)
