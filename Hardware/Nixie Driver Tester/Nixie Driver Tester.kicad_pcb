@@ -75,9 +75,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "C:/Users/aaron/Desktop/Nixie Driver Tester Gerbers/")
 		)
 	)
 	(net 0 "")
@@ -10603,6 +10603,18 @@
 			(justify left mirror)
 		)
 	)
+	(gr_text "JLCJLCJLCJLC"
+		(at 136.906 122.047 0)
+		(layer "F.SilkS")
+		(uuid "514584bd-3820-4894-9799-93365ef99c1d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "◀ OFF  ON ▶"
 		(at 152.908 95.25 0)
 		(layer "F.SilkS" knockout)
@@ -10623,7 +10635,7 @@
 			(xy 123.825 78.74) (xy 170.18 78.74)
 		)
 		(height -5.08)
-		(gr_text "1.8250 in"
+		(gr_text "46.3550 mm"
 			(at 147.0025 72.51 0)
 			(layer "User.4")
 			(uuid "1b46d70d-229b-4094-a677-2d113b92459d")
@@ -10656,7 +10668,7 @@
 			(xy 155.575 119.38) (xy 159.385 119.38)
 		)
 		(height 9.525)
-		(gr_text "0.1500 in"
+		(gr_text "3.8100 mm"
 			(at 157.48 130.81 0)
 			(layer "User.4")
 			(uuid "24eba42b-9957-4b2c-81cc-8a10d7325170")
@@ -10689,7 +10701,7 @@
 			(xy 123.825 123.825) (xy 123.825 78.74)
 		)
 		(height -5.715)
-		(gr_text "1.7750 in"
+		(gr_text "45.0850 mm"
 			(at 116.96 101.2825 90)
 			(layer "User.4")
 			(uuid "eb1e9e8c-3333-42ba-87ce-6ee21145c3ce")
@@ -10723,7 +10735,7 @@
 		)
 		(height 8.255)
 		(orientation 1)
-		(gr_text "0.8750 in"
+		(gr_text "22.2250 mm"
 			(at 177.285 112.7125 90)
 			(layer "User.4")
 			(uuid "2a0769f8-8b77-44c0-ac6f-4443a71d5e89")
@@ -10757,7 +10769,7 @@
 		)
 		(height -3.81)
 		(orientation 1)
-		(gr_text "0.3000 in"
+		(gr_text "7.6200 mm"
 			(at 153.67 125.73 90)
 			(layer "User.4")
 			(uuid "3899d081-5cd2-4440-978c-7e0daf92dcb5")
@@ -10791,7 +10803,7 @@
 		)
 		(height 9.525)
 		(orientation 0)
-		(gr_text "0.4250 in"
+		(gr_text "10.7950 mm"
 			(at 164.7825 127.755 0)
 			(layer "User.4")
 			(uuid "3ec870ff-8bc3-4f84-a691-41545472da66")
@@ -10825,7 +10837,7 @@
 		)
 		(height -8.709)
 		(orientation 0)
-		(gr_text "0.5394 in"
+		(gr_text "13.7000 mm"
 			(at 134.62 69.081 0)
 			(layer "User.4")
 			(uuid "4448c73f-3d5a-4e9d-8802-b0ef23b9693d")
@@ -10859,7 +10871,7 @@
 		)
 		(height -5.715)
 		(orientation 1)
-		(gr_text "0.1000 in"
+		(gr_text "2.5400 mm"
 			(at 151.765 128.27 90)
 			(layer "User.4")
 			(uuid "8ea3923a-0f02-4ed6-b223-bf01196ccb75")
@@ -10893,7 +10905,7 @@
 		)
 		(height -6.866)
 		(orientation 1)
-		(gr_text "0.4921 in"
+		(gr_text "12.5000 mm"
 			(at 119.746 84.99 90)
 			(layer "User.4")
 			(uuid "909058b6-8bf4-4eee-a437-ca5f92f2c6fe")
@@ -10927,7 +10939,7 @@
 		)
 		(height -7.312)
 		(orientation 0)
-		(gr_text "0.1553 in"
+		(gr_text "3.9450 mm"
 			(at 118.872 70.231 0)
 			(layer "User.4")
 			(uuid "bb462bea-9c77-48e4-8643-4422ce829e1f")
@@ -10961,7 +10973,7 @@
 		)
 		(height -5.08)
 		(orientation 0)
-		(gr_text "0.1250 in"
+		(gr_text "3.1750 mm"
 			(at 174.625 96.52 0)
 			(layer "User.4")
 			(uuid "ea6439e7-c72f-4d2f-9e89-96866e9c2197")
