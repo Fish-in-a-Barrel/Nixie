@@ -155,7 +155,7 @@ void InitPWM()
     PWM4CONbits.EN = 1;
 }
 
-volatile uint8_t gDataI2C = 0;
+volatile uint8_t gDataI2C = 0xFF;
 volatile uint8_t gNewDataI2C = 0;
 
 // §25.2.3
@@ -330,7 +330,7 @@ void main(void)
     __delay_ms(50);
     
     InitI2C();
-
+    
     while(1)
     {
         if (gNewDataI2C)
