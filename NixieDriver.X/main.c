@@ -80,9 +80,6 @@ void InitPins()
     TRISA = 0x03;
     TRISB = 0x50;
     TRISC = 0x03;
-    
-    WPUA = 0x03;
-    WPUC = 0x03;
 
     // Clear the analog registers (§16.5)
     ANSELA = 0x00;
