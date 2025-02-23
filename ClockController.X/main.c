@@ -110,18 +110,20 @@ void main(void)
     InitTimer();
     InitAdc();
     InitPWM();
-    InitBoostConverter();
+    BoostConverter_Init();
     
     // Power-on can be detected as a state change in buttons. That should have stabilized at this point, so reset the
     // edge states.
     Button_ResetEdges();
+    
+    // Exercise all the Nixie cathodes on startup.
+    RefreshNixies();
     
     gGpsData.updated = 0;
     
     uint8_t frameCounter = 0;
     while (1)
     {
-        UpdateBoostConverter();
         HandleUserInteraction();
         
         if (frameCounter % 4 == 0)
@@ -132,7 +134,7 @@ void main(void)
             UpdateNixieDrivers();
         }
 
-        if (frameCounter % 64 == 0)
+        if (frameCounter % 10 == 0)
         {
             UI_TickSpinner();
             UI_Update();

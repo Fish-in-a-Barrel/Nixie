@@ -28,7 +28,7 @@
 #define ADDRESS_PIN_2 RC1
 #define ADDRESS_PIN_3 RC0
 
-// Note that this is shifted left 1 bit
+// Note that this is shifted left by 1 bit for convenient use with the I2C registers.
 #define I2C_ADDRESS (\
     (uint8_t)((uint8_t)ADDRESS_PIN_0 << 1) | \
     (uint8_t)((uint8_t)ADDRESS_PIN_1 << 2) | \
@@ -72,7 +72,7 @@ void InitPins()
      * A0 = RA0
      * A1 = RA1
      * A2 = RC1
-     * A3 = RC3
+     * A3 = RC0
      */
     
     // I2C pins must be configured as inputs (§25.2.2.3)

@@ -4,7 +4,6 @@
 #include <xc.h>
 
 extern uint16_t gAdcCv; ///< The current raw value of the ADC.
-extern uint8_t gVoltage;///< The calculated voltage in V.
 
 ///
 /// Initializes the ADC.

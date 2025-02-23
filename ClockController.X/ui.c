@@ -216,6 +216,8 @@ void UI_HandleButtonPress(void)
 
 void DrawStatusPage(void)
 {
+    static uint8_t ovpHold = 0;
+    
     struct DateTime rtcTime;
     ConvertRtcToDateTime(&gRtc, &rtcTime);
     
@@ -237,13 +239,14 @@ void DrawStatusPage(void)
         0);
 
     // "###V @ ##%"
-    OLED_DrawNumber8(3, 0, gVoltage, 3);
+    OLED_DrawNumber8(3, 0, BoostConverter_GetVoltage(), 3);
     OLED_DrawNumber16(3, 7, BoostConverter_GetDutyCyclePct(), 2);
 
-    if (AdcOverVoltageProtectionTripped())
-    {
-        OLED_DrawString(3, 14, "! OVP !", 1);
-    }
+    uint8_t on = BoostConverter_OverVoltageProtectionOn();
+    if (on) ovpHold = 5;
+    
+    OLED_DrawString(3, 14, (on || ovpHold) ? "! OVP !" : "       ", on);
+    if (!on && ovpHold) --ovpHold;
 }
 
 void DrawTimeZonePage(void)
@@ -297,7 +300,7 @@ void DrawTimeZonePage(void)
 
 void DrawBoostPage(void)
 {
-    OLED_DrawNumber8(1, 8, gVoltage, 3);
+    OLED_DrawNumber8(1, 8, BoostConverter_GetVoltage(), 3);
     OLED_DrawNumber16(2, 5, BoostConverter_GetDutyCycle(), 4);
     OLED_DrawNumber16(2, 16, BoostConverter_GetDutyCyclePct(), 2);
     OLED_DrawNumber16(3, 5, gAdcCv * 4, 4);
@@ -348,7 +351,7 @@ void UI_Update(void)
     
     if (gDisplayTimer == 0)
     {
-        //OLED_Off();
+        OLED_Off();
         gDisplayState = DISPLAY_STATE_OFF;
     }
     else

@@ -14,7 +14,7 @@ uint8_t CRC(void* data, uint8_t size)
 
 void UpdateNixieDriver(uint8_t value, uint8_t address)
 {
-    uint8_t response = 0xFF;
+    uint8_t response = 0x8F;
     I2C_WriteRead(address, &value, sizeof(value), &response, sizeof(response));
     
     if (response == value) gNixieStatus |= 1 << address;
@@ -42,4 +42,10 @@ void UpdateNixieDrivers(void)
     UpdateNixieDriver(gRtc.month01,  0x0C);
     UpdateNixieDriver(gRtc.year10,   0x0D);
     UpdateNixieDriver(gRtc.year01,   0x0E);
+}
+
+void RefreshNixies(void)
+{
+    for (uint8_t i = 0x01; i <= 0x06; ++i) UpdateNixieDriver(0x01, i);
+    for (uint8_t i = 0x09; i <= 0x0E; ++i) UpdateNixieDriver(0x01, i);
 }

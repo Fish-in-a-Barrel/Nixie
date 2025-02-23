@@ -135,6 +135,7 @@ void GPS_HandleInterrupt(void)
     // Always shift out the contents of the receive buffer.
     char data = RC1REG;
 
+    // Toggle CREN if an overrun occurs (§24.1.2.5)
     if (RC1STAbits.OERR)
     {
         RC1STAbits.CREN = 0;

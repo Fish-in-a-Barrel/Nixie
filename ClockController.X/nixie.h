@@ -7,5 +7,7 @@ extern uint16_t gNixieStatus;
 
 void UpdateNixieDrivers(void);
 
+void RefreshNixies(void);
+
 #endif	/* NIXIE_H */
 
