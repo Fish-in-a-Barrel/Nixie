@@ -36,8 +36,25 @@
     (uint8_t)((uint8_t)ADDRESS_PIN_3 << 4) )
 
 // TOPPS(X) composites the pin register with the suffix "PPS" to form the PPS register associated with that pin.
+//    eg: TOPPS(RA1) -> RA1PPS
 #define TOPPS_(RA) RA ## PPS
 #define TOPPS(RA) TOPPS_(RA)
+
+typedef union
+{
+    uint8_t _raw;
+    struct
+    {
+        uint8_t digit:4;
+        uint8_t :3;
+        uint8_t comma:1;
+    };
+} NixieCommand;
+
+#define REFRESH_CATHODES_COMMAND 0xFF
+
+#define Byte2NixieCommand(b) ((NixieCommand)(b))
+#define Address2NixieCommand(a) Byte2NixieCommand((uint8_t)(((a >> 1) & 0x0F) | ((a << 3) & 0x80)))
 
 // The PPS register for each driver pin.
 #define CATHODE_1_PPS TOPPS(CATHODE_1_PIN)
@@ -85,6 +102,10 @@ void InitPins()
     ANSELA = 0x00;
     ANSELB = 0x00;
     ANSELC = 0x00;
+    
+    // Enable weak pull-ups on address pins (§16.14.5)
+    WPUA = 0x03;
+    WPUC = 0x03;
     
     // Clear the GPIO pins
     PORTA = 0;
@@ -217,17 +238,13 @@ void SetPwmDutyCycle(int dc)
 //   If the pin # matches the selected digit, assign PWM 3 (increasing duty cycle, fade in)
 //   Otherwise, if the pin # matches the previously selected digit, assign PWM 4 (decreasing duty cycle, fade out)
 //   Otherwise, assign GPIO (off)
-#define ASSIGN_PPS(PPS, X) PPS = (X == bcd) ? PPS_OUT_PWM3 : (X == lastBcd) ? PPS_OUT_PWM4 : 0;
+#define ASSIGN_PPS(PPS, X) PPS = (X == command.digit) ? PPS_OUT_PWM3 : (X == lastCommand.digit) ? PPS_OUT_PWM4 : 0;
 
-void RampCathodePins(uint8_t bcd)
+void RampCathodePins(NixieCommand command)
 {
-    static uint8_t lastBcd = 0xFF;
+    static NixieCommand lastCommand = { REFRESH_CATHODES_COMMAND };
     
-    // Extract the comma bit.
-    uint8_t comma = bcd >> 7;
-    bcd &= 0x7F;
-    
-    if (bcd != lastBcd)
+    if (command._raw != lastCommand._raw)
     {
         SetPwmDutyCycle(0);
 
@@ -255,9 +272,44 @@ void RampCathodePins(uint8_t bcd)
     }
     
     // Light the comma if requested, but only if a digit is also lit.
-    CATHODE_COMMA_PIN = comma && (bcd <= 9);
+    CATHODE_COMMA_PIN = command.comma && (command.digit <= 9);
     
-    lastBcd = bcd;
+    lastCommand = command;
+}
+
+void UpdateCathodePins(NixieCommand command)
+{
+    static NixieCommand lastCommand = { REFRESH_CATHODES_COMMAND };
+    
+    if (command._raw != lastCommand._raw)
+    {
+        CATHODE_0_PIN = 0;
+        CATHODE_1_PIN = 0;
+        CATHODE_2_PIN = 0;
+        CATHODE_3_PIN = 0;
+        CATHODE_4_PIN = 0;
+        CATHODE_5_PIN = 0;
+        CATHODE_6_PIN = 0;
+        CATHODE_7_PIN = 0;
+        CATHODE_8_PIN = 0;
+        CATHODE_COMMA_PIN = 0;
+        
+        switch (command.digit)
+        {
+            case 0: CATHODE_0_PIN = 1; break;
+            case 1: CATHODE_1_PIN = 1; break;
+            case 2: CATHODE_2_PIN = 1; break;
+            case 3: CATHODE_3_PIN = 1; break;
+            case 4: CATHODE_4_PIN = 1; break;
+            case 5: CATHODE_5_PIN = 1; break;
+            case 6: CATHODE_6_PIN = 1; break;
+            case 7: CATHODE_7_PIN = 1; break;
+            case 8: CATHODE_8_PIN = 1; break;
+            case 9: CATHODE_9_PIN = 1; break;
+        }
+    }
+    
+    lastCommand = command;
 }
 
 // Scroll through all the cathodes for a minute. Apparently cathodes that aren't used can fail.
@@ -331,15 +383,15 @@ void main(void)
     
     InitI2C();
     
-    while(1)
+    while (1)
     {
         if (gNewDataI2C)
         {
-            uint8_t data = gDataI2C;
+            NixieCommand command = { gDataI2C };
             gNewDataI2C = 0;
             
-            if (0xFF != data) RampCathodePins(data);
-            else RefreshCathodes();
+            if (REFRESH_CATHODES_COMMAND == command._raw) RefreshCathodes();
+            else RampCathodePins(command);
         }
         
         __delay_ms(10);
