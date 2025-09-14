@@ -1,5 +1,6 @@
 # Yet Another Nixie Clock
-![Clock](./readme/clock.jpg)
+
+https://github.com/user-attachments/assets/6bedab27-45c4-4004-90cc-e61acbbc9fcc
 
 ## Introduction
 
