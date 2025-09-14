@@ -15,6 +15,10 @@ The clock runs 12 IN-12A Nixie tubes that display the time and date. INS-1 tubes
 - Rotary encoder for user input
 - I2C Driver boards for each tube
 
+## Development Tools
+**Hardware**: KiCad 8
+**Firmware**: MPLAB X IDE
+
 ## Architecture
 ![Architecture BlockDiagram](./readme/architecture.svg)
 
