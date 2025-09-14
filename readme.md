@@ -19,28 +19,28 @@ The clock runs 12 IN-12A Nixie tubes that display the time and date. INS-1 tubes
 ![Architecture BlockDiagram](./readme/architecture.svg)
 
 ### Main Processor
-A Microchip PIC16F15224 8-bit microcontroller is the main processing unit of the clock. It controls the boost converter while managing and coordinating the other hardware modules.
+A [Microchip PIC16F15224](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F15213-14-23-24-43-44-Microcontroller-Data-Sheet-40002195.pdf) 8-bit microcontroller is the main processing unit of the clock. It controls the boost converter while managing and coordinating the other hardware modules.
 
 ### Power
 ![Power](./readme/power.svg)
 
-A Diodes Incorporated AP33772 is used to negotiate with a PD source for the input power. The AP33772 is controlled by the main MCU via I2C. The AP33772 requests 12V from the power source, which supplies the boost converter.
+A [Diodes Incorporated AP33772](https://www.diodes.com/assets/Datasheets/products_inactive_data/AP33772.pdf) is used to negotiate with a PD source for the input power. The AP33772 is controlled by the main MCU via I2C. The AP33772 requests 12V from the power source, which supplies the boost converter.
 
-The AP33772 also provides a dedicated 5V power source. This is a low amperage source, so it is only used to drive the MCU and UI. A separate 78L05 regulator (powered by the 12V from USB VBUS) provides 5V power to all of the other devices.
+The AP33772 also provides a dedicated 5V power source. This is a low current source, so it is only used to drive the MCU and UI, which are needed during power-up. A separate 78L05 regulator (powered by the 12V from USB VBUS) provides 5V power to all of the other devices.
 
 Finally, the AP33772 provides over-current and over-voltage protection features.
 
 ### User Interface
-A 128x32 OLED display (driven by an SSD1306) is used to display status and diagnostics information. A rotary encoder with detent is used to scroll through the different display pages, and to select timezone and DST support. The OLED pixel data is sent over I2C.
+A 128x32 OLED display (driven by an [SSD1306](https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf)) is used to display status and diagnostics information. A rotary encoder with detent is used to scroll through the different display pages, and to select timezone and DST support. The OLED pixel data is sent over I2C.
 
 ### Real Time Clock
-An RTC module provides an accurate time source for the clock. It is the source of the time/date displayed and is only updated if it differs from the GPS time. The RTC module is also equiped with a battery backup. This allows the clock to display time/date immediately after power-on instead of having to wait several minutes for valid GPS data. RTC data is sent over I2C.
+A [DS3231](https://www.analog.com/media/en/technical-documentation/data-sheets/ds3231.pdf) RTC module provides an accurate time source for the clock. It is the source of the time/date displayed and is only updated if it differs from the GPS time. The RTC module is also equiped with a battery backup. This allows the clock to display time/date immediately after power-on instead of having to wait several minutes for valid GPS data. RTC data is sent over I2C.
 
 ### GPS
-The GPS module provides a reference time to initialize the RTC. The module streams standard NMEA messages to the primary MCU over UART serial. Time/date are decoded from these messages.
+The [U-Blox NEO-6M](https://content.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_%28GPS.G6-HW-09005%29.pdf) GPS module provides a reference time to initialize the RTC. The module streams standard NMEA messages to the primary MCU over UART serial. Time/date are decoded from these messages.
 
 ### Nixie Drivers
-Each Nixie tube has a driver board. This board has a Microchip PIC16F15243 MCU in I2C client mode receiving commands from the primary MCU. This client MCU drives the Nixie pins and provides features such as digit cross-fading and cathode maintenance.
+Each Nixie tube has a driver board. This board has a [Microchip PIC16F15243](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F15213-14-23-24-43-44-Microcontroller-Data-Sheet-40002195.pdf) MCU in I2C client mode receiving commands from the primary MCU. This client MCU drives the Nixie pins and provides features such as digit cross-fading and cathode maintenance.
 
 ## Project Components
 
