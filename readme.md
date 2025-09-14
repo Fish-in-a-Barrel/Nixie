@@ -1,6 +1,6 @@
 # Yet Another Nixie Clock
 
-https://github.com/user-attachments/assets/6bedab27-45c4-4004-90cc-e61acbbc9fcc
+https://github.com/user-attachments/assets/0fcae77a-54a8-4b7d-9e90-6edd31807fbd
 
 ## Introduction
 
