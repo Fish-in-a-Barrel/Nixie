@@ -5,30 +5,44 @@
 	(uuid "709c3de8-9e86-4767-b7c6-164cfea3af0f")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Clock Controller-eagle-import:+20V_35"
-			(power)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "#NetPort"
-				(at 0 0 0)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
+					(justify left)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
 				(at 0 0 0)
 				(effects
 					(font
@@ -37,7 +51,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Description" "Unpolarized capacitor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -46,7 +60,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
+			(property "ki_keywords" "cap capacitor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -55,38 +69,71 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
+			(property "ki_fp_filters" "C_*"
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
-			(symbol "+20V_35_1_0"
+			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.54 0) (xy 2.54 0)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0.508)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(pin power_in line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "+5V"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
 						(effects
 							(font
-								(size 0 0)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -97,12 +144,50 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Clock Controller-eagle-import:+5V"
-			(power)
+		(symbol "Regulator_Linear:L78L05_SOT89"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "#NetPort"
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L78L05_SOT89"
+				(at -0.635 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf"
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Positive 100mA 30V Linear Regulator, Fixed Output 5V, SOT-89"
 				(at 0 0 0)
 				(effects
 					(font
@@ -111,7 +196,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" ""
+			(property "ki_keywords" "Voltage Regulator 100mA Positive"
 				(at 0 0 0)
 				(effects
 					(font
@@ -120,7 +205,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" ""
+			(property "ki_fp_filters" "SOT?89*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -129,194 +214,24 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+5V_1_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 2.54 0)
-					)
+			(symbol "L78L05_SOT89_0_1"
+				(rectangle
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0.254)
+						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
+			)
+			(symbol "L78L05_SOT89_1_1"
 				(pin power_in line
-					(at 0 -2.54 90)
+					(at -7.62 0 0)
 					(length 2.54)
-					(name "+5V"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Clock Controller-eagle-import:AS78L05RTR-E1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U2"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "AS78L05RTR-E1"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "Clock Controller:DIODES_SOT89"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "AS78L05RTR-E1_1_0"
-				(polyline
-					(pts
-						(xy 7.62 5.08) (xy 7.62 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -7.62) (xy 38.1 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 38.1 5.08) (xy 7.62 5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 38.1 -7.62) (xy 38.1 5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_out line
-					(at 0 0 0)
-					(length 7.62)
-					(name "OUTPUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 45.72 0 180)
-					(length 7.62)
-					(name "INPUT"
+					(name "IN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -331,9 +246,9 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at 45.72 -2.54 180)
-					(length 7.62)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
 					(name "GND"
 						(effects
 							(font
@@ -349,122 +264,13 @@
 						)
 					)
 				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Clock Controller-eagle-import:CAP_0805"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "Clock Controller:CAP_0805"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "CAP_0805_1_0"
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -0.33 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.33 -1.905) (xy -0.33 1.905)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.305 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.9439 -1.9109)
-					(mid 0.3044 0.0001)
-					(end 0.944 1.911)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 0 0)
+				(pin power_out line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "1"
+					(name "OUT"
 						(effects
 							(font
-								(size 0 0)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -476,34 +282,23 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Clock Controller-eagle-import:GND_DIGITAL"
+		(symbol "power:GND"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "#NetPort"
-				(at 0 0 0)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -511,13 +306,12 @@
 					(hide yes)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Footprint" ""
@@ -538,7 +332,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 				(at 0 0 0)
 				(effects
 					(font
@@ -547,58 +341,37 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
-			(symbol "GND_DIGITAL_1_0"
+			(symbol "GND_0_1"
 				(polyline
 					(pts
-						(xy -1.905 1.27) (xy 0 -1.27)
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.905 1.27) (xy 1.905 1.27)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 1.905 1.27)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "GND_1_1"
 				(pin power_in line
-					(at 0 3.81 270)
-					(length 2.54)
-					(name "GNDD"
+					(at 0 0 270)
+					(length 0)
+					(name "~"
 						(effects
 							(font
-								(size 0 0)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -613,340 +386,114 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Clock Controller-eagle-import:TP_1.25MM"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "GND"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "Clock Controller:TP_1.25MM"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TP_1.25MM_1_0"
-				(circle
-					(center 0 0.635)
-					(radius 0.635)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "TP"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "TP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-	)
-	(text "+20V"
-		(exclude_from_sim no)
-		(at 184.994 92.65 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "6e8ea7e4-4fec-4f60-957d-ecc0c57b0f6e")
-	)
-	(text "C6"
-		(exclude_from_sim no)
-		(at 186.049 113.015 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "86cc153e-ba4f-4959-97e2-c7ae11819d80")
-	)
-	(text "Vcc"
-		(exclude_from_sim no)
-		(at 98.401 93.345 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "d5e9741c-f588-4ee4-b72a-2542c12ecacf")
-	)
-	(text "C5"
-		(exclude_from_sim no)
-		(at 117.469 114.322 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "daba6ed2-6e6a-4730-8ffe-e4d72cb7572f")
-	)
-	(text "U2"
-		(exclude_from_sim no)
-		(at 123.204 97.79 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "e88fef00-c1a8-429f-87f5-0d0af5f1e099")
-	)
-	(text "+5V"
-		(exclude_from_sim no)
-		(at 117.16 92.65 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "eae8ccb4-2278-4d16-a453-146b7072747d")
 	)
 	(junction
-		(at 119.38 104.14)
+		(at 134.62 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6a1f6441-63d3-4dda-8f2d-d85bea659d77")
+		(uuid "71132a28-ee29-4bd6-b866-6d7e9047a709")
 	)
 	(junction
-		(at 187.96 104.14)
+		(at 160.02 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e255ea03-0992-4d9d-9530-182960914c10")
+		(uuid "8fc27fa9-d332-4c07-a219-e53898df7506")
 	)
 	(wire
 		(pts
-			(xy 119.38 95.25) (xy 119.38 104.14)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "13c1597d-8245-4b7e-8e88-839aaff0a7ad")
-	)
-	(wire
-		(pts
-			(xy 119.38 104.14) (xy 124.46 104.14)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "165c51b4-3772-4d63-8c74-bb1ae96c7333")
-	)
-	(wire
-		(pts
-			(xy 100.33 96.52) (xy 100.33 97.79)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "1b9bab52-799e-420d-9584-df8ddfafe685")
-	)
-	(wire
-		(pts
-			(xy 187.96 115.57) (xy 187.96 116.84)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "6e3040e8-2694-4e29-8497-a3038b68d2f3")
-	)
-	(wire
-		(pts
-			(xy 170.18 106.68) (xy 175.26 106.68)
+			(xy 160.02 104.14) (xy 160.02 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "76946bd0-efd2-4ffd-8010-7d09beccca46")
+		(uuid "0e3ae6db-56b3-49bd-b701-909af399be6b")
 	)
 	(wire
 		(pts
-			(xy 175.26 106.68) (xy 175.26 111.76)
+			(xy 134.62 104.14) (xy 129.54 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8c2a6d9f-2514-4f2d-983a-20c2e337df8d")
+		(uuid "6aba7fed-ec0e-4300-bdf8-ccc08951c992")
 	)
 	(wire
 		(pts
-			(xy 187.96 107.95) (xy 187.96 104.14)
+			(xy 134.62 104.14) (xy 134.62 109.22)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "968eb2c4-3f25-4137-ba9d-90ac528d3d62")
+		(uuid "8ecfbdba-7540-4803-8a24-21b52491e8a4")
 	)
 	(wire
 		(pts
-			(xy 119.38 109.22) (xy 119.38 104.14)
+			(xy 160.02 104.14) (xy 165.1 104.14)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "9abef883-8320-442f-9b0b-d0b2c9228228")
+		(uuid "a1b5b9e9-3593-4941-9b1e-c2f20ebec761")
 	)
 	(wire
 		(pts
-			(xy 187.96 104.14) (xy 187.96 95.25)
+			(xy 139.7 104.14) (xy 134.62 104.14)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "9ae69fb1-d5ed-49d9-90bd-ee080790acd2")
+		(uuid "b0fa1fec-8578-4be6-89d8-8f5dd276bf84")
 	)
 	(wire
 		(pts
-			(xy 119.38 116.84) (xy 119.38 118.11)
+			(xy 154.94 104.14) (xy 160.02 104.14)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "a5b2ec28-8a5a-4ed1-ae32-71b25894d1f7")
+		(uuid "bc001275-0998-4fe5-ac42-3243d7e863a2")
 	)
-	(wire
-		(pts
-			(xy 170.18 104.14) (xy 187.96 104.14)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "c8a02d3b-c668-4f9c-b443-3ebd321841ab")
-	)
-	(global_label "+20V"
-		(shape bidirectional)
-		(at 187.96 107.95 0)
-		(fields_autoplaced yes)
+	(hierarchical_label "VBUS"
+		(shape input)
+		(at 129.54 104.14 180)
 		(effects
 			(font
-				(size 1.016 1.016)
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6170d030-b90e-4187-bc75-129f9d216405")
+	)
+	(hierarchical_label "5V"
+		(shape output)
+		(at 165.1 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "4d4f2ad1-2164-4c7b-9328-cad8b0cb7d7c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.3009 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
+		(uuid "70bad4f1-9019-4185-8caa-27a6084fd308")
 	)
-	(global_label "+5V"
-		(shape bidirectional)
-		(at 100.33 96.52 0)
+	(symbol
+		(lib_id "power:GND")
+		(at 147.32 111.76 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "a4029f16-c882-49bd-86c7-7f73f1b50f69")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.7033 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clock Controller-eagle-import:TP_1.25MM")
-		(at 100.33 93.98 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1cb5a084-9e9d-4264-b140-0b0cd2ac720f")
-		(property "Reference" "Vcc0"
-			(at 100.33 93.98 0)
+		(uuid "8a22ed93-dab6-4c3a-b284-a7e71c6db008")
+		(property "Reference" "#PWR019"
+			(at 147.32 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -954,83 +501,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Most Density"
-			(at 100.33 93.98 0)
+		(property "Value" "GND"
+			(at 147.32 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Clock Controller:TP_1.25MM"
-			(at 100.33 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 100.33 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 100.33 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "TP"
-			(uuid "0906ce53-f29b-4ba0-a6f2-d8fdcb1c096f")
-		)
-		(instances
-			(project "Clock Controller"
-				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
-					(reference "Vcc0")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clock Controller-eagle-import:+20V_35")
-		(at 187.96 92.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6c947e5f-fb0f-44e1-8d9e-23f67f09e39f")
-		(property "Reference" "#NetPort029"
-			(at 187.96 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+20V_35"
-			(at 187.96 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 187.96 92.71 0)
+			(at 147.32 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1039,7 +519,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 92.71 0)
+			(at 147.32 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1047,8 +527,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 187.96 92.71 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 147.32 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1057,28 +537,30 @@
 			)
 		)
 		(pin "1"
-			(uuid "f64ba6f6-0f45-42a7-a88b-8a48cb97fad0")
+			(uuid "16734a7b-1bd6-41b1-94d3-81983f4ead45")
 		)
 		(instances
-			(project "Clock Controller"
+			(project ""
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
-					(reference "#NetPort029")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Clock Controller-eagle-import:+5V")
-		(at 119.38 92.71 0)
+		(lib_id "power:GND")
+		(at 134.62 116.84 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "89665ffe-031f-4855-bc6c-49767756e6ff")
-		(property "Reference" "#NetPort028"
-			(at 119.38 92.71 0)
+		(fields_autoplaced yes)
+		(uuid "912555bd-24fe-4305-ab97-d18daad3ce35")
+		(property "Reference" "#PWR018"
+			(at 134.62 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1086,17 +568,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 119.38 92.71 0)
+		(property "Value" "GND"
+			(at 134.62 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 92.71 0)
+			(at 134.62 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1105,7 +586,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 92.71 0)
+			(at 134.62 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1113,8 +594,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 119.38 92.71 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 134.62 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1123,28 +604,30 @@
 			)
 		)
 		(pin "1"
-			(uuid "a45841b4-fbd1-4b21-a96b-72d40a40c419")
+			(uuid "16734a7b-1bd6-41b1-94d3-81983f4ead46")
 		)
 		(instances
-			(project "Clock Controller"
+			(project ""
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
-					(reference "#NetPort028")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
-		(at 119.38 121.92 0)
+		(lib_id "power:GND")
+		(at 160.02 116.84 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8d70c1d7-5191-4447-aef1-9ff4694a1597")
-		(property "Reference" "#NetPort037"
-			(at 119.38 121.92 0)
+		(fields_autoplaced yes)
+		(uuid "9b20def5-bc2d-4cb1-a4d9-d4e115acb178")
+		(property "Reference" "#PWR017"
+			(at 160.02 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1152,17 +635,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_DIGITAL"
-			(at 119.38 121.92 0)
+		(property "Value" "GND"
+			(at 160.02 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 121.92 0)
+			(at 160.02 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1171,7 +653,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 121.92 0)
+			(at 160.02 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1179,74 +661,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 119.38 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "74db08f1-d881-4b3f-9625-b48694bbe27c")
-		)
-		(instances
-			(project "Clock Controller"
-				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
-					(reference "#NetPort037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
-		(at 175.26 115.57 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a783aaee-516f-4f11-bb8b-2bb054b319fc")
-		(property "Reference" "#NetPort027"
-			(at 175.26 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND_DIGITAL"
-			(at 175.26 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 175.26 115.57 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1255,20 +671,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "24b78e4b-5d08-40c7-9bbf-134b9af68abe")
+			(uuid "16734a7b-1bd6-41b1-94d3-81983f4ead47")
 		)
 		(instances
-			(project "Clock Controller"
+			(project ""
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
-					(reference "#NetPort027")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Clock Controller-eagle-import:CAP_0805")
-		(at 187.96 111.76 90)
+		(lib_id "Device:C")
+		(at 134.62 113.03 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1276,25 +693,23 @@
 		(dnp no)
 		(uuid "b3a6bd9e-801f-4215-b6fd-43b19dd0b691")
 		(property "Reference" "C6"
-			(at 187.96 111.76 0)
+			(at 130.81 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100nF"
-			(at 187.96 111.76 0)
+			(at 138.43 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 187.96 111.76 0)
+			(at 135.5852 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1302,8 +717,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 187.96 111.76 0)
+		(property "Datasheet" "~"
+			(at 134.62 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1311,8 +726,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 187.96 111.76 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 134.62 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1336,8 +751,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Clock Controller-eagle-import:CAP_0805")
-		(at 119.38 113.03 90)
+		(lib_id "Device:C")
+		(at 160.02 113.03 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1345,25 +761,23 @@
 		(dnp no)
 		(uuid "bf275d2d-62a2-4bb3-a4a0-c375386750b5")
 		(property "Reference" "C5"
-			(at 119.38 113.03 0)
+			(at 156.21 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100nF"
-			(at 119.38 113.03 0)
+			(at 163.576 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 119.38 113.03 0)
+			(at 160.9852 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1371,8 +785,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 119.38 113.03 0)
+		(property "Datasheet" "~"
+			(at 160.02 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1380,8 +794,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 119.38 113.03 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 160.02 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1405,74 +819,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Clock Controller-eagle-import:GND_DIGITAL")
-		(at 187.96 120.65 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cdceee79-f33d-4e95-b00d-fe7d411d1679")
-		(property "Reference" "#NetPort016"
-			(at 187.96 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND_DIGITAL"
-			(at 187.96 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 187.96 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "90777684-9308-4dcf-ab7f-66293b2e0805")
-		)
-		(instances
-			(project "Clock Controller"
-				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/ce5f0f3f-aec6-4132-9c02-46f441a88bf8"
-					(reference "#NetPort016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clock Controller-eagle-import:AS78L05RTR-E1")
-		(at 124.46 104.14 0)
+		(lib_id "Regulator_Linear:L78L05_SOT89")
+		(at 147.32 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1480,25 +828,33 @@
 		(dnp no)
 		(uuid "d1e31655-c85f-4210-b853-882979b8f373")
 		(property "Reference" "U2"
-			(at 124.46 104.14 0)
+			(at 143.51 98.044 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "AS78L05RTR-E1"
-			(at 124.46 104.14 0)
+			(at 150.114 100.584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
-			(at 124.46 104.14 0)
+			(at 147.32 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf"
+			(at 147.32 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1506,17 +862,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 124.46 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 124.46 104.14 0)
+		(property "Description" "Positive 100mA 30V Linear Regulator, Fixed Output 5V, SOT-89"
+			(at 147.32 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)

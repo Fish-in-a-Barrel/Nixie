@@ -606,6 +606,18 @@
           "label": "Description",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -685,12 +697,8 @@
       "Rotary Input"
     ],
     [
-      "70fc2848-2605-4874-bf04-b4bbdf7c1213",
-      "Mounting"
-    ],
-    [
       "ce5f0f3f-aec6-4132-9c02-46f441a88bf8",
-      "+5 VRC"
+      "+5 VRM"
     ]
   ],
   "text_variables": {}
