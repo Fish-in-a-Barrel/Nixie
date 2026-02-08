@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "c2082ee6-4c2e-4b3c-b2d7-410eae192cfe")
 	(paper "USLetter")
 	(lib_symbols
@@ -86,6 +86,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -565,6 +566,10 @@
 	(sheet
 		(at 76.2 60.96)
 		(size 22.86 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -595,43 +600,43 @@
 		)
 		(pin "SCL" bidirectional
 			(at 76.2 63.5 180)
+			(uuid "c41e68f6-7a65-4c9c-83fb-4a69fed3df9b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "c41e68f6-7a65-4c9c-83fb-4a69fed3df9b")
 		)
 		(pin "SDA" bidirectional
 			(at 76.2 66.04 180)
+			(uuid "b8855a61-1827-4241-bc92-f015b58fa96e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b8855a61-1827-4241-bc92-f015b58fa96e")
 		)
 		(pin "5V" input
 			(at 76.2 69.85 180)
+			(uuid "459b340c-ac9c-483c-a8c5-9d971b8ed0c9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "459b340c-ac9c-483c-a8c5-9d971b8ed0c9")
 		)
 		(pin "180V" input
 			(at 99.06 63.5 0)
+			(uuid "1aac77e5-b354-423f-89e4-63e15a271fb8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "1aac77e5-b354-423f-89e4-63e15a271fb8")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -644,6 +649,10 @@
 	(sheet
 		(at 124.46 25.4)
 		(size 15.24 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -674,13 +683,13 @@
 		)
 		(pin "Button" output
 			(at 124.46 27.94 180)
+			(uuid "d2388afa-26e4-43f4-9da1-9a24d96324d0")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d2388afa-26e4-43f4-9da1-9a24d96324d0")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -693,6 +702,10 @@
 	(sheet
 		(at 76.2 25.4)
 		(size 22.86 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -723,63 +736,63 @@
 		)
 		(pin "SCL" bidirectional
 			(at 76.2 27.94 180)
+			(uuid "e1624d3d-535f-42f6-84a6-d9d15752f900")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e1624d3d-535f-42f6-84a6-d9d15752f900")
 		)
 		(pin "SDA" bidirectional
 			(at 76.2 30.48 180)
+			(uuid "b475b4ab-aa61-4b7a-beaf-b282ffe950c4")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b475b4ab-aa61-4b7a-beaf-b282ffe950c4")
 		)
 		(pin "PWM" output
 			(at 99.06 34.29 0)
+			(uuid "ac63f012-2a13-4e3c-9437-ae3b2792c1f5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ac63f012-2a13-4e3c-9437-ae3b2792c1f5")
 		)
 		(pin "HVMON" input
 			(at 99.06 30.48 0)
+			(uuid "4baf8230-4142-4ffd-9d40-98cc51c68079")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4baf8230-4142-4ffd-9d40-98cc51c68079")
 		)
 		(pin "Button" input
 			(at 99.06 27.94 0)
+			(uuid "36059201-e439-4779-9a91-9174d7780ae0")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "36059201-e439-4779-9a91-9174d7780ae0")
 		)
 		(pin "5V" input
 			(at 76.2 34.29 180)
+			(uuid "f7c40442-408b-4483-b7dd-6ac4469a5b9c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f7c40442-408b-4483-b7dd-6ac4469a5b9c")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -792,6 +805,10 @@
 	(sheet
 		(at 38.1 25.4)
 		(size 12.7 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -822,33 +839,33 @@
 		)
 		(pin "SDA" bidirectional
 			(at 50.8 30.48 0)
+			(uuid "adbeed5b-1925-48a9-8ee2-a0d268d595fb")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "adbeed5b-1925-48a9-8ee2-a0d268d595fb")
 		)
 		(pin "SCL" bidirectional
 			(at 50.8 27.94 0)
+			(uuid "115e9a5e-11e0-4740-bd35-85cf1e69e205")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "115e9a5e-11e0-4740-bd35-85cf1e69e205")
 		)
 		(pin "VBUS" output
 			(at 50.8 34.29 0)
+			(uuid "91c5379c-4800-4698-b757-46f502bad3e8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "91c5379c-4800-4698-b757-46f502bad3e8")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -861,6 +878,10 @@
 	(sheet
 		(at 124.46 38.1)
 		(size 15.24 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -891,23 +912,23 @@
 		)
 		(pin "HVMON" output
 			(at 124.46 40.64 180)
+			(uuid "acb6bee1-16e5-4f62-8f16-864c45587e0f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "acb6bee1-16e5-4f62-8f16-864c45587e0f")
 		)
 		(pin "180V" input
 			(at 124.46 43.18 180)
+			(uuid "fe2c1bb5-4911-4d19-8668-8ee9e4d7ebd7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "fe2c1bb5-4911-4d19-8668-8ee9e4d7ebd7")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -920,6 +941,10 @@
 	(sheet
 		(at 38.1 45.72)
 		(size 12.7 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -950,23 +975,23 @@
 		)
 		(pin "VBUS" input
 			(at 50.8 48.26 0)
+			(uuid "763a54c6-fc87-4590-ba70-9fb2496275a9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "763a54c6-fc87-4590-ba70-9fb2496275a9")
 		)
 		(pin "5V" output
 			(at 50.8 50.8 0)
+			(uuid "ec6633d4-5574-454b-ad64-2f1e9a300f0f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ec6633d4-5574-454b-ad64-2f1e9a300f0f")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -979,6 +1004,10 @@
 	(sheet
 		(at 76.2 45.72)
 		(size 22.86 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -1009,43 +1038,43 @@
 		)
 		(pin "PWM" input
 			(at 99.06 48.26 0)
+			(uuid "c1aa1c44-b9ab-4b43-8d72-f9e9884d8622")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "c1aa1c44-b9ab-4b43-8d72-f9e9884d8622")
 		)
 		(pin "5V" input
 			(at 76.2 50.8 180)
+			(uuid "68957ee4-dab0-491d-9de8-88f159788ca2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "68957ee4-dab0-491d-9de8-88f159788ca2")
 		)
 		(pin "VBUS" input
 			(at 76.2 48.26 180)
+			(uuid "bf09d53d-b0d8-482f-80f6-29b59ee563de")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "bf09d53d-b0d8-482f-80f6-29b59ee563de")
 		)
 		(pin "180V" output
 			(at 99.06 50.8 0)
+			(uuid "0ee1c67c-e757-4966-a724-59d763558a08")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "0ee1c67c-e757-4966-a724-59d763558a08")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -1060,4 +1089,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

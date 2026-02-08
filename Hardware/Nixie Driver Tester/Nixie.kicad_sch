@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "eeca8d4c-1ed5-45cf-85e6-58522cd0cd8f")
 	(paper "A4")
 	(lib_symbols
@@ -61,34 +61,34 @@
 				)
 			)
 			(symbol "Nixie_Driver_0_1"
-				(arc
-					(start -8.8898 -8.8898)
-					(mid -8.1459 -10.6859)
-					(end -6.3498 -11.4298)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -6.35 6.35)
-					(mid -8.1461 5.6061)
-					(end -8.89 3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(polyline
 					(pts
 						(xy -8.89 3.81) (xy -8.89 -8.89)
 					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -8.89 3.81)
+					(mid -8.1461 5.6061)
+					(end -6.35 6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -6.3498 -11.4298)
+					(mid -8.1459 -10.6859)
+					(end -8.8898 -8.8898)
 					(stroke
 						(width 0)
 						(type default)
@@ -121,34 +121,34 @@
 						(type none)
 					)
 				)
+				(arc
+					(start 6.35 6.35)
+					(mid 8.1461 5.6061)
+					(end 8.89 3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.89 -8.89)
+					(mid 8.1461 -10.6861)
+					(end 6.35 -11.43)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy 8.89 3.81) (xy 8.89 -8.89)
 					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 6.35 -11.43)
-					(mid 8.1461 -10.6861)
-					(end 8.89 -8.89)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 8.89 3.81)
-					(mid 8.1461 5.6061)
-					(end 6.35 6.35)
 					(stroke
 						(width 0)
 						(type default)
@@ -181,24 +181,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 12.7 2.54 180)
-					(length 3.81)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -317,16 +299,16 @@
 					(alternate "ICSPDAT" bidirectional line)
 				)
 				(pin power_in line
-					(at 12.7 -2.54 180)
+					(at 12.7 2.54 180)
 					(length 3.81)
-					(name "Vnn"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -352,13 +334,36 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 12.7 -2.54 180)
+					(length 3.81)
+					(name "Vnn"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -449,6 +454,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction

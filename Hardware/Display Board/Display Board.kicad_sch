@@ -1,13 +1,15 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "599c1f9b-5fc3-4149-97f0-45bd67df2dcb")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -74,14 +76,14 @@
 			)
 			(symbol "Conn_01x02_1_1"
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(rectangle
@@ -96,14 +98,14 @@
 					)
 				)
 				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -3.81)
+					(start -1.27 -2.413)
+					(end 0 -2.667)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -143,10 +145,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -213,19 +218,19 @@
 			)
 			(symbol "Conn_01x04_1_1"
 				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 2.667)
+					(end 0 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -246,8 +251,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+					(start -1.27 -2.413)
+					(end 0 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -257,14 +262,14 @@
 					)
 				)
 				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
+					(start -1.27 -4.953)
+					(end 0 -5.207)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -340,10 +345,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector_Generic:Conn_02x04_Odd_Even"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -410,19 +418,19 @@
 			)
 			(symbol "Conn_02x04_Odd_Even_1_1"
 				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
+					(start -1.27 3.81)
+					(end 3.81 -6.35)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 2.667)
+					(end 0 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -443,8 +451,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+					(start -1.27 -2.413)
+					(end 0 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -454,19 +462,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 3.81)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start 3.81 -4.953)
-					(end 2.54 -5.207)
+					(start -1.27 -4.953)
+					(end 0 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -476,8 +473,8 @@
 					)
 				)
 				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
+					(start 3.81 2.667)
+					(end 2.54 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -498,8 +495,19 @@
 					)
 				)
 				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -4.953)
+					(end 2.54 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -527,24 +535,6 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
@@ -555,24 +545,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -599,24 +571,6 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_7"
@@ -627,6 +581,60 @@
 						)
 					)
 					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -653,11 +661,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:Antenna"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -761,6 +774,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole"
 			(pin_names
@@ -843,11 +857,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole_Pad"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim yes)
 			(in_bom no)
 			(on_board yes)
@@ -945,12 +964,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1022,7 +1046,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1034,7 +1058,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1065,12 +1089,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1161,7 +1190,44 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 44.45 73.66)
+		(end 95.25 87.63)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 442e326c-dd81-4432-bb15-9c76a7750190)
+	)
+	(rectangle
+		(start 20.32 111.76)
+		(end 107.95 125.73)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 864b4586-7c62-427c-8fae-d09184a2f65a)
+	)
+	(rectangle
+		(start 44.45 92.71)
+		(end 95.25 106.68)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid df89e567-e2a1-4fdc-ac22-441dd39720a1)
 	)
 	(no_connect
 		(at 207.01 53.34)
@@ -1262,42 +1328,6 @@
 	(no_connect
 		(at 54.61 27.94)
 		(uuid "ff5604df-2da0-46b8-91a1-82d37c2b9c74")
-	)
-	(rectangle
-		(start 44.45 73.66)
-		(end 95.25 87.63)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 442e326c-dd81-4432-bb15-9c76a7750190)
-	)
-	(rectangle
-		(start 20.32 111.76)
-		(end 107.95 125.73)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 864b4586-7c62-427c-8fae-d09184a2f65a)
-	)
-	(rectangle
-		(start 44.45 92.71)
-		(end 95.25 106.68)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid df89e567-e2a1-4fdc-ac22-441dd39720a1)
 	)
 	(global_label "SDA"
 		(shape input)
@@ -8568,6 +8598,10 @@
 	(sheet
 		(at 152.4 50.8)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -8598,93 +8632,93 @@
 		)
 		(pin "GND" input
 			(at 152.4 53.34 180)
+			(uuid "80ba40d7-7a0b-4311-9231-bb394394f369")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "80ba40d7-7a0b-4311-9231-bb394394f369")
 		)
 		(pin "Vnn" input
 			(at 152.4 55.88 180)
+			(uuid "4f44c694-323b-4110-8a94-701f0e561843")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "4f44c694-323b-4110-8a94-701f0e561843")
 		)
 		(pin "Vdd" input
 			(at 152.4 58.42 180)
+			(uuid "f1bad51e-b581-42b9-8901-de03048392c5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f1bad51e-b581-42b9-8901-de03048392c5")
 		)
 		(pin "ADDR0" input
 			(at 168.91 53.34 0)
+			(uuid "4d4fd9b3-2bc7-4a72-9e74-d0146680df03")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4d4fd9b3-2bc7-4a72-9e74-d0146680df03")
 		)
 		(pin "ADDR2" input
 			(at 168.91 58.42 0)
+			(uuid "4b421688-b106-4fa1-8ecd-4d746ccdae88")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4b421688-b106-4fa1-8ecd-4d746ccdae88")
 		)
 		(pin "SCL" input
 			(at 168.91 68.58 0)
+			(uuid "0d98843f-7eba-4170-b0a4-495a00c4b4e5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "0d98843f-7eba-4170-b0a4-495a00c4b4e5")
 		)
 		(pin "ADDR1" input
 			(at 168.91 55.88 0)
+			(uuid "cd393da4-7370-49bd-bb66-1435ed02cc89")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "cd393da4-7370-49bd-bb66-1435ed02cc89")
 		)
 		(pin "SDA" input
 			(at 168.91 66.04 0)
+			(uuid "f53c4835-3a51-4ffd-8d24-1b2f42fd8204")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "f53c4835-3a51-4ffd-8d24-1b2f42fd8204")
 		)
 		(pin "ADDR3" input
 			(at 168.91 60.96 0)
+			(uuid "ca7f1137-23bd-4264-b380-094b311f0be3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ca7f1137-23bd-4264-b380-094b311f0be3")
 		)
 		(instances
 			(project "Display Board"
@@ -8697,6 +8731,10 @@
 	(sheet
 		(at 152.4 25.4)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -8727,93 +8765,93 @@
 		)
 		(pin "GND" input
 			(at 152.4 27.94 180)
+			(uuid "c6b7bbc4-4b3a-4715-a1f5-4cf2ecf66574")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "c6b7bbc4-4b3a-4715-a1f5-4cf2ecf66574")
 		)
 		(pin "Vnn" input
 			(at 152.4 30.48 180)
+			(uuid "6b2bdd3d-5574-4f30-a1a3-783092e4b498")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "6b2bdd3d-5574-4f30-a1a3-783092e4b498")
 		)
 		(pin "Vdd" input
 			(at 152.4 33.02 180)
+			(uuid "ce6b939c-6a37-489f-b1ed-74f9548e88f4")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ce6b939c-6a37-489f-b1ed-74f9548e88f4")
 		)
 		(pin "ADDR0" input
 			(at 168.91 27.94 0)
+			(uuid "0d74eaf7-7c2d-4855-8fb9-dd49f502d7ae")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "0d74eaf7-7c2d-4855-8fb9-dd49f502d7ae")
 		)
 		(pin "ADDR2" input
 			(at 168.91 33.02 0)
+			(uuid "2ffcb06d-c5bf-4470-88aa-ca9a39929ce4")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "2ffcb06d-c5bf-4470-88aa-ca9a39929ce4")
 		)
 		(pin "SCL" input
 			(at 168.91 43.18 0)
+			(uuid "f6b013b9-08fa-4ae1-82cf-307ecd0d6f02")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "f6b013b9-08fa-4ae1-82cf-307ecd0d6f02")
 		)
 		(pin "ADDR1" input
 			(at 168.91 30.48 0)
+			(uuid "6a3745d2-3764-4a22-87b7-e579a7de6406")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6a3745d2-3764-4a22-87b7-e579a7de6406")
 		)
 		(pin "SDA" input
 			(at 168.91 40.64 0)
+			(uuid "6e98c425-c4dc-4b3b-aff5-e077cd4f8555")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6e98c425-c4dc-4b3b-aff5-e077cd4f8555")
 		)
 		(pin "ADDR3" input
 			(at 168.91 35.56 0)
+			(uuid "36cc5bf3-b9e0-4d38-808e-34635065e2df")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "36cc5bf3-b9e0-4d38-808e-34635065e2df")
 		)
 		(instances
 			(project "Display Board"
@@ -8826,6 +8864,10 @@
 	(sheet
 		(at 114.3 50.8)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -8856,93 +8898,93 @@
 		)
 		(pin "GND" input
 			(at 114.3 53.34 180)
+			(uuid "7c99bd48-3329-4d68-837d-79eefe3cc77f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "7c99bd48-3329-4d68-837d-79eefe3cc77f")
 		)
 		(pin "Vnn" input
 			(at 114.3 55.88 180)
+			(uuid "66be758f-7f8d-42c5-a50c-02dc1d8aa1de")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "66be758f-7f8d-42c5-a50c-02dc1d8aa1de")
 		)
 		(pin "Vdd" input
 			(at 114.3 58.42 180)
+			(uuid "ba60fe42-8bbc-4bea-8389-a8d512bcdbe1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ba60fe42-8bbc-4bea-8389-a8d512bcdbe1")
 		)
 		(pin "ADDR0" input
 			(at 130.81 53.34 0)
+			(uuid "b758a6cc-a755-404e-acf9-82b299360c36")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "b758a6cc-a755-404e-acf9-82b299360c36")
 		)
 		(pin "ADDR2" input
 			(at 130.81 58.42 0)
+			(uuid "594cec82-027e-4fb0-95df-d8ffef526407")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "594cec82-027e-4fb0-95df-d8ffef526407")
 		)
 		(pin "SCL" input
 			(at 130.81 68.58 0)
+			(uuid "9def3a57-ee17-42d4-9087-d742b6a9d6a1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "9def3a57-ee17-42d4-9087-d742b6a9d6a1")
 		)
 		(pin "ADDR1" input
 			(at 130.81 55.88 0)
+			(uuid "c9ec3a76-50c3-454e-9d64-842408ce6a0b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "c9ec3a76-50c3-454e-9d64-842408ce6a0b")
 		)
 		(pin "SDA" input
 			(at 130.81 66.04 0)
+			(uuid "df9c7691-c7ea-4d7e-ab9e-6fcc209e1468")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "df9c7691-c7ea-4d7e-ab9e-6fcc209e1468")
 		)
 		(pin "ADDR3" input
 			(at 130.81 60.96 0)
+			(uuid "eaf913d0-d263-4bcc-a9b8-2d6376a116bc")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "eaf913d0-d263-4bcc-a9b8-2d6376a116bc")
 		)
 		(instances
 			(project "Display Board"
@@ -8955,6 +8997,10 @@
 	(sheet
 		(at 190.5 50.8)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -8985,93 +9031,93 @@
 		)
 		(pin "GND" input
 			(at 190.5 53.34 180)
+			(uuid "e637d3b9-5b94-49c4-a583-47fef0dc79d2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e637d3b9-5b94-49c4-a583-47fef0dc79d2")
 		)
 		(pin "Vnn" input
 			(at 190.5 55.88 180)
+			(uuid "d07363b8-e4d1-478c-b7a5-7e1cd7d16d1e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d07363b8-e4d1-478c-b7a5-7e1cd7d16d1e")
 		)
 		(pin "Vdd" input
 			(at 190.5 58.42 180)
+			(uuid "993dc3b0-18d4-486a-8c6a-1ea80766ce42")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "993dc3b0-18d4-486a-8c6a-1ea80766ce42")
 		)
 		(pin "ADDR0" input
 			(at 207.01 53.34 0)
+			(uuid "ae0f254e-9d96-4756-9bd5-43cb0839e265")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ae0f254e-9d96-4756-9bd5-43cb0839e265")
 		)
 		(pin "ADDR2" input
 			(at 207.01 58.42 0)
+			(uuid "5f4c2d18-e36f-491e-b797-66560c3218c1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "5f4c2d18-e36f-491e-b797-66560c3218c1")
 		)
 		(pin "SCL" input
 			(at 207.01 68.58 0)
+			(uuid "f4ee3504-0260-42ec-882c-dc69555d6319")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "f4ee3504-0260-42ec-882c-dc69555d6319")
 		)
 		(pin "ADDR1" input
 			(at 207.01 55.88 0)
+			(uuid "1ef5a203-58c8-46bf-9987-affb5b92d10a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "1ef5a203-58c8-46bf-9987-affb5b92d10a")
 		)
 		(pin "SDA" input
 			(at 207.01 66.04 0)
+			(uuid "daa1bc69-7839-436c-ac54-8547b22190d9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "daa1bc69-7839-436c-ac54-8547b22190d9")
 		)
 		(pin "ADDR3" input
 			(at 207.01 60.96 0)
+			(uuid "884dc79f-9e27-475d-9fc6-dbfa748a8361")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "884dc79f-9e27-475d-9fc6-dbfa748a8361")
 		)
 		(instances
 			(project "Display Board"
@@ -9084,6 +9130,10 @@
 	(sheet
 		(at 114.3 25.4)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9114,93 +9164,93 @@
 		)
 		(pin "GND" input
 			(at 114.3 27.94 180)
+			(uuid "e4eac3a7-94c5-430c-9d90-0f718e4bdc68")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e4eac3a7-94c5-430c-9d90-0f718e4bdc68")
 		)
 		(pin "Vnn" input
 			(at 114.3 30.48 180)
+			(uuid "528e4891-cda7-4e10-8a55-669b4034379f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "528e4891-cda7-4e10-8a55-669b4034379f")
 		)
 		(pin "Vdd" input
 			(at 114.3 33.02 180)
+			(uuid "587524ca-251e-4101-b113-31b824074d28")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "587524ca-251e-4101-b113-31b824074d28")
 		)
 		(pin "ADDR0" input
 			(at 130.81 27.94 0)
+			(uuid "3965fdab-8d6c-4227-bdb4-ea3161937074")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "3965fdab-8d6c-4227-bdb4-ea3161937074")
 		)
 		(pin "ADDR2" input
 			(at 130.81 33.02 0)
+			(uuid "2b92f245-b614-49a7-9692-3a16e1c6c129")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "2b92f245-b614-49a7-9692-3a16e1c6c129")
 		)
 		(pin "SCL" input
 			(at 130.81 43.18 0)
+			(uuid "0db2c671-2d41-4f5d-b76a-3316e136a962")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "0db2c671-2d41-4f5d-b76a-3316e136a962")
 		)
 		(pin "ADDR1" input
 			(at 130.81 30.48 0)
+			(uuid "e8967299-4016-4603-b704-98f4fbbc88e5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "e8967299-4016-4603-b704-98f4fbbc88e5")
 		)
 		(pin "SDA" input
 			(at 130.81 40.64 0)
+			(uuid "e84a99c4-ed4b-4cc1-b259-7e3902b8e9a7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "e84a99c4-ed4b-4cc1-b259-7e3902b8e9a7")
 		)
 		(pin "ADDR3" input
 			(at 130.81 35.56 0)
+			(uuid "65622d20-4ee9-4cae-b468-e8999311403e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "65622d20-4ee9-4cae-b468-e8999311403e")
 		)
 		(instances
 			(project "Display Board"
@@ -9213,6 +9263,10 @@
 	(sheet
 		(at 228.6 25.4)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9243,93 +9297,93 @@
 		)
 		(pin "GND" input
 			(at 228.6 27.94 180)
+			(uuid "c6755d2b-a7ca-43c8-9fe5-f5308fd11ff3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "c6755d2b-a7ca-43c8-9fe5-f5308fd11ff3")
 		)
 		(pin "Vnn" input
 			(at 228.6 30.48 180)
+			(uuid "cec2baa6-c9b8-455f-b708-7a707e2e75f6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "cec2baa6-c9b8-455f-b708-7a707e2e75f6")
 		)
 		(pin "Vdd" input
 			(at 228.6 33.02 180)
+			(uuid "e8161d21-84a3-4d77-89b4-cfd99a7989d8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e8161d21-84a3-4d77-89b4-cfd99a7989d8")
 		)
 		(pin "ADDR0" input
 			(at 245.11 27.94 0)
+			(uuid "4ef7ba6a-9677-4daf-a830-5fd4ca4c6100")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4ef7ba6a-9677-4daf-a830-5fd4ca4c6100")
 		)
 		(pin "ADDR2" input
 			(at 245.11 33.02 0)
+			(uuid "a6712bfd-812e-42bc-a044-fdf963f93f61")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a6712bfd-812e-42bc-a044-fdf963f93f61")
 		)
 		(pin "SCL" input
 			(at 245.11 43.18 0)
+			(uuid "2d17b863-aff0-424a-9cd0-b0694a5aa19b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "2d17b863-aff0-424a-9cd0-b0694a5aa19b")
 		)
 		(pin "ADDR1" input
 			(at 245.11 30.48 0)
+			(uuid "5884c292-efcd-4eb6-aea6-a3fa8d688dcf")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "5884c292-efcd-4eb6-aea6-a3fa8d688dcf")
 		)
 		(pin "SDA" input
 			(at 245.11 40.64 0)
+			(uuid "37872439-f375-4b6a-9d53-11fcd5f2a356")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "37872439-f375-4b6a-9d53-11fcd5f2a356")
 		)
 		(pin "ADDR3" input
 			(at 245.11 35.56 0)
+			(uuid "ac1c4435-506a-46b3-839b-ec06e6bb92da")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ac1c4435-506a-46b3-839b-ec06e6bb92da")
 		)
 		(instances
 			(project "Display Board"
@@ -9342,6 +9396,10 @@
 	(sheet
 		(at 76.2 50.8)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9372,93 +9430,93 @@
 		)
 		(pin "GND" input
 			(at 76.2 53.34 180)
+			(uuid "43b1fc27-1eb5-4ba1-9198-21bada3eb77e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "43b1fc27-1eb5-4ba1-9198-21bada3eb77e")
 		)
 		(pin "Vnn" input
 			(at 76.2 55.88 180)
+			(uuid "08cf733b-afd5-46bf-86e9-96c2bccc33eb")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "08cf733b-afd5-46bf-86e9-96c2bccc33eb")
 		)
 		(pin "Vdd" input
 			(at 76.2 58.42 180)
+			(uuid "3a8b7ad0-485f-4f5c-b23c-a936f14246a2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3a8b7ad0-485f-4f5c-b23c-a936f14246a2")
 		)
 		(pin "ADDR0" input
 			(at 92.71 53.34 0)
+			(uuid "e9fe2cea-cad7-4cfa-9d44-1a87fb987dfd")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "e9fe2cea-cad7-4cfa-9d44-1a87fb987dfd")
 		)
 		(pin "ADDR2" input
 			(at 92.71 58.42 0)
+			(uuid "e172903c-b957-4003-ba48-686e900fa893")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "e172903c-b957-4003-ba48-686e900fa893")
 		)
 		(pin "SCL" input
 			(at 92.71 68.58 0)
+			(uuid "70fd28c3-b70c-42ef-864a-5fd0ebff6f70")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "70fd28c3-b70c-42ef-864a-5fd0ebff6f70")
 		)
 		(pin "ADDR1" input
 			(at 92.71 55.88 0)
+			(uuid "eefd4e77-870e-4625-942b-d1c883a05a1d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "eefd4e77-870e-4625-942b-d1c883a05a1d")
 		)
 		(pin "SDA" input
 			(at 92.71 66.04 0)
+			(uuid "7ff687a7-de3a-4c15-9043-d972cf6f4951")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7ff687a7-de3a-4c15-9043-d972cf6f4951")
 		)
 		(pin "ADDR3" input
 			(at 92.71 60.96 0)
+			(uuid "9992487e-a11f-4c38-a324-4c1b798e5cd6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "9992487e-a11f-4c38-a324-4c1b798e5cd6")
 		)
 		(instances
 			(project "Display Board"
@@ -9471,6 +9529,10 @@
 	(sheet
 		(at 228.6 50.8)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9501,93 +9563,93 @@
 		)
 		(pin "GND" input
 			(at 228.6 53.34 180)
+			(uuid "d84193ea-eaff-4857-9cc5-2f15788308c1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d84193ea-eaff-4857-9cc5-2f15788308c1")
 		)
 		(pin "Vnn" input
 			(at 228.6 55.88 180)
+			(uuid "223c19f9-67c6-4a25-8c92-c9d4390ab400")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "223c19f9-67c6-4a25-8c92-c9d4390ab400")
 		)
 		(pin "Vdd" input
 			(at 228.6 58.42 180)
+			(uuid "b418b3f6-a819-4c57-a603-d5965424e544")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b418b3f6-a819-4c57-a603-d5965424e544")
 		)
 		(pin "ADDR0" input
 			(at 245.11 53.34 0)
+			(uuid "8ff90c89-7fa3-4820-86d2-9bb8db55fc12")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "8ff90c89-7fa3-4820-86d2-9bb8db55fc12")
 		)
 		(pin "ADDR2" input
 			(at 245.11 58.42 0)
+			(uuid "bcbb6cb0-eccc-4dff-bf34-d6fcc6e2af1a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "bcbb6cb0-eccc-4dff-bf34-d6fcc6e2af1a")
 		)
 		(pin "SCL" input
 			(at 245.11 68.58 0)
+			(uuid "a85e39b0-f454-463d-a4e8-83bf596431f0")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a85e39b0-f454-463d-a4e8-83bf596431f0")
 		)
 		(pin "ADDR1" input
 			(at 245.11 55.88 0)
+			(uuid "b7150b7d-1b2c-410b-9383-70b317fe0ca5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "b7150b7d-1b2c-410b-9383-70b317fe0ca5")
 		)
 		(pin "SDA" input
 			(at 245.11 66.04 0)
+			(uuid "7a8ddd7f-a71f-491b-b862-0a29a872bac5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7a8ddd7f-a71f-491b-b862-0a29a872bac5")
 		)
 		(pin "ADDR3" input
 			(at 245.11 60.96 0)
+			(uuid "b9a52b8f-681b-4f56-9283-0927e65a7dca")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "b9a52b8f-681b-4f56-9283-0927e65a7dca")
 		)
 		(instances
 			(project "Display Board"
@@ -9600,6 +9662,10 @@
 	(sheet
 		(at 38.1 50.8)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9630,93 +9696,93 @@
 		)
 		(pin "GND" input
 			(at 38.1 53.34 180)
+			(uuid "241fb4cc-2501-4630-9073-cdeafa4e5178")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "241fb4cc-2501-4630-9073-cdeafa4e5178")
 		)
 		(pin "Vnn" input
 			(at 38.1 55.88 180)
+			(uuid "ea24c338-d5f4-4c26-8259-eb23bf640515")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ea24c338-d5f4-4c26-8259-eb23bf640515")
 		)
 		(pin "Vdd" input
 			(at 38.1 58.42 180)
+			(uuid "3bc54a11-3b8f-44e3-bc0a-2bdeff57367b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3bc54a11-3b8f-44e3-bc0a-2bdeff57367b")
 		)
 		(pin "ADDR0" input
 			(at 54.61 53.34 0)
+			(uuid "95acc741-e9b0-4947-9fde-ecf0c83a3a33")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "95acc741-e9b0-4947-9fde-ecf0c83a3a33")
 		)
 		(pin "ADDR2" input
 			(at 54.61 58.42 0)
+			(uuid "edab92d9-9851-48ad-a1b0-296766c81d24")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "edab92d9-9851-48ad-a1b0-296766c81d24")
 		)
 		(pin "SCL" input
 			(at 54.61 68.58 0)
+			(uuid "cefe6df6-bb4d-41d5-9304-9be09a8473d7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "cefe6df6-bb4d-41d5-9304-9be09a8473d7")
 		)
 		(pin "ADDR1" input
 			(at 54.61 55.88 0)
+			(uuid "b1c0c685-0d82-474f-917f-dc2f17531144")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "b1c0c685-0d82-474f-917f-dc2f17531144")
 		)
 		(pin "SDA" input
 			(at 54.61 66.04 0)
+			(uuid "8651c9a8-f4c7-4f9d-ad18-01d15aafb07c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "8651c9a8-f4c7-4f9d-ad18-01d15aafb07c")
 		)
 		(pin "ADDR3" input
 			(at 54.61 60.96 0)
+			(uuid "965b2189-a480-4a08-a2b0-fa7ab5963e12")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "965b2189-a480-4a08-a2b0-fa7ab5963e12")
 		)
 		(instances
 			(project "Display Board"
@@ -9729,6 +9795,10 @@
 	(sheet
 		(at 38.1 25.4)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9759,93 +9829,93 @@
 		)
 		(pin "GND" input
 			(at 38.1 27.94 180)
+			(uuid "529d2c2e-b01c-4bc1-8ef5-360855c11d13")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "529d2c2e-b01c-4bc1-8ef5-360855c11d13")
 		)
 		(pin "Vnn" input
 			(at 38.1 30.48 180)
+			(uuid "dbf11243-2b70-4100-b4e6-dda982ba00e7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "dbf11243-2b70-4100-b4e6-dda982ba00e7")
 		)
 		(pin "Vdd" input
 			(at 38.1 33.02 180)
+			(uuid "ff7010e0-40db-44c6-8de8-fc01c7c55379")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ff7010e0-40db-44c6-8de8-fc01c7c55379")
 		)
 		(pin "ADDR0" input
 			(at 54.61 27.94 0)
+			(uuid "ab590bc8-4395-4683-87ba-fed67eba36fc")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ab590bc8-4395-4683-87ba-fed67eba36fc")
 		)
 		(pin "ADDR2" input
 			(at 54.61 33.02 0)
+			(uuid "1f745a94-3b80-42ce-8244-a14e76239016")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "1f745a94-3b80-42ce-8244-a14e76239016")
 		)
 		(pin "SCL" input
 			(at 54.61 43.18 0)
+			(uuid "1c1cee3e-3cb0-4302-9e9f-ca31c4adb4f1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "1c1cee3e-3cb0-4302-9e9f-ca31c4adb4f1")
 		)
 		(pin "ADDR1" input
 			(at 54.61 30.48 0)
+			(uuid "83b41661-a4ba-490b-9361-e6759510b408")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "83b41661-a4ba-490b-9361-e6759510b408")
 		)
 		(pin "SDA" input
 			(at 54.61 40.64 0)
+			(uuid "6c379d75-aae9-49fd-8479-03dbfc609a0a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6c379d75-aae9-49fd-8479-03dbfc609a0a")
 		)
 		(pin "ADDR3" input
 			(at 54.61 35.56 0)
+			(uuid "5ed00c00-9829-417c-9b97-26e8f0189d13")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "5ed00c00-9829-417c-9b97-26e8f0189d13")
 		)
 		(instances
 			(project "Display Board"
@@ -9858,6 +9928,10 @@
 	(sheet
 		(at 190.5 25.4)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9888,93 +9962,93 @@
 		)
 		(pin "GND" input
 			(at 190.5 27.94 180)
+			(uuid "94ca2e30-25ed-43de-be5d-4a427810ee06")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "94ca2e30-25ed-43de-be5d-4a427810ee06")
 		)
 		(pin "Vnn" input
 			(at 190.5 30.48 180)
+			(uuid "08982a2c-3781-4ebf-8853-b954b18956d6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "08982a2c-3781-4ebf-8853-b954b18956d6")
 		)
 		(pin "Vdd" input
 			(at 190.5 33.02 180)
+			(uuid "010d3317-72d7-42c3-99ea-21c58f5a5379")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "010d3317-72d7-42c3-99ea-21c58f5a5379")
 		)
 		(pin "ADDR0" input
 			(at 207.01 27.94 0)
+			(uuid "0cd4d084-c463-4d0f-8908-eed7fefb8ac2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "0cd4d084-c463-4d0f-8908-eed7fefb8ac2")
 		)
 		(pin "ADDR2" input
 			(at 207.01 33.02 0)
+			(uuid "fa468c75-17dd-4332-8f6f-8fbd90392c5d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "fa468c75-17dd-4332-8f6f-8fbd90392c5d")
 		)
 		(pin "SCL" input
 			(at 207.01 43.18 0)
+			(uuid "5ee20637-55da-4f89-b63e-a6d7951362bf")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "5ee20637-55da-4f89-b63e-a6d7951362bf")
 		)
 		(pin "ADDR1" input
 			(at 207.01 30.48 0)
+			(uuid "63685b3c-7341-44ec-80cd-63a320d2c3a4")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "63685b3c-7341-44ec-80cd-63a320d2c3a4")
 		)
 		(pin "SDA" input
 			(at 207.01 40.64 0)
+			(uuid "21669631-6bb0-43f6-9b0d-64f9c1012d03")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "21669631-6bb0-43f6-9b0d-64f9c1012d03")
 		)
 		(pin "ADDR3" input
 			(at 207.01 35.56 0)
+			(uuid "52a61a58-c005-4cd0-84b7-eaec898461e1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "52a61a58-c005-4cd0-84b7-eaec898461e1")
 		)
 		(instances
 			(project "Display Board"
@@ -9987,6 +10061,10 @@
 	(sheet
 		(at 76.2 25.4)
 		(size 16.51 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -10017,93 +10095,93 @@
 		)
 		(pin "GND" input
 			(at 76.2 27.94 180)
+			(uuid "f57be4ae-2589-4641-b650-35d48f787352")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f57be4ae-2589-4641-b650-35d48f787352")
 		)
 		(pin "Vnn" input
 			(at 76.2 30.48 180)
+			(uuid "ab75948c-5caf-4464-8159-517226c604c8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ab75948c-5caf-4464-8159-517226c604c8")
 		)
 		(pin "Vdd" input
 			(at 76.2 33.02 180)
+			(uuid "1cccdd2c-dbf8-49b4-9e92-2201abd3e549")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "1cccdd2c-dbf8-49b4-9e92-2201abd3e549")
 		)
 		(pin "ADDR0" input
 			(at 92.71 27.94 0)
+			(uuid "97cefdbe-7075-4108-a67f-06687a454dd9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "97cefdbe-7075-4108-a67f-06687a454dd9")
 		)
 		(pin "ADDR2" input
 			(at 92.71 33.02 0)
+			(uuid "52d968b8-255f-4fa2-94f6-d055d4ccf014")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "52d968b8-255f-4fa2-94f6-d055d4ccf014")
 		)
 		(pin "SCL" input
 			(at 92.71 43.18 0)
+			(uuid "2743e0a5-c492-4183-959d-453c068a5275")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "2743e0a5-c492-4183-959d-453c068a5275")
 		)
 		(pin "ADDR1" input
 			(at 92.71 30.48 0)
+			(uuid "77bed45c-167f-4a94-95d5-129cd2a1aaab")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "77bed45c-167f-4a94-95d5-129cd2a1aaab")
 		)
 		(pin "SDA" input
 			(at 92.71 40.64 0)
+			(uuid "08dde60f-cb20-46e0-8579-9c9fd3a206f6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "08dde60f-cb20-46e0-8579-9c9fd3a206f6")
 		)
 		(pin "ADDR3" input
 			(at 92.71 35.56 0)
+			(uuid "d7c1ab12-520d-48fd-bbcb-1b939b3894df")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "d7c1ab12-520d-48fd-bbcb-1b939b3894df")
 		)
 		(instances
 			(project "Display Board"
@@ -10118,4 +10196,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

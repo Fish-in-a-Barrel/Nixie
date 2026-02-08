@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "98244e2c-e8e9-40c0-82f3-68072d2c81f8")
 	(paper "A4")
 	(lib_symbols
@@ -95,6 +95,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:GND_DIGITAL"
 			(power)
@@ -210,6 +211,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:HV_MON"
 			(power)
@@ -312,6 +314,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:RES_0805"
 			(exclude_from_sim no)
@@ -492,7 +495,85 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "12 / (750 + 12) = 1 / 63.5\nVoltage @ J10-1 should be approx:\n2.8V  with source @ 180V\n3.15V with source @ 200V\n3.8V  with source @ 240V\n43mW power consumed"
+		(exclude_from_sim no)
+		(at 125.73 97.79 0)
+		(effects
+			(font
+				(size 2.467 2.467)
+			)
+			(justify left top)
+		)
+		(uuid "111127ce-a23f-4b2b-bdcb-3f02e090b121")
+	)
+	(text "+180V"
+		(exclude_from_sim no)
+		(at 99.487 68.52 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f3f9ac5-282a-4c1f-9ce0-7174836b259b")
+	)
+	(text "R4"
+		(exclude_from_sim no)
+		(at 101.6 116.862 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "70c8b96c-6421-4a1d-ac57-32548f2aec4f")
+	)
+	(text "HV Mon"
+		(exclude_from_sim no)
+		(at 111.337 91.44 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "88727250-c1dd-4de0-8228-ee380820a29b")
+	)
+	(text "12k"
+		(exclude_from_sim no)
+		(at 104.14 117.135 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "c442b0e7-e743-4f78-af7d-c0784d0e974b")
+	)
+	(text "R3"
+		(exclude_from_sim no)
+		(at 101.6 88.886 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef5410eb-6f5f-4bf9-ae58-93046452657a")
+	)
+	(text "750k"
+		(exclude_from_sim no)
+		(at 104.14 90.268 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "f403e247-0272-4085-a8aa-9f0fdbe38e59")
 	)
 	(junction
 		(at 102.87 102.87)
@@ -589,83 +670,6 @@
 			(type solid)
 		)
 		(uuid "ef422bbe-2d74-41a1-9b1c-f6f93cf74dfa")
-	)
-	(text "12 / (750 + 12) = 1 / 63.5\nVoltage @ J10-1 should be approx:\n2.8V  with source @ 180V\n3.15V with source @ 200V\n3.8V  with source @ 240V\n43mW power consumed"
-		(exclude_from_sim no)
-		(at 125.73 97.79 0)
-		(effects
-			(font
-				(size 2.467 2.467)
-			)
-			(justify left top)
-		)
-		(uuid "111127ce-a23f-4b2b-bdcb-3f02e090b121")
-	)
-	(text "+180V"
-		(exclude_from_sim no)
-		(at 99.487 68.52 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "2f3f9ac5-282a-4c1f-9ce0-7174836b259b")
-	)
-	(text "R4"
-		(exclude_from_sim no)
-		(at 101.6 116.862 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "70c8b96c-6421-4a1d-ac57-32548f2aec4f")
-	)
-	(text "HV Mon"
-		(exclude_from_sim no)
-		(at 111.337 91.44 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "88727250-c1dd-4de0-8228-ee380820a29b")
-	)
-	(text "12k"
-		(exclude_from_sim no)
-		(at 104.14 117.135 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "c442b0e7-e743-4f78-af7d-c0784d0e974b")
-	)
-	(text "R3"
-		(exclude_from_sim no)
-		(at 101.6 88.886 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "ef5410eb-6f5f-4bf9-ae58-93046452657a")
-	)
-	(text "750k"
-		(exclude_from_sim no)
-		(at 104.14 90.268 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "f403e247-0272-4085-a8aa-9f0fdbe38e59")
 	)
 	(global_label "VNN"
 		(shape bidirectional)

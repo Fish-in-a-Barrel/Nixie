@@ -1,7 +1,7 @@
 (kicad_pcb
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(general
 		(thickness 1.6)
 		(legacy_teardrops no)
@@ -9,42 +9,43 @@
 	(paper "USLetter")
 	(layers
 		(0 "F.Cu" signal)
-		(31 "B.Cu" signal)
-		(32 "B.Adhes" user "B.Adhesive")
-		(33 "F.Adhes" user "F.Adhesive")
-		(34 "B.Paste" user)
-		(35 "F.Paste" user)
-		(36 "B.SilkS" user "B.Silkscreen")
-		(37 "F.SilkS" user "F.Silkscreen")
-		(38 "B.Mask" user)
-		(39 "F.Mask" user)
-		(40 "Dwgs.User" user "User.Drawings")
-		(41 "Cmts.User" user "User.Comments")
-		(42 "Eco1.User" user "User.Eco1")
-		(43 "Eco2.User" user "User.Eco2")
-		(44 "Edge.Cuts" user)
-		(45 "Margin" user)
-		(46 "B.CrtYd" user "B.Courtyard")
-		(47 "F.CrtYd" user "F.Courtyard")
-		(48 "B.Fab" user)
-		(49 "F.Fab" user)
-		(50 "User.1" user)
-		(51 "User.2" user)
-		(52 "User.3" user)
-		(53 "User.4" user)
-		(54 "User.5" user)
-		(55 "User.6" user)
-		(56 "User.7" user)
-		(57 "User.8" user)
-		(58 "User.9" user)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+		(39 "User.1" user)
+		(41 "User.2" user)
+		(43 "User.3" user)
+		(45 "User.4" user)
+		(47 "User.5" user)
+		(49 "User.6" user)
+		(51 "User.7" user)
+		(53 "User.8" user)
+		(55 "User.9" user)
 	)
 	(setup
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
+		(tenting front back)
 		(grid_origin 139.7 107.95)
 		(pcbplotparams
-			(layerselection 0x00010fc_ffffffff)
-			(plot_on_all_layers_selection 0x0000000_00000000)
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
 			(usegerberattributes yes)
@@ -54,7 +55,6 @@
 			(dashed_line_gap_ratio 3.000000)
 			(svgprecision 4)
 			(plotframeref no)
-			(viasonmask no)
 			(mode 1)
 			(useauxorigin no)
 			(hpglpennumber 1)
@@ -62,16 +62,19 @@
 			(hpglpendiameter 15.000000)
 			(pdf_front_fp_property_popups yes)
 			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
 			(dxfpolygonmode yes)
 			(dxfimperialunits yes)
 			(dxfusepcbnewfont yes)
 			(psnegative no)
 			(psa4output no)
-			(plotreference yes)
-			(plotvalue yes)
-			(plotfptext yes)
-			(plotinvisibletext no)
+			(plot_black_and_white yes)
 			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
@@ -154,21 +157,8 @@
 				)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm"
-			(at 0 0 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6333e08d-f315-40f6-8bcf-87b89f9e0188")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -181,7 +171,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -205,7 +195,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "38973fa7-5dfd-41aa-b7b8-fc2e713d05e9")
 		)
@@ -216,7 +206,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "ac904119-24bb-42bd-a73f-63973fc72152")
 		)
@@ -238,6 +228,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "9712556a-b7e5-48aa-bf75-dc4f7216bc56")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
 		(layer "F.Cu")
@@ -264,19 +255,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "2a47a632-6ca0-42eb-a7b3-ee4362abadef")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -495,6 +473,7 @@
 			(pintype "passive")
 			(uuid "05626206-8416-41b9-8035-d2e21709b68d")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -529,19 +508,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "192767d8-2147-4dc8-95cb-364e74e5471e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e1ae2df5-6b50-4dd1-8893-5f184a4fdf56")
 			(effects
 				(font
 					(size 1 1)
@@ -1223,6 +1189,7 @@
 				"ec59bee7-f8c8-4b6e-a426-757939b220f7" "f6a61e74-9925-45ab-8673-ca1d7d99ff61"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -1286,19 +1253,6 @@
 				)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "dc523f52-5ab5-4eae-b062-1be114818b68")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
@@ -1337,7 +1291,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "dbf9c805-bc2f-4bd0-8284-ca872d702c0e")
 		)
@@ -1348,7 +1302,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "104eef10-9205-441c-ae68-291a8476f20b")
 		)
@@ -1374,6 +1328,7 @@
 			(pintype "input")
 			(uuid "e4391e6a-ffc2-4154-97c6-5d578212857b")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "Nixie:Nixie Driver V2"
 		(layer "F.Cu")
@@ -1397,19 +1352,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "6f5a5739-5938-45b4-97ea-6032439e9f32")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "7f95557a-8713-4a38-a630-ef5dbb0bbad8")
 			(effects
 				(font
 					(size 1 1)
@@ -2091,6 +2033,7 @@
 				"b9b3a3b6-0a75-4610-bf87-5e3d66482a0a" "f9c26714-031c-4c8b-9af3-f6cf3748c913"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -2154,21 +2097,8 @@
 				)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 0 0 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "aaf3b6d5-ac76-4c9d-9119-076c0e5f414b")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -2181,7 +2111,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -2205,7 +2135,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "a33e63b3-d0ce-430a-b161-2adfd55b9ce8")
 		)
@@ -2216,7 +2146,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "215e2f43-1989-46cc-93f4-7110f6072075")
 		)
@@ -2238,6 +2168,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "477a137e-2866-4b4e-ad1e-ec7057e35fb2")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "MountingHole:MountingHole_2.5mm"
 		(layer "F.Cu")
@@ -2268,21 +2199,8 @@
 				)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm"
-			(at 0 0 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "71bcdf8b-33e4-4e7f-b20d-42e32d86e618")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -2295,7 +2213,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -2319,7 +2237,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "8d98bceb-a22b-4db7-bef7-72013291ec56")
 		)
@@ -2330,7 +2248,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "69ea6022-cad2-4484-ad4a-94518f46f04b")
 		)
@@ -2352,6 +2270,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "75b363a1-70a9-45d5-94ae-f0d9a1fc8ffd")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "Nixie:Nixie Driver V2"
 		(layer "F.Cu")
@@ -2375,19 +2294,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "2d32c12a-c29d-443f-812c-37c5003cc38f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "33953943-1159-49c3-aae1-2dd98a800539")
 			(effects
 				(font
 					(size 1 1)
@@ -3069,6 +2975,7 @@
 				"6fe91fee-bcd1-45b9-bc37-b6e4eee67708" "7eac0dac-5451-4278-b51f-e1dc8692adf6"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -3125,19 +3032,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "11300c73-e790-4de5-8dbd-e3ca9b63325d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "21d7ee2d-9c48-4d5d-895c-cb8da3e617b0")
 			(effects
 				(font
 					(size 1 1)
@@ -3819,6 +3713,7 @@
 				"eb7c9934-b2d7-494e-92be-47c24f32f67f" "ee4f2936-5f0b-402d-bc1d-ebca7aba78db"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -3882,19 +3777,6 @@
 				)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e93000b5-f4dd-40f6-bf54-24d58f2b4f50")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
@@ -3933,7 +3815,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "fce8c94d-7c92-4bbf-8f96-3fff669e8550")
 		)
@@ -3944,7 +3826,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "f7eb213f-6b1d-4a8d-bec3-0cb68152592a")
 		)
@@ -3966,6 +3848,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "9e77b43c-20b9-411f-9abe-20d76cd78a04")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "Nixie:Nixie Driver V2"
 		(layer "F.Cu")
@@ -3989,19 +3872,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "1b3af014-d847-4f1c-827b-678ae00b88aa")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "8bf5192d-e9ec-4378-b4f7-9ca42b60a3c5")
 			(effects
 				(font
 					(size 1 1)
@@ -4683,6 +4553,7 @@
 				"c76baa06-02ae-4285-be32-33f57bf14ad0" "ff8fa4c2-3c8f-4a39-9c45-418365acdaa7"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -4742,19 +4613,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "5077d80f-9a81-41fd-8ca8-87a850368f9d")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -4973,6 +4831,7 @@
 			(pintype "passive")
 			(uuid "7f072bcb-b2a5-45df-bc4e-1b3c04603776")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -5010,19 +4869,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "a795e3d1-93b6-4eba-b558-87317999273f")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -5065,7 +4911,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "6cec83e7-1eec-4bfd-9693-4b0e6820acc2")
 		)
@@ -5076,7 +4922,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "f99d24a8-59f1-4711-b42f-a8add06bce2b")
 		)
@@ -5098,6 +4944,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "6593bcd2-a606-4634-9b1b-7f34d56906f4")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
@@ -5128,21 +4975,8 @@
 				)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 0 0 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "777fe28a-8cfe-4193-b5af-3e74ae4ce84e")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -5155,7 +4989,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 0 0 -90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -5179,7 +5013,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "132e17f8-ac17-4ea4-a85a-b4dc17af126f")
 		)
@@ -5190,7 +5024,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "7fb06dba-20a8-46a2-b24e-075bcb7acd83")
 		)
@@ -5212,6 +5046,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "e0f7c342-496d-4d1b-b963-a2d2ea139850")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "MountingHole:MountingHole_2.5mm_Pad"
 		(layer "F.Cu")
@@ -5238,19 +5073,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "60083796-614f-4fbc-a57d-8123551257c7")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -5293,7 +5115,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "082f1a77-7817-43ab-b75d-fbac1f7e9acb")
 		)
@@ -5304,7 +5126,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "5342b7f0-31a0-4c59-8d5a-2bae812e4d40")
 		)
@@ -5330,6 +5152,7 @@
 			(pintype "input")
 			(uuid "1c7105cc-fa10-49c9-b670-f12662218916")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
@@ -5356,19 +5179,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e8911c88-d9a2-49f4-8fc5-5bc36544e211")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -5411,7 +5221,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "e9a41220-e771-4ee6-8ad2-e83276398391")
 		)
@@ -5422,7 +5232,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "2581794f-0c8e-4e71-b1d6-8ead2c128659")
 		)
@@ -5444,6 +5254,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "4f0cfa74-d9e1-4408-8b22-e0a87e820a91")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "Nixie:Nixie Driver V2"
 		(layer "F.Cu")
@@ -5467,19 +5278,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "1ef1d969-3403-4135-89c1-2812087ab321")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "bd615766-73f6-4707-b2e9-fd27f0aa4ecd")
 			(effects
 				(font
 					(size 1 1)
@@ -6161,6 +5959,7 @@
 				"d7e5083c-dc32-41bc-97a5-45b2ea774f4b" "e0ce3f60-8c6b-4e88-894a-1077d243d6f0"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -6217,19 +6016,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "c0981a12-de8f-49f3-8774-1a2d81fc340c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "96af427b-ac24-418a-b363-5aaf8e8a3a10")
 			(effects
 				(font
 					(size 1 1)
@@ -6911,6 +6697,7 @@
 				"60ee980f-c27a-4b17-9017-2eff7f4b7ae1" "c884cccb-c7b0-43a2-b742-8d8414c4e9e8"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -6967,19 +6754,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "711f0d5c-ac9b-45cf-8504-3e98c9ab7c4c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "69985bd7-1b96-42b9-993b-e460e45bdbcd")
 			(effects
 				(font
 					(size 1 1)
@@ -7661,6 +7435,7 @@
 				"97459d93-7076-4cea-bd0d-2c6c07b7ed4d" "cdc0b1bc-5d51-4414-a77a-ebe7dbe7962c"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -7720,19 +7495,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "583a6217-5a19-4343-909c-7b8f12628d80")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -7951,6 +7713,7 @@
 			(pintype "passive")
 			(uuid "3ce44448-aa5c-4cec-ad49-0fc3921e9753")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -7985,19 +7748,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "a379b58d-e049-42d0-88fe-96a89aa4610b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "27446d2d-7a1f-4a84-9205-5b07c755c2fa")
 			(effects
 				(font
 					(size 1 1)
@@ -8679,6 +8429,7 @@
 				"b5c69ac5-9eea-4466-914b-1563e9563846" "c44a51e2-a3dd-42f2-bda1-2e6fef23b07b"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -8742,19 +8493,6 @@
 				)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "22936d15-0fe6-4275-9fbc-07abca514006")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
@@ -8793,7 +8531,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "9102e38a-ad32-445f-9377-855a030d92bd")
 		)
@@ -8804,7 +8542,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "b2abe3f0-ba36-4927-a875-eb2287a7cc40")
 		)
@@ -8826,6 +8564,7 @@
 			(layers "*.Cu" "*.Mask")
 			(uuid "2552bf09-25f6-4272-adee-9bcb4fe773fc")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "MountingHole:MountingHole_2.5mm_Pad"
 		(layer "F.Cu")
@@ -8852,19 +8591,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "76b03b63-7eb0-4cf2-a84d-91ff07c8f55f")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -8907,7 +8633,7 @@
 				(width 0.15)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "Cmts.User")
 			(uuid "e88e94ae-892d-4eec-a46b-53e0ac9222ee")
 		)
@@ -8918,7 +8644,7 @@
 				(width 0.05)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "74e858a4-49e3-45e0-a7c6-7dbebbaa65a7")
 		)
@@ -8944,6 +8670,7 @@
 			(pintype "input")
 			(uuid "225e4361-2755-4ebe-973a-cb94513b4d43")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "Nixie:Nixie Driver V2"
 		(layer "F.Cu")
@@ -8967,19 +8694,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "b0416431-e696-4752-b94d-0411a692a001")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "9762d8d8-2649-41cc-8dbb-05a40aaed6e1")
 			(effects
 				(font
 					(size 1 1)
@@ -9661,6 +9375,7 @@
 				"827f417a-76e1-45a7-af4d-4a3b62b22f19" "f25ab8e9-a508-4816-8765-3e734fd1800a"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -9717,19 +9432,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "4bc3e720-4f78-4c4c-ac7d-78a6c758e45e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "405e1b13-f5e8-43c7-b830-fa38e8bd8cec")
 			(effects
 				(font
 					(size 1 1)
@@ -10411,6 +10113,7 @@
 				"606e8fac-0e94-4b3f-af12-8f1e8a2da2c5" "b96de71f-b865-4254-b141-7ab1da52f9fc"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -10470,19 +10173,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d4bb311d-caed-4e40-b80f-7f695b18b5a8")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -10701,6 +10391,7 @@
 			(pintype "passive")
 			(uuid "e14b5cf1-2e0e-418d-a9da-7ff6c37acfb7")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -10735,19 +10426,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "79fda29e-66d7-457d-bd11-5c8caeb150cc")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Nixie:Nixie Driver V2"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "90c55fbd-79e2-47b2-86a5-3635b1718bb0")
 			(effects
 				(font
 					(size 1 1)
@@ -11429,6 +11107,7 @@
 				"44db1010-8e23-4f4e-8874-3c22eb8591b9" "fa6db542-53c9-470d-9653-c7ab732b8be4"
 			)
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x03_P2.54mm_Vertical.step"
 			(offset
 				(xyz -8.89 7.62 0)
@@ -11489,20 +11168,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "290a67d0-c8a6-4eee-8da6-a1e50941b323")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -11811,6 +11476,7 @@
 			(pintype "passive")
 			(uuid "58f80c71-e141-4cb4-bdca-709c6633d750")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x04_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -11845,20 +11511,6 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "1fa3b696-270a-42f8-bc68-cbb99244460d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Footprint" "DisplayBoard:GPS Antenna Holder"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "624ba011-9002-47e9-8141-68f547b5771d")
 			(effects
 				(font
 					(size 1 1)
@@ -11905,7 +11557,7 @@
 				(width 0.05)
 				(type default)
 			)
-			(fill none)
+			(fill no)
 			(layer "B.CrtYd")
 			(uuid "ec6f22d5-5706-464a-b5ba-668ffe239714")
 		)
@@ -11916,7 +11568,7 @@
 				(width 0.05)
 				(type default)
 			)
-			(fill none)
+			(fill no)
 			(layer "B.CrtYd")
 			(uuid "14c7881b-8402-45a5-b615-5238bac7da80")
 		)
@@ -11927,7 +11579,7 @@
 				(width 0.1)
 				(type default)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "9ee677b5-60fb-48fa-b564-69059ea42a50")
 		)
@@ -11938,7 +11590,7 @@
 				(width 0.1)
 				(type default)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.CrtYd")
 			(uuid "6e3616c5-5b69-4990-803b-9dca0a4e978f")
 		)
@@ -11949,7 +11601,7 @@
 				(width 0.1)
 				(type default)
 			)
-			(fill none)
+			(fill no)
 			(layer "B.Fab")
 			(uuid "7907a546-677f-4b4b-a517-0b1074fb8ec8")
 		)
@@ -11980,6 +11632,7 @@
 			(layers "*.Mask")
 			(uuid "23ecdc1c-8cf9-43b7-a98f-2da279bafa35")
 		)
+		(embedded_fonts no)
 		(model "C:/Users/aaron/MPLABXProjects/NixieClock/Hardware/3D/GPS Antenna Holder.step"
 			(offset
 				(xyz 15 0 2)
@@ -12012,26 +11665,12 @@
 			)
 		)
 		(property "Value" "GPS"
-			(at -2.54 -3.81 360)
+			(at -2.54 -3.81 0)
 			(layer "B.SilkS")
 			(uuid "622303d8-ff04-49e4-8a3f-73d1e82a0d47")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "3a983878-5d3d-466b-8c1d-8235cdd3d0a6")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -12221,7 +11860,7 @@
 			(uuid "a42b1888-b476-42ba-a201-1838114282f2")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -3.81 360)
+			(at 0 -3.81 0)
 			(layer "B.Fab")
 			(uuid "c41bcb9f-ca41-499b-89a3-c69e0a3f8a5f")
 			(effects
@@ -12276,6 +11915,7 @@
 			(pintype "passive")
 			(uuid "3f9b109b-14bc-4a39-8743-32a508641f6e")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -12308,26 +11948,12 @@
 			)
 		)
 		(property "Value" "RTC"
-			(at -2.54 -3.81 360)
+			(at -2.54 -3.81 0)
 			(layer "B.SilkS")
 			(uuid "88b3f01c-065e-4090-ba7f-5052ef742555")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f34fa36c-28d4-4a44-82d5-9e9bbbcbd3a2")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -12517,7 +12143,7 @@
 			(uuid "a37dad08-704a-4a5d-a029-00d21250d4dc")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -3.81 360)
+			(at 0 -3.81 0)
 			(layer "B.Fab")
 			(uuid "fa96cc2e-92e6-46fd-9941-1d8b9cc7bb30")
 			(effects
@@ -12572,6 +12198,7 @@
 			(pintype "passive")
 			(uuid "13d2a206-cf01-4c55-b195-e11d19cac988")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -12595,13 +12222,13 @@
 		(uuid "1341b172-2111-4f1b-9ca3-bc8b3095c525")
 	)
 	(gr_rect
-		(start 191.643 121.158)
-		(end 217.297 85.09)
+		(start 191.643 85.09)
+		(end 217.297 121.158)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "B.SilkS")
 		(uuid "6339ad9f-6349-424a-a5d9-34c632700e0d")
 	)
@@ -12642,7 +12269,7 @@
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "B.SilkS")
 		(uuid "b0a7bb59-2c7b-4303-9d9d-35bd6c1aa3dd")
 	)
@@ -15965,4 +15592,5 @@
 			"d75c3d3d-42f9-47d1-8783-3e7ad15a2f97"
 		)
 	)
+	(embedded_fonts no)
 )
