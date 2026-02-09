@@ -479,7 +479,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.19,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -497,27 +497,8 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.19,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Cathode Signal",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2032,
-        "via_diameter": 1.016,
-        "via_drill": 0.485667,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.19,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -526,16 +507,32 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.33,
-        "via_diameter": 1.016,
-        "via_drill": 0.485667,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Small Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       },
       {
         "bus_width": 12,
         "clearance": 0.3,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -544,9 +541,9 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.33,
-        "via_diameter": 1.016,
-        "via_drill": 0.485667,
+        "track_width": 0.6,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
         "wire_width": 6
       }
     ],
@@ -555,6 +552,39 @@
     },
     "net_colors": null,
     "netclass_assignments": {
+      "/Nixie Tube/Cathode 0/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 1/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 2/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 3/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 4/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 5/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 6/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 7/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 8/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode 9/Cathode": [
+        "Vnn"
+      ],
+      "/Nixie Tube/Cathode Dot/Cathode": [
+        "Vnn"
+      ],
       "N_GND": [
         "Ground",
         "Vnn"
@@ -578,35 +608,27 @@
         "pattern": "GND"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Small Signal",
         "pattern": "SCL"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Small Signal",
         "pattern": "SDA"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Small Signal",
         "pattern": "VDD"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Small Signal",
         "pattern": "~{MCLR}"
       },
       {
-        "netclass": "Vnn",
-        "pattern": "N_GND"
-      },
-      {
-        "netclass": "Vnn",
-        "pattern": "/Cathode*"
-      },
-      {
-        "netclass": "Cathode Signal",
+        "netclass": "Small Signal",
         "pattern": "/Driver*"
       },
       {
-        "netclass": "Cathode Signal",
+        "netclass": "Small Signal",
         "pattern": "/ADDR*"
       },
       {
@@ -734,6 +756,54 @@
     [
       "a603c7dd-0964-4ab1-bdb5-8ff7833b36d7",
       "Root"
+    ],
+    [
+      "b9f36219-f6fd-4dbc-a925-d6d5b4f99d74",
+      "Cathode 0"
+    ],
+    [
+      "4b446eb4-47da-4727-9643-7fc77d139e4f",
+      "Nixie Tube"
+    ],
+    [
+      "9c4e7203-912f-45ba-9fcb-82981e718d74",
+      "Cathode 1"
+    ],
+    [
+      "b5b08423-4071-4d66-a194-80434262f516",
+      "Cathode 2"
+    ],
+    [
+      "13431172-01ee-4a2b-8391-f92188254264",
+      "Cathode 3"
+    ],
+    [
+      "e5a1be99-f45d-4c16-bc30-40e3a9a2c985",
+      "Cathode 4"
+    ],
+    [
+      "c262906c-257b-4409-b42a-b02ff2e4775f",
+      "Cathode 5"
+    ],
+    [
+      "99dc2b5e-3f77-4edf-af88-934afc94e997",
+      "Cathode 6"
+    ],
+    [
+      "f05da09c-aacf-4768-a62c-cb6585e8b571",
+      "Cathode 7"
+    ],
+    [
+      "946b2f68-0a11-4dda-abbd-d6af41f7f24b",
+      "Cathode 8"
+    ],
+    [
+      "4e836426-b999-4f67-8a02-05dcfd0cf008",
+      "Cathode 9"
+    ],
+    [
+      "e49c044e-a1ff-4dca-b4f6-11cdb3ec838c",
+      "Cathode Dot"
     ]
   ],
   "text_variables": {}

@@ -1,0 +1,1990 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "e2c5dbf0-3e64-48f2-b724-25639dface9c")
+	(paper "USLetter")
+	(lib_symbols
+		(symbol "Device:R_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_US"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.016 -0.254 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, US symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_US_0_1"
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_US_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Nixie Driver-eagle-import:IN-12B"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Nixie Driver:IN-12[A_B]"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IN-12B_1_0"
+				(polyline
+					(pts
+						(xy -3.81 -15.772) (xy -3.81 12.168)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.8101 12.1678)
+					(mid -0.0001 14.914)
+					(end 3.81 12.168)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.8101 -15.7718)
+					(mid 0.0001 -18.518)
+					(end -3.81 -15.772)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 12.168) (xy 3.81 -15.772)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "IN-12B"
+					(at 3.81 18.518 0)
+					(effects
+						(font
+							(size 1.48 1.48)
+						)
+						(justify right top)
+					)
+				)
+				(pin output line
+					(at -6.35 10.898 0)
+					(length 2.54)
+					(name "'0'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 8.358 0)
+					(length 2.54)
+					(name "'1'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 5.818 0)
+					(length 2.54)
+					(name "'2'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 3.278 0)
+					(length 2.54)
+					(name "'3'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 0.738 0)
+					(length 2.54)
+					(name "'4'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 -1.802 0)
+					(length 2.54)
+					(name "'5'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 -4.342 0)
+					(length 2.54)
+					(name "'6'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 -6.882 0)
+					(length 2.54)
+					(name "'7'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 -9.422 0)
+					(length 2.54)
+					(name "'8'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 -11.962 0)
+					(length 2.54)
+					(name "'9'"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -6.35 -14.502 0)
+					(length 2.54)
+					(name "DP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 6.35 -1.802 180)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 127 144.78) (xy 175.26 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "016a801b-e2ab-4209-b03d-099256fc24a8")
+	)
+	(wire
+		(pts
+			(xy 97.79 114.3) (xy 101.6 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0541da42-8da9-4ffc-ad12-24468082c7dc")
+	)
+	(wire
+		(pts
+			(xy 127 134.62) (xy 172.72 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a5a4bea-1db5-46c6-9df6-1e4d632fad31")
+	)
+	(wire
+		(pts
+			(xy 172.72 134.62) (xy 172.72 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bd5e551-2aff-4c94-b8f7-b686b7889c8b")
+	)
+	(wire
+		(pts
+			(xy 97.79 144.78) (xy 101.6 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10d09753-be03-4d19-a5fb-16a4c91eeefc")
+	)
+	(wire
+		(pts
+			(xy 127 124.46) (xy 170.18 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1313c6de-eb38-41ab-98aa-4eee206cb6a6")
+	)
+	(wire
+		(pts
+			(xy 97.79 134.62) (xy 101.6 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13323013-1346-44f9-b010-d6351312757a")
+	)
+	(wire
+		(pts
+			(xy 127 93.98) (xy 162.56 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d031ed3-86ea-4366-92ce-1d1a2ea46d86")
+	)
+	(wire
+		(pts
+			(xy 127 53.34) (xy 152.4 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "271e60be-e06f-4395-84c0-1050f46e4863")
+	)
+	(wire
+		(pts
+			(xy 127 154.94) (xy 133.35 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29470cb4-c3ca-4dd6-a359-2d5076fc7e09")
+	)
+	(wire
+		(pts
+			(xy 127 114.3) (xy 167.64 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e2b3a55-cee2-4a7e-862f-b3d46e75519e")
+	)
+	(wire
+		(pts
+			(xy 161.29 27.94) (xy 165.1 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "305f73f1-8b8f-42e6-8f75-3455dc35b455")
+	)
+	(wire
+		(pts
+			(xy 149.86 27.94) (xy 153.67 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30831ec4-432d-4df9-8ad8-9a62c80f287c")
+	)
+	(wire
+		(pts
+			(xy 167.64 114.3) (xy 167.64 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3864bdb7-df4b-4eee-84e5-2e1619cb2aa9")
+	)
+	(wire
+		(pts
+			(xy 127 83.82) (xy 160.02 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "419b96d5-8e82-4d2c-91ec-3822c26d47a2")
+	)
+	(wire
+		(pts
+			(xy 97.79 63.5) (xy 101.6 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4997e0ba-2105-4b1f-8145-81e0646d0e7b")
+	)
+	(wire
+		(pts
+			(xy 152.4 53.34) (xy 152.4 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f269165-be89-4d5c-99fc-e1b400fa9aa2")
+	)
+	(wire
+		(pts
+			(xy 97.79 93.98) (xy 101.6 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82c0affa-e083-46a8-97a3-379903670e5e")
+	)
+	(wire
+		(pts
+			(xy 165.1 104.14) (xy 165.1 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84e7822c-7a09-4b6e-b97e-23c458b17b1a")
+	)
+	(wire
+		(pts
+			(xy 170.18 124.46) (xy 170.18 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "897b495d-f6ae-49f2-a2a2-cc359b1d4c82")
+	)
+	(wire
+		(pts
+			(xy 160.02 83.82) (xy 160.02 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96d41ecc-6adb-413d-ac52-77cce97233ea")
+	)
+	(wire
+		(pts
+			(xy 97.79 73.66) (xy 101.6 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97450e37-bc75-43c1-aca1-b38d95a18305")
+	)
+	(wire
+		(pts
+			(xy 154.94 63.5) (xy 154.94 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a694024a-5c5f-41b3-8ecf-b03e4f542108")
+	)
+	(wire
+		(pts
+			(xy 97.79 83.82) (xy 101.6 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7198910-0f4a-4a23-ac8e-0904afed75f0")
+	)
+	(wire
+		(pts
+			(xy 140.97 154.94) (xy 177.8 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a911ff94-a2c8-44c1-9ea3-3adf6e05a20c")
+	)
+	(wire
+		(pts
+			(xy 175.26 144.78) (xy 175.26 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9cb0ce4-9a32-4dd5-bf8d-951ebb37cb9a")
+	)
+	(wire
+		(pts
+			(xy 97.79 124.46) (xy 101.6 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b179fbae-b10e-46dc-850c-e84314e4e9e1")
+	)
+	(wire
+		(pts
+			(xy 97.79 104.14) (xy 101.6 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8d09a66-2483-46cd-8209-cf7fcc910cf0")
+	)
+	(wire
+		(pts
+			(xy 165.1 27.94) (xy 165.1 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7e60a45-9ff4-4e9d-a71c-8d8e95144e0b")
+	)
+	(wire
+		(pts
+			(xy 127 104.14) (xy 165.1 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d51c45c2-5327-4d87-b229-4337c2789683")
+	)
+	(wire
+		(pts
+			(xy 127 63.5) (xy 154.94 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e02c0b78-d762-49e9-afa5-0bfe001db0ce")
+	)
+	(wire
+		(pts
+			(xy 157.48 73.66) (xy 157.48 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4c49258-1dea-4538-97a6-5e4857167c4c")
+	)
+	(wire
+		(pts
+			(xy 127 73.66) (xy 157.48 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f67f03ed-7fd4-48a6-9cf0-11cca128e7ce")
+	)
+	(wire
+		(pts
+			(xy 97.79 53.34) (xy 101.6 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fba69e13-6442-4179-8630-8db457eaed24")
+	)
+	(wire
+		(pts
+			(xy 177.8 154.94) (xy 177.8 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd908ecb-7d18-44d2-8847-b71859de1cf9")
+	)
+	(wire
+		(pts
+			(xy 97.79 154.94) (xy 101.6 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdd6f43e-fe7b-4c15-bf15-7e1f5df1e029")
+	)
+	(wire
+		(pts
+			(xy 162.56 93.98) (xy 162.56 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffe8229e-536a-4768-9782-f5bb5083c7c6")
+	)
+	(hierarchical_label "3"
+		(shape input)
+		(at 97.79 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0633d0b1-ccd8-4213-b9f0-c9279b83c1d8")
+	)
+	(hierarchical_label "2"
+		(shape input)
+		(at 97.79 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2e45865b-d143-4e4a-a300-11b8ad5b7a62")
+	)
+	(hierarchical_label "Dot"
+		(shape input)
+		(at 97.79 154.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "34d2b51d-96cf-4939-9cb0-e5b381703da0")
+	)
+	(hierarchical_label "1"
+		(shape input)
+		(at 97.79 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "38bab4c3-5562-4e1c-8909-1a407689f241")
+	)
+	(hierarchical_label "5"
+		(shape input)
+		(at 97.79 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "41a581a1-fc7a-4013-8bad-9f578344867b")
+	)
+	(hierarchical_label "4"
+		(shape input)
+		(at 97.79 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "537cbe0c-df8c-4312-990b-48cd5fd3ba3a")
+	)
+	(hierarchical_label "7"
+		(shape input)
+		(at 97.79 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "955f6d82-8641-488c-a3a7-88e9cc60dc72")
+	)
+	(hierarchical_label "8"
+		(shape input)
+		(at 97.79 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a8c356a4-c6fc-47ce-a74b-968f3cff5475")
+	)
+	(hierarchical_label "Vnn"
+		(shape input)
+		(at 149.86 27.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b08fc6d4-faf7-46c3-9d35-7e148861d99e")
+	)
+	(hierarchical_label "0"
+		(shape input)
+		(at 97.79 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d37c8ad2-c0fc-48eb-a2ba-63c550ec16f4")
+	)
+	(hierarchical_label "9"
+		(shape input)
+		(at 97.79 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e33c0ba4-0a21-45f6-a58f-228475e94e97")
+	)
+	(hierarchical_label "6"
+		(shape input)
+		(at 97.79 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f6a4fa53-8303-49ed-89c4-8b1183bbcf73")
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 165.1 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9694e857-f3d6-4a18-ab62-3ef000b7617a")
+		(property "Netclass" "Vnn"
+			(at 165.1 20.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 152.4 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "da113b1a-6c51-40de-91f6-558f3a39d458")
+		(property "Netclass" "Vnn"
+			(at 152.4 20.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 137.16 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5745a329-4255-49bf-bdfe-8be2a551e002")
+		(property "Reference" "R12"
+			(at 137.16 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150k"
+			(at 137.16 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 137.414 153.924 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 137.16 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c0da3514-22e7-4b33-9e93-dee9de6613ad")
+		)
+		(pin "1"
+			(uuid "cfde6d42-c4d9-486a-bb40-b165a8001f82")
+		)
+		(instances
+			(project ""
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 157.48 27.94 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "801faf3e-7423-4867-b376-dcf8d569baf6")
+		(property "Reference" "R11"
+			(at 158.242 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20k"
+			(at 157.734 30.734 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 157.226 26.924 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 157.48 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "29b8f807-8b86-40d5-89c0-2dcbf34c3584")
+		)
+		(pin "2"
+			(uuid "19400673-b847-45f2-bc2c-aad39330eb44")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie Driver-eagle-import:IN-12B")
+		(at 163.298 39.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c70b31cf-9b94-4a3a-afb4-1956b4f576dc")
+		(property "Reference" "V1"
+			(at 184.15 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "IN-12B"
+			(at 163.298 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Nixie:IN-12[A_B] with center hole"
+			(at 163.298 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.298 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 163.298 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "d21e9339-f7d9-4eaf-9935-8039c63443ec")
+		)
+		(pin "2"
+			(uuid "f3e962cf-73fd-4e9f-b1a5-a9c35cb06ea7")
+		)
+		(pin "12"
+			(uuid "7d6344d0-f9be-499f-97ce-99e8f7aa2da4")
+		)
+		(pin "3"
+			(uuid "9bd01b4d-bf25-4342-9f9a-4f4890d843b1")
+		)
+		(pin "11"
+			(uuid "6c528c67-26a2-4046-8c86-70f639b8593a")
+		)
+		(pin "1"
+			(uuid "d1fa0f41-e481-4c39-b829-38c3431a51e1")
+		)
+		(pin "10"
+			(uuid "48b094b4-ec8b-4ff9-b365-3edd1129ae9b")
+		)
+		(pin "7"
+			(uuid "ef3f3c78-cb9d-4b83-8392-6cb7f31da041")
+		)
+		(pin "8"
+			(uuid "0872fd4a-8648-4442-94ac-f919378272b3")
+		)
+		(pin "6"
+			(uuid "173597ea-dee3-489a-811a-4019a1350ee1")
+		)
+		(pin "9"
+			(uuid "cb9adc86-1290-4b92-bd0f-52e57a6bca52")
+		)
+		(pin "5"
+			(uuid "15d88654-ff17-4053-9280-40e88fa9f348")
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(reference "V1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 81.28)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "13431172-01ee-4a2b-8391-f92188254264")
+		(property "Sheetname" "Cathode 3"
+			(at 101.6 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 86.9446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 83.82 0)
+			(uuid "1a94f0ff-d0ff-401f-a3da-540cd84a4176")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 83.82 180)
+			(uuid "d545c110-96da-40d2-800c-effb2702a523")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 142.24)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4e836426-b999-4f67-8a02-05dcfd0cf008")
+		(property "Sheetname" "Cathode 9"
+			(at 101.6 141.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 147.9046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 144.78 0)
+			(uuid "d1592940-7c9e-4a6c-9f08-ca5de249fff3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 144.78 180)
+			(uuid "0739c163-c25b-4598-95b8-a6a000dbe87b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 132.08)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "946b2f68-0a11-4dda-abbd-d6af41f7f24b")
+		(property "Sheetname" "Cathode 8"
+			(at 101.6 131.3684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 137.7446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 134.62 0)
+			(uuid "46736e01-6a6e-464b-b9a8-6d821bf43027")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 134.62 180)
+			(uuid "a8a6eb44-2d25-42d0-828e-5879f7598f55")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 111.76)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "99dc2b5e-3f77-4edf-af88-934afc94e997")
+		(property "Sheetname" "Cathode 6"
+			(at 101.6 111.0484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 117.4246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 114.3 0)
+			(uuid "73e03427-0e0d-4cfb-ac59-2afaa09dfc0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 114.3 180)
+			(uuid "29dcb714-6e31-4238-8bf7-a5200a3e472e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 60.96)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9c4e7203-912f-45ba-9fcb-82981e718d74")
+		(property "Sheetname" "Cathode 1"
+			(at 101.6 60.2484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 66.6246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 63.5 0)
+			(uuid "99b4fe18-1575-4f52-a643-07c54fd8ce13")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 63.5 180)
+			(uuid "09369bb8-91b9-4d8c-b2fa-5d8eaef0dc55")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 71.12)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b5b08423-4071-4d66-a194-80434262f516")
+		(property "Sheetname" "Cathode 2"
+			(at 101.6 70.4084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 73.66 0)
+			(uuid "720539e6-8864-4d30-805d-fd6ca91c88a0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 73.66 180)
+			(uuid "e06ceb42-82b8-4249-a01f-b2f1414d4ce3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 50.8)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b9f36219-f6fd-4dbc-a925-d6d5b4f99d74")
+		(property "Sheetname" "Cathode 0"
+			(at 101.6 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 56.4646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 53.34 0)
+			(uuid "cc905f10-4e99-416f-9710-293e4c3181ba")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 53.34 180)
+			(uuid "1fb92bf0-feb1-4a86-8bb9-08caf0b14bb0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 101.6)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c262906c-257b-4409-b42a-b02ff2e4775f")
+		(property "Sheetname" "Cathode 5"
+			(at 101.6 100.8884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 104.14 0)
+			(uuid "02aa10f0-8bb0-410e-8910-86d5cec34100")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 104.14 180)
+			(uuid "f56a6c5d-6561-412a-b9ce-15bbc09715b9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 152.4)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e49c044e-a1ff-4dca-b4f6-11cdb3ec838c")
+		(property "Sheetname" "Cathode Dot"
+			(at 101.6 151.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 158.0646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 154.94 0)
+			(uuid "4f4e83f0-0870-48cd-bbcb-8b6f0d0ba311")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 154.94 180)
+			(uuid "d62bc795-378c-4b3a-88bd-29995c362a54")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 91.44)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e5a1be99-f45d-4c16-bc30-40e3a9a2c985")
+		(property "Sheetname" "Cathode 4"
+			(at 101.6 90.7284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 93.98 0)
+			(uuid "cb016ebc-c624-4d42-a4b8-ba806925a155")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 93.98 180)
+			(uuid "64241ceb-73a9-4ba0-b3a8-05e3b73a9f6b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 121.92)
+		(size 25.4 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f05da09c-aacf-4768-a62c-cb6585e8b571")
+		(property "Sheetname" "Cathode 7"
+			(at 101.6 121.2084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cathode-driver.kicad_sch"
+			(at 101.6 127.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "Cathode" input
+			(at 127 124.46 0)
+			(uuid "42c436fb-fd95-4260-a048-91a88a4a95a4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Enable" input
+			(at 101.6 124.46 180)
+			(uuid "cec46909-3299-49a9-8845-dd290ec41d30")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Nixie Driver"
+				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7/4b446eb4-47da-4727-9643-7fc77d139e4f"
+					(page "10")
+				)
+			)
+		)
+	)
+)
