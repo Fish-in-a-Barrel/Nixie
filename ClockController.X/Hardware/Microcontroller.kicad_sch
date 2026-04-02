@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "e4b6f393-26e2-41ea-9191-33568c2f2770")
 	(paper "A4")
 	(lib_symbols
@@ -100,9 +100,9 @@
 					)
 				)
 				(arc
-					(start 0.944 1.911)
+					(start 0.9439 -1.9109)
 					(mid 0.3044 0.0001)
-					(end 0.9439 -1.9109)
+					(end 0.944 1.911)
 					(stroke
 						(width 0.254)
 						(type solid)
@@ -148,6 +148,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:GND_DIGITAL"
 			(power)
@@ -263,6 +264,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:PIC16F15224-I/SL"
 			(exclude_from_sim no)
@@ -324,18 +326,6 @@
 			(symbol "PIC16F15224-I/SL_1_0"
 				(polyline
 					(pts
-						(xy -59.69 -12.7) (xy -59.69 12.7)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -59.69 12.7) (xy 59.69 12.7)
 					)
 					(stroke
@@ -348,7 +338,7 @@
 				)
 				(polyline
 					(pts
-						(xy 59.69 -12.7) (xy -59.69 -12.7)
+						(xy -59.69 -12.7) (xy -59.69 12.7)
 					)
 					(stroke
 						(width 0.25)
@@ -361,6 +351,18 @@
 				(polyline
 					(pts
 						(xy 59.69 12.7) (xy 59.69 -12.7)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 59.69 -12.7) (xy -59.69 -12.7)
 					)
 					(stroke
 						(width 0.25)
@@ -389,34 +391,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 62.23 10.16 180)
+					(at -62.23 2.54 0)
 					(length 2.54)
-					(name "RC0/ANC0/C2IN0+/SCL1/SCK1/IOCC0"
+					(name "RA0/ANA0/C1IN0+/DAC1OUT/ICSPDAT/IOCA0"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -62.23 -2.54 0)
-					(length 2.54)
-					(name "RA2/ANA2/CWG1IN/ZCD1/INT/IOCA2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
+					(number "13"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -443,70 +427,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at -62.23 2.54 0)
+					(at -62.23 -2.54 0)
 					(length 2.54)
-					(name "RA0/ANA0/C1IN0+/DAC1OUT/ICSPDAT/IOCA0"
+					(name "RA2/ANA2/CWG1IN/ZCD1/INT/IOCA2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 62.23 -10.16 180)
-					(length 2.54)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -62.23 -10.16 0)
-					(length 2.54)
-					(name "RA5/ANA5/T1CKI/T2IN/SOSCIN/CLCIN3/CLKIN/OSC1/EIN/IOCA5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -62.23 -7.62 0)
-					(length 2.54)
-					(name "RA4/ANA4/C1IN1-/T1G/SOSCO/CLKOUT/OSC2/IOCA4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
+					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -533,16 +463,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 62.23 -2.54 180)
+					(at -62.23 -7.62 0)
 					(length 2.54)
-					(name "RC5/ANC5/CCP1/RX1/DT1/IOCC5"
+					(name "RA4/ANA4/C1IN1-/T1G/SOSCO/CLKOUT/OSC2/IOCA4"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -551,16 +481,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 62.23 0 180)
+					(at -62.23 -10.16 0)
 					(length 2.54)
-					(name "RC4/ANC4/TX1/CK1/CLCIN1/IOCC4"
+					(name "RA5/ANA5/T1CKI/T2IN/SOSCIN/CLCIN3/CLKIN/OSC1/EIN/IOCA5"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "6"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -569,16 +499,34 @@
 					)
 				)
 				(pin bidirectional line
-					(at 62.23 2.54 180)
+					(at 62.23 10.16 180)
 					(length 2.54)
-					(name "RC3/ANC3/C1IN3-/C2IN3-/CCP2/~{SS1}/CLCIN0/IOCC3"
+					(name "RC0/ANC0/C2IN0+/SCL1/SCK1/IOCC0"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "7"
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 7.62 180)
+					(length 2.54)
+					(name "RC1/ANC1/C1IN1-/C2IN1-/SDA1/SDI1/CLCIN2/IOCC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -605,16 +553,70 @@
 					)
 				)
 				(pin bidirectional line
-					(at 62.23 7.62 180)
+					(at 62.23 2.54 180)
 					(length 2.54)
-					(name "RC1/ANC1/C1IN1-/C2IN1-/SDA1/SDI1/CLCIN2/IOCC1"
+					(name "RC3/ANC3/C1IN3-/C2IN3-/CCP2/~{SS1}/CLCIN0/IOCC3"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "9"
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 0 180)
+					(length 2.54)
+					(name "RC4/ANC4/TX1/CK1/CLCIN1/IOCC4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -2.54 180)
+					(length 2.54)
+					(name "RC5/ANC5/CCP1/RX1/DT1/IOCC5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 62.23 -10.16 180)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -623,6 +625,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:PPPC051LGBN-RC"
 			(exclude_from_sim no)
@@ -821,7 +824,52 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "PIC16F15224-I/SL"
+		(exclude_from_sim no)
+		(at 203.2 97.79 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "0a6e169d-a852-4457-8523-73dc4f269713")
+	)
+	(text "C2"
+		(exclude_from_sim no)
+		(at 142.218 128.899 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e190805-ba04-47cd-97d1-df82e5bd4a7b")
+	)
+	(text "ICSP"
+		(exclude_from_sim no)
+		(at 151.384 74.168 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify right bottom)
+		)
+		(uuid "f15a1d2b-4a5f-45db-b423-d53b777917bf")
+	)
+	(text "U1"
+		(exclude_from_sim no)
+		(at 142.581 123.19 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left top)
+		)
+		(uuid "f65e79be-70de-4b38-8492-c250efb0d96f")
 	)
 	(junction
 		(at 68.58 130.81)
@@ -1179,53 +1227,8 @@
 		)
 		(uuid "f789f773-b0f9-4905-b540-87dfa47e5a12")
 	)
-	(text "PIC16F15224-I/SL"
-		(exclude_from_sim no)
-		(at 203.2 97.79 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "0a6e169d-a852-4457-8523-73dc4f269713")
-	)
-	(text "C2"
-		(exclude_from_sim no)
-		(at 142.218 128.899 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "6e190805-ba04-47cd-97d1-df82e5bd4a7b")
-	)
-	(text "ICSP"
-		(exclude_from_sim no)
-		(at 151.384 74.168 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify right bottom)
-		)
-		(uuid "f15a1d2b-4a5f-45db-b423-d53b777917bf")
-	)
-	(text "U1"
-		(exclude_from_sim no)
-		(at 142.581 123.19 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left top)
-		)
-		(uuid "f65e79be-70de-4b38-8492-c250efb0d96f")
-	)
 	(label "~{MCLR}"
 		(at 209.55 105.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1236,7 +1239,6 @@
 	)
 	(label "ICSPDAT"
 		(at 135.89 85.09 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1247,7 +1249,6 @@
 	)
 	(label "~{MCLR}"
 		(at 135.89 77.47 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1258,7 +1259,6 @@
 	)
 	(label "ICSPCLK"
 		(at 135.89 87.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1269,7 +1269,6 @@
 	)
 	(label "ICSPCLK"
 		(at 209.55 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1280,7 +1279,6 @@
 	)
 	(label "ICSPDAT"
 		(at 209.55 113.03 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.016 1.016)
