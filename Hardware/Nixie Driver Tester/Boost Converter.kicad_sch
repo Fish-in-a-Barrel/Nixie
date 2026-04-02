@@ -1785,6 +1785,75 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
+		(at 97.79 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0284c87d-c9b3-46b1-89c7-ac8f77f5c1ab")
+		(property "Netclass" "Thicc"
+			(at 98.4885 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 137.16 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "082a7f88-c038-4cc6-91e6-2110d6ce5964")
+		(property "Netclass" "Thicc"
+			(at 137.8585 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 105.41 88.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "41a74590-4d00-498e-bcba-2b2f20f785db")
+		(property "Netclass" "Thicc"
+			(at 106.1085 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
 		(at 121.92 58.42 0)
 		(fields_autoplaced yes)
 		(effects
@@ -1796,6 +1865,29 @@
 		(uuid "990852f0-95ea-413c-9adb-d37e01de3157")
 		(property "Netclass" "Thicc"
 			(at 122.6185 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 143.51 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aba854fc-efc5-4b51-bc95-df5f41377e30")
+		(property "Netclass" "Thicc"
+			(at 144.2085 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1911,10 +2003,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5184b1f9-8cc2-487a-856e-4b1eae58af51")
 		(property "Reference" "D1"
-			(at 131.1275 52.07 0)
+			(at 130.81 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1927,6 +2018,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
@@ -2065,7 +2157,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_1812_4532Metric"
 			(at 153.3652 92.71 0)
 			(effects
 				(font

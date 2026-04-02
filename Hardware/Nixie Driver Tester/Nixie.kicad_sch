@@ -499,6 +499,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 81.28) (xy 165.1 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7804c340-b815-4e87-946c-0600245e2536")
+	)
+	(wire
+		(pts
 			(xy 151.13 93.98) (xy 151.13 96.52)
 		)
 		(stroke
@@ -572,7 +582,7 @@
 	)
 	(hierarchical_label "180V"
 		(shape input)
-		(at 165.1 81.28 0)
+		(at 172.72 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -580,6 +590,37 @@
 			(justify left)
 		)
 		(uuid "a84a4659-bb1c-4a63-b969-75e36168b9fe")
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 168.91 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c68d4158-bde3-4c5e-9596-21d5e8377ab1")
+		(property "Netclass" "Thicc"
+			(at 169.6085 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -38.1 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
