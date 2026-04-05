@@ -677,10 +677,6 @@
       "Microcontroller"
     ],
     [
-      "f21bc6e7-c992-4316-9545-f3984eb63b0a",
-      "Headers"
-    ],
-    [
       "7249a21b-eb16-4e9e-abfb-85589cfd2ea3",
       "USB PD"
     ],
@@ -699,6 +695,10 @@
     [
       "ce5f0f3f-aec6-4132-9c02-46f441a88bf8",
       "+5 VRM"
+    ],
+    [
+      "f21bc6e7-c992-4316-9545-f3984eb63b0a",
+      "Headers"
     ]
   ],
   "text_variables": {}

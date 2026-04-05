@@ -1520,7 +1520,7 @@
 		(instances
 			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7"
-					(page "1")
+					(page "2")
 				)
 			)
 		)
@@ -1656,7 +1656,7 @@
 		(instances
 			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7"
-					(page "8")
+					(page "7")
 				)
 			)
 		)
@@ -1769,7 +1769,7 @@
 		(instances
 			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7"
-					(page "2")
+					(page "8")
 				)
 			)
 		)
