@@ -494,7 +494,7 @@
 			(uuid "9ddd7325-42df-4400-88ab-c3043f7f6d20")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/71853cd7-0343-4b40-9bfb-08983ce43f31"
 					(reference "#PWR016")
 					(unit 1)

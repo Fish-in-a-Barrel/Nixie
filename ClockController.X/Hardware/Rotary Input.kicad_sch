@@ -1023,6 +1023,36 @@
 		)
 		(uuid "fbfe7432-99c2-4ef8-b75d-c187657c04d0")
 	)
+	(label "Rotary_A Unfiltered"
+		(at 119.38 93.98 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0808db62-4f8c-445a-8c6e-3e66b6d8a81d")
+	)
+	(label "Rotary_B Unfiltered"
+		(at 119.38 109.22 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "214ae5b8-0e31-4938-a72b-2ca49072c8db")
+	)
+	(label "Button Unfiltered"
+		(at 154.94 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "230ab071-8376-4bb5-89bc-1405ccc59b7a")
+	)
 	(hierarchical_label "Button"
 		(shape output)
 		(at 160.02 116.84 0)
@@ -1929,7 +1959,7 @@
 			(uuid "15ea1c1b-7e74-416d-ac71-1f86bca4dc4e")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/867f44d7-ba62-42d8-959c-be37f05c9614"
 					(reference "#PWR023")
 					(unit 1)

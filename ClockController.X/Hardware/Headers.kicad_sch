@@ -1020,7 +1020,7 @@
 		)
 	)
 	(junction
-		(at 154.94 76.2)
+		(at 154.94 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "15943d76-638a-40bb-bc3c-f02e466f0de4")
@@ -1047,7 +1047,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 81.28) (xy 132.08 76.2)
+			(xy 132.08 81.28) (xy 132.08 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1067,16 +1067,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 86.36) (xy 154.94 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d5e89e4-e5db-4876-a062-df134b24f162")
-	)
-	(wire
-		(pts
 			(xy 132.08 90.17) (xy 132.08 81.28)
 		)
 		(stroke
@@ -1087,7 +1077,17 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 76.2) (xy 154.94 76.2)
+			(xy 154.94 80.01) (xy 154.94 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51aa9e5c-0cee-4c33-bb3d-377e819140f1")
+	)
+	(wire
+		(pts
+			(xy 132.08 69.85) (xy 154.94 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1117,7 +1117,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 82.55) (xy 173.99 76.2)
+			(xy 173.99 76.2) (xy 173.99 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1127,7 +1127,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 76.2) (xy 154.94 76.2)
+			(xy 173.99 69.85) (xy 154.94 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1147,7 +1147,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 76.2) (xy 154.94 78.74)
+			(xy 154.94 69.85) (xy 154.94 72.39)
 		)
 		(stroke
 			(width 0)
@@ -1167,13 +1167,53 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 90.17) (xy 173.99 92.71)
+			(xy 173.99 83.82) (xy 173.99 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f1f5d2f9-40b9-44c8-bc30-88787fafee96")
+	)
+	(label "SCL Out"
+		(at 133.35 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "100799ca-d1ab-400d-a61e-b15e6f5f3594")
+	)
+	(label "SDA Gate"
+		(at 173.99 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2325fd9d-51ad-4039-968b-52235de07e6a")
+	)
+	(label "SCL Gate"
+		(at 154.94 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "481eb3b8-87ef-4b01-88fc-5786a65b660d")
+	)
+	(label "SDA Out"
+		(at 133.35 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d16778b0-e8a9-4742-86ca-0a7a5a1bd525")
 	)
 	(hierarchical_label "MCU_RX"
 		(shape input)
@@ -1363,7 +1403,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 154.94 82.55 180)
+		(at 154.94 76.2 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1371,7 +1411,7 @@
 		(dnp no)
 		(uuid "52edbeb2-8455-4f4b-8cee-44fb898859aa")
 		(property "Reference" "R1"
-			(at 152.146 82.55 0)
+			(at 152.146 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1379,7 +1419,7 @@
 			)
 		)
 		(property "Value" "2.2k"
-			(at 157.734 82.55 90)
+			(at 157.734 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1387,7 +1427,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 153.924 82.296 90)
+			(at 153.924 75.946 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1396,7 +1436,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 154.94 82.55 0)
+			(at 154.94 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1405,7 +1445,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 154.94 82.55 0)
+			(at 154.94 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1578,7 +1618,7 @@
 			(uuid "9a0285a9-234f-4e74-9b8c-83c7ce0f3b7f")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "#PWR03")
 					(unit 1)
@@ -1821,7 +1861,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 173.99 86.36 180)
+		(at 173.99 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1829,7 +1869,7 @@
 		(dnp no)
 		(uuid "fe31b9bc-af58-490c-97b0-a15c4f1675a4")
 		(property "Reference" "R2"
-			(at 171.196 86.36 0)
+			(at 171.196 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1837,7 +1877,7 @@
 			)
 		)
 		(property "Value" "2.2k"
-			(at 176.784 86.36 90)
+			(at 176.784 80.01 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1845,7 +1885,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 172.974 86.106 90)
+			(at 172.974 79.756 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1854,7 +1894,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 173.99 86.36 0)
+			(at 173.99 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1863,7 +1903,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 173.99 86.36 0)
+			(at 173.99 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)

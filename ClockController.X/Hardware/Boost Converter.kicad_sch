@@ -1986,6 +1986,36 @@
 		)
 		(uuid "f0514c5b-a784-4d1f-bc65-3bea576a91cd")
 	)
+	(label "Driver Out"
+		(at 118.11 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f06cb96-98b1-4987-8432-517315cd1ae7")
+	)
+	(label "Boost"
+		(at 139.7 87.63 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "473b8a62-04a2-4d9d-800e-66c208abece3")
+	)
+	(label "Boost In"
+		(at 124.46 76.2 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a9725366-a3fe-4ed3-b7e6-2be032a6a09e")
+	)
 	(hierarchical_label "PWM"
 		(shape input)
 		(at 96.52 104.14 180)
@@ -2088,7 +2118,7 @@
 			(uuid "75cfa26f-2c38-4f2f-99e6-44fbd3d88143")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
 					(reference "#PWR015")
 					(unit 1)
@@ -2288,7 +2318,7 @@
 			(uuid "75cfa26f-2c38-4f2f-99e6-44fbd3d88144")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/44189c1c-ba8e-4c06-ad6c-4084ba07d9ce"
 					(reference "#PWR014")
 					(unit 1)

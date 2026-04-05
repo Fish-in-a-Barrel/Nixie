@@ -2044,16 +2044,6 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 78.74) (xy 130.81 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e0a9ba0-bec1-44fb-b78d-aa55059ca961")
-	)
-	(wire
-		(pts
 			(xy 88.9 100.33) (xy 88.9 106.68)
 		)
 		(stroke
@@ -2114,7 +2104,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 78.74) (xy 106.68 78.74)
+			(xy 113.03 78.74) (xy 106.68 78.74)
 		)
 		(stroke
 			(width 0.25)
@@ -2154,6 +2144,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 78.74) (xy 130.81 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c7c3455-2d03-47fc-a608-2ed731a5242b")
+	)
+	(wire
+		(pts
 			(xy 228.6 85.09) (xy 233.68 85.09)
 		)
 		(stroke
@@ -2164,7 +2164,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 137.16) (xy 74.93 137.16)
+			(xy 87.63 137.16) (xy 83.82 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2334,7 +2334,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 137.16) (xy 55.88 137.16)
+			(xy 53.34 137.16) (xy 59.69 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2434,7 +2434,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 137.16) (xy 67.31 137.16)
+			(xy 67.31 137.16) (xy 76.2 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2481,6 +2481,86 @@
 			(type default)
 		)
 		(uuid "f682df24-9deb-46b0-bb15-b166bfc308bc")
+	)
+	(label "VBUS In"
+		(at 80.01 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2ad7ffe2-6172-4e5e-9a06-673b1dff4519")
+	)
+	(label "VBUS Enable"
+		(at 120.65 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b06f9bc6-1df0-4c1f-ae45-545eb7d81072")
+	)
+	(label "IFB"
+		(at 160.02 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8af91c5-332e-4e40-913b-766045f40163")
+	)
+	(label "VBUS Enable Limit"
+		(at 110.49 78.74 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d08f15e8-6cc6-4495-80bb-3bb4c32b01ee")
+	)
+	(label "5V LED Limit"
+		(at 72.39 137.16 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "df7d094b-c845-4de5-9619-62b7545d717e")
+	)
+	(label "PD LED"
+		(at 218.44 85.09 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec36492f-aed9-4f70-a2b7-10d5625d4661")
+	)
+	(label "Current Shunt"
+		(at 135.89 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fc105b96-08e8-4701-8ed7-125ebfaf2d3c")
+	)
+	(label "PD LED Limit"
+		(at 232.41 85.09 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fc29bbc7-68c8-4a7d-b0c7-d841e2a98f34")
 	)
 	(global_label "V5V"
 		(shape bidirectional)
@@ -2793,7 +2873,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 78.74 137.16 90)
+		(at 87.63 137.16 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2802,7 +2882,7 @@
 		(fields_autoplaced yes)
 		(uuid "3f1fe3b0-d0a0-46ce-bed0-ae841bc8a21a")
 		(property "Reference" "#PWR07"
-			(at 85.09 137.16 0)
+			(at 93.98 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2811,7 +2891,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 82.55 137.1599 90)
+			(at 91.44 137.1599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2820,7 +2900,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 137.16 0)
+			(at 87.63 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2829,7 +2909,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 137.16 0)
+			(at 87.63 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2838,7 +2918,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 137.16 0)
+			(at 87.63 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3137,7 +3217,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 114.3 78.74 90)
+		(at 116.84 78.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3145,7 +3225,7 @@
 		(dnp no)
 		(uuid "6f196332-d6c3-4e5f-924b-51c4cf1a52f2")
 		(property "Reference" "R6"
-			(at 114.3 75.692 90)
+			(at 116.84 75.692 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3153,7 +3233,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 114.3 81.788 90)
+			(at 116.84 81.788 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3161,7 +3241,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 114.554 77.724 90)
+			(at 117.094 77.724 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3170,7 +3250,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 114.3 78.74 0)
+			(at 116.84 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3179,7 +3259,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 114.3 78.74 0)
+			(at 116.84 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3409,7 +3489,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 71.12 137.16 90)
+		(at 80.01 137.16 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3417,7 +3497,7 @@
 		(dnp no)
 		(uuid "7dade640-5756-42f9-9bdc-b738ea0163ce")
 		(property "Reference" "R9"
-			(at 71.12 133.858 90)
+			(at 80.01 133.858 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3425,7 +3505,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 71.12 140.462 90)
+			(at 80.01 140.462 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3433,7 +3513,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 71.374 136.144 90)
+			(at 80.264 136.144 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3442,7 +3522,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 71.12 137.16 0)
+			(at 80.01 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3451,7 +3531,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 71.12 137.16 0)
+			(at 80.01 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3667,7 +3747,7 @@
 			(uuid "a4eb0006-8de2-43cf-a6b3-d634006c5a77")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/7249a21b-eb16-4e9e-abfb-85589cfd2ea3"
 					(reference "#PWR05")
 					(unit 1)
@@ -3677,7 +3757,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 59.69 137.16 180)
+		(at 63.5 137.16 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3685,7 +3765,7 @@
 		(dnp no)
 		(uuid "bd83e1ca-96e6-40a1-8564-94f932d9b43b")
 		(property "Reference" "UNK5V0"
-			(at 59.69 137.16 0)
+			(at 63.5 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3694,7 +3774,7 @@
 			)
 		)
 		(property "Value" "5V"
-			(at 59.69 132.334 0)
+			(at 63.5 132.334 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3702,7 +3782,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_1206_3216Metric"
-			(at 59.69 137.16 0)
+			(at 63.5 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3711,7 +3791,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 137.16 0)
+			(at 63.5 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3720,7 +3800,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 59.69 137.16 0)
+			(at 63.5 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3729,7 +3809,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 59.69 137.16 0)
+			(at 63.5 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -1207,7 +1207,7 @@
 			(uuid "c210eefd-85e6-4956-98fb-21c0e552fba4")
 		)
 		(instances
-			(project ""
+			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/7ea8a5df-9af0-4344-95d1-3868b159b0e5"
 					(reference "#PWR01")
 					(unit 1)
