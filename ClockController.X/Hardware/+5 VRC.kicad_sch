@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "709c3de8-9e86-4767-b7c6-164cfea3af0f")
 	(paper "A4")
 	(lib_symbols
@@ -95,6 +95,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:+5V"
 			(power)
@@ -186,6 +187,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:AS78L05RTR-E1"
 			(exclude_from_sim no)
@@ -247,18 +249,6 @@
 			(symbol "AS78L05RTR-E1_1_0"
 				(polyline
 					(pts
-						(xy 7.62 -7.62) (xy 38.1 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 7.62 5.08) (xy 7.62 -7.62)
 					)
 					(stroke
@@ -271,7 +261,7 @@
 				)
 				(polyline
 					(pts
-						(xy 38.1 -7.62) (xy 38.1 5.08)
+						(xy 7.62 -7.62) (xy 38.1 -7.62)
 					)
 					(stroke
 						(width 0.127)
@@ -284,6 +274,18 @@
 				(polyline
 					(pts
 						(xy 38.1 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 38.1 -7.62) (xy 38.1 5.08)
 					)
 					(stroke
 						(width 0.127)
@@ -311,24 +313,6 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at 45.72 -2.54 180)
-					(length 7.62)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at 45.72 0 180)
 					(length 7.62)
@@ -347,7 +331,26 @@
 						)
 					)
 				)
+				(pin bidirectional line
+					(at 45.72 -2.54 180)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:CAP_0805"
 			(exclude_from_sim no)
@@ -444,9 +447,9 @@
 					)
 				)
 				(arc
-					(start 0.944 1.911)
+					(start 0.9439 -1.9109)
 					(mid 0.3044 0.0001)
-					(end 0.9439 -1.9109)
+					(end 0.944 1.911)
 					(stroke
 						(width 0.254)
 						(type solid)
@@ -492,6 +495,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:GND_DIGITAL"
 			(power)
@@ -607,6 +611,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:TP_1.25MM"
 			(exclude_from_sim no)
@@ -696,7 +701,74 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "+20V"
+		(exclude_from_sim no)
+		(at 184.994 92.65 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e8ea7e4-4fec-4f60-957d-ecc0c57b0f6e")
+	)
+	(text "C6"
+		(exclude_from_sim no)
+		(at 186.049 113.015 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "86cc153e-ba4f-4959-97e2-c7ae11819d80")
+	)
+	(text "Vcc"
+		(exclude_from_sim no)
+		(at 98.401 93.345 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5e9741c-f588-4ee4-b72a-2542c12ecacf")
+	)
+	(text "C5"
+		(exclude_from_sim no)
+		(at 117.469 114.322 90)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "daba6ed2-6e6a-4730-8ffe-e4d72cb7572f")
+	)
+	(text "U2"
+		(exclude_from_sim no)
+		(at 123.204 97.79 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "e88fef00-c1a8-429f-87f5-0d0af5f1e099")
+	)
+	(text "+5V"
+		(exclude_from_sim no)
+		(at 117.16 92.65 0)
+		(effects
+			(font
+				(size 1.48 1.48)
+			)
+			(justify left bottom)
+		)
+		(uuid "eae8ccb4-2278-4d16-a453-146b7072747d")
 	)
 	(junction
 		(at 119.38 104.14)
@@ -819,72 +891,6 @@
 			(type solid)
 		)
 		(uuid "c8a02d3b-c668-4f9c-b443-3ebd321841ab")
-	)
-	(text "+20V"
-		(exclude_from_sim no)
-		(at 184.994 92.65 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "6e8ea7e4-4fec-4f60-957d-ecc0c57b0f6e")
-	)
-	(text "C6"
-		(exclude_from_sim no)
-		(at 186.049 113.015 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "86cc153e-ba4f-4959-97e2-c7ae11819d80")
-	)
-	(text "Vcc"
-		(exclude_from_sim no)
-		(at 98.401 93.345 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "d5e9741c-f588-4ee4-b72a-2542c12ecacf")
-	)
-	(text "C5"
-		(exclude_from_sim no)
-		(at 117.469 114.322 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "daba6ed2-6e6a-4730-8ffe-e4d72cb7572f")
-	)
-	(text "U2"
-		(exclude_from_sim no)
-		(at 123.204 97.79 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "e88fef00-c1a8-429f-87f5-0d0af5f1e099")
-	)
-	(text "+5V"
-		(exclude_from_sim no)
-		(at 117.16 92.65 0)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "eae8ccb4-2278-4d16-a453-146b7072747d")
 	)
 	(global_label "+20V"
 		(shape bidirectional)

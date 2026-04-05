@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "f728b0f0-a90c-4288-b72b-6b53de05e11c")
 	(paper "A4")
 	(lib_symbols
@@ -95,6 +95,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:GND_DIGITAL"
 			(power)
@@ -210,6 +211,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:GND_DIGITAL_3"
 			(power)
@@ -325,6 +327,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:HDR-1X4"
 			(exclude_from_sim no)
@@ -386,18 +389,6 @@
 			(symbol "HDR-1X4_1_0"
 				(polyline
 					(pts
-						(xy -5.08 -5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -5.08 5.08) (xy 5.08 5.08)
 					)
 					(stroke
@@ -410,115 +401,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.635 -3.81) (xy 0.635 -5.08)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -3.81) (xy 0.635 -2.54)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -3.81) (xy 5.08 -3.81)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.27) (xy 0.635 -2.54)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.27) (xy 0.635 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.27) (xy 5.08 -1.27)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 1.27) (xy 0.635 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 1.27) (xy 0.635 2.54)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 1.27) (xy 5.08 1.27)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 3.81) (xy 0.635 2.54)
+						(xy -5.08 -5.08) (xy -5.08 5.08)
 					)
 					(stroke
 						(width 0.25)
@@ -542,6 +425,18 @@
 				)
 				(polyline
 					(pts
+						(xy -0.635 3.81) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy -0.635 3.81) (xy 5.08 3.81)
 					)
 					(stroke
@@ -554,7 +449,103 @@
 				)
 				(polyline
 					(pts
-						(xy 5.08 -5.08) (xy -5.08 -5.08)
+						(xy -0.635 1.27) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 5.08 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 0.635 -5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 5.08 -3.81)
 					)
 					(stroke
 						(width 0.25)
@@ -576,35 +567,29 @@
 						(type none)
 					)
 				)
-				(pin passive line
-					(at 7.62 -3.81 180)
-					(length 2.54)
-					(name "P1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
+				(polyline
+					(pts
+						(xy 5.08 -5.08) (xy -5.08 -5.08)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(pin passive line
-					(at 7.62 -1.27 180)
+					(at 7.62 3.81 180)
 					(length 2.54)
-					(name "P2"
+					(name "P4"
 						(effects
 							(font
 								(size 0 0)
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -631,16 +616,34 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 3.81 180)
+					(at 7.62 -1.27 180)
 					(length 2.54)
-					(name "P4"
+					(name "P2"
 						(effects
 							(font
 								(size 0 0)
 							)
 						)
 					)
-					(number "4"
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -3.81 180)
+					(length 2.54)
+					(name "P1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -649,6 +652,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:HDR-2X4"
 			(exclude_from_sim no)
@@ -710,18 +714,6 @@
 			(symbol "HDR-2X4_1_0"
 				(polyline
 					(pts
-						(xy -5.08 -10.16) (xy -5.08 10.16)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -5.08 10.16) (xy 5.08 10.16)
 					)
 					(stroke
@@ -734,259 +726,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.635 -8.89) (xy 0.635 -10.16)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -8.89) (xy 0.635 -7.62)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -8.89) (xy 5.08 -8.89)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -6.35) (xy 0.635 -7.62)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -6.35) (xy 0.635 -5.08)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -6.35) (xy 5.08 -6.35)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -3.81) (xy 0.635 -5.08)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -3.81) (xy 0.635 -2.54)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -3.81) (xy 5.08 -3.81)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.27) (xy 0.635 -2.54)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.27) (xy 0.635 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.27) (xy 5.08 -1.27)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 1.27) (xy 0.635 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 1.27) (xy 0.635 2.54)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 1.27) (xy 5.08 1.27)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 3.81) (xy 0.635 2.54)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 3.81) (xy 0.635 5.08)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 3.81) (xy 5.08 3.81)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 6.35) (xy 0.635 5.08)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 6.35) (xy 0.635 7.62)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 6.35) (xy 5.08 6.35)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 8.89) (xy 0.635 7.62)
+						(xy -5.08 -10.16) (xy -5.08 10.16)
 					)
 					(stroke
 						(width 0.25)
@@ -1010,6 +750,18 @@
 				)
 				(polyline
 					(pts
+						(xy -0.635 8.89) (xy 0.635 7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy -0.635 8.89) (xy 5.08 8.89)
 					)
 					(stroke
@@ -1022,7 +774,247 @@
 				)
 				(polyline
 					(pts
-						(xy 5.08 -10.16) (xy -5.08 -10.16)
+						(xy -0.635 6.35) (xy 0.635 7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 6.35) (xy 0.635 5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 6.35) (xy 5.08 6.35)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 3.81) (xy 0.635 5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 3.81) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 3.81) (xy 5.08 3.81)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 5.08 -1.27)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 0.635 -5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -3.81) (xy 5.08 -3.81)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -6.35) (xy 0.635 -5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -6.35) (xy 0.635 -7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -6.35) (xy 5.08 -6.35)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -8.89) (xy 0.635 -7.62)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -8.89) (xy 0.635 -10.16)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -8.89) (xy 5.08 -8.89)
 					)
 					(stroke
 						(width 0.25)
@@ -1035,6 +1027,18 @@
 				(polyline
 					(pts
 						(xy 5.08 10.16) (xy 5.08 -10.16)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -10.16) (xy -5.08 -10.16)
 					)
 					(stroke
 						(width 0.25)
@@ -1189,6 +1193,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:MMBT2222A-TP"
 			(exclude_from_sim no)
@@ -1262,7 +1267,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.775 -2.21) (xy 4.775 2.21)
+						(xy 4.775 0.94) (xy 8.585 2.21)
 					)
 					(stroke
 						(width 0.25)
@@ -1286,7 +1291,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.775 0.94) (xy 8.585 2.21)
+						(xy 4.775 -2.21) (xy 4.775 2.21)
 					)
 					(stroke
 						(width 0.25)
@@ -1302,6 +1307,17 @@
 					)
 					(stroke
 						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.35 0)
+					(radius 3.81)
+					(stroke
+						(width 0.254)
 						(type solid)
 					)
 					(fill
@@ -1334,7 +1350,7 @@
 				)
 				(polyline
 					(pts
-						(xy 8.585 -2.54) (xy 8.585 -2.21)
+						(xy 8.585 2.21) (xy 8.585 2.54)
 					)
 					(stroke
 						(width 0.25)
@@ -1346,21 +1362,10 @@
 				)
 				(polyline
 					(pts
-						(xy 8.585 2.21) (xy 8.585 2.54)
+						(xy 8.585 -2.54) (xy 8.585 -2.21)
 					)
 					(stroke
 						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 6.35 0)
-					(radius 3.81)
-					(stroke
-						(width 0.254)
 						(type solid)
 					)
 					(fill
@@ -1386,24 +1391,6 @@
 					)
 				)
 				(pin passive line
-					(at 8.585 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 8.585 5.08 270)
 					(length 2.54)
 					(name "C"
@@ -1421,7 +1408,26 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 8.585 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Clock Controller-eagle-import:RES_1206"
 			(exclude_from_sim no)
@@ -1602,218 +1608,8 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
-	)
-	(junction
-		(at 154.94 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8136f132-797d-4819-ad0b-97ac602acd03")
-	)
-	(no_connect
-		(at 124.46 92.71)
-		(uuid "6b76fff6-95a8-4de7-808e-c015b48528f1")
-	)
-	(wire
-		(pts
-			(xy 173.99 63.5) (xy 173.99 67.31)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "10bba3be-3d39-4867-9995-25efced5b7e6")
-	)
-	(wire
-		(pts
-			(xy 154.94 58.42) (xy 154.94 63.5)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "1a43851c-83a0-4378-9f6a-023d6508c125")
-	)
-	(wire
-		(pts
-			(xy 124.46 69.85) (xy 127 69.85)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "1a67f5b1-bb26-4666-9a78-a72b2e731955")
-	)
-	(wire
-		(pts
-			(xy 127 97.79) (xy 124.46 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22e5e2c4-c6fd-49c6-97b1-407a77183dcb")
-	)
-	(wire
-		(pts
-			(xy 124.46 102.87) (xy 127 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2650a24c-67f1-4e08-83dc-3ec418adcdbe")
-	)
-	(wire
-		(pts
-			(xy 124.46 85.09) (xy 127 85.09)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "3478fc3d-1872-418a-9c97-783b86fcf0e9")
-	)
-	(wire
-		(pts
-			(xy 161.29 95.25) (xy 160.02 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a8af7f4-9c27-40af-99de-45f36f312adf")
-	)
-	(wire
-		(pts
-			(xy 154.94 67.31) (xy 154.94 63.5)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "7f7a31e8-7495-4194-81d3-abe2676cf3c2")
-	)
-	(wire
-		(pts
-			(xy 154.94 63.5) (xy 173.99 63.5)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "93a06913-685e-4d97-b353-eda8eca195e4")
-	)
-	(wire
-		(pts
-			(xy 124.46 64.77) (xy 127 64.77)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "a8a7345d-60ad-4035-83b4-7367a9a2cffb")
-	)
-	(wire
-		(pts
-			(xy 154.94 80.01) (xy 154.94 87.63)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "af48ae93-a4f6-4887-99ea-8b277be3bbb0")
-	)
-	(wire
-		(pts
-			(xy 124.46 100.33) (xy 168.91 100.33)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "b18d0835-5fbb-4d58-be86-97d4129756ee")
-	)
-	(wire
-		(pts
-			(xy 124.46 72.39) (xy 132.08 72.39)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "b39b7862-1a27-4eeb-b648-70c6110b6070")
-	)
-	(wire
-		(pts
-			(xy 173.99 80.01) (xy 173.99 92.71)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "b5f56f7d-34e5-4ddd-9eb9-b4e4d90efdff")
-	)
-	(wire
-		(pts
-			(xy 124.46 67.31) (xy 127 67.31)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "c9844da7-a2fb-4cb6-8f3f-3eea34685e06")
-	)
-	(wire
-		(pts
-			(xy 149.86 95.25) (xy 124.46 95.25)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "c9c711e2-6b8d-4415-94f9-eec367ef5959")
-	)
-	(wire
-		(pts
-			(xy 124.46 87.63) (xy 132.08 87.63)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "ee8f5081-cde8-4a15-b909-60187118bc0f")
-	)
-	(wire
-		(pts
-			(xy 181.61 100.33) (xy 179.07 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8c8c478-3a04-4114-abfe-4a3b5d617d0a")
-	)
-	(wire
-		(pts
-			(xy 124.46 90.17) (xy 127 90.17)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "fbd38e3b-afa5-4b07-be5b-ff9d738240ec")
-	)
-	(text "R2"
-		(exclude_from_sim no)
-		(at 172.72 74.916 90)
-		(effects
-			(font
-				(size 1.48 1.48)
-			)
-			(justify left bottom)
-		)
-		(uuid "32f69593-6548-44bb-9188-1ef29403df96")
 	)
 	(text "DISP"
 		(exclude_from_sim no)
@@ -1894,7 +1690,7 @@
 	)
 	(text "MMBT2222A-TP"
 		(exclude_from_sim no)
-		(at 165.148 84.125 0)
+		(at 165.608 91.694 0)
 		(effects
 			(font
 				(size 1.48 1.48)
@@ -1902,6 +1698,196 @@
 			(justify left bottom)
 		)
 		(uuid "f239409d-6e35-4584-8bf9-cc12b1179ef0")
+	)
+	(junction
+		(at 154.94 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47da9460-7951-4856-a487-e27d69c83cc0")
+	)
+	(no_connect
+		(at 124.46 92.71)
+		(uuid "6b76fff6-95a8-4de7-808e-c015b48528f1")
+	)
+	(wire
+		(pts
+			(xy 154.94 58.42) (xy 154.94 67.31)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1a43851c-83a0-4378-9f6a-023d6508c125")
+	)
+	(wire
+		(pts
+			(xy 124.46 69.85) (xy 127 69.85)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1a67f5b1-bb26-4666-9a78-a72b2e731955")
+	)
+	(wire
+		(pts
+			(xy 127 97.79) (xy 124.46 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22e5e2c4-c6fd-49c6-97b1-407a77183dcb")
+	)
+	(wire
+		(pts
+			(xy 124.46 102.87) (xy 127 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2650a24c-67f1-4e08-83dc-3ec418adcdbe")
+	)
+	(wire
+		(pts
+			(xy 124.46 85.09) (xy 127 85.09)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "3478fc3d-1872-418a-9c97-783b86fcf0e9")
+	)
+	(wire
+		(pts
+			(xy 154.94 83.82) (xy 154.94 87.63)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4822ef47-a92f-404c-8077-ed883c199416")
+	)
+	(wire
+		(pts
+			(xy 173.99 92.71) (xy 173.99 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5454c613-10de-416d-9976-a9a6a6b56e8a")
+	)
+	(wire
+		(pts
+			(xy 161.29 95.25) (xy 160.02 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a8af7f4-9c27-40af-99de-45f36f312adf")
+	)
+	(wire
+		(pts
+			(xy 124.46 64.77) (xy 127 64.77)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a8a7345d-60ad-4035-83b4-7367a9a2cffb")
+	)
+	(wire
+		(pts
+			(xy 154.94 80.01) (xy 154.94 83.82)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "af48ae93-a4f6-4887-99ea-8b277be3bbb0")
+	)
+	(wire
+		(pts
+			(xy 124.46 100.33) (xy 168.91 100.33)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "b18d0835-5fbb-4d58-be86-97d4129756ee")
+	)
+	(wire
+		(pts
+			(xy 124.46 72.39) (xy 132.08 72.39)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "b39b7862-1a27-4eeb-b648-70c6110b6070")
+	)
+	(wire
+		(pts
+			(xy 173.99 83.82) (xy 154.94 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c69d3195-1ff6-4149-9e4a-fd3fb2191e7a")
+	)
+	(wire
+		(pts
+			(xy 124.46 67.31) (xy 127 67.31)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c9844da7-a2fb-4cb6-8f3f-3eea34685e06")
+	)
+	(wire
+		(pts
+			(xy 149.86 95.25) (xy 124.46 95.25)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c9c711e2-6b8d-4415-94f9-eec367ef5959")
+	)
+	(wire
+		(pts
+			(xy 124.46 87.63) (xy 132.08 87.63)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "ee8f5081-cde8-4a15-b909-60187118bc0f")
+	)
+	(wire
+		(pts
+			(xy 181.61 100.33) (xy 179.07 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8c8c478-3a04-4114-abfe-4a3b5d617d0a")
+	)
+	(wire
+		(pts
+			(xy 124.46 90.17) (xy 127 90.17)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "fbd38e3b-afa5-4b07-be5b-ff9d738240ec")
 	)
 	(global_label "GND"
 		(shape bidirectional)
@@ -2237,7 +2223,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 154.94 73.66 0)
 			(effects
 				(font
@@ -2691,75 +2677,6 @@
 			(project "Clock Controller"
 				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
 					(reference "Q5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clock Controller-eagle-import:RES_1206")
-		(at 173.99 73.66 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fe31b9bc-af58-490c-97b0-a15c4f1675a4")
-		(property "Reference" "R2"
-			(at 173.99 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "2.2k"
-			(at 173.99 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 173.99 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 173.99 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "118dca8e-f5f1-424c-9cae-2857120b3a34")
-		)
-		(pin "1"
-			(uuid "2b32585e-f4f3-4560-a954-392bad4be49d")
-		)
-		(instances
-			(project "Clock Controller"
-				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/f21bc6e7-c992-4316-9545-f3984eb63b0a"
-					(reference "R2")
 					(unit 1)
 				)
 			)

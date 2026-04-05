@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "0f5e626c-f39b-48d5-89a3-7c1a1e478343")
 	(paper "A4")
 	(lib_symbols
@@ -93,37 +93,8 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
-	)
-	(wire
-		(pts
-			(xy 157.48 105.41) (xy 157.48 106.68)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "2514768b-77d5-4c28-94bb-765ed90a11f1")
-	)
-	(wire
-		(pts
-			(xy 146.05 105.41) (xy 146.05 106.68)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "4f72ca2d-43c9-4b1b-9e2e-deb955b63d20")
-	)
-	(wire
-		(pts
-			(xy 134.62 105.41) (xy 134.62 106.68)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "e8173ef3-cb3d-4549-9cf4-07fe0d1d17b0")
 	)
 	(text "MH1"
 		(exclude_from_sim no)
@@ -157,6 +128,36 @@
 			(justify left bottom)
 		)
 		(uuid "cccbd439-b634-4eb9-bc8d-83bd697acac8")
+	)
+	(wire
+		(pts
+			(xy 157.48 105.41) (xy 157.48 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2514768b-77d5-4c28-94bb-765ed90a11f1")
+	)
+	(wire
+		(pts
+			(xy 146.05 105.41) (xy 146.05 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4f72ca2d-43c9-4b1b-9e2e-deb955b63d20")
+	)
+	(wire
+		(pts
+			(xy 134.62 105.41) (xy 134.62 106.68)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "e8173ef3-cb3d-4549-9cf4-07fe0d1d17b0")
 	)
 	(global_label "GND"
 		(shape bidirectional)
