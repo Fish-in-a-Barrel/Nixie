@@ -964,7 +964,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Battery_Holder_:BAT_BAT-HLD-003-SMT"
 			(at 181.356 81.28 90)
 			(effects
 				(font
