@@ -2496,7 +2496,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Display_:SSD1306 0.91 128x32 OLED"
 			(at 116.84 68.58 0)
 			(effects
 				(font

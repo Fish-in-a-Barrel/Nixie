@@ -2059,7 +2059,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Clock Controller:IC5_PEC11S-929K-S0015_BRN"
+		(property "Footprint" "Rotary_Encoder_:PEC11S-929K-S0015"
 			(at 128.27 95.25 0)
 			(effects
 				(font
