@@ -1,7 +1,7 @@
 (footprint "SRN8040TA221M"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 0 0)
@@ -14,22 +14,10 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "Val**"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "dec65ff9-6caf-475c-8844-99cd5086b4ba")
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "3fb46a16-dba1-41c2-869a-0bb1d7ed6a17")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -164,7 +152,7 @@
 	(pad "1" smd rect
 		(at 0 2.825)
 		(size 6.6 2.85)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
 		(zone_connect 2)
@@ -174,11 +162,34 @@
 	(pad "2" smd rect
 		(at 0 -2.825)
 		(size 6.6 2.85)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
 		(zone_connect 2)
 		(thermal_bridge_angle 0)
 		(uuid "81dccde1-381c-440b-854f-f184ecda516d")
+	)
+	(embedded_fonts no)
+	(model "${REPO}/Inductor_.pretty/SRN8040TA221M.kicad_mod"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "${REPO}/3d/SRN8040TA-221M.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
 	)
 )
