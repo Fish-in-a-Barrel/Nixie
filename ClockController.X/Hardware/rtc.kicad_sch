@@ -592,20 +592,20 @@
 		)
 	)
 	(no_connect
-		(at 127 76.2)
+		(at 109.22 91.44)
 		(uuid "1c38a547-3994-4ed4-a226-26db1d7a41d6")
 	)
 	(no_connect
-		(at 127 78.74)
+		(at 109.22 93.98)
 		(uuid "3d888467-ab72-496c-a04e-c111b3e1d505")
 	)
 	(no_connect
-		(at 162.56 76.2)
+		(at 144.78 91.44)
 		(uuid "7c5fd577-fb82-4c50-a4a2-c37ae340b30d")
 	)
 	(wire
 		(pts
-			(xy 162.56 81.28) (xy 177.8 81.28)
+			(xy 144.78 96.52) (xy 160.02 96.52)
 		)
 		(stroke
 			(width 0)
@@ -613,9 +613,19 @@
 		)
 		(uuid "0cf94aac-0ff3-48f1-ba93-caddba2054bb")
 	)
-	(hierarchical_label "5V"
+	(label "Batt Power"
+		(at 149.86 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ae5a3c82-6e41-41b9-93c1-59d6c9c88c3e")
+	)
+	(hierarchical_label "VDD"
 		(shape input)
-		(at 162.56 78.74 0)
+		(at 144.78 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -626,7 +636,7 @@
 	)
 	(hierarchical_label "SCL"
 		(shape bidirectional)
-		(at 127 81.28 180)
+		(at 109.22 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -637,7 +647,7 @@
 	)
 	(hierarchical_label "SDA"
 		(shape bidirectional)
-		(at 127 83.82 180)
+		(at 109.22 99.06 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -648,7 +658,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 185.42 81.28 90)
+		(at 167.64 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -657,7 +667,7 @@
 		(fields_autoplaced yes)
 		(uuid "07f04a7c-37be-4827-bb59-8020c545abfe")
 		(property "Reference" "#PWR031"
-			(at 191.77 81.28 0)
+			(at 173.99 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -666,7 +676,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 189.23 81.2799 90)
+			(at 171.45 96.5199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -675,7 +685,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 185.42 81.28 0)
+			(at 167.64 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -684,7 +694,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 185.42 81.28 0)
+			(at 167.64 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -693,7 +703,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 185.42 81.28 0)
+			(at 167.64 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -715,7 +725,7 @@
 	)
 	(symbol
 		(lib_id "RTC_:RV-3028-C7_32.768KHZ_1PPM-TA-QC")
-		(at 127 76.2 0)
+		(at 109.22 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -724,7 +734,7 @@
 		(fields_autoplaced yes)
 		(uuid "d11db025-897e-4a56-b475-1cd3ea6795c9")
 		(property "Reference" "Y1"
-			(at 144.78 68.58 0)
+			(at 127 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -732,7 +742,7 @@
 			)
 		)
 		(property "Value" "RV-3028-C7_32.768KHZ_1PPM-TA-QC"
-			(at 144.78 71.12 0)
+			(at 127 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -740,7 +750,7 @@
 			)
 		)
 		(property "Footprint" "RTC_:RV3028C732768KHZ1PPMTAQC"
-			(at 158.75 171.12 0)
+			(at 140.97 186.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -750,7 +760,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.microcrystal.com/fileadmin/Media/Products/RTC/Datasheet/RV-3028-C7.pdf"
-			(at 158.75 271.12 0)
+			(at 140.97 286.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -760,7 +770,7 @@
 			)
 		)
 		(property "Description" "IC RTC CLK/CALENDAR I2C 8-SMT"
-			(at 127 76.2 0)
+			(at 109.22 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -769,7 +779,7 @@
 			)
 		)
 		(property "Height" "0.8"
-			(at 158.75 471.12 0)
+			(at 140.97 486.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -779,7 +789,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Micro Crystal AG"
-			(at 158.75 571.12 0)
+			(at 140.97 586.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -789,7 +799,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "RV-3028-C7 32.768KHZ 1PPM-TA-QC"
-			(at 158.75 671.12 0)
+			(at 140.97 686.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -799,7 +809,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 158.75 771.12 0)
+			(at 140.97 786.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -809,7 +819,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 158.75 871.12 0)
+			(at 140.97 886.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -819,7 +829,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 158.75 971.12 0)
+			(at 140.97 986.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -829,7 +839,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 158.75 1071.12 0)
+			(at 140.97 1086.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -873,7 +883,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 162.56 83.82 90)
+		(at 144.78 99.06 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -882,7 +892,7 @@
 		(fields_autoplaced yes)
 		(uuid "f0ea509f-67f5-48e1-9b7a-17bd5c3ad569")
 		(property "Reference" "#PWR030"
-			(at 168.91 83.82 0)
+			(at 151.13 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -891,7 +901,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 83.8199 90)
+			(at 148.59 99.0599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -900,7 +910,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 83.82 0)
+			(at 144.78 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -909,7 +919,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 83.82 0)
+			(at 144.78 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -918,7 +928,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 83.82 0)
+			(at 144.78 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -940,7 +950,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 182.88 81.28 90)
+		(at 165.1 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -949,7 +959,7 @@
 		(fields_autoplaced yes)
 		(uuid "f5c3bb02-234a-42f9-88cf-0025353b91df")
 		(property "Reference" "BT1"
-			(at 181.0385 73.66 90)
+			(at 163.2585 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -957,7 +967,7 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 181.0385 76.2 90)
+			(at 163.2585 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -965,7 +975,7 @@
 			)
 		)
 		(property "Footprint" "Battery_Holder_:BAT_BAT-HLD-003-SMT"
-			(at 181.356 81.28 90)
+			(at 163.576 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -974,7 +984,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 181.356 81.28 90)
+			(at 163.576 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -983,7 +993,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 182.88 81.28 0)
+			(at 165.1 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -992,7 +1002,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 182.88 81.28 0)
+			(at 165.1 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1001,7 +1011,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 182.88 81.28 0)
+			(at 165.1 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1010,7 +1020,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 182.88 81.28 0)
+			(at 165.1 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)

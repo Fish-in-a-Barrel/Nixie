@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "e4b6f393-26e2-41ea-9191-33568c2f2770")
-	(paper "A4")
+	(paper "USLetter")
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x05"
 			(pin_names
@@ -1137,7 +1137,7 @@
 		)
 		(uuid "e2f2bc02-02ff-4faf-a240-6ee9d21a935b")
 	)
-	(hierarchical_label "5V"
+	(hierarchical_label "VDD"
 		(shape input)
 		(at 106.68 104.14 180)
 		(effects

@@ -488,14 +488,66 @@
         "track_width": 0.2,
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 6
+        "wire_width": 8
+      },
+      {
+        "name": "Extra Thicc",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "wire_width": 20
+      },
+      {
+        "name": "Thicc",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "wire_width": 13
+      },
+      {
+        "name": "VNN",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "wire_width": 13
       }
     ],
     "meta": {
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "/Boost Converter/Boost": [
+        "Extra Thicc"
+      ],
+      "/Boost Converter/Boost In": [
+        "Extra Thicc"
+      ],
+      "/Boost Converter/Driver Out": [
+        "Thicc"
+      ],
+      "/Boost Converter/VBUS": [
+        "Extra Thicc"
+      ],
+      "/Nixie Tubes/VDD": [
+        "Thicc"
+      ],
+      "/Nixie Tubes/VNN": [
+        "VNN"
+      ],
+      "/USB PD/3.3V": [
+        "Thicc"
+      ],
+      "/USB PD/VBUS In": [
+        "Extra Thicc"
+      ],
+      "/VCC VRM/VRM SW": [
+        "Thicc"
+      ],
+      "GND": [
+        "Thicc"
+      ]
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -693,16 +745,24 @@
       "Rotary Input"
     ],
     [
-      "ce5f0f3f-aec6-4132-9c02-46f441a88bf8",
-      "+5 VRM"
+      "03b8ea28-244d-42d6-84b8-960765aaa263",
+      "I2C Cut-Out"
     ],
     [
-      "f21bc6e7-c992-4316-9545-f3984eb63b0a",
-      "Headers"
+      "b9aa6bc4-e0b2-46a1-9d85-fc8641087b3b",
+      "VCC VRM"
     ],
     [
       "59d3a184-e955-43bb-82be-82b9cbe11a29",
       "RTC"
+    ],
+    [
+      "cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e",
+      "Nixie Tubes"
+    ],
+    [
+      "6805e1ac-cbd3-417a-bd24-6253c844fa06",
+      "GPS"
     ]
   ],
   "text_variables": {}

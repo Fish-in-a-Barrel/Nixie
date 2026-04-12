@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "371a87c6-3b81-4199-be0f-cedbe7dd66d2")
-	(paper "A4")
+	(paper "USLetter")
 	(lib_symbols
 		(symbol "Clock Controller-eagle-import:AP33772DKZ-13"
 			(exclude_from_sim no)
@@ -1941,12 +1941,6 @@
 		(uuid "9da1b2ce-d72a-4466-8999-2ec0dfed2f63")
 	)
 	(junction
-		(at 53.34 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ab9f38df-8ac6-43b0-835b-8217954b8c54")
-	)
-	(junction
 		(at 83.82 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1979,10 +1973,6 @@
 	(no_connect
 		(at 212.09 80.01)
 		(uuid "717d6c57-734a-47c5-b9e3-25b01da3a473")
-	)
-	(no_connect
-		(at 212.09 69.85)
-		(uuid "7362cb0c-e649-4882-b31e-16d8dbabb93d")
 	)
 	(no_connect
 		(at 166.37 87.63)
@@ -2034,13 +2024,13 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 137.16) (xy 53.34 142.24)
+			(xy 219.71 69.85) (xy 212.09 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "05eb3d78-cd25-440c-8ff6-09e488b80f68")
+		(uuid "0f36292b-34d2-4b78-9515-78da64806320")
 	)
 	(wire
 		(pts
@@ -2081,16 +2071,6 @@
 			(type default)
 		)
 		(uuid "1ca786f2-cb28-4f94-b3b5-3b0b5817bf66")
-	)
-	(wire
-		(pts
-			(xy 53.34 137.16) (xy 49.53 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d56314e-5be0-49ab-96df-fae1482272f6")
 	)
 	(wire
 		(pts
@@ -2334,16 +2314,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 137.16) (xy 59.69 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad1821c0-6f72-4322-9ecb-9b4e97a566a0")
-	)
-	(wire
-		(pts
 			(xy 157.48 72.39) (xy 166.37 72.39)
 		)
 		(stroke
@@ -2361,6 +2331,16 @@
 			(type default)
 		)
 		(uuid "ba8e95e6-15b4-4e2d-a60e-cce24b0c5356")
+	)
+	(wire
+		(pts
+			(xy 57.15 137.16) (xy 59.69 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc1f4273-6d08-4901-a45f-a14666bc761a")
 	)
 	(wire
 		(pts
@@ -2492,6 +2472,16 @@
 		)
 		(uuid "2ad7ffe2-6172-4e5e-9a06-673b1dff4519")
 	)
+	(label "3.3V"
+		(at 215.9 69.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a0be4628-4319-4028-8aa4-d244b6d55820")
+	)
 	(label "VBUS Enable"
 		(at 120.65 78.74 0)
 		(effects
@@ -2501,6 +2491,16 @@
 			(justify left bottom)
 		)
 		(uuid "b06f9bc6-1df0-4c1f-ae45-545eb7d81072")
+	)
+	(label "3.3V"
+		(at 57.15 137.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b4540613-2740-4102-843a-87c957a74db9")
 	)
 	(label "IFB"
 		(at 160.02 72.39 0)
@@ -2522,7 +2522,7 @@
 		)
 		(uuid "d08f15e8-6cc6-4495-80bb-3bb4c32b01ee")
 	)
-	(label "5V LED Limit"
+	(label "3V LED Limit"
 		(at 72.39 137.16 270)
 		(effects
 			(font
@@ -2561,28 +2561,6 @@
 			(justify left bottom)
 		)
 		(uuid "fc29bbc7-68c8-4a7d-b0c7-d841e2a98f34")
-	)
-	(global_label "V5V"
-		(shape bidirectional)
-		(at 166.37 85.09 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "252397fe-9cdd-4bdc-bedb-f6a292ba60cd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.3837 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
 	)
 	(global_label "CC2"
 		(shape input)
@@ -2672,28 +2650,6 @@
 			)
 		)
 	)
-	(global_label "V5V"
-		(shape bidirectional)
-		(at 53.34 142.24 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "d94af480-654c-417f-ae51-1c710e995ff7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 53.34 148.2263 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(hierarchical_label "SDA"
 		(shape bidirectional)
 		(at 212.09 90.17 0)
@@ -2705,9 +2661,20 @@
 		)
 		(uuid "11648434-bf14-4472-8e25-0a871e2ad1f7")
 	)
+	(hierarchical_label "3.3V"
+		(shape bidirectional)
+		(at 219.71 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14980242-7a86-49f7-8203-0fdd4dfd818e")
+	)
 	(hierarchical_label "5V"
 		(shape output)
-		(at 49.53 137.16 180)
+		(at 166.37 85.09 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2737,6 +2704,97 @@
 			(justify right)
 		)
 		(uuid "74dfe6cd-8d2b-46a7-8889-a368700249f1")
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 67.31 92.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06dfee26-fcaa-40e8-a2bf-b7b426f64d76")
+		(property "Netclass" "Extra Thicc"
+			(at 68.0085 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -144.78 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 147.32 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a35297d-f3bb-4bc2-9226-d0a86caa0a79")
+		(property "Netclass" "Thicc"
+			(at 147.32 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -106.68 12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 217.17 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bddb5f72-8646-4930-ba77-2006785ac464")
+		(property "Netclass" "Thicc"
+			(at 217.17 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at 0 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C")

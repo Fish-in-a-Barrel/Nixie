@@ -1,0 +1,5592 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "7095f1d7-b3c3-4596-bf7f-e4f9cc1d9ec6")
+	(paper "USLetter")
+	(lib_symbols
+		(symbol "Nixie:Nixie_Driver"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "N"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Nixie:Nixie Driver V2"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "I2C Address" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Nixie_Driver_0_1"
+				(polyline
+					(pts
+						(xy -8.89 3.81) (xy -8.89 -8.89)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -8.89 3.81)
+					(mid -8.1461 5.6061)
+					(end -6.35 6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -6.3498 -11.4298)
+					(mid -8.1459 -10.6859)
+					(end -8.8898 -8.8898)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -11.43) (xy 6.35 -11.43)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 6.35) (xy -6.35 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 6.35 6.35)
+					(mid 8.1461 5.6061)
+					(end 8.89 3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.89 -8.89)
+					(mid 8.1461 -10.6861)
+					(end 6.35 -11.43)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 3.81) (xy 8.89 -8.89)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Nixie_Driver_1_1"
+				(text "${I2C Address}"
+					(at 5.08 -12.954 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(italic yes)
+							(color 0 1 255 1)
+						)
+						(justify left)
+					)
+				)
+				(pin input line
+					(at -12.7 2.54 0)
+					(length 3.81)
+					(name "~{MCLR}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 0 0)
+					(length 3.81)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 -2.54 0)
+					(length 3.81)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -3.81 -15.24 90)
+					(length 3.81)
+					(name "ADDR3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -1.27 -15.24 90)
+					(length 3.81)
+					(name "ADDR2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 1.27 -15.24 90)
+					(length 3.81)
+					(name "ADDR1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "ICSPCLK" input line)
+				)
+				(pin input line
+					(at 3.81 -15.24 90)
+					(length 3.81)
+					(name "ADDR0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "ICSPDAT" bidirectional line)
+				)
+				(pin power_in line
+					(at 12.7 2.54 180)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 12.7 0 180)
+					(length 3.81)
+					(name "Vdd"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 12.7 -2.54 180)
+					(length 3.81)
+					(name "Vnn"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text_box "Date"
+		(exclude_from_sim no)
+		(at 139.7 25.4 0)
+		(size 101.6 127)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "6fdb1d0e-9deb-4c57-8740-f769b9bd2da2")
+	)
+	(text_box "Time"
+		(exclude_from_sim no)
+		(at 25.4 25.4 0)
+		(size 101.6 127)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "abe1256a-d0d2-467e-a44a-0e41771df567")
+	)
+	(no_connect
+		(at 161.29 97.79)
+		(uuid "029d1162-746d-46f6-8f36-bc796da14bcb")
+	)
+	(no_connect
+		(at 161.29 59.69)
+		(uuid "0caa8801-bfa7-4c64-96ec-17f764b3b32e")
+	)
+	(no_connect
+		(at 213.36 135.89)
+		(uuid "0cf76de3-e1e8-4c9d-8da1-5402f014b8cc")
+	)
+	(no_connect
+		(at 97.79 59.69)
+		(uuid "25fa633e-7938-421e-a770-aad024a207b0")
+	)
+	(no_connect
+		(at 168.91 97.79)
+		(uuid "2878ae83-5fa4-4911-ba69-b34629ab7660")
+	)
+	(no_connect
+		(at 53.34 97.79)
+		(uuid "2a270150-9dcc-4915-b611-128325b1df5f")
+	)
+	(no_connect
+		(at 210.82 97.79)
+		(uuid "5533163a-7b21-4e38-8e32-5342c8925bdd")
+	)
+	(no_connect
+		(at 208.28 59.69)
+		(uuid "6f4290e8-e473-4dc4-8951-74ea69e65949")
+	)
+	(no_connect
+		(at 168.91 135.89)
+		(uuid "75ac878b-42fb-468e-a8f2-745edcd93374")
+	)
+	(no_connect
+		(at 163.83 135.89)
+		(uuid "772bbbbf-6c7f-4831-afbb-1d1ed6c912d2")
+	)
+	(no_connect
+		(at 50.8 97.79)
+		(uuid "77b12ca3-b8be-40d1-82ac-6335d643e570")
+	)
+	(no_connect
+		(at 213.36 59.69)
+		(uuid "8230b885-12d2-485c-9a09-0c159e9b4c37")
+	)
+	(no_connect
+		(at 95.25 135.89)
+		(uuid "85ae5f1b-0de5-4418-9b92-a61e78ec8639")
+	)
+	(no_connect
+		(at 95.25 97.79)
+		(uuid "8935365e-45e4-4931-b88c-d51b470c13e8")
+	)
+	(no_connect
+		(at 208.28 135.89)
+		(uuid "8b3e6ae0-42b1-40e4-b906-8cd7c3c5af21")
+	)
+	(no_connect
+		(at 97.79 135.89)
+		(uuid "927477c7-6d01-4936-97f5-d6308219cd53")
+	)
+	(no_connect
+		(at 208.28 97.79)
+		(uuid "937ae9d0-1870-4947-8660-7dd697ce8aa9")
+	)
+	(no_connect
+		(at 210.82 135.89)
+		(uuid "951e5741-cb92-4f7f-9f4b-c967d750d3f8")
+	)
+	(no_connect
+		(at 168.91 59.69)
+		(uuid "9b7055e2-55e8-4dc9-9e67-42de485bf11a")
+	)
+	(no_connect
+		(at 53.34 59.69)
+		(uuid "ac1d11e7-fa01-47e6-a75e-fc28f0b06919")
+	)
+	(no_connect
+		(at 161.29 135.89)
+		(uuid "dcee2161-6927-45e8-98dd-607784e8bdc1")
+	)
+	(no_connect
+		(at 53.34 135.89)
+		(uuid "f6a78284-467f-426b-887e-2864f4506ab8")
+	)
+	(no_connect
+		(at 48.26 135.89)
+		(uuid "f984821c-485a-45d8-beca-b83f5d6a7cbd")
+	)
+	(no_connect
+		(at 166.37 97.79)
+		(uuid "f994c2e1-7e8f-4ffb-a227-9c8caaa53799")
+	)
+	(wire
+		(pts
+			(xy 69.85 179.07) (xy 73.66 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "266540e6-a1ce-49a3-ba5e-59673ea0bbc9")
+	)
+	(wire
+		(pts
+			(xy 69.85 175.26) (xy 73.66 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8139bcdb-bffc-4770-be45-d3f0681701f7")
+	)
+	(wire
+		(pts
+			(xy 69.85 182.88) (xy 73.66 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af239add-439f-4ced-a446-085afa337661")
+	)
+	(wire
+		(pts
+			(xy 69.85 171.45) (xy 73.66 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc1ae997-6a4c-4d9b-a954-444070ff6ec5")
+	)
+	(label "VDD"
+		(at 62.23 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0312efd9-0f14-4655-b36c-fdb4a1b49c38")
+	)
+	(label "SCL"
+		(at 152.4 123.19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "0403a11f-08c4-4c1f-afa4-99d1a5ca9ae8")
+	)
+	(label "VDD"
+		(at 177.8 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0734f342-ed66-410e-be5b-c70c4aab3f53")
+	)
+	(label "VDD"
+		(at 224.79 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0928606e-ee1e-4804-8196-8b5bfb4a2723")
+	)
+	(label "SDA"
+		(at 152.4 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "0c5dcf26-30d3-47d1-828f-4b4e1cd5f65d")
+	)
+	(label "SDA"
+		(at 83.82 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "0d15803f-c539-4b30-b930-226f082b0cab")
+	)
+	(label "VNN"
+		(at 109.22 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0ea45c82-f627-4480-ad9a-ebc1de34ea13")
+	)
+	(label "SCL"
+		(at 152.4 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "178edf90-4b63-4cd6-81d9-352dd11250fb")
+	)
+	(label "SDA"
+		(at 73.66 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2c8a2601-6dc6-464e-9d10-fcbe0519953e")
+	)
+	(label "VDD"
+		(at 109.22 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2d0190f2-460b-4e24-b68a-058d08eeff29")
+	)
+	(label "SCL"
+		(at 73.66 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2d4dfac2-9c2f-4243-aa5f-6e05a914344b")
+	)
+	(label "VNN"
+		(at 224.79 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2e41d078-7977-4320-a93c-bcc2b5f46254")
+	)
+	(label "VNN"
+		(at 224.79 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "35e0d1de-9009-43c9-9ab3-dbcdea030f41")
+	)
+	(label "SCL"
+		(at 152.4 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "3bd1ab52-9c07-497d-821c-44600d3d57c9")
+	)
+	(label "VDD"
+		(at 224.79 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "40b53f2b-ac04-4e8f-b7f1-e9e49150a3ca")
+	)
+	(label "VDD"
+		(at 73.66 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "43edcfc9-ff1d-448b-af41-62b8943c822a")
+	)
+	(label "VDD"
+		(at 224.79 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "4ba6ae43-67c6-4ee2-aef8-a54aa4e2c336")
+	)
+	(label "SDA"
+		(at 36.83 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "53e62b9f-f3cd-4ffa-91bd-ab4d1b400a6c")
+	)
+	(label "SDA"
+		(at 36.83 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "53fdd777-4caf-4e83-bdf7-114564ac3d8c")
+	)
+	(label "VDD"
+		(at 62.23 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "5b050d34-0aad-48fd-8731-f0771b452616")
+	)
+	(label "VNN"
+		(at 62.23 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "5b088e7a-107a-4503-a5dd-93f7035d8c88")
+	)
+	(label "SDA"
+		(at 36.83 44.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "65f7e527-a48e-424b-9f1d-35352c60b522")
+	)
+	(label "VNN"
+		(at 224.79 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "6aaaf170-59af-4e79-8532-8b6eac4625cc")
+	)
+	(label "SCL"
+		(at 36.83 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "6d50f610-30dc-439b-85bb-f1293b7880e6")
+	)
+	(label "VNN"
+		(at 177.8 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "72f843ac-6635-4ed8-8c0b-faae96018b7e")
+	)
+	(label "SDA"
+		(at 199.39 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "7d09ff98-0165-4c9e-8856-b81d625e9d94")
+	)
+	(label "VNN"
+		(at 73.66 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7d0e0885-a894-46a7-9bfc-d4b109b4c44a")
+	)
+	(label "VDD"
+		(at 177.8 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7e82cdaf-e294-484b-ae07-c13353857633")
+	)
+	(label "SCL"
+		(at 199.39 123.19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "8d0aa295-c9cf-4f8b-9a9a-dd02bfe5bc55")
+	)
+	(label "SDA"
+		(at 152.4 44.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "8df6be2c-71ed-4f6b-827a-0ac612f511ce")
+	)
+	(label "VDD"
+		(at 109.22 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "96ffac24-daf3-4b6e-86f2-df9252624984")
+	)
+	(label "SCL"
+		(at 83.82 123.19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "97b8bd17-032d-414a-87ff-84147dcd4c06")
+	)
+	(label "VNN"
+		(at 177.8 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "a0b3b850-5562-4f26-a6c2-772ecb959aa3")
+	)
+	(label "SDA"
+		(at 83.82 44.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "a28fcebd-ea2a-4f0d-a33d-db9d9dbc72e9")
+	)
+	(label "VNN"
+		(at 177.8 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "aa4021fe-4874-402d-8ff6-d742085d08f2")
+	)
+	(label "VDD"
+		(at 62.23 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ad136061-3ad1-4831-ad30-32998bd260db")
+	)
+	(label "SDA"
+		(at 83.82 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "af193473-b12f-4478-8a91-7e79717e511b")
+	)
+	(label "VNN"
+		(at 109.22 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b00a79c3-9ae2-4767-a5cd-18d9621bf3dc")
+	)
+	(label "VDD"
+		(at 109.22 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b9e1a777-53de-4974-a266-fbc814fe9da2")
+	)
+	(label "SCL"
+		(at 199.39 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "c76f283e-e1be-4404-8b9a-d37b444da75d")
+	)
+	(label "SCL"
+		(at 36.83 123.19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "ca75cf76-f9c4-4867-a829-cabb190266ed")
+	)
+	(label "VNN"
+		(at 62.23 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "cb66173a-e96c-42e8-a987-f9c3824a7464")
+	)
+	(label "SDA"
+		(at 152.4 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "ccdee299-6eb6-4202-b9b7-3a402691adce")
+	)
+	(label "SCL"
+		(at 83.82 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "d143ded5-cfe2-4dfc-957a-d98ad17f949c")
+	)
+	(label "SCL"
+		(at 83.82 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "d15a6ee6-101e-486e-a863-33d1e685b7cb")
+	)
+	(label "VNN"
+		(at 109.22 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d287abb2-2c60-49c2-abc4-6dbe9516d26f")
+	)
+	(label "VNN"
+		(at 62.23 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d7785fdf-c9f3-4c37-85d0-1956ed5f3e41")
+	)
+	(label "SDA"
+		(at 199.39 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "db610446-2c06-4f47-8736-66363e021b73")
+	)
+	(label "SDA"
+		(at 199.39 44.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "e61470e1-4c7a-4971-a2b9-41d827ae95c3")
+	)
+	(label "VDD"
+		(at 177.8 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "e942c70a-e246-4cae-bc17-550295bd3d37")
+	)
+	(label "SCL"
+		(at 36.83 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "ea3a393e-e987-42e8-a7ad-dfc12a89e871")
+	)
+	(label "SCL"
+		(at 199.39 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "ebbfa556-4f33-483d-9e5b-1f453fa0c3fe")
+	)
+	(hierarchical_label "VNN"
+		(shape bidirectional)
+		(at 69.85 182.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0ac29631-4fd3-4e7f-8543-2ccec598ed19")
+	)
+	(hierarchical_label "SCL"
+		(shape bidirectional)
+		(at 69.85 175.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "176356a3-b7b2-4268-8e13-99851970b96d")
+	)
+	(hierarchical_label "VDD"
+		(shape bidirectional)
+		(at 69.85 179.07 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8999b5ed-205b-458b-8bb3-05040b61bf0a")
+	)
+	(hierarchical_label "SDA"
+		(shape bidirectional)
+		(at 69.85 171.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f4f2e611-38c6-40a2-ac84-989c20e9743d")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 45.72 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0690a690-9c3d-4810-9c18-615df339707a")
+		(property "Reference" "#PWR054"
+			(at 45.72 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 45.72 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "657a86a2-3052-4c09-a4c7-199fbce2684d")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 199.39 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "071c4acd-fccd-4522-9fc9-eb1e3029b1db")
+		(property "Reference" "#PWR076"
+			(at 193.04 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 195.58 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.39 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 199.39 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2117a64a-5230-4c9f-acaf-d7922a14340f")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR076")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 166.37 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0ad99e6b-209b-406b-8e6c-29417a618977")
+		(property "Reference" "#PWR069"
+			(at 166.37 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 166.37 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.37 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 166.37 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d18c2c0f-c534-4fba-bb2a-ffc6ae0a6e3a")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 50.8 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0b7ffd0a-5d3b-42da-8297-4ae55e6b9ad8")
+		(property "Reference" "#PWR035"
+			(at 50.8 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.8 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 50.8 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47af07a1-564c-4c31-8fc4-1c456368950d")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0ed765e8-8a74-4815-8c16-79f21b4e616c")
+		(property "Reference" "#PWR046"
+			(at 48.26 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b78574f-0639-472d-ba50-43f57e2f3427")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 97.79 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0fd0eeb3-5bf6-4f84-a022-1506a6d4cfdd")
+		(property "Reference" "#PWR047"
+			(at 97.79 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 97.79 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b41c486-7efc-48f0-8aef-8478c0f02b22")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 83.82 41.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "118ee646-23dd-4916-8aa9-a72e83f80213")
+		(property "Reference" "#PWR039"
+			(at 77.47 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 80.01 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 83.82 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89ead60b-406a-4140-bb24-50f3ef0d1acc")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1290b340-5807-4eb3-bad1-0afc0dfb9a20")
+		(property "Reference" "#PWR061"
+			(at 115.57 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "69ab4e32-ea08-410c-a379-ddc2b95c1c76")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 96.52 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "17cc3135-ab7f-4fd3-b4e8-e200c2995c0d")
+		(property "Reference" "N2"
+			(at 101.8624 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Hour01"
+			(at 101.8624 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 96.52 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 96.52 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "602db48c-f62a-44c7-b4b8-393f243441e0")
+		)
+		(pin "7"
+			(uuid "39b7a651-656e-4391-90d4-728644ff829b")
+		)
+		(pin "8"
+			(uuid "cabd6c87-1455-4589-9390-f425379f8974")
+		)
+		(pin "3"
+			(uuid "01959d5a-4b34-444d-8fe5-52df787ccfb2")
+		)
+		(pin "2"
+			(uuid "63db1425-89c3-4afd-9a88-4b5ea299815e")
+		)
+		(pin "1"
+			(uuid "98b3e59b-731d-488f-8a72-dd1c096539a3")
+		)
+		(pin "6"
+			(uuid "e0bd0ec1-92cc-42a6-919d-af256e94819a")
+		)
+		(pin "10"
+			(uuid "8af2b4ab-1463-42b3-b9c9-9a673c1d3da5")
+		)
+		(pin "4"
+			(uuid "c3aafb78-963d-4289-9672-d4d5ac83417c")
+		)
+		(pin "5"
+			(uuid "e371abeb-6772-4fb2-bb5d-3f2fd3304d9e")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 49.53 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22ccb553-872e-40b6-9e35-e5c7f496b1ef")
+		(property "Reference" "N5"
+			(at 54.8724 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Second10"
+			(at 54.8724 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 49.53 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 49.53 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "6bb5e77e-6dde-48b3-be7c-6e7608b0f367")
+		)
+		(pin "7"
+			(uuid "9c376ace-4174-433a-9a53-b64726b56189")
+		)
+		(pin "8"
+			(uuid "4104dcea-221c-4f07-8709-74606f7004dd")
+		)
+		(pin "3"
+			(uuid "56edd827-a14c-47f4-9550-5c33d5f0548c")
+		)
+		(pin "2"
+			(uuid "10ba1167-7616-4590-8e4e-55f84e198aa1")
+		)
+		(pin "1"
+			(uuid "37637e5c-18a8-4a57-82e3-e4a1e1049e2b")
+		)
+		(pin "6"
+			(uuid "d278f348-1a07-44d6-af45-07a91404ab94")
+		)
+		(pin "10"
+			(uuid "6f6bb072-7ae0-429c-970b-62a08e64ce39")
+		)
+		(pin "4"
+			(uuid "1a977bbc-5fb2-456c-ba8f-0fe84900f77c")
+		)
+		(pin "5"
+			(uuid "61a668a2-fd29-4d7f-a1de-3c6068d3d9f6")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 199.39 41.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "25d150f6-d411-4e41-96f0-0f372f61e5bf")
+		(property "Reference" "#PWR074"
+			(at 193.04 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 195.58 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.39 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 199.39 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4877d754-492f-4112-8fbe-ee302b19f235")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR074")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2890f041-fef2-46ae-9ac6-f2f2148565f5")
+		(property "Reference" "#PWR036"
+			(at 48.26 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47af07a1-564c-4c31-8fc4-1c456368950d")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 36.83 41.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43da199a-5dd2-4b12-883e-3fc6031b0c5b")
+		(property "Reference" "#PWR019"
+			(at 30.48 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 33.02 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 36.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad0b79e5-2644-4f36-b9a7-e46457d73325")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 224.79 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45577aea-2a79-4fc1-9e0b-6349990eed35")
+		(property "Reference" "#PWR087"
+			(at 231.14 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 224.79 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7fec3dab-1345-49d8-aa08-c44785d82813")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 163.83 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a0f4019-1b33-4809-b877-7b71ddeb87af")
+		(property "Reference" "#PWR067"
+			(at 163.83 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 163.83 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 163.83 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "743cae7b-8e6c-45ee-bb99-3433e64601f5")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR067")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b0eca4e-1b9a-4a54-ab0a-2716755a2146")
+		(property "Reference" "#PWR073"
+			(at 184.15 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc8cc076-0151-4a16-b62c-32953908c154")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 224.79 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4cbb135c-b5e5-4d13-aee4-5c745e31e689")
+		(property "Reference" "#PWR086"
+			(at 231.14 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 224.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b4546e42-9999-4816-a388-7a92a847630a")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR086")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 212.09 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e62707b-a864-451e-a45b-6b84f0820323")
+		(property "Reference" "N12"
+			(at 217.4324 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Year01"
+			(at 217.4324 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 212.09 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 212.09 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 212.09 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "fee67e03-2911-4a0b-9978-229782d025c4")
+		)
+		(pin "7"
+			(uuid "4451a4ca-5fd0-4565-a470-99bf71370d46")
+		)
+		(pin "8"
+			(uuid "f80d8087-1dcf-408a-b780-b9bc022d62d4")
+		)
+		(pin "3"
+			(uuid "9d75bb57-5e6c-4e05-92a1-8e440c2a29e0")
+		)
+		(pin "2"
+			(uuid "ad9144e8-1b4c-42e5-86f0-f7f6fc113de5")
+		)
+		(pin "1"
+			(uuid "a4da9cd2-49d0-4ad9-9fd3-fa4f8345b6d6")
+		)
+		(pin "6"
+			(uuid "aa5e8ddc-db46-4f58-8dae-f712a178eb86")
+		)
+		(pin "10"
+			(uuid "48f53f0e-c505-412a-9f6e-7f199bc0dd93")
+		)
+		(pin "4"
+			(uuid "e9d199a9-9c31-4273-9867-06f07611b7d6")
+		)
+		(pin "5"
+			(uuid "efc8e76f-258e-4323-b5e8-5599b4955f9e")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 62.23 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "52be6c1a-3388-4289-9c49-0cf5be7cc122")
+		(property "Reference" "#PWR038"
+			(at 68.58 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 66.04 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 62.23 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f584ebe4-0b24-4022-a115-c45e543fef71")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 92.71 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "570923e7-bf33-4039-b38f-4d787e0aa239")
+		(property "Reference" "#PWR050"
+			(at 92.71 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 92.71 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.71 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 92.71 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e0521b36-f8f8-447b-9af8-e92516623b06")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 49.53 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e48b5ce-cc04-4670-8bfe-1159d039a58e")
+		(property "Reference" "N3"
+			(at 54.8724 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Minute10"
+			(at 54.8724 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 49.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 49.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "58afc232-0150-4db8-b267-515dd0a6bd25")
+		)
+		(pin "7"
+			(uuid "fd3ea21c-5152-408d-94ac-ef12a9800d22")
+		)
+		(pin "8"
+			(uuid "fcb694f7-065f-44d4-baa1-2277da013437")
+		)
+		(pin "3"
+			(uuid "c4fb7ece-0267-4c1b-a6c8-d2a3d290d85d")
+		)
+		(pin "2"
+			(uuid "0a0548c7-58d3-4ef4-981f-687277738d27")
+		)
+		(pin "1"
+			(uuid "01ae23cc-617d-4b6f-b719-1eb69acc7a2b")
+		)
+		(pin "6"
+			(uuid "489ca9b5-76e1-4bbc-8808-db425178facf")
+		)
+		(pin "10"
+			(uuid "62c7c304-8b45-43f8-b870-43cff789d268")
+		)
+		(pin "4"
+			(uuid "22cd5469-08d7-486c-acf2-5abf32f227fe")
+		)
+		(pin "5"
+			(uuid "843b2457-b46a-4a11-b8ce-b5cdb175612d")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 215.9 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "610110a8-3aff-44ee-bad0-a6afd5e6eb9a")
+		(property "Reference" "#PWR084"
+			(at 215.9 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 215.9 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 215.9 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "79e614d1-4837-4c25-bc3f-8d924f77c014")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR084")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a137586-8c7c-4e9f-ba43-1ff5c542dc79")
+		(property "Reference" "#PWR071"
+			(at 184.15 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9fc27c8e-4b01-4957-9374-69c3d945683a")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 166.37 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a8cb27e-883c-4080-8580-766765c5b5a1")
+		(property "Reference" "#PWR070"
+			(at 166.37 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 166.37 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.37 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 166.37 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e442480-60d8-4191-9b01-1fe38e15af37")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 215.9 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ba67bf7-9322-4f14-8eaa-5dc5d15393de")
+		(property "Reference" "#PWR083"
+			(at 215.9 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 215.9 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 215.9 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67181cc4-40f5-4cc2-809d-98dbe9708497")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR083")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 165.1 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6c8bb21d-c7c5-4231-ae4e-5726fdac5ee0")
+		(property "Reference" "N9"
+			(at 170.4424 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Month10"
+			(at 170.4424 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 165.1 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 165.1 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "6d61de10-9c1a-4063-b06d-8df4bd51654d")
+		)
+		(pin "7"
+			(uuid "b777c5fa-967a-4842-83b8-de8ab3546984")
+		)
+		(pin "8"
+			(uuid "a2257aa0-e07c-49f0-be08-3026e85a13dc")
+		)
+		(pin "3"
+			(uuid "4cd67020-8375-48cc-aa50-92c9884cdd04")
+		)
+		(pin "2"
+			(uuid "fac8767c-0353-47ad-91da-d2dabd3a42c2")
+		)
+		(pin "1"
+			(uuid "8e5c6a54-c3f2-4e99-8b3c-4ec87d1d1992")
+		)
+		(pin "6"
+			(uuid "535e62dd-eac9-4ad6-a8a1-220ae2814e39")
+		)
+		(pin "10"
+			(uuid "c972feb5-dc99-4a14-be26-84845db2c1fc")
+		)
+		(pin "4"
+			(uuid "f714983e-d3ff-40e9-89e1-b57bc08146ca")
+		)
+		(pin "5"
+			(uuid "4cc386ea-c22b-4f0d-b5ee-711d555bdbb8")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 199.39 80.01 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "73b4d4b6-0815-4618-9ba5-298bc968c95d")
+		(property "Reference" "#PWR075"
+			(at 193.04 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 195.58 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.39 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 199.39 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "790d8ffd-46b9-4186-bf68-4f332bd39213")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR075")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "73c7efa3-4b0d-4aa9-bad9-ef8e670e1610")
+		(property "Reference" "#PWR053"
+			(at 115.57 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "447f083a-f06f-4241-bfc0-bd1a1d79f0b6")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 95.25 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "740e7970-d25f-4aab-8fd2-83b2cb186459")
+		(property "Reference" "#PWR041"
+			(at 95.25 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 95.25 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 95.25 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1d7f3b37-2b74-44d7-bbc7-2fd3387d7f6c")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 41.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75259b30-6c34-475b-a657-2d6704ca0ee3")
+		(property "Reference" "#PWR059"
+			(at 146.05 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 152.4 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "91d9c81e-c69a-46c5-a21e-d2eb24ff4a45")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR059")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 45.72 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "78a2f152-569f-4a05-b5fc-dd161a01b077")
+		(property "Reference" "#PWR037"
+			(at 45.72 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 45.72 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47af07a1-564c-4c31-8fc4-1c456368950d")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 62.23 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8316def7-f8cd-41cd-ae9e-3c27d96b8e7c")
+		(property "Reference" "#PWR048"
+			(at 68.58 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 66.04 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 62.23 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f2a8942-725b-4162-a642-2f46caed5c2d")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 163.83 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "88b692a6-4110-4147-a87d-31056471e488")
+		(property "Reference" "#PWR068"
+			(at 163.83 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 163.83 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 163.83 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2833a6f-4fc1-4074-b2c2-d4bb49a48a83")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR068")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.33 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "93b6a722-6ef5-4e56-97bb-95f3c545d6e7")
+		(property "Reference" "#PWR060"
+			(at 100.33 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 100.33 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 100.33 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8ecd5f4-21b0-45ea-ad99-aa3a1345545b")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 215.9 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98ce332b-cc74-46aa-87cd-314fe04fe49f")
+		(property "Reference" "#PWR082"
+			(at 215.9 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 215.9 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 215.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b72d3917-4dd2-48e7-96bd-2ce46df871d1")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR082")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 213.36 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2417c73-3d99-4857-8c9f-3c0aab2a4804")
+		(property "Reference" "#PWR081"
+			(at 213.36 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 213.36 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d3e48a69-fd5d-42b6-a974-b4ea0702e11e")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR081")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 96.52 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a869f8db-7cd3-47a6-839f-62054635b627")
+		(property "Reference" "N4"
+			(at 101.8624 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Minute01"
+			(at 101.8624 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 96.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 96.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "699e6899-348c-4ca4-b0e2-50c5eb99b76a")
+		)
+		(pin "7"
+			(uuid "907fe51b-7ca3-4356-91e4-a5f5a53a3495")
+		)
+		(pin "8"
+			(uuid "56c6f634-ab6e-42c2-9d39-473d61258981")
+		)
+		(pin "3"
+			(uuid "23a2c532-248e-4621-b6cd-0691589c0d02")
+		)
+		(pin "2"
+			(uuid "8026beef-ff8d-47bc-a341-8c717a92eb53")
+		)
+		(pin "1"
+			(uuid "a02a086b-9246-40de-aaf2-06e29067cc3a")
+		)
+		(pin "6"
+			(uuid "b2bc9312-969f-4df0-9f99-83fa0e536d0b")
+		)
+		(pin "10"
+			(uuid "b08a599f-c7a3-495f-934e-d878e3f2f1a2")
+		)
+		(pin "4"
+			(uuid "10bae03a-1995-48d4-8dea-c3f07daa65f9")
+		)
+		(pin "5"
+			(uuid "810500d7-cc5e-4c9f-b62e-867f40a4da6b")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a9c27965-5188-41ba-885a-29cd3c26f4db")
+		(property "Reference" "#PWR072"
+			(at 184.15 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c23e3149-6c15-4efb-b52a-84fd3b55865f")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 210.82 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b261beea-b9c7-44e2-9c15-82d361ee2f4d")
+		(property "Reference" "#PWR080"
+			(at 210.82 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 210.82 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 210.82 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce86d6f2-fd43-446a-a0d4-e2e70d436cc8")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR080")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4339053-1e47-48c0-8219-49ea07256de1")
+		(property "Reference" "#PWR063"
+			(at 146.05 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 152.4 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4e688d6d-a37a-4db3-9295-dec8bd51d6b6")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR063")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 212.09 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b45c5333-1127-47a6-8ddd-8827e6873cd7")
+		(property "Reference" "N8"
+			(at 217.4324 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Day01"
+			(at 217.4324 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 212.09 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 212.09 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 212.09 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "5d231f25-4c97-4a34-8f10-5bbc188aef31")
+		)
+		(pin "7"
+			(uuid "12027d5f-1719-4da1-aaa5-3e7169a75daf")
+		)
+		(pin "8"
+			(uuid "e96001a6-422d-4378-8c4b-a8310fec5315")
+		)
+		(pin "3"
+			(uuid "55cfcf2b-d3a7-4221-81a8-ce4d8e7bc06e")
+		)
+		(pin "2"
+			(uuid "5a2f6cf7-e320-4c83-ab52-eef63c4e684c")
+		)
+		(pin "1"
+			(uuid "415eae9f-2774-4857-bf3d-36f12494d54e")
+		)
+		(pin "6"
+			(uuid "f1baf8b2-f202-4c26-b811-a3385f1d4a90")
+		)
+		(pin "10"
+			(uuid "b8682559-6db7-49a7-a73a-e15009a74bc9")
+		)
+		(pin "4"
+			(uuid "d3a49a27-d232-4ea8-ae8e-921f2a3ae89a")
+		)
+		(pin "5"
+			(uuid "7ab26e66-a9fd-4805-a372-9657e0737f5c")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 83.82 80.01 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5adf536-8b6f-4897-8352-996e5cc7f9da")
+		(property "Reference" "#PWR049"
+			(at 77.47 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 80.01 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 83.82 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55f8dceb-307b-40e2-a124-446e15b1602e")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 92.71 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b67b92bb-1219-4c69-8f8b-95c63f578cdc")
+		(property "Reference" "#PWR058"
+			(at 92.71 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 92.71 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.71 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 92.71 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26a4334c-b5c2-4730-b674-c2e2c736c4e3")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR058")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 212.09 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7f2cf25-16c9-4a64-a9b6-bcb4276757bc")
+		(property "Reference" "N10"
+			(at 217.4324 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Month01"
+			(at 217.4324 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 212.09 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 212.09 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 212.09 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "dc3953cb-72db-40fd-b80e-8d9d50ffccbe")
+		)
+		(pin "7"
+			(uuid "832b9ab9-74f8-452c-ab3e-3d784dd31e09")
+		)
+		(pin "8"
+			(uuid "24139751-7770-4fb7-8e8b-b6ae208c9ebf")
+		)
+		(pin "3"
+			(uuid "85d5a8f7-3a56-4ecb-b82a-99d5ec9f0d00")
+		)
+		(pin "2"
+			(uuid "4fa897b8-bbf4-4500-8c20-c4704f0ad242")
+		)
+		(pin "1"
+			(uuid "b7f63fbf-3773-40b6-81e9-162f64f85037")
+		)
+		(pin "6"
+			(uuid "10d6eba3-d75e-4c38-bfb0-6a18c49e7625")
+		)
+		(pin "10"
+			(uuid "909763b7-d978-4113-843d-a24b9cc7b36e")
+		)
+		(pin "4"
+			(uuid "a4dd6498-865d-4b26-a961-7743a66606fc")
+		)
+		(pin "5"
+			(uuid "71754b44-b3e5-4b3f-bb8f-68d0cb7e9daa")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 80.01 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c14d47d4-6e8d-4ec3-9571-1958db480fdb")
+		(property "Reference" "#PWR062"
+			(at 146.05 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 152.4 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "88bd5bb0-0670-40ad-9b5b-75af7dfa0b9e")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 36.83 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c4382786-2578-4647-a394-c323677e0fcf")
+		(property "Reference" "#PWR051"
+			(at 30.48 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 33.02 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 36.83 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "303dba52-6999-4dd2-a7ef-86aeaaf73fb6")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR051")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.33 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca78f061-6f51-4cdc-bdab-f56225351ee8")
+		(property "Reference" "#PWR042"
+			(at 100.33 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 100.33 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c00e5e3d-94fe-43bc-91eb-00cb33d31942")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 92.71 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d0dbe043-0e5b-47a1-a740-fa3081a06bdd")
+		(property "Reference" "#PWR040"
+			(at 92.71 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 92.71 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.71 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 92.71 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ce9cad5-ae1c-4151-8bc1-93ee704c5b2e")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 83.82 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2d13d54-8a20-4866-ae2a-2cf20845d03b")
+		(property "Reference" "#PWR057"
+			(at 77.47 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 80.01 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 83.82 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b6923d6-efc6-4ce0-aa40-46356f213965")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 165.1 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d41512b9-9b48-43e2-b3f4-ffdb84719bdc")
+		(property "Reference" "N7"
+			(at 170.4424 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Day10"
+			(at 170.4424 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 165.1 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 165.1 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "fc28f3dd-4dd8-42ec-a9a8-233a6a2f351c")
+		)
+		(pin "7"
+			(uuid "480894f9-9993-4beb-848f-91c5c57b8ff4")
+		)
+		(pin "8"
+			(uuid "bb753e58-dc46-4aa8-b594-5bc65424e89c")
+		)
+		(pin "3"
+			(uuid "5f14f46c-3b91-4309-adc6-8d57f217e10f")
+		)
+		(pin "2"
+			(uuid "72be5fae-f349-4705-bfc6-0e61ad0ab45d")
+		)
+		(pin "1"
+			(uuid "2560cb53-668c-4859-99b9-99ed6543cac3")
+		)
+		(pin "6"
+			(uuid "475f5991-346c-46df-804b-7a34d81fefc6")
+		)
+		(pin "10"
+			(uuid "2e1ce808-7199-4f1a-85ba-dc7c3356b18d")
+		)
+		(pin "4"
+			(uuid "86058f81-b491-4768-859a-657696ca24b8")
+		)
+		(pin "5"
+			(uuid "dea38f11-14a6-48b4-a15f-99aa262018de")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 224.79 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d5b18187-c1dd-407e-a5d7-b4407228bf4f")
+		(property "Reference" "#PWR085"
+			(at 231.14 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 224.79 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0aade2e-97d2-4180-9bcf-3f78db458eaa")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR085")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 62.23 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d74c6085-6224-411a-8ad7-bb6978da42cd")
+		(property "Reference" "#PWR056"
+			(at 68.58 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 66.04 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 62.23 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54b747b5-060b-4706-b5f6-83dab7afdf7a")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 49.53 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e191fc88-f94d-49fc-be20-48c88e5a558d")
+		(property "Reference" "N1"
+			(at 54.8724 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Hour10"
+			(at 54.8724 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 49.53 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 49.53 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "e9d7bbbf-6eef-469d-98ab-f8ffb3472266")
+		)
+		(pin "7"
+			(uuid "0500f76e-c44f-40c1-8214-57211fd665e8")
+		)
+		(pin "8"
+			(uuid "1ba1122e-2fbf-4ede-b38e-90d41a8bacd1")
+		)
+		(pin "3"
+			(uuid "b58c4dcd-5e5c-461c-8cbc-8315e3237274")
+		)
+		(pin "2"
+			(uuid "1be3b082-c516-4aa6-a564-b8a5bd341fea")
+		)
+		(pin "1"
+			(uuid "31455feb-a0ed-48d3-b53e-ac5ef5f0248e")
+		)
+		(pin "6"
+			(uuid "480632c4-0629-461a-88a7-4d177e16f5aa")
+		)
+		(pin "10"
+			(uuid "ddc8c3e5-08d3-4065-aba8-222a94b8c22d")
+		)
+		(pin "4"
+			(uuid "8093c69e-7483-4a08-8e40-9c3d447223b9")
+		)
+		(pin "5"
+			(uuid "ca9eb348-b3fd-4301-9324-0c37f689f79b")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 96.52 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e52b6f74-d27b-493e-ba5c-a48b9e39fb2c")
+		(property "Reference" "N6"
+			(at 101.8624 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Second01"
+			(at 101.8624 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 96.52 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 96.52 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "f12722f7-bfad-400d-811f-b9883350e785")
+		)
+		(pin "7"
+			(uuid "e0b80163-ab5c-4e9e-9358-082dc2204ccb")
+		)
+		(pin "8"
+			(uuid "3ec43783-59e0-4c93-a2d0-ca2de86ad342")
+		)
+		(pin "3"
+			(uuid "d0ba5599-0634-48f6-8908-4c9ff9b8dfca")
+		)
+		(pin "2"
+			(uuid "99338003-9d2c-4ff8-a0bb-e51ed1f30d63")
+		)
+		(pin "1"
+			(uuid "086614c6-2f0d-491c-ac06-f2387d82b276")
+		)
+		(pin "6"
+			(uuid "7431eb16-c999-4bb5-bd5b-640fa55b3e12")
+		)
+		(pin "10"
+			(uuid "6a029cf4-1c30-4e5b-b741-d2580a476710")
+		)
+		(pin "4"
+			(uuid "082fd1d4-719f-49c5-b73f-fab67724c88f")
+		)
+		(pin "5"
+			(uuid "3da90b04-99e9-4016-b208-ae77810ef79a")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 50.8 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5fac83f-e77c-4051-bc38-78172559dae1")
+		(property "Reference" "#PWR055"
+			(at 50.8 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.8 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 50.8 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f10ee3d5-7561-4a1c-a8f5-359a16cfe71b")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR055")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.33 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9510bfd-2263-4f7c-ae11-11a07387ba5f")
+		(property "Reference" "#PWR052"
+			(at 100.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 100.33 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 100.33 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d15c3d88-322c-431e-b1b3-dc652ecdb7fa")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR052")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 45.72 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea9723d0-9728-46a4-93df-a8c1d7bf02a8")
+		(property "Reference" "#PWR045"
+			(at 45.72 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 45.72 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e29c7317-d774-4560-aa9c-7241982b1f4a")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 36.83 80.01 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f094b93a-0b9d-4a22-8a39-1fd34805282d")
+		(property "Reference" "#PWR044"
+			(at 30.48 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 33.02 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 36.83 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61a6ceee-8b6a-460b-b136-2ab69781c3c4")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f7eec374-83db-46de-8103-f4cacac11435")
+		(property "Reference" "#PWR043"
+			(at 115.57 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 41.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7e9cfaf-9e55-497d-af8d-b22f6d50f537")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "#PWR043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Nixie:Nixie_Driver")
+		(at 165.1 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f9fe117f-d6df-4fff-acce-d9f3ea796713")
+		(property "Reference" "N11"
+			(at 170.4424 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Year10"
+			(at 170.4424 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Nixie:Nixie Driver V2"
+			(at 165.1 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "I2C Address" ""
+			(at 165.1 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "9"
+			(uuid "f1e6dd47-327d-4cba-abb0-556ffb8549b4")
+		)
+		(pin "7"
+			(uuid "1268188c-f4c5-4bce-909c-7556b8ca3c65")
+		)
+		(pin "8"
+			(uuid "6704b219-be3b-49dc-8674-e93785690c04")
+		)
+		(pin "3"
+			(uuid "19ecc2c1-3987-4db8-91e9-428c08e0384d")
+		)
+		(pin "2"
+			(uuid "1a220bb8-a339-444b-9a80-0058b412ce91")
+		)
+		(pin "1"
+			(uuid "a1d33d1d-bb05-4bc8-ba04-30a7c9ffa33e")
+		)
+		(pin "6"
+			(uuid "9a144035-e7d3-4d57-a018-7c683eafbf52")
+		)
+		(pin "10"
+			(uuid "e5e31288-abdd-48a9-b59b-15b5a33a7805")
+		)
+		(pin "4"
+			(uuid "bd3b79a3-12cd-45b3-8a0b-46b15a9921a4")
+		)
+		(pin "5"
+			(uuid "e7b68370-a435-4bfe-a27c-aa1375ea9c1b")
+		)
+		(instances
+			(project "Clock Controller"
+				(path "/de4049ea-1674-4dcc-86d3-bb1be3dcf2e7/cfe62983-f8c0-4ec2-ac3d-0af1a1b6724e"
+					(reference "N11")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

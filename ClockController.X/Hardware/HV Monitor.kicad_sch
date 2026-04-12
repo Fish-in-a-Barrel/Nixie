@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "98244e2c-e8e9-40c0-82f3-68072d2c81f8")
-	(paper "A4")
+	(paper "USLetter")
 	(lib_symbols
 		(symbol "Device:R_US"
 			(pin_numbers
@@ -282,7 +282,7 @@
 	)
 	(text "12 / (750 + 12) = 1 / 63.5\nVoltage @ J10-1 should be approx:\n2.8V  with source @ 180V\n3.15V with source @ 200V\n3.8V  with source @ 240V\n43mW power consumed"
 		(exclude_from_sim no)
-		(at 125.73 97.79 0)
+		(at 101.6 77.47 0)
 		(effects
 			(font
 				(size 2.467 2.467)
@@ -292,14 +292,14 @@
 		(uuid "111127ce-a23f-4b2b-bdcb-3f02e090b121")
 	)
 	(junction
-		(at 158.75 127)
+		(at 134.62 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f329ba90-4b1e-4523-a24d-bdda5ddaeab5")
 	)
 	(wire
 		(pts
-			(xy 158.75 127) (xy 163.83 127)
+			(xy 134.62 106.68) (xy 139.7 106.68)
 		)
 		(stroke
 			(width 0)
@@ -309,7 +309,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 127) (xy 158.75 127)
+			(xy 129.54 106.68) (xy 134.62 106.68)
 		)
 		(stroke
 			(width 0)
@@ -319,7 +319,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 132.08) (xy 158.75 127)
+			(xy 134.62 111.76) (xy 134.62 106.68)
 		)
 		(stroke
 			(width 0)
@@ -329,7 +329,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 127) (xy 146.05 127)
+			(xy 116.84 106.68) (xy 121.92 106.68)
 		)
 		(stroke
 			(width 0)
@@ -339,7 +339,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 127) (xy 171.45 127)
+			(xy 152.4 106.68) (xy 147.32 106.68)
 		)
 		(stroke
 			(width 0)
@@ -349,7 +349,7 @@
 	)
 	(hierarchical_label "VNN"
 		(shape input)
-		(at 140.97 127 180)
+		(at 116.84 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -360,7 +360,7 @@
 	)
 	(hierarchical_label "HV_MON"
 		(shape output)
-		(at 158.75 132.08 270)
+		(at 134.62 111.76 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -371,7 +371,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 149.86 127 270)
+		(at 125.73 106.68 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -379,7 +379,7 @@
 		(dnp no)
 		(uuid "6f0cdacd-5bdc-412f-ac07-da0b73d3b83f")
 		(property "Reference" "R3"
-			(at 149.86 130.048 90)
+			(at 125.73 109.728 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -387,7 +387,7 @@
 			)
 		)
 		(property "Value" "750k"
-			(at 149.86 123.952 90)
+			(at 125.73 103.632 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -395,7 +395,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 149.606 128.016 90)
+			(at 125.476 107.696 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -404,7 +404,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 127 0)
+			(at 125.73 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -413,7 +413,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 149.86 127 0)
+			(at 125.73 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -438,7 +438,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 176.53 127 90)
+		(at 152.4 106.68 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -447,7 +447,7 @@
 		(fields_autoplaced yes)
 		(uuid "73d2af03-49ce-415e-a5fd-7e07996ce325")
 		(property "Reference" "#PWR016"
-			(at 182.88 127 0)
+			(at 158.75 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -456,7 +456,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 127 0)
+			(at 157.48 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -464,7 +464,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 176.53 127 0)
+			(at 152.4 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -473,7 +473,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 176.53 127 0)
+			(at 152.4 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -482,7 +482,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 176.53 127 0)
+			(at 152.4 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -504,7 +504,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 167.64 127 270)
+		(at 143.51 106.68 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -512,7 +512,7 @@
 		(dnp no)
 		(uuid "c1393562-b0ba-4e13-b03c-984c6da7dd36")
 		(property "Reference" "R4"
-			(at 167.64 129.794 90)
+			(at 143.51 109.474 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -520,7 +520,7 @@
 			)
 		)
 		(property "Value" "12k"
-			(at 167.64 123.952 90)
+			(at 143.51 103.632 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -528,7 +528,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 167.386 128.016 90)
+			(at 143.256 107.696 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -537,7 +537,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 127 0)
+			(at 143.51 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -546,7 +546,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 167.64 127 0)
+			(at 143.51 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
