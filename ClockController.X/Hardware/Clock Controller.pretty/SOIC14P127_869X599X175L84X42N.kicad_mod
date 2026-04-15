@@ -1,7 +1,7 @@
 (footprint "SOIC14P127_869X599X175L84X42N"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 0 0)
@@ -14,22 +14,10 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "Val**"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "4d78e710-7efe-4596-8927-dabd53b8a3b3")
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "c904efb5-8ee9-48bb-9d78-351bc1cfd074")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -128,7 +116,7 @@
 			(width 0.25)
 			(type solid)
 		)
-		(fill solid)
+		(fill yes)
 		(layer "F.SilkS")
 		(uuid "d3bc54ea-fcec-4ec0-bf22-de42f843bae7")
 	)
@@ -185,7 +173,7 @@
 	(pad "1" smd roundrect
 		(at -3.81 2.42)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -196,7 +184,7 @@
 	(pad "2" smd roundrect
 		(at -2.54 2.42)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -207,7 +195,7 @@
 	(pad "3" smd roundrect
 		(at -1.27 2.42)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -218,7 +206,7 @@
 	(pad "4" smd roundrect
 		(at 0 2.42)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -229,7 +217,7 @@
 	(pad "5" smd roundrect
 		(at 1.27 2.42)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -240,7 +228,7 @@
 	(pad "6" smd roundrect
 		(at 2.54 2.42)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -251,7 +239,7 @@
 	(pad "7" smd roundrect
 		(at 3.81 2.42)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -262,7 +250,7 @@
 	(pad "8" smd roundrect
 		(at 3.81 -2.42 180)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -273,7 +261,7 @@
 	(pad "9" smd roundrect
 		(at 2.54 -2.42 180)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -284,7 +272,7 @@
 	(pad "10" smd roundrect
 		(at 1.27 -2.42 180)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -295,7 +283,7 @@
 	(pad "11" smd roundrect
 		(at 0 -2.42 180)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -306,7 +294,7 @@
 	(pad "12" smd roundrect
 		(at -1.27 -2.42 180)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -317,7 +305,7 @@
 	(pad "13" smd roundrect
 		(at -2.54 -2.42 180)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
@@ -328,12 +316,24 @@
 	(pad "14" smd roundrect
 		(at -3.81 -2.42 180)
 		(size 0.67 2.07)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.255)
 		(solder_mask_margin 0.0508)
 		(solder_paste_margin -0.0508)
 		(zone_connect 2)
 		(thermal_bridge_angle 0)
 		(uuid "7cb8a4a5-f1b7-45a6-8b7e-28099326447c")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-14_3.9x8.7mm_P1.27mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -90)
+		)
 	)
 )

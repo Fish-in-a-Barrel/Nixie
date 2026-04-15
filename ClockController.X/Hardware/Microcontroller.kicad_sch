@@ -266,7 +266,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Clock Controller-eagle-import:PIC16F15224-I/SL"
+		(symbol "Clock Controller-eagle-import:PIC16F15225-I/SL"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -315,15 +315,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PIC16F15224-I/SL_1_0"
+			(symbol "PIC16F15225-I/SL_1_0"
 				(polyline
 					(pts
 						(xy -59.69 12.7) (xy 59.69 12.7)
@@ -829,7 +821,7 @@
 	)
 	(text "PIC16F15224-I/SL"
 		(exclude_from_sim no)
-		(at 203.2 97.79 0)
+		(at 83.82 96.52 0)
 		(effects
 			(font
 				(size 1.48 1.48)
@@ -862,7 +854,7 @@
 	)
 	(text "U1"
 		(exclude_from_sim no)
-		(at 142.581 123.19 0)
+		(at 142.24 95.25 0)
 		(effects
 			(font
 				(size 1.48 1.48)
@@ -899,6 +891,36 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 113.03) (xy 81.28 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0508dc4a-384b-47da-92a4-17e7391e87e7")
+	)
+	(wire
+		(pts
+			(xy 205.74 105.41) (xy 209.55 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09fd98e6-10f9-44c3-9715-357efc3399e0")
+	)
+	(wire
+		(pts
+			(xy 78.74 118.11) (xy 81.28 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c4ae741-a17a-466c-b40e-b9a1f9951495")
+	)
+	(wire
+		(pts
 			(xy 68.58 130.81) (xy 68.58 100.33)
 		)
 		(stroke
@@ -909,73 +931,13 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 115.57) (xy 80.01 115.57)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "1061220f-e90a-4eb8-9324-0d0356cd1ead")
-	)
-	(wire
-		(pts
-			(xy 209.55 100.33) (xy 207.01 100.33)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "1badeec2-5fce-40f5-8243-dcaa59f0bcf9")
-	)
-	(wire
-		(pts
-			(xy 78.74 107.95) (xy 80.01 107.95)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "28bd2e0c-5973-4658-89e7-57a67564974d")
-	)
-	(wire
-		(pts
-			(xy 209.55 110.49) (xy 205.74 110.49)
+			(xy 78.74 110.49) (xy 81.28 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "400f0f0b-f3e1-44b0-9225-a9a501789413")
-	)
-	(wire
-		(pts
-			(xy 209.55 107.95) (xy 207.01 107.95)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "42e09520-49ad-4757-a000-a8fe4c759b19")
-	)
-	(wire
-		(pts
-			(xy 78.74 110.49) (xy 80.01 110.49)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "44b1c220-d265-4c52-b76f-f0523965c8fa")
-	)
-	(wire
-		(pts
-			(xy 78.74 113.03) (xy 81.28 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49ea34b0-3c42-47c2-b086-54335ff1e322")
+		(uuid "2895d4fd-731f-41d9-b896-19e857213480")
 	)
 	(wire
 		(pts
@@ -989,16 +951,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 102.87) (xy 207.01 102.87)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "5b1cbf3e-338b-4255-8dd0-dfc7093788ab")
-	)
-	(wire
-		(pts
 			(xy 68.58 133.35) (xy 68.58 130.81)
 		)
 		(stroke
@@ -1009,33 +961,13 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 118.11) (xy 81.28 118.11)
+			(xy 205.74 100.33) (xy 209.55 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6204ab33-546e-4ffa-aa34-35d4d77328aa")
-	)
-	(wire
-		(pts
-			(xy 209.55 113.03) (xy 207.01 113.03)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "67fbe3f6-8bc5-4b09-a2dd-d66fe66a291b")
-	)
-	(wire
-		(pts
-			(xy 78.74 118.11) (xy 80.01 118.11)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "76a9225c-d410-4085-80e0-dfa6e71247b7")
+		(uuid "729f8e2d-8dd9-4c97-991f-8f866a7257fb")
 	)
 	(wire
 		(pts
@@ -1049,23 +981,13 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 107.95) (xy 205.74 107.95)
+			(xy 205.74 102.87) (xy 209.55 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7bb7fbc9-6428-46db-b540-0acfd203f913")
-	)
-	(wire
-		(pts
-			(xy 78.74 120.65) (xy 81.28 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d43f348-ec85-4daf-8e51-46a7acd20685")
+		(uuid "7fd66934-3f35-4236-9415-63639906512e")
 	)
 	(wire
 		(pts
@@ -1099,53 +1021,33 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 105.41) (xy 205.74 105.41)
+			(xy 205.74 113.03) (xy 209.55 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8cdabd1a-003d-49b6-a35e-4f1f3b439b02")
+		(uuid "971b96c3-3b06-4191-8d91-8d964521be9a")
 	)
 	(wire
 		(pts
-			(xy 209.55 100.33) (xy 205.74 100.33)
+			(xy 205.74 107.95) (xy 209.55 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "93c90f00-1f9a-4bbe-aaef-baef86ba74b9")
+		(uuid "a3c5ba39-22a4-4a29-84ba-bad38762f61d")
 	)
 	(wire
 		(pts
-			(xy 209.55 113.03) (xy 205.74 113.03)
+			(xy 78.74 120.65) (xy 81.28 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "95a3dc06-ac0a-4a5f-822b-d67641520345")
-	)
-	(wire
-		(pts
-			(xy 78.74 115.57) (xy 81.28 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a186e0f-55a3-4650-a12f-b82323969ee4")
-	)
-	(wire
-		(pts
-			(xy 78.74 120.65) (xy 80.01 120.65)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "9ee10797-ac3d-480e-97ba-d424dca59a88")
+		(uuid "a6837c1d-f67d-4e06-8881-65f5ec993811")
 	)
 	(wire
 		(pts
@@ -1159,43 +1061,13 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 105.41) (xy 207.01 105.41)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "bfc211c3-54ac-484d-94d9-ee58a4a6fde8")
-	)
-	(wire
-		(pts
-			(xy 78.74 107.95) (xy 81.28 107.95)
+			(xy 78.74 115.57) (xy 81.28 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d05147ab-5fc1-4000-81a2-89723afa9074")
-	)
-	(wire
-		(pts
-			(xy 209.55 102.87) (xy 205.74 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9eb67cd-fba8-4b6d-9695-dfc7f069acd9")
-	)
-	(wire
-		(pts
-			(xy 78.74 110.49) (xy 81.28 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5c0fdc8-ad50-4196-8b81-2ef9ca40e5df")
+		(uuid "e7a7e0c5-596f-4d75-ac2c-2b622efe0f78")
 	)
 	(wire
 		(pts
@@ -1209,13 +1081,23 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 113.03) (xy 80.01 113.03)
+			(xy 78.74 107.95) (xy 81.28 107.95)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "ef27e198-4ac1-4a70-825f-7935d62fd221")
+		(uuid "f2e74385-c0d4-43a0-b372-06af9bcea10b")
+	)
+	(wire
+		(pts
+			(xy 205.74 110.49) (xy 209.55 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f76bd108-8217-4d45-bc1e-584fcc466188")
 	)
 	(wire
 		(pts
@@ -1552,7 +1434,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Clock Controller-eagle-import:PIC16F15224-I/SL")
+		(lib_id "Clock Controller-eagle-import:PIC16F15225-I/SL")
 		(at 143.51 110.49 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1578,7 +1460,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+		(property "Footprint" "Clock Controller:SOIC14P127_869X599X175L84X42N"
 			(at 143.51 110.49 0)
 			(effects
 				(font

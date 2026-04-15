@@ -488,7 +488,28 @@
         "track_width": 0.2,
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 6
+        "wire_width": 8
+      },
+      {
+        "name": "Extra Thicc",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "wire_width": 20
+      },
+      {
+        "name": "Thicc",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "wire_width": 13
+      },
+      {
+        "name": "VNN",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "wire_width": 13
       }
     ],
     "meta": {

@@ -288,7 +288,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" "Clock Controller:IC5_PEC11S-929K-S0015_BRN"
+			(property "Footprint" "Rotary_Encoder_:PEC11S-929K-S0015"
 				(at 0 0 0)
 				(effects
 					(font
@@ -437,24 +437,6 @@
 						)
 					)
 					(number "10"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 20.32 -12.7 90)
-					(length 2.54)
-					(name "Chassis"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
 						(effects
 							(font
 								(size 0 0)
@@ -2097,9 +2079,6 @@
 		)
 		(pin "3"
 			(uuid "e49af24e-c8ab-4f45-a3a1-190047181ad3")
-		)
-		(pin "6"
-			(uuid "b6d562bd-f1ba-4837-a35a-e1da7c74015f")
 		)
 		(pin "4"
 			(uuid "60222647-b852-4ad8-bd16-e2691248343c")
