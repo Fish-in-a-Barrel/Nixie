@@ -6818,7 +6818,7 @@
 			(net 8 "GND")
 			(pinfunction "Chassis")
 			(pintype "bidirectional")
-			(uuid "061ed815-0028-470c-8de5-dc4e0202ff4a")
+			(uuid "cc381940-9e89-41ee-b2e5-4ddb77cb5f06")
 		)
 		(pad "10" smd rect
 			(at -4.99745 7.749987 90)
@@ -6827,7 +6827,7 @@
 			(net 8 "GND")
 			(pinfunction "Chassis")
 			(pintype "bidirectional")
-			(uuid "061ed815-0028-470c-8de5-dc4e0202ff4a")
+			(uuid "da73fc5f-db72-49f0-af2b-5dbcc440d50c")
 		)
 		(pad "10" smd rect
 			(at 4.99745 -8.050012 90)
@@ -6836,7 +6836,7 @@
 			(net 8 "GND")
 			(pinfunction "Chassis")
 			(pintype "bidirectional")
-			(uuid "061ed815-0028-470c-8de5-dc4e0202ff4a")
+			(uuid "3fc34278-2f19-4240-892c-918dbca63e16")
 		)
 		(pad "10" smd rect
 			(at 4.99745 7.749987 90)
@@ -6845,7 +6845,7 @@
 			(net 8 "GND")
 			(pinfunction "Chassis")
 			(pintype "bidirectional")
-			(uuid "061ed815-0028-470c-8de5-dc4e0202ff4a")
+			(uuid "8695fc34-615f-4cbe-9241-e7c3c2ec8377")
 		)
 		(pad "10" smd rect
 			(at 6.375001 -0.150012 90)
@@ -6854,7 +6854,7 @@
 			(net 8 "GND")
 			(pinfunction "Chassis")
 			(pintype "bidirectional")
-			(uuid "061ed815-0028-470c-8de5-dc4e0202ff4a")
+			(uuid "a62e9aa5-82ae-4e03-8a48-240739151a1f")
 		)
 		(embedded_fonts no)
 		(model "${REPO}/3d/PEC11S-929K.STP"
@@ -11937,8 +11937,8 @@
 			(justify bottom)
 		)
 	)
-	(gr_text "Nixie Clock Controller (v1.1)\nAaron Johnson\n4/4/2026"
-		(at 156.5721 84.0486 0)
+	(gr_text "Nixie Clock Controller (v1.1.3)\nAaron Johnson\n4/14/2026"
+		(at 165.1 84.328 0)
 		(layer "B.SilkS")
 		(uuid "ab56802f-860e-483d-b119-82a70257db8a")
 		(effects
