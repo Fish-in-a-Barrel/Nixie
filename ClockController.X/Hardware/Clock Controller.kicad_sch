@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "de4049ea-1674-4dcc-86d3-bb1be3dcf2e7")
 	(paper "A4")
 	(lib_symbols)
@@ -18,11 +18,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "44189c1c-ba8e-4c06-ad6c-4084ba07d9ce")
 		(property "Sheetname" "Boost Converter"
 			(at 177.8 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32,6 +34,8 @@
 		)
 		(property "Sheetfile" "Boost Converter.kicad_sch"
 			(at 177.8 29.7946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60,11 +64,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "70fc2848-2605-4874-bf04-b4bbdf7c1213")
 		(property "Sheetname" "Mounting"
 			(at 76.2 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -74,6 +80,8 @@
 		)
 		(property "Sheetfile" "Mounting.kicad_sch"
 			(at 76.2 80.5946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -102,11 +110,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "71853cd7-0343-4b40-9bfb-08983ce43f31")
 		(property "Sheetname" "HV Monitor"
 			(at 228.6 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -116,6 +126,8 @@
 		)
 		(property "Sheetfile" "HV Monitor.kicad_sch"
 			(at 228.6 29.7946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -144,11 +156,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "7249a21b-eb16-4e9e-abfb-85589cfd2ea3")
 		(property "Sheetname" "USB PD"
 			(at 127 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -158,6 +172,8 @@
 		)
 		(property "Sheetfile" "USB PD.kicad_sch"
 			(at 127 29.7946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -186,11 +202,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "7ea8a5df-9af0-4344-95d1-3868b159b0e5")
 		(property "Sheetname" "Microcontroller"
 			(at 25.4 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -200,6 +218,8 @@
 		)
 		(property "Sheetfile" "Microcontroller.kicad_sch"
 			(at 25.4 29.7946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -228,11 +248,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "867f44d7-ba62-42d8-959c-be37f05c9614")
 		(property "Sheetname" "Rotary Input"
 			(at 25.4 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -242,6 +264,8 @@
 		)
 		(property "Sheetfile" "Rotary Input.kicad_sch"
 			(at 25.4 80.5946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -270,11 +294,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "ce5f0f3f-aec6-4132-9c02-46f441a88bf8")
 		(property "Sheetname" "+5 VRC"
 			(at 127 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -284,6 +310,8 @@
 		)
 		(property "Sheetfile" "+5 VRC.kicad_sch"
 			(at 127 80.5946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -312,11 +340,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "f21bc6e7-c992-4316-9545-f3984eb63b0a")
 		(property "Sheetname" "Headers"
 			(at 76.2 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -326,6 +356,8 @@
 		)
 		(property "Sheetfile" "Headers.kicad_sch"
 			(at 76.2 29.7946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
