@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "c2082ee6-4c2e-4b3c-b2d7-410eae192cfe")
 	(paper "USLetter")
 	(lib_symbols
@@ -12,8 +12,12 @@
 			(exclude_from_sim yes)
 			(in_bom no)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "H"
 				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -22,6 +26,8 @@
 			)
 			(property "Value" "MountingHole"
 				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -30,47 +36,57 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Mounting Hole without connection"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "mounting hole"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "MountingHole*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "MountingHole_0_1"
@@ -439,14 +455,18 @@
 		(lib_id "Mechanical:MountingHole")
 		(at 27.94 172.72 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6861191-f1d6-4f1f-ad36-ec2ceaeb2246")
 		(property "Reference" "H1"
 			(at 30.48 171.4499 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -456,6 +476,8 @@
 		)
 		(property "Value" "MountingHole"
 			(at 30.48 173.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -465,33 +487,39 @@
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 27.94 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 27.94 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
 			(at 27.94 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(instances
-			(project ""
+			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
 					(reference "H1")
 					(unit 1)
@@ -503,14 +531,18 @@
 		(lib_id "Mechanical:MountingHole")
 		(at 27.94 179.07 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff907794-63fb-4efa-aa5c-8188e4d0ba53")
 		(property "Reference" "H2"
 			(at 30.48 177.7999 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -520,6 +552,8 @@
 		)
 		(property "Value" "MountingHole"
 			(at 30.48 180.3399 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -529,29 +563,35 @@
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 27.94 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 27.94 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
 			(at 27.94 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(instances
@@ -576,11 +616,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "394d8c35-7fb7-4f2e-9832-1fea7fce0352")
 		(property "Sheetname" "Nixie"
 			(at 76.2 60.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -590,12 +632,14 @@
 		)
 		(property "Sheetfile" "Nixie.kicad_sch"
 			(at 76.2 72.9746 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-				(hide yes)
 			)
 		)
 		(pin "SCL" bidirectional
@@ -659,11 +703,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "6e79d909-830f-4059-b641-0b140124ed9d")
 		(property "Sheetname" "Button"
 			(at 124.46 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -673,12 +719,14 @@
 		)
 		(property "Sheetfile" "Button.kicad_sch"
 			(at 124.46 31.0646 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-				(hide yes)
 			)
 		)
 		(pin "Button" output
@@ -712,11 +760,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "9f01134a-2f79-4022-9c4f-b5d1e4c08c6e")
 		(property "Sheetname" "Controller"
 			(at 76.2 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -726,12 +776,14 @@
 		)
 		(property "Sheetfile" "Controller.kicad_sch"
 			(at 76.2 37.4146 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-				(hide yes)
 			)
 		)
 		(pin "SCL" bidirectional
@@ -784,9 +836,9 @@
 				(justify right)
 			)
 		)
-		(pin "5V" input
+		(pin "VDD" input
 			(at 76.2 34.29 180)
-			(uuid "f7c40442-408b-4483-b7dd-6ac4469a5b9c")
+			(uuid "48bd538a-2075-47f2-9ca1-add1f975fa11")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -815,11 +867,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "a2c82d8d-ba01-453c-92fd-beb2147f352b")
 		(property "Sheetname" "USB PD"
 			(at 38.1 24.6884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -829,12 +883,14 @@
 		)
 		(property "Sheetfile" "USB PD.kicad_sch"
 			(at 38.1 37.4146 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-				(hide yes)
 			)
 		)
 		(pin "SDA" bidirectional
@@ -888,11 +944,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "ae5fc040-94ea-4df2-9d60-7848f7e17a3f")
 		(property "Sheetname" "Voltage Divider"
 			(at 124.46 37.3884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -902,12 +960,14 @@
 		)
 		(property "Sheetfile" "Voltage Divider.kicad_sch"
 			(at 124.46 46.3046 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-				(hide yes)
 			)
 		)
 		(pin "HVMON" output
@@ -951,11 +1011,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "f02fb26c-0046-487f-b7d5-0718c4f74977")
 		(property "Sheetname" "5V VRM"
 			(at 38.1 45.0084 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -965,12 +1027,14 @@
 		)
 		(property "Sheetfile" "5V VRM.kicad_sch"
 			(at 38.1 53.9246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-				(hide yes)
 			)
 		)
 		(pin "VBUS" input
@@ -1014,11 +1078,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "f65193b1-af2e-4613-8eac-c37ef85f5db5")
 		(property "Sheetname" "Boost Converter"
 			(at 76.2 45.0084 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1028,12 +1094,14 @@
 		)
 		(property "Sheetfile" "Boost Converter.kicad_sch"
 			(at 76.2 53.9246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-				(hide yes)
 			)
 		)
 		(pin "PWM" input
