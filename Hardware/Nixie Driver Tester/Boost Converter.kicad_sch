@@ -1627,6 +1627,12 @@
 		)
 	)
 	(junction
+		(at 93.98 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9436816e-fd31-420f-9737-a90b236d09b3")
+	)
+	(junction
 		(at 101.6 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1639,7 +1645,7 @@
 		(uuid "c63ec043-b8c7-42ac-ab67-bc2e84ec2f76")
 	)
 	(junction
-		(at 93.98 88.9)
+		(at 91.44 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e240e1ec-0bc9-4373-a2ce-fd3e60fbacf0")
@@ -1688,6 +1694,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 58.42) (xy 88.9 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5054c710-1ecd-417c-9a3a-12b8d4c1f2ef")
+	)
+	(wire
+		(pts
 			(xy 101.6 88.9) (xy 111.76 88.9)
 		)
 		(stroke
@@ -1695,6 +1711,16 @@
 			(type default)
 		)
 		(uuid "537aae30-56bd-45d4-b4c7-6854a564c767")
+	)
+	(wire
+		(pts
+			(xy 93.98 40.64) (xy 93.98 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5983cb8c-f0d2-4156-bee2-3b1fb7112bb1")
 	)
 	(wire
 		(pts
@@ -1718,7 +1744,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 88.9) (xy 93.98 88.9)
+			(xy 88.9 88.9) (xy 91.44 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1728,7 +1754,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 88.9) (xy 93.98 101.6)
+			(xy 91.44 88.9) (xy 91.44 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1745,6 +1771,16 @@
 			(type default)
 		)
 		(uuid "9a70ccce-e951-4ed5-8939-c6bfff69aa05")
+	)
+	(wire
+		(pts
+			(xy 93.98 50.8) (xy 93.98 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b49b6a6-58ec-4dde-9231-825dc48d57f4")
 	)
 	(wire
 		(pts
@@ -1788,7 +1824,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 58.42) (xy 88.9 58.42)
+			(xy 106.68 58.42) (xy 93.98 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1838,13 +1874,53 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 88.9) (xy 93.98 76.2)
+			(xy 91.44 101.6) (xy 93.98 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4f3de64-6a79-4508-b8c2-9f1454e9e6c1")
+	)
+	(wire
+		(pts
+			(xy 91.44 88.9) (xy 91.44 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f33571e6-2841-44ec-a1a8-d770a302cd74")
+	)
+	(wire
+		(pts
+			(xy 91.44 76.2) (xy 93.98 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f42b8994-1cbf-447f-91e8-f546e8c8d551")
+	)
+	(label "Gate Drive"
+		(at 101.6 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "80ecb292-7068-4906-a005-3df9966fb27a")
+	)
+	(label "Boost Src"
+		(at 121.92 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a854b2b4-7c69-476c-9f11-907aab01196d")
 	)
 	(hierarchical_label "180V"
 		(shape output)
@@ -2219,7 +2295,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "52084326-0fe2-4178-9cd3-5f7776c5dc14")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR06"
 			(at 101.6 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -2279,7 +2355,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/f65193b1-af2e-4613-8eac-c37ef85f5db5"
-					(reference "#PWR04")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -2379,7 +2455,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7470f0a6-02a4-444c-a4a6-941340780f06")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR07"
 			(at 121.92 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -2439,7 +2515,89 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/f65193b1-af2e-4613-8eac-c37ef85f5db5"
-					(reference "#PWR06")
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 93.98 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "839ef55d-48e9-4bea-9eab-49f90f104129")
+		(property "Reference" "C6"
+			(at 97.79 45.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 97.79 48.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 94.9452 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 93.98 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "613e2a14-0d0e-4d7f-b1d6-737474369110")
+		)
+		(pin "2"
+			(uuid "a443d559-0d7a-41df-8ea0-8a315cede66f")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/f65193b1-af2e-4613-8eac-c37ef85f5db5"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -2477,7 +2635,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_:Bourns RLB1014"
+		(property "Footprint" "Inductor_SMD:L_Wuerth_WE-PD-Typ-LS"
 			(at 110.49 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -2690,6 +2848,84 @@
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/f65193b1-af2e-4613-8eac-c37ef85f5db5"
 					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 93.98 40.64 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e632f159-410a-4f4f-8ead-f04e534a65c8")
+		(property "Reference" "#PWR026"
+			(at 93.98 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 93.98 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "411f167a-588b-47ea-8446-675690bda4fa")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/f65193b1-af2e-4613-8eac-c37ef85f5db5"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)

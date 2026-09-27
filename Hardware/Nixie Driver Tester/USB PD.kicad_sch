@@ -1557,7 +1557,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 142.24) (xy 160.02 142.24)
+			(xy 177.8 142.24) (xy 160.02 142.24)
 		)
 		(stroke
 			(width 0)
@@ -1567,7 +1567,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 123.19) (xy 171.45 123.19)
+			(xy 187.96 123.19) (xy 185.42 123.19)
 		)
 		(stroke
 			(width 0)
@@ -1607,7 +1607,17 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 142.24) (xy 171.45 142.24)
+			(xy 160.02 123.19) (xy 177.8 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bb34307-a48f-4c74-807e-b06149b29912")
+	)
+	(wire
+		(pts
+			(xy 187.96 142.24) (xy 185.42 142.24)
 		)
 		(stroke
 			(width 0)
@@ -1634,16 +1644,6 @@
 			(type default)
 		)
 		(uuid "6c1e2b8f-319d-4c10-b8c8-8ec3c86ce444")
-	)
-	(wire
-		(pts
-			(xy 163.83 123.19) (xy 160.02 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f20a122-800e-40b1-9a3d-b0939c164fed")
 	)
 	(wire
 		(pts
@@ -1825,6 +1825,16 @@
 		)
 		(uuid "f7fd2f26-10ef-4fbb-a211-e9a6850b9338")
 	)
+	(label "PWR LED"
+		(at 165.1 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "182b5d80-87f6-4b75-aa4c-6e49cebdb444")
+	)
 	(label "CC1"
 		(at 170.18 49.53 90)
 		(effects
@@ -1905,6 +1915,16 @@
 		)
 		(uuid "9b53d35b-efe4-4004-a4be-f6da1ec3d0ec")
 	)
+	(label "USB LED"
+		(at 165.1 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cde76216-d870-464b-aec0-16dd38717a1d")
+	)
 	(label "CC2"
 		(at 170.18 52.07 270)
 		(effects
@@ -1962,40 +1982,6 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 149.86 142.24 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2320cf84-9aaa-4bec-8bcb-55df946633f5")
-		(property "Netclass" "Low Current"
-			(at 150.114 146.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Component Class" ""
-			(at 388.62 209.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-	)
-	(netclass_flag ""
-		(length 2.54)
-		(shape round)
 		(at 111.76 83.82 0)
 		(fields_autoplaced yes)
 		(effects
@@ -2031,42 +2017,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 149.86 123.19 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8016ee25-6e2e-4b52-84b0-949478ccd412")
-		(property "Netclass" "Low Current"
-			(at 150.114 127 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Component Class" ""
-			(at 388.62 190.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-	)
-	(netclass_flag ""
-		(length 2.54)
-		(shape round)
 		(at 163.83 46.99 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2099,7 +2050,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1353a50a-6367-48a2-b51e-7bfa7b81e4a9")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 146.05 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -2273,7 +2224,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -2281,7 +2232,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 167.64 142.24 90)
+		(at 181.61 142.24 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2290,8 +2241,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "20072acc-5d8d-46a8-a580-302b6856f193")
-		(property "Reference" "R10"
-			(at 167.64 139.7 90)
+		(property "Reference" "R5"
+			(at 181.61 139.7 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2301,7 +2252,7 @@
 			)
 		)
 		(property "Value" "49k"
-			(at 167.64 144.78 90)
+			(at 181.61 144.78 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2311,7 +2262,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 167.894 141.224 90)
+			(at 181.864 141.224 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2322,7 +2273,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 142.24 0)
+			(at 181.61 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2333,7 +2284,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 167.64 142.24 0)
+			(at 181.61 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2352,7 +2303,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "R10")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -2370,7 +2321,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24c7cee5-399a-4987-9615-1ed041ae7787")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR011"
 			(at 80.01 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2431,7 +2382,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR015")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -2449,7 +2400,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "29ee45c4-f23a-4b4f-82df-024391d81a47")
-		(property "Reference" "D3"
+		(property "Reference" "D2"
 			(at 159.0676 125.73 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2513,7 +2464,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "D3")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -2521,7 +2472,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 167.64 123.19 90)
+		(at 181.61 123.19 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2530,8 +2481,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2cd18b79-c0a2-477b-9247-5be28b0e1cfc")
-		(property "Reference" "R9"
-			(at 167.64 120.65 90)
+		(property "Reference" "R4"
+			(at 181.61 120.65 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2541,7 +2492,7 @@
 			)
 		)
 		(property "Value" "49k"
-			(at 167.64 125.73 90)
+			(at 181.61 125.73 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2551,7 +2502,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 167.894 122.174 90)
+			(at 181.864 122.174 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2562,7 +2513,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 123.19 0)
+			(at 181.61 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2573,7 +2524,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 167.64 123.19 0)
+			(at 181.61 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2592,7 +2543,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "R9")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -2610,7 +2561,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3226267f-8e19-496d-9299-a1922d3d7b43")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR012"
 			(at 118.11 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2671,7 +2622,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR011")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -2689,7 +2640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "495646c2-1b03-4b2d-a757-ad00018cb0cc")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR020"
 			(at 199.39 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2750,7 +2701,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR08")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -2768,7 +2719,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c87b853-a71d-4950-954d-93433889aca2")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR018"
 			(at 187.96 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -2829,7 +2780,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR017")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -2847,7 +2798,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8861e696-1821-401e-bc8e-c71e3666e243")
-		(property "Reference" "D2"
+		(property "Reference" "D3"
 			(at 159.0676 144.78 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2911,7 +2862,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "D2")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -3011,7 +2962,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "914fe597-60c5-49ec-a65d-b4b172893d19")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR017"
 			(at 181.61 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -3072,7 +3023,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR07")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -3080,7 +3031,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 173.99 123.19 90)
+		(at 187.96 123.19 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3090,8 +3041,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91b870c2-d2bd-4755-836f-06a1d9cd04ea")
-		(property "Reference" "#PWR022"
-			(at 180.34 123.19 0)
+		(property "Reference" "#PWR015"
+			(at 194.31 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3102,7 +3053,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 179.07 123.19 0)
+			(at 193.04 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3112,7 +3063,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 123.19 0)
+			(at 187.96 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3123,7 +3074,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 123.19 0)
+			(at 187.96 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3134,7 +3085,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 173.99 123.19 0)
+			(at 187.96 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3150,7 +3101,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR022")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -3168,7 +3119,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "984d0850-a3b0-4ea6-992d-fca2749ede30")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR013"
 			(at 127 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -3228,7 +3179,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR014")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -3236,7 +3187,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 173.99 142.24 90)
+		(at 187.96 142.24 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3246,8 +3197,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b4a9c28-d7ab-451a-adb9-fbd33740925c")
-		(property "Reference" "#PWR019"
-			(at 180.34 142.24 0)
+		(property "Reference" "#PWR016"
+			(at 194.31 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3258,7 +3209,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 179.07 142.24 0)
+			(at 193.04 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3268,7 +3219,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 142.24 0)
+			(at 187.96 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3279,7 +3230,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 142.24 0)
+			(at 187.96 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3290,7 +3241,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 173.99 142.24 0)
+			(at 187.96 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3306,7 +3257,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR019")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -3401,10 +3352,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c3732a07-45e8-416a-84a0-2413a5518222")
 		(property "Reference" "U2"
-			(at 163.83 86.36 0)
+			(at 163.83 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3413,9 +3363,8 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 163.83 96.52 0)
-			(hide yes)
+		(property "Value" "HUSB238"
+			(at 163.83 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3671,7 +3620,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e181cb3a-e21e-4b83-9c8d-54b1cb84f8a0")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR019"
 			(at 187.96 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -3732,7 +3681,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR016")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -3832,7 +3781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fde49969-3bcb-4916-ba98-dea4d7d2498e")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR014"
 			(at 163.83 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -3892,7 +3841,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR05")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)

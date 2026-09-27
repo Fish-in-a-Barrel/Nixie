@@ -1767,6 +1767,16 @@
 		)
 		(uuid "a678a4d6-a9cf-47f4-b3f1-2f49b9acd050")
 	)
+	(label "SWO"
+		(at 161.29 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c2f234d8-610e-4c85-84c2-98dfe9186f76")
+	)
 	(label "NRST"
 		(at 177.8 123.19 0)
 		(effects
@@ -1864,7 +1874,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "04c21dec-b375-4b70-acba-db96cb5b90f7")
-		(property "Reference" "J3"
+		(property "Reference" "J1"
 			(at 114.3 124.46 90)
 			(hide yes)
 			(show_name no)
@@ -1933,7 +1943,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
-					(reference "J3")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -1951,7 +1961,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "274f2d36-8605-4411-a3e3-07d3a4ec7384")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR05"
 			(at 184.15 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -2012,7 +2022,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
-					(reference "#PWR012")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2030,7 +2040,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bbe5f93c-43fb-4e22-ab22-692206446a93")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR03"
 			(at 148.59 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -2090,7 +2100,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
-					(reference "#PWR025")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2176,6 +2186,7 @@
 		)
 		(pin "7"
 			(uuid "82c47a24-92ef-4038-b71d-7d7b2bc0b220")
+			(alternate "LPUART1_TX")
 		)
 		(pin "9"
 			(uuid "de00397f-84fd-418a-9ea5-af019ed0712a")
@@ -2252,7 +2263,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cec2c0aa-127e-4ca6-b5aa-d49cc6973abf")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR02"
 			(at 119.38 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -2312,7 +2323,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
-					(reference "#PWR010")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -2412,7 +2423,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eaed4c1b-1176-4881-9a53-15cbb030a356")
-		(property "Reference" "J1"
+		(property "Reference" "J2"
 			(at 171.45 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2498,7 +2509,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
-					(reference "J1")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -2516,7 +2527,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eafd05d2-e6ff-411d-8200-634268512ba8")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR04"
 			(at 148.59 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -2576,7 +2587,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
-					(reference "#PWR018")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
