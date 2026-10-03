@@ -347,6 +347,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -1450,6 +1573,12 @@
 		(uuid "e0caf3a4-9a2e-424b-a9d8-14e6e039ccb4")
 	)
 	(junction
+		(at 147.32 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eafddeb2-a85b-4c40-9341-ee8d8ef9abb7")
+	)
+	(junction
 		(at 101.6 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1767,7 +1896,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 91.44) (xy 152.4 91.44)
+			(xy 140.97 91.44) (xy 147.32 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1804,6 +1933,16 @@
 			(type default)
 		)
 		(uuid "e87d5c81-72eb-43aa-b6c4-fddc8ee52287")
+	)
+	(wire
+		(pts
+			(xy 147.32 91.44) (xy 152.4 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef2e79e3-f082-4dfb-8685-fd8e8d482550")
 	)
 	(wire
 		(pts
@@ -2051,8 +2190,7 @@
 		(dnp no)
 		(uuid "1353a50a-6367-48a2-b51e-7bfa7b81e4a9")
 		(property "Reference" "J3"
-			(at 146.05 40.64 0)
-			(hide yes)
+			(at 146.05 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2062,8 +2200,7 @@
 			)
 		)
 		(property "Value" "UJC-HP-3-SMT-TR"
-			(at 129.54 45.72 0)
-			(hide yes)
+			(at 146.05 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2241,7 +2378,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "20072acc-5d8d-46a8-a580-302b6856f193")
-		(property "Reference" "R5"
+		(property "Reference" "R7"
 			(at 181.61 139.7 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2303,7 +2440,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "R5")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -2321,7 +2458,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24c7cee5-399a-4987-9615-1ed041ae7787")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR012"
 			(at 80.01 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2382,7 +2519,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR011")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -2481,7 +2618,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2cd18b79-c0a2-477b-9247-5be28b0e1cfc")
-		(property "Reference" "R4"
+		(property "Reference" "R6"
 			(at 181.61 120.65 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2543,7 +2680,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "R4")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -2561,7 +2698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3226267f-8e19-496d-9299-a1922d3d7b43")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR013"
 			(at 118.11 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2622,7 +2759,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR012")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -2640,7 +2777,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "495646c2-1b03-4b2d-a757-ad00018cb0cc")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR022"
 			(at 199.39 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2701,7 +2838,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -2781,6 +2918,164 @@
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 127 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "822e4d6b-1c8a-49a0-a0bb-504b7f9ad078")
+		(property "Reference" "TP7"
+			(at 127 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 124.9679 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro_Mini"
+			(at 132.08 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 127 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9feb99a6-6c32-45fa-901e-af33c474d2fa")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 147.32 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "837b5e50-6468-405c-b7bf-6f5e23a112d9")
+		(property "Reference" "TP8"
+			(at 147.32 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 149.86 89.4079 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro_Mini"
+			(at 152.4 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 147.32 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5da3ee60-278f-4372-ab0e-cebf760f734c")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -2880,7 +3175,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8a893e76-91e4-49c2-8ced-460ab7d5f183")
-		(property "Reference" "R6"
+		(property "Reference" "R4"
 			(at 177.8001 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2944,7 +3239,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "R6")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -3041,7 +3336,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91b870c2-d2bd-4755-836f-06a1d9cd04ea")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR020"
 			(at 194.31 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -3101,7 +3396,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR015")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -3119,7 +3414,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "984d0850-a3b0-4ea6-992d-fca2749ede30")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR014"
 			(at 127 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -3179,7 +3474,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR013")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -3197,7 +3492,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b4a9c28-d7ab-451a-adb9-fbd33740925c")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR021"
 			(at 194.31 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -3257,7 +3552,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR016")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -3337,6 +3632,84 @@
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c05a49a7-0b1e-4a5c-bed1-aa01be3e24ee")
+		(property "Reference" "#PWR015"
+			(at 127 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 127 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c0e5ee9d-3ea4-4266-92fb-5b0e2d177527")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -3699,7 +4072,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1a17bc2-5d3c-4be0-82d2-72b4054313a2")
-		(property "Reference" "R7"
+		(property "Reference" "R5"
 			(at 175.2599 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3763,7 +4136,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "R7")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -3781,7 +4154,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fde49969-3bcb-4916-ba98-dea4d7d2498e")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR016"
 			(at 163.83 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -3841,7 +4214,7 @@
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/a2c82d8d-ba01-453c-92fd-beb2147f352b"
-					(reference "#PWR014")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
