@@ -2111,7 +2111,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 118.11 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -3127,7 +3127,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be8c9694-3d07-4e4e-9874-c14df8fc6949")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 113.9033 111.76 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3251,7 +3251,7 @@
 		(instances
 			(project "Nixie Driver"
 				(path "/a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -3290,7 +3290,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 118.11 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -3371,7 +3371,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 118.11 127 0)
 			(hide yes)
 			(show_name no)
