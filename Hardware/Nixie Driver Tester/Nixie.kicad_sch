@@ -5,6 +5,195 @@
 	(uuid "eeca8d4c-1ed5-45cf-85e6-58522cd0cd8f")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Device:R_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_US"
+				(at -2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.016 -0.254 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor, US symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_US_0_1"
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_US_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Nixie:Nixie_Driver"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -184,10 +373,10 @@
 						(justify left)
 					)
 				)
-				(pin input line
-					(at -12.7 2.54 0)
+				(pin power_in line
+					(at 12.7 0 180)
 					(length 3.81)
-					(name "~{MCLR}"
+					(name "Vdd"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -202,10 +391,10 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at -12.7 0 0)
+				(pin input line
+					(at 12.7 -2.54 180)
 					(length 3.81)
-					(name "SDA"
+					(name "ADDR"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -213,6 +402,42 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 1.27 -15.24 90)
+					(length 3.81)
+					(name "Vnn"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -1.27 -15.24 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -230,42 +455,6 @@
 							)
 						)
 					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 -15.24 90)
-					(length 3.81)
-					(name "ADDR3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -1.27 -15.24 90)
-					(length 3.81)
-					(name "ADDR2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
 					(number "5"
 						(effects
 							(font
@@ -274,10 +463,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at 1.27 -15.24 90)
+				(pin bidirectional line
+					(at -12.7 0 0)
 					(length 3.81)
-					(name "ADDR1"
+					(name "SDA"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -285,80 +474,6 @@
 						)
 					)
 					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "ICSPCLK" input line)
-				)
-				(pin input line
-					(at 3.81 -15.24 90)
-					(length 3.81)
-					(name "ADDR0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "ICSPDAT" bidirectional line)
-				)
-				(pin power_in line
-					(at 12.7 -2.54 180)
-					(length 3.81)
-					(name "Vnn"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 12.7 0 180)
-					(length 3.81)
-					(name "Vdd"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 12.7 2.54 180)
-					(length 3.81)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -485,95 +600,25 @@
 			(embedded_fonts no)
 		)
 	)
-	(junction
-		(at 153.67 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4d6763e5-ad22-4d40-a7a9-639710a6af30")
-	)
-	(junction
-		(at 151.13 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "943bff24-47ca-42d5-aad6-9386953146ca")
-	)
-	(no_connect
-		(at 156.21 93.98)
-		(uuid "2db12598-306b-4b49-8cdb-8dfeca22f98c")
-	)
-	(no_connect
-		(at 139.7 76.2)
-		(uuid "a20126f1-8080-4cf8-bae3-678e15ca1e9f")
-	)
 	(wire
 		(pts
-			(xy 151.13 96.52) (xy 153.67 96.52)
+			(xy 153.67 100.33) (xy 153.67 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2cc9c5d5-b9c5-4871-ada3-52ad6abde703")
+		(uuid "82ef7d46-8f47-4028-a054-80d5240d0b3c")
 	)
 	(wire
 		(pts
-			(xy 153.67 99.06) (xy 153.67 96.52)
+			(xy 165.1 81.28) (xy 170.18 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4948bd5c-23f0-44df-a495-e5f4a14b9fae")
-	)
-	(wire
-		(pts
-			(xy 172.72 81.28) (xy 165.1 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7804c340-b815-4e87-946c-0600245e2536")
-	)
-	(wire
-		(pts
-			(xy 151.13 93.98) (xy 151.13 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9612c25c-e688-4357-9841-b81a93731e0c")
-	)
-	(wire
-		(pts
-			(xy 148.59 93.98) (xy 148.59 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae98b6b7-a0ff-4313-85bc-b546a98ef630")
-	)
-	(wire
-		(pts
-			(xy 148.59 96.52) (xy 151.13 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba914cf2-6090-4984-b53b-952484ae13e3")
-	)
-	(wire
-		(pts
-			(xy 153.67 96.52) (xy 153.67 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e15835f2-6e1b-408e-ab4b-587e685af6c1")
+		(uuid "b9a5ca29-6849-42f6-b712-30e66597dc42")
 	)
 	(hierarchical_label "5V"
 		(shape input)
@@ -610,20 +655,19 @@
 	)
 	(hierarchical_label "180V"
 		(shape input)
-		(at 172.72 81.28 0)
+		(at 153.67 100.33 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "a84a4659-bb1c-4a63-b969-75e36168b9fe")
 	)
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 168.91 81.28 180)
-		(fields_autoplaced yes)
+		(at 153.67 97.79 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -632,7 +676,7 @@
 		)
 		(uuid "c68d4158-bde3-4c5e-9596-21d5e8377ab1")
 		(property "Netclass" "Thicc"
-			(at 169.6085 83.82 0)
+			(at 157.48 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -643,7 +687,7 @@
 			)
 		)
 		(property "Component Class" ""
-			(at -38.1 10.16 0)
+			(at -53.34 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -655,8 +699,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 165.1 76.2 90)
+		(lib_id "Device:R_US")
+		(at 173.99 81.28 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -665,10 +709,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5fa198fd-0912-45a2-a0ea-8639903edecd")
-		(property "Reference" "#PWR027"
-			(at 171.45 76.2 0)
-			(hide yes)
+		(uuid "39a6ec58-4300-4564-8efd-9ef30b3301b3")
+		(property "Reference" "R9"
+			(at 173.99 74.93 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -677,19 +720,18 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 168.91 76.1999 90)
+		(property "Value" "68"
+			(at 173.99 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 165.1 76.2 0)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 174.244 80.264 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -700,7 +742,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 76.2 0)
+			(at 173.99 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -710,8 +752,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 76.2 0)
+		(property "Description" "Resistor, US symbol"
+			(at 173.99 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -720,14 +762,17 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "2"
+			(uuid "d9423bfd-d24f-4ab5-87b0-d0495a4c026a")
 		)
 		(pin "1"
-			(uuid "b538efd7-8ae5-4d28-88b9-354ca2d2e3ab")
+			(uuid "f2513862-ccc6-4ab1-83b7-df1c238ffb11")
 		)
 		(instances
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/394d8c35-7fb7-4f2e-9832-1fea7fce0352"
-					(reference "#PWR027")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -821,23 +866,11 @@
 		(pin "5"
 			(uuid "7de307f8-50c0-40cd-9ee7-49a0735123b1")
 		)
-		(pin "7"
-			(uuid "68867d4e-a460-4813-b144-fbcf5a54c24f")
-		)
-		(pin "8"
-			(uuid "36893ce1-5fa9-415e-bd28-1ddaf3fc464f")
-		)
 		(pin "2"
 			(uuid "1599a76a-e035-402c-adb6-56c9cdffd977")
 		)
-		(pin "9"
-			(uuid "3aadbc4d-0064-4e31-8fbc-1b54d46fe557")
-		)
 		(pin "3"
 			(uuid "f83ccb36-fb43-4b16-9367-680f40807f3f")
-		)
-		(pin "10"
-			(uuid "6ede946a-0c3c-4632-ae47-9bc1826c7793")
 		)
 		(instances
 			(project "Nixie Driver Tester"
@@ -850,7 +883,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 153.67 99.06 0)
+		(at 151.13 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -861,7 +894,7 @@
 		(fields_autoplaced yes)
 		(uuid "b1cb54dd-658f-4b96-933f-05e3e67f2baf")
 		(property "Reference" "#PWR026"
-			(at 153.67 105.41 0)
+			(at 151.13 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -872,7 +905,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 153.67 104.14 0)
+			(at 151.13 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -882,7 +915,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 153.67 99.06 0)
+			(at 151.13 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -893,7 +926,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 153.67 99.06 0)
+			(at 151.13 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -904,7 +937,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 153.67 99.06 0)
+			(at 151.13 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -921,6 +954,85 @@
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/394d8c35-7fb7-4f2e-9832-1fea7fce0352"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 81.28 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fdd62142-0447-43b5-b457-dc808c9bc66a")
+		(property "Reference" "#PWR027"
+			(at 184.15 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 81.2799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d5b86dd7-bc8e-4ed7-8bef-986d3ca29eae")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/394d8c35-7fb7-4f2e-9832-1fea7fce0352"
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)

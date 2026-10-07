@@ -1928,7 +1928,7 @@
 	)
 	(hierarchical_label "PWM"
 		(shape output)
-		(at 161.29 78.74 0)
+		(at 161.29 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1972,7 +1972,7 @@
 	)
 	(hierarchical_label "HVMON"
 		(shape input)
-		(at 161.29 83.82 0)
+		(at 161.29 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2418,6 +2418,7 @@
 		)
 		(pin "8"
 			(uuid "43d35808-47a6-4485-bfef-8e3f82b3c12e")
+			(alternate "ADC_IN5")
 		)
 		(pin "13"
 			(uuid "35556ba3-ce72-4541-9f23-dbdb1d5bea46")
@@ -2436,7 +2437,6 @@
 		)
 		(pin "10"
 			(uuid "f62ad861-28d3-47d4-88bc-14860540b56c")
-			(alternate "ADC_IN7")
 		)
 		(pin "17"
 			(uuid "7cef5ef0-da1a-4f06-a5ff-ed0ef9f2826e")

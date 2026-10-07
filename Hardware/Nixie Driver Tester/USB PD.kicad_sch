@@ -1549,6 +1549,12 @@
 		(uuid "1305f999-aac3-489f-b424-4d50aa715909")
 	)
 	(junction
+		(at 107.95 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "17722dd9-a799-48d8-a5b3-53bc2c78ebfc")
+	)
+	(junction
 		(at 127 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1571,12 +1577,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0caf3a4-9a2e-424b-a9d8-14e6e039ccb4")
-	)
-	(junction
-		(at 147.32 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eafddeb2-a85b-4c40-9341-ee8d8ef9abb7")
 	)
 	(junction
 		(at 101.6 83.82)
@@ -1636,7 +1636,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 83.82) (xy 120.65 83.82)
+			(xy 101.6 83.82) (xy 107.95 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1896,7 +1896,17 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 91.44) (xy 147.32 91.44)
+			(xy 107.95 83.82) (xy 120.65 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6706fc6-5297-40e2-ba7b-bfd05c37974e")
+	)
+	(wire
+		(pts
+			(xy 140.97 91.44) (xy 152.4 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1933,16 +1943,6 @@
 			(type default)
 		)
 		(uuid "e87d5c81-72eb-43aa-b6c4-fddc8ee52287")
-	)
-	(wire
-		(pts
-			(xy 147.32 91.44) (xy 152.4 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef2e79e3-f082-4dfb-8685-fd8e8d482550")
 	)
 	(wire
 		(pts
@@ -3004,7 +3004,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 147.32 91.44 0)
+		(at 107.95 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3014,7 +3014,7 @@
 		(dnp no)
 		(uuid "837b5e50-6468-405c-b7bf-6f5e23a112d9")
 		(property "Reference" "TP8"
-			(at 147.32 86.36 0)
+			(at 107.95 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3025,7 +3025,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 149.86 89.4079 0)
+			(at 110.49 81.7879 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3037,7 +3037,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro_Mini"
-			(at 152.4 91.44 0)
+			(at 113.03 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3048,7 +3048,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 91.44 0)
+			(at 113.03 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3059,7 +3059,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 147.32 91.44 0)
+			(at 107.95 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

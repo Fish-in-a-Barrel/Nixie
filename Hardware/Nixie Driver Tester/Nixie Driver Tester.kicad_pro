@@ -72,12 +72,16 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "lib_footprint_mismatch|154575000|103870000|9c271e43-7b97-4426-a3b8-94fdf3445d89|00000000-0000-0000-0000-000000000000",
-          "Enlarged thermal vias to match board constraints"
+          "lib_footprint_mismatch|129286000|81534000|8c586f4f-b486-4b82-98e4-5b5bc71b244e|00000000-0000-0000-0000-000000000000",
+          "Hanging the connector off the edge so I need to remove some silkscreen"
         ],
         [
-          "lib_footprint_mismatch|166295000|88138000|395d8141-1c42-4dc0-9891-4a9ca4ec6e48|00000000-0000-0000-0000-000000000000",
-          "Removed superfluous markings and made courtyard size more reasonable"
+          "lib_footprint_mismatch|130556000|93538000|9c271e43-7b97-4426-a3b8-94fdf3445d89|00000000-0000-0000-0000-000000000000",
+          "Library vias violate board constraints"
+        ],
+        [
+          "lib_footprint_mismatch|138176000|86106000|395d8141-1c42-4dc0-9891-4a9ca4ec6e48|00000000-0000-0000-0000-000000000000",
+          "Library footprint has excessive courtyard and silkscreens"
         ]
       ],
       "meta": {
@@ -739,7 +743,7 @@
         "uuid": "c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
       }
     ],
-    "used_designators": "C1-6,C10-11,VBUS1-2,J1-3,Q1-3,N1,PWM1,GND1,BTN1,#PWR1-27,#PWR34,SW1,S1,MON1,H1-2,TP1-9,R1-9,L1-2,SCL1,VNN1,SDA1,D1-3,U1-5,3.3V1",
+    "used_designators": "VBUS1-2,C1-6,C10-11,N1,Q1-3,J1-3,PWM1,GND1,BTN1,3.3V1,TP1-9,R1-9,L1-2,VNN1,SCL1,SW1,SDA1,D1-3,U1-5,H1-2,MON1,S1,#PWR1-27,#PWR34",
     "variants": []
   },
   "sheets": [
