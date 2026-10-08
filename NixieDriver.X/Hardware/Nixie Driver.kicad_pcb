@@ -4013,6 +4013,17 @@
 			(uuid "1e3e878c-3b92-4e9c-9026-e78423e0a576")
 		)
 		(embedded_fonts no)
+		(model "${REPO}/3d/ECV3-6Pin Defeatured.STEP"
+			(offset
+				(xyz 0 5.5 -3.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -180)
+			)
+		)
 	)
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "B.Cu")
