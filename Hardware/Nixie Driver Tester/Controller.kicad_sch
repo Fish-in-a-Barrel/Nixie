@@ -1503,6 +1503,12 @@
 		(uuid "0edcc000-8488-4157-8526-1817b462edc7")
 	)
 	(junction
+		(at 177.8 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2efcaa11-960d-41e9-8e95-26fc281f3944")
+	)
+	(junction
 		(at 105.41 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1628,6 +1634,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 83.82) (xy 161.29 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "429a8eca-6a6b-4d5b-8637-61cc82b05c53")
+	)
+	(wire
+		(pts
 			(xy 128.27 86.36) (xy 128.27 93.98)
 		)
 		(stroke
@@ -1645,6 +1661,16 @@
 			(type default)
 		)
 		(uuid "4db38231-088e-480e-adc4-a80f74d4e774")
+	)
+	(wire
+		(pts
+			(xy 187.96 83.82) (xy 177.8 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fd5afae-b463-4487-8e43-420df639aa8f")
 	)
 	(wire
 		(pts
@@ -1928,7 +1954,7 @@
 	)
 	(hierarchical_label "PWM"
 		(shape output)
-		(at 161.29 83.82 0)
+		(at 187.96 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2614,6 +2640,85 @@
 			(project "Nixie Driver Tester"
 				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 177.8 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d901e8f5-ce1a-4625-888e-ce3bb09484d8")
+		(property "Reference" "TP3"
+			(at 177.8 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "PWM"
+			(at 180.34 81.7879 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro_Mini"
+			(at 182.88 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 177.8 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9bc9f6df-445c-46d9-8ab5-1e15a6d6c6ee")
+		)
+		(instances
+			(project "Nixie Driver Tester"
+				(path "/c2082ee6-4c2e-4b3c-b2d7-410eae192cfe/9f01134a-2f79-4022-9c4f-b5d1e4c08c6e"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
