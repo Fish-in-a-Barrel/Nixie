@@ -433,14 +433,14 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "Power through R3\n	@160V: 34mW\n	@180V: 43mW\n	@200V: 53mW\n\nVoltage to HVMON\n	@160V: 3.137V\n	@180V: 3.529V\n	@200V: 3.921V\n	@208V: 4.078V\n\nHVMON = 4.096V (max)\n	@208.9V"
+	(text_box "Power through R1\n	@160V: 15mW\n	@180V: 20mW\n	@200V: 25mW\n\nVoltage to HVMON\n	@160V: 2.655V\n	@180V: 2.987V\n	@200V: 3.319V"
 		(exclude_from_sim no)
-		(at 138.43 110.49 0)
-		(size 26.67 27.94)
+		(at 102.87 104.14 0)
+		(size 26.67 20.32)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(fill
 			(type none)
@@ -553,7 +553,7 @@
 				)
 			)
 		)
-		(property "Value" "750k"
+		(property "Value" "1.6M"
 			(at 123.19 97.79 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -791,7 +791,7 @@
 				)
 			)
 		)
-		(property "Value" "15k"
+		(property "Value" "27k"
 			(at 143.51 97.79 90)
 			(show_name no)
 			(do_not_autoplace no)

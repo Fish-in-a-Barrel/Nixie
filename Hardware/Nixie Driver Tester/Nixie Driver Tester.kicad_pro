@@ -190,6 +190,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -201,6 +202,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -212,6 +214,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -569,7 +572,7 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
+    "net_colors": {},
     "netclass_assignments": {
       "+180V": [
         "Vnn"
@@ -747,7 +750,7 @@
         "uuid": "c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
       }
     ],
-    "used_designators": "H1-2,MON1,S1,TP1-9,R1-9,PWM1,GND1,BTN1,#PWR1-27,#PWR34,J1-3,SW1,SDA1,D1-3,U1-5,C1-6,C10-11,VBUS1-2,Q1-3,N1,L1-2,SCL1,VNN1,3.3V1",
+    "used_designators": "D1-3,SDA1,U1-5,J1-3,SW1,BTN1,GND1,PWM1,#PWR1-27,#PWR34,3.3V1,L1-2,VNN1,SCL1,N1,Q1-3,VBUS1-2,C1-6,C10-11,H1-2,MON1,S1,TP1-9,R1-9",
     "variants": []
   },
   "sheets": [
