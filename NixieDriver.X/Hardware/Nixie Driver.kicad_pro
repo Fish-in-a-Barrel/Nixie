@@ -180,6 +180,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -191,6 +192,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -202,6 +204,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -486,6 +489,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -587,7 +591,7 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
+    "net_colors": {},
     "netclass_assignments": {
       "/Nixie Tube/Cathode 0/Cathode": [
         "Vnn"
@@ -620,16 +624,6 @@
         "Vnn"
       ],
       "/Nixie Tube/Cathode Dot/Cathode": [
-        "Vnn"
-      ],
-      "N_GND": [
-        "Ground",
-        "Vnn"
-      ],
-      "Net-(J1-Pin_1)": [
-        "Ground"
-      ],
-      "Net-(Q10-E)": [
         "Vnn"
       ],
       "Net-(V1-V+)": [
@@ -802,7 +796,7 @@
         "uuid": "a603c7dd-0964-4ab1-bdb5-8ff7833b36d7"
       }
     ],
-    "used_designators": "R13,#PWR4,#PWR20-21,J1,J4-5,U2",
+    "used_designators": "#PWR4,#PWR20-21,J1,J4-5,R13,U2",
     "variants": []
   },
   "sheets": [

@@ -492,6 +492,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -574,16 +575,6 @@
     },
     "net_colors": {},
     "netclass_assignments": {
-      "+180V": [
-        "Vnn"
-      ],
-      "/5V VRM/5V": [
-        "Thicc"
-      ],
-      "/5V VRM/VBUS": [
-        "Low Current",
-        "Thicc"
-      ],
       "/Boost Converter/180V": [
         "Thicc"
       ],
@@ -606,12 +597,6 @@
         "Thicc"
       ],
       "GND": [
-        "Thicc"
-      ],
-      "Net-(D1-A)": [
-        "Thicc"
-      ],
-      "Net-(Q1-E)": [
         "Thicc"
       ]
     },
@@ -750,7 +735,7 @@
         "uuid": "c2082ee6-4c2e-4b3c-b2d7-410eae192cfe"
       }
     ],
-    "used_designators": "D1-3,SDA1,U1-5,J1-3,SW1,BTN1,GND1,PWM1,#PWR1-27,#PWR34,3.3V1,L1-2,VNN1,SCL1,N1,Q1-3,VBUS1-2,C1-6,C10-11,H1-2,MON1,S1,TP1-9,R1-9",
+    "used_designators": "#PWR1-28,#PWR34,3.3V1,BTN1,C1-6,C10-11,D1-3,GND1,H1-2,J1-3,L1-2,MON1,N1,PWM1,Q1-3,R1-9,S1,SCL1,SDA1,SW1,TP1-9,U1-5,VBUS1-2,VNN1",
     "variants": []
   },
   "sheets": [
